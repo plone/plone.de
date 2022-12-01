@@ -119,11 +119,6 @@ const Footer = ({ intl }) => {
               <FormattedMessage id="Contact" defaultMessage="Contact" />
             </UniversalLink>
           </div>
-          {/* <div role="listitem" className="item">
-            <UniversalLink className="item">
-              <FormattedMessage id="Impressum" defaultMessage="Impressum" />
-            </UniversalLink>
-          </div> */}
           <br />
           <br />
           <div role="listitem" className="item">

@@ -119,6 +119,14 @@ const Footer = ({ intl }) => {
               <FormattedMessage id="Contact" defaultMessage="Contact" />
             </UniversalLink>
           </div>
+          <div role="listitem" className="item">
+            <UniversalLink
+              className="item"
+              href={settings.isMultilingual ? `/${lang}/imprint` : '/imprint'}
+            >
+              <FormattedMessage id="Imprint" defaultMessage="Imprint" />
+            </UniversalLink>
+          </div>
           <br />
           <br />
           <div role="listitem" className="item">

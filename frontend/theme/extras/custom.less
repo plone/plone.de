@@ -1,0 +1,257 @@
+// Header
+.ui.basic.segment.header-wrapper .header {
+  width: 1140px;
+  a {
+    color: #fafafa;
+  }
+}
+.ui.basic.segment.header-wrapper {
+  background-color: #007eb6;
+  padding: 0px;
+  height: 80px;
+  #navigation .item.active {
+    color: #fafafa;
+    margin-bottom: 13px;
+    padding: 7px;
+    border-radius: 4px;
+    border: 0px solid transparent;
+    background-color: #1a0b31;
+    &:hover {
+      border: none;
+    }
+  }
+  .item {
+    color: #fafafa;
+    margin-bottom: 5px;
+    padding: 7px;
+    border-radius: 4px;
+    border: 0px solid transparent;
+    background-color: #007eb6;
+  }
+}
+.logo {
+  margin: 15px;
+  margin-left: 0px;
+  width: 195px;
+  height: 50px;
+}
+.ui.transparent.input {
+  width: 160px;
+}
+.ui.form .searchbox.field button {
+  color: #fafafa;
+}
+.themeSwitcher {
+  color: #fafafa;
+  border-color: transparent;
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+//Breadcrumbs
+.ui.secondary.vertical.segment.breadcrumbs {
+  height: 44px;
+  padding: 0px;
+  border-top: 1px solid #737373;
+  border-bottom: 1px solid #737373;
+  background-color: #edf1f2;
+  .section {
+    margin-top: 8.5px;
+    margin-bottom: 9.5px;
+    color: #181818;
+    height: 25px;
+    width: 25px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    text-align: center;
+    .icon {
+      height: 25px;
+      width: 25px;
+    }
+  }
+  .divider {
+    color: #181818;
+  }
+}
+
+// Content
+.ui.basic.segment.content-area {
+  background-color: #fafafa !important;
+  margin: 0px;
+  .content {
+    color: #181818;
+  }
+  body {
+    color: #181818;
+  }
+  .ui.container {
+    a {
+      color: #007eb6;
+    }
+  }
+}
+.documentFirstHeading {
+  color: #181818;
+}
+#view .ui.container {
+  padding: 5px;
+
+  p {
+    color: #181818;
+  }
+}
+.block.hero .hero-body {
+  background-color: #e0e1e2;
+  h1 {
+    color: #181818;
+  }
+}
+.documentFirstHeading::before {
+  border-bottom-color: #1a0b31;
+}
+
+// Blocks
+// Grid Block
+.grid-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.grid-teaser-item.default .grid-image-wrapper img {
+  height: 60px;
+  width: 100px;
+}
+
+// Hero Block
+.block.hero {
+  &.alignLeft {
+    .block-inner-wrapper {
+      flex-direction: row;
+    }
+  }
+  &.alignRight {
+    .block-inner-wrapper {
+      flex-direction: row-reverse;
+    }
+  }
+  &.transparent .hero-body {
+    background-color: transparent;
+    padding-left: 0px;
+  }
+  &.grey .hero-body {
+    background-color: #e0e1e2;
+  }
+  &.plone-blue .hero-body {
+    background-color: #007eb6;
+    h1 {
+      color: #fafafa;
+    }
+    p {
+      color: #fafafa !important;
+    }
+  }
+}
+
+// Button Block
+.block.__button {
+  &.transparent button {
+    background-color: transparent;
+  }
+  &.grey button {
+    background-color: #e0e1e2;
+  }
+  &.plone-blue button {
+    background-color: #007eb6;
+    color: #fafafa;
+  }
+}
+
+.color-picker-widget .button.active {
+  border: 2px solid #007eb6;
+}
+
+.button.grey {
+  background-color: #e0e1e2;
+}
+
+.button.plone-blue {
+  background-color: #007eb6;
+}
+
+// Footer
+.ui.padded.segment.vertical.segment {
+  border-top: 1px;
+  border-color: #fafafa;
+}
+.ui.inverted.grey.segment {
+  background-color: #113156 !important;
+}
+// .inverted.segment a.item {
+//   text-decoration: none;
+// }
+
+// Login
+#page-login {
+  .ui.form {
+    background-color: #fafafa;
+  }
+  .ui.raised.segments {
+    border-color: #fafafa;
+  }
+  .ui.form .field .wrapper > label {
+    color: #181818;
+  }
+  .ui.segment.primary {
+    color: #181818;
+  }
+  .ui.secondary.segment {
+    color: #181818;
+  }
+  .iu.input {
+    background-color: #fafafa;
+  }
+  #login .placeholder {
+    color: #fafafa;
+  }
+  .ui.form input:not([type]),
+  .ui.form input[type='date'],
+  .ui.form input[type='datetime-local'],
+  .ui.form input[type='email'],
+  .ui.form input[type='number'],
+  .ui.form input[type='password'],
+  .ui.form input[type='search'],
+  .ui.form input[type='tel'],
+  .ui.form input[type='time'],
+  .ui.form input[type='text'],
+  .ui.form input[type='file'],
+  .ui.form input[type='url'] {
+    background-color: #fafafa;
+  }
+  .ui.segment {
+    background-color: #fafafa;
+  }
+  .ui.clearing.section.actions {
+    border-color: #fafafa;
+  }
+  #login-from-submit.icon.circled {
+    color: #007eb1;
+  }
+  #login-from-cancel.icon.circled {
+    color: red !important;
+  }
+  .help {
+    padding-top: 17px;
+    padding-bottom: 3px;
+    border: 0px;
+    a {
+      color: #007eb1;
+    }
+  }
+}
+#toolbar-body {
+  .toolbar-body {
+    background-color: #fafafa;
+  }
+}

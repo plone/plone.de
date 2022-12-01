@@ -1,0 +1,7 @@
+// From now on, we would avoid to put our code into .overrides files
+// since it's seems that the JS devs community bets (and more specificly
+// the plugins/utilities authors for using always the proper extension
+//  for the proper type of files
+@import 'custom';
+
+// So NO CSS from this line ! ;)

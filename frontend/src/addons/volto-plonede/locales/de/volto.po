@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#: components/manage/Blocks/ButtonBlockEnhancer
+#: components/manage/Blocks/HeroBlockEnhancer
+# defaultMessage: Backgroundcolor
+msgid "Backgroundcolor"
+msgstr "Hintergrundfarbe"
+
+#: components/manage/Blocks/ButtonBlockEnhancer
+# defaultMessage: Open in new tab
+msgid "Open in new tab"
+msgstr "In neuem Tab öffnen"

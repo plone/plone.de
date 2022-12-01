@@ -1,0 +1,19 @@
+{
+  "portal": [
+    {
+      "email": "piterek@kitconcept.com",
+      "properties": {
+        "fullname": "Plonede",
+        "location": "World"
+      },
+      "groups": [
+      ],
+      "roles": [
+        "Member"
+      ],
+      "username": "plonede"
+    }
+  ],
+    "team": [
+  ]
+}

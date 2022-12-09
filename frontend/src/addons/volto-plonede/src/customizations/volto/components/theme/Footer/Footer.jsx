@@ -10,6 +10,7 @@ import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 import { useSelector } from 'react-redux';
 import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
+import Logo from '../Logo/Logo';
 
 const messages = defineMessages({
   copyright: {
@@ -128,6 +129,9 @@ const Footer = ({ intl }) => {
             </UniversalLink>
           </div>
           <br />
+          <br />
+          <br />
+          <Logo />
           <br />
           <div role="listitem" className="item">
             <a className="item" href="https://plone.org">

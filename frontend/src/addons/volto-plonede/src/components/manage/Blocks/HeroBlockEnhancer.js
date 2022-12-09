@@ -9,7 +9,7 @@ const messages = defineMessages({
 
 export const HeroBlockSchemaEnhancer = ({ formData, schema, intl }) => {
   schema.properties.align = {
-    title: 'align',
+    title: 'Align',
     widget: 'align',
     actions: ['left', 'right'],
   };

@@ -1,6 +1,5 @@
 // Header
 .ui.basic.segment.header-wrapper .header {
-  width: 1140px;
   a {
     color: #fafafa;
   }
@@ -63,10 +62,10 @@
     width: auto;
     text-align: center;
   }
-  .section.icon {
+  svg.icon {
     height: 25px;
     width: 25px;
-    margin-top: 10px;
+    margin-top: -2px;
     margin-bottom: auto;
   }
   .divider {
@@ -267,5 +266,88 @@
 #toolbar-body {
   .toolbar-body {
     background-color: #fafafa;
+  }
+}
+
+//@container
+@media screen and (max-width: 769px) {
+  //Hamburger
+  .hamburger {
+    padding: 0;
+    margin-top: 27px;
+    margin-right: 3px;
+  }
+  //Hamburger open
+  .ui.basic.segment.header-wrapper .header a {
+    color: #181818;
+  }
+  .item.active {
+    margin-top: 25px !important;
+    margin-bottom: 0px !important;
+  }
+  //Breadcrumbs
+  .ui.secondary.vertical.segment.breadcrumbs {
+    display: none;
+    visibility: hidden;
+  }
+  //Search field
+  .ui.transparent.input {
+    display: none;
+    visibility: hidden;
+  }
+  //Content area
+  .ui.basic.segment.content-area {
+    padding-top: 0px;
+  }
+  //Hero block
+  .block.hero.alignRight {
+    &.transparent {
+      .block-inner-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    &.grey {
+      .block-inner-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    &.plone-blue {
+      .block-inner-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  .block.hero {
+    &.transparent {
+      .block-inner-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    &.grey {
+      .block-inner-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    &.plone-blue {
+      .block-inner-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    .hero-image {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  //Button block
+  .button.container {
+    .align.center {
+      text-align: left;
+    }
   }
 }

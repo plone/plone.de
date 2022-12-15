@@ -41,7 +41,11 @@ const View = ({ data, isEditMode, className }) => {
       </ConditionalLink>
     ) : (
       data.href.length > 0 && (
-        <a href={flattenToAppURL(data.href[0]['@id'])} target="_blank">
+        <a
+          href={flattenToAppURL(data.href[0]['@id'])}
+          target="_blank"
+          rel="noreferrer"
+        >
           <Button className={(cx('button'), data.align)}>
             {data.title || intl.formatMessage(messages.ButtonText)}
           </Button>

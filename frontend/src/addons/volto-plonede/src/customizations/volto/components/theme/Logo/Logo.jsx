@@ -4,11 +4,9 @@
  */
 
 import { defineMessages, useIntl } from 'react-intl';
-import { Image } from 'semantic-ui-react';
 import { useSelector } from 'react-redux';
 import config from '@plone/volto/registry';
 import { UniversalLink } from '@plone/volto/components';
-import LogoImage from '@plone/volto/components/theme/Logo/Logo.svg';
 
 const messages = defineMessages({
   site: {

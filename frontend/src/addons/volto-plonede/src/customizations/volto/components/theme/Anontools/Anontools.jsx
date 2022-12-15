@@ -6,10 +6,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
-import { FormattedMessage } from 'react-intl';
-import config from '@plone/volto/registry';
 
 /**
  * Anontools container class.
@@ -45,7 +42,6 @@ export class Anontools extends Component {
    * @returns {string} Markup for the component.
    */
   render() {
-    const { settings } = config;
     return !this.props.token && <Menu pointing secondary floated="right" />;
   }
 }

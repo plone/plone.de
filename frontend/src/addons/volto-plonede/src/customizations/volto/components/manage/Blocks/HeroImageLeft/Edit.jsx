@@ -309,7 +309,6 @@ class EditComponent extends Component {
     const placeholder =
       this.props.data.placeholder ||
       this.props.intl.formatMessage(messages.placeholder);
-    console.log(this.props);
     return (
       <div
         className={cx('block hero', this.props.data.backgroundColor, {

@@ -2,8 +2,6 @@ import {
   HeroBlockSchemaEnhancer,
   ButtonBlockSchemaEnhancer,
 } from 'volto-plonede/components';
-import installTooltipPlugin from '../../../editor/plugins/TooltipPlugin';
-import { TOOLTIP } from '../../../editor/plugins/TooltipPlugin/constants';
 
 const applyConfig = (config) => {
   config.settings = {

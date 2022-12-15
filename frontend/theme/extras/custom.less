@@ -276,6 +276,14 @@
     padding: 0;
     margin-top: 27px;
     margin-right: 3px;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: #fafafa;
   }
   //Hamburger open
   .ui.basic.segment.header-wrapper .header a {
@@ -286,7 +294,7 @@
     margin-bottom: 0px !important;
   }
   //Breadcrumbs
-  .ui.secondary.vertical.segment.breadcrumbs {
+  .siteroot .ui.secondary.vertical.segment.breadcrumbs {
     display: none;
     visibility: hidden;
   }
@@ -300,45 +308,13 @@
     padding-top: 0px;
   }
   //Hero block
-  .block.hero.alignRight {
-    &.transparent {
-      .block-inner-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
-    &.grey {
-      .block-inner-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
-    &.plone-blue {
-      .block-inner-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
+  .block.hero.alignRight .block-inner-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
   }
-  .block.hero {
-    &.transparent {
-      .block-inner-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
-    &.grey {
-      .block-inner-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
-    &.plone-blue {
-      .block-inner-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
+  .block.hero .block-inner-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
     .hero-image {
       display: none;
       visibility: hidden;

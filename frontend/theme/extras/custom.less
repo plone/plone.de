@@ -35,28 +35,38 @@
   margin: 15px;
   margin-left: 0px;
 }
-
-.ui.transparent.input {
-  width: 160px;
+.ui.form {
+  width: 190px;
 }
-
+.ui.transparent.input {
+  width: 190px;
+}
 .ui.form .searchbox.field button {
   color: #fafafa;
 }
-
-.themeSwitcher {
-  width: 25px;
-  height: 25px;
-  border-color: transparent;
-  margin-left: 5px;
-  background-color: transparent;
+.ui.form .searchbox.field {
   color: #fafafa;
-  cursor: pointer;
 }
-
+.ui.form input:not([type]):focus,
+.ui.form input[type='date']:focus,
+.ui.form input[type='datetime-local']:focus,
+.ui.form input[type='email']:focus,
+.ui.form input[type='number']:focus,
+.ui.form input[type='password']:focus,
+.ui.form input[type='search']:focus,
+.ui.form input[type='tel']:focus,
+.ui.form input[type='time']:focus,
+.ui.form input[type='text']:focus,
+.ui.form input[type='file']:focus,
+.ui.form input[type='url']:focus {
+  color: #fafafa;
+}
 //Breadcrumbs
+.siteroot .ui.secondary.vertical.segment.breadcrumbs {
+  display: none;
+  visibility: hidden;
+}
 .ui.secondary.vertical.segment.breadcrumbs {
-  height: 44px;
   padding: 0px;
   border-top: 1px solid #737373;
   border-bottom: 1px solid #737373;
@@ -232,9 +242,9 @@
     height: 64px;
   }
 }
-// .inverted.segment a.item {
-//   text-decoration: none;
-// }
+.ui.inverted.list .item a:not(.ui):hover {
+  color: #007eb1 !important;
+}
 
 // Login
 #page-login {
@@ -326,7 +336,6 @@
       opacity: 1;
     }
   }
-
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
@@ -336,7 +345,6 @@
   .ui.basic.segment.header-wrapper .header a {
     color: #181818;
   }
-
   .item.active {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
@@ -376,6 +384,10 @@
       text-align: left;
     }
   }
+  //Footer
+  .ui.inverted.list .item a:not(.ui):hover {
+    color: #007eb1 !important;
+  }
 }
 @media screen and (max-width: 1012px) {
   //Hamburger
@@ -404,7 +416,6 @@
       align-self: center;
     }
   }
-
   .item.active {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
@@ -425,5 +436,9 @@
   //Content area
   .ui.basic.segment.content-area {
     padding-top: 0px;
+  }
+  //Footer
+  .ui.inverted.list .item a:not(.ui):hover {
+    color: #007eb1 !important;
   }
 }

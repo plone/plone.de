@@ -1283,6 +1283,11 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
+"@datapunt/matomo-tracker-js@0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@datapunt/matomo-tracker-js/-/matomo-tracker-js-0.5.1.tgz#92a746ffa421f91b3a59fefce707d45ca22be96b"
+  integrity sha512-9/MW9vt/BA5Db7tO6LqCeQKtuvBNjyq51faF3AzUmPMlYsJCnASIxcut3VqJKiribhUoey7aYbPIYuj9x4DLPA==
+
 "@datapunt/matomo-tracker-js@^0.3.1":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@datapunt/matomo-tracker-js/-/matomo-tracker-js-0.3.1.tgz#a707429471d89da78f095d75a055bad98b299eec"
@@ -1769,6 +1774,14 @@
   integrity sha512-5E8mhHq1w+hVr0/pBz1/jDF7xZu4ZpVm77zoSP6tSfKlDqvuXLCQFH6J4JLnVOJuAA1clpS70oRCA0PfaK6TIg==
   dependencies:
     "@plone/scripts" "*"
+
+"@kitconcept/volto-dsgvo-banner@*":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@kitconcept/volto-dsgvo-banner/-/volto-dsgvo-banner-1.2.1.tgz#1f4314da47278dcfd3d7023120bef59a72a7bf90"
+  integrity sha512-BxIYxaWKsTbXQX38WkKndQSegj6hebVa3PeXrZjD0uAMJOAEEwfMzc/OH9VuDHR8Yl2gif15KKd98a8HgXxyHw==
+  dependencies:
+    "@datapunt/matomo-tracker-js" "0.5.1"
+    react-ga "3.3.0"
 
 "@kitconcept/volto-separator-block@*":
   version "2.0.0"
@@ -15397,6 +15410,11 @@ react-fast-compare@^3.0.1, react-fast-compare@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
+
+react-ga@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-3.3.0.tgz#c91f407198adcb3b49e2bc5c12b3fe460039b3ca"
+  integrity sha512-o8RScHj6Lb8cwy3GMrVH6NJvL+y0zpJvKtc0+wmH7Bt23rszJmnqEQxRbyrqUzk9DTJIHoP42bfO5rswC9SWBQ==
 
 react-helmet-async@^1.0.7:
   version "1.0.9"

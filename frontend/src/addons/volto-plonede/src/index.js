@@ -2,6 +2,9 @@ import {
   HeroBlockSchemaEnhancer,
   ButtonBlockSchemaEnhancer,
 } from 'volto-plonede/components';
+import { defineMessages } from 'react-intl';
+
+defineMessages({ Imprint: { id: 'Imprint', defaultMessage: 'Imprint' } });
 
 const applyConfig = (config) => {
   config.settings = {
@@ -33,15 +36,6 @@ const applyConfig = (config) => {
     ...config.blocks.blocksConfig.__grid.gridAllowedBlocks,
     '__button',
   ];
-  // config.settings.slate.toolbarButtons = [
-  //   ...(config.settings.slate.toolbarButtons || []),
-  //   TOOLTIP,
-  // ];
-  // config.settings.slate.expandedToolbarButtons = [
-  //   ...(config.settings.slate.expandedToolbarButtons || []),
-  //   TOOLTIP,
-  // ];
-  // config = installTooltipPlugin(config);
   return config;
 };
 

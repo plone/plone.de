@@ -17,6 +17,11 @@ msgstr ""
 msgid "Backgroundcolor"
 msgstr "Hintergrundfarbe"
 
+#: index
+# defaultMessage: Imprint
+msgid "Imprint"
+msgstr "Impressum"
+
 #: components/manage/Blocks/ButtonBlockEnhancer
 # defaultMessage: Open in new tab
 msgid "Open in new tab"

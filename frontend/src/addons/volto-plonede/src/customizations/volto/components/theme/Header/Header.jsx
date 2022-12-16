@@ -49,6 +49,12 @@ class Header extends Component {
   render() {
     return (
       <Segment basic className="header-wrapper" role="banner">
+        <LanguageSelector />
+        {!this.props.token && (
+          <div className="tools">
+            <Anontools />
+          </div>
+        )}
         <Container>
           <div className="header">
             <div className="logo-nav-wrapper">

@@ -1,6 +1,7 @@
 import {
   HeroBlockSchemaEnhancer,
   ButtonBlockSchemaEnhancer,
+  SliderBlockSchemaEnhancer,
 } from 'volto-plonede/components';
 import { defineMessages } from 'react-intl';
 
@@ -31,11 +32,18 @@ const applyConfig = (config) => {
     defaultLanguage: 'de',
   };
 
+  config.blocks.blocksConfig.slider = {
+    ...config.blocks.blocksConfig.slider,
+    schemaEnhancer: SliderBlockSchemaEnhancer,
+  };
+
   delete config.blocks.blocksConfig.text;
   config.blocks.blocksConfig.__grid.gridAllowedBlocks = [
     ...config.blocks.blocksConfig.__grid.gridAllowedBlocks,
     '__button',
   ];
+
+  console.log(config.blocks.blocksConfig.slider);
   return config;
 };
 

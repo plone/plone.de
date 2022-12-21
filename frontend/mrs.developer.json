@@ -1,5 +1,13 @@
 {
   "volto-plonede": {
     "local": "addons/volto-plonede/src"
+  },
+  "volto-slider-block": {
+    "develop": true,
+    "package": "@kitconcept/volto-slider-block",
+    "url": "git@github.com:kitconcept/volto-slider-block.git",
+    "https": "https://github.com/kitconcept/volto-slider-block.git",
+    "path": "src",
+    "branch": "master"
   }
 }

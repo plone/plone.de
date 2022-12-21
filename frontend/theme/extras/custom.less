@@ -71,20 +71,6 @@
   width: 190px;
 }
 
-.ui.form input:not([type]):focus,
-.ui.form input[type='date']:focus,
-.ui.form input[type='datetime-local']:focus,
-.ui.form input[type='email']:focus,
-.ui.form input[type='number']:focus,
-.ui.form input[type='password']:focus,
-.ui.form input[type='search']:focus,
-.ui.form input[type='tel']:focus,
-.ui.form input[type='time']:focus,
-.ui.form input[type='text']:focus,
-.ui.form input[type='file']:focus,
-.ui.form input[type='url']:focus {
-  color: #fafafa;
-}
 //Breadcrumbs
 .siteroot .ui.secondary.vertical.segment.breadcrumbs {
   display: none;
@@ -163,7 +149,7 @@
 }
 
 //Blocks
-//Grid Block
+//Grid
 .grid-image-wrapper {
   display: flex;
   justify-content: center;
@@ -174,7 +160,7 @@
   height: 60px;
 }
 
-//Hero Block
+//Hero
 .block.hero {
   &.alignLeft {
     .block-inner-wrapper {
@@ -210,7 +196,7 @@
   }
 }
 
-//Button Block
+//Button
 .block.__button {
   &.transparent button {
     background-color: transparent;
@@ -238,9 +224,30 @@
   background-color: #007eb6;
 }
 
-//Img Block
+//Img
 .block.align.center {
   text-align: left;
+}
+
+//Slider
+.grid-teaser-item.top {
+  position: relative;
+  .teaser-item.top {
+    .teaser-item-title.fix-width-issue {
+      width: 350px;
+      position: absolute;
+      top: 140px;
+      padding: 20px;
+      background-color: #113156;
+      p {
+        color: #fafafa !important;
+      }
+      .ui.button {
+        background-color: #fafafa;
+        color: #181818;
+      }
+    }
+  }
 }
 
 //Footer
@@ -362,41 +369,43 @@
       opacity: 1;
     }
   }
-
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
     background-color: #fafafa;
   }
+
   //Hamburger open
   .ui.basic.segment.header-wrapper .header a {
     color: #181818;
   }
-
   .item.active {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
   }
+
   //Breadcrumbs
   .siteroot .ui.secondary.vertical.segment.breadcrumbs {
     display: none;
     visibility: hidden;
   }
+
   //Search field
   .ui.transparent.input {
     display: none;
     visibility: hidden;
   }
+
   //Content area
   .ui.basic.segment.content-area {
     padding-top: 0px;
   }
-  //Hero block
+
+  //Hero
   .block.hero.alignRight .block-inner-wrapper {
     display: flex;
     flex-direction: column-reverse;
   }
-
   .block.hero .block-inner-wrapper {
     display: flex;
     flex-direction: column-reverse;
@@ -406,17 +415,35 @@
       visibility: hidden;
     }
   }
-  //Button block
+
+  //Button
   .button.container {
     .align.center {
       text-align: left;
     }
   }
+
+  //Slider
+  .grid-teaser-item.top {
+    position: static;
+    .teaser-item.top {
+      .teaser-item-title.fix-width-issue {
+        position: static;
+        padding: 20px;
+        background-color: #113156;
+        p {
+          color: #fafafa !important;
+        }
+      }
+    }
+  }
+
   //Footer
   .ui.inverted.list .item a:not(.ui):hover {
     color: #007eb1 !important;
   }
 }
+
 @media screen and (max-width: 1012px) {
   //Hamburger
   .hamburger {
@@ -428,17 +455,16 @@
       opacity: 1;
     }
   }
-
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
     background-color: #fafafa;
   }
+
   //Hamburger open
   .ui.basic.segment.header-wrapper .header a {
     color: #181818;
   }
-
   .mobile-menu-nav .ui.pointing.secondary.stackable.menu {
     display: flex;
     flex-direction: column;
@@ -447,29 +473,47 @@
       align-self: center;
     }
   }
-
   .item.active {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
   }
+
   //Breadcrumbs
   .siteroot .ui.secondary.vertical.segment.breadcrumbs {
     display: none;
     visibility: hidden;
   }
-
   .ui.secondary.vertical.segment.breadcrumbs {
     height: auto;
   }
+
   //Search field
   .ui.transparent.input {
     display: none;
     visibility: hidden;
   }
+
   //Content area
   .ui.basic.segment.content-area {
     padding-top: 0px;
   }
+
+  //Slider
+  .grid-teaser-item.top {
+    position: static;
+    .teaser-item.top {
+      .teaser-item-title.fix-width-issue {
+        position: static;
+        width: auto;
+        padding: 20px;
+        background-color: #113156;
+        p {
+          color: #fafafa !important;
+        }
+      }
+    }
+  }
+
   //Footer
   .ui.inverted.list .item a:not(.ui):hover {
     color: #007eb1 !important;

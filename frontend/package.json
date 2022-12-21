@@ -47,8 +47,7 @@
     "@eeacms/volto-matomo",
     "@kitconcept/volto-separator-block",
     "@kitconcept/volto-button-block",
-    "volto-plonede",
-    "@kitconcept/volto-dsgvo-banner"
+    "volto-plonede"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -156,8 +155,7 @@
     "@kitconcept/volto-slider-block": "*",
     "@eeacms/volto-matomo": "*",
     "@kitconcept/volto-separator-block": "*",
-    "@kitconcept/volto-button-block": "*",
-    "@kitconcept/volto-dsgvo-banner": "*"
+    "@kitconcept/volto-button-block": "*"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.1.3",

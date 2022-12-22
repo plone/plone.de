@@ -1,5 +1,4 @@
 import { defineMessages } from 'react-intl';
-import { SliderSchema } from '@kitconcept/volto-slider-block/components/schema';
 
 const messages = defineMessages({
   buttonText: {
@@ -8,10 +7,13 @@ const messages = defineMessages({
   },
 });
 
-export const SliderBlockSchemaEnhancer = ({ formData, schema, intl }) => {
-  schema.properties.slides.schema.fieldsets[0].fields.push('buttonText');
+export const SliderBlockSchemaEnhancer = ({ schema, intl }) => {
+  schema.properties.slides.schema.fieldsets[0].fields = [
+    ...schema.properties.slides.schema.fieldsets[0].fields,
+    'buttonText',
+  ];
   schema.properties.slides.schema.properties.buttonText = {
     title: intl.formatMessage(messages.buttonText),
   };
-  return SliderSchema({ schema, formData, intl });
+  return schema;
 };

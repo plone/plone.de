@@ -43,7 +43,6 @@ const applyConfig = (config) => {
     '__button',
   ];
 
-  console.log(config.blocks.blocksConfig.slider);
   return config;
 };
 

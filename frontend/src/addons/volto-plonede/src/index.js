@@ -2,6 +2,7 @@ import {
   HeroBlockSchemaEnhancer,
   ButtonBlockSchemaEnhancer,
   SliderBlockSchemaEnhancer,
+  EventTemplate,
 } from 'volto-plonede/components';
 import { defineMessages } from 'react-intl';
 
@@ -36,6 +37,15 @@ const applyConfig = (config) => {
     ...config.blocks.blocksConfig.slider,
     schemaEnhancer: SliderBlockSchemaEnhancer,
   };
+
+  config.blocks.blocksConfig.listing.variations = [
+    ...config.blocks.blocksConfig.listing.variations,
+    {
+      id: 'events',
+      title: 'Events',
+      template: EventTemplate,
+    },
+  ];
 
   delete config.blocks.blocksConfig.text;
   config.blocks.blocksConfig.__grid.gridAllowedBlocks = [

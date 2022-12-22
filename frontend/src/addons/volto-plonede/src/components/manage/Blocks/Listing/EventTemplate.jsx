@@ -19,7 +19,6 @@ const EventTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
   } else if (href) {
     link = <a href={href}>{linkTitle || href}</a>;
   }
-  console.log(items);
   return (
     <>
       <div className="items">

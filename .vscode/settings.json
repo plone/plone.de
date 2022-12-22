@@ -1,0 +1,25 @@
+{
+  "eslint.workingDirectories": ["./frontend"],
+  "workbench.colorCustomizations": {
+    // "activityBar.activeBackground": "#c0ea5f",
+    // "activityBar.activeBorder": "#1a91c5",
+    // "activityBar.background": "#c0ea5f",
+    // "activityBar.foreground": "#15202b",
+    // "activityBar.inactiveForeground": "#15202b99",
+    // "activityBarBadge.background": "#1a91c5",
+    // "activityBarBadge.foreground": "#e7e7e7",
+    // "sash.hoverBorder": "#c0ea5f",
+    "statusBar.background": "#5a3693",
+    //"statusBar.foreground": "#15202b"
+    //"statusBarItem.hoverBackground": "#b0bef0",
+    "statusBarItem.hoverBackground": "#9b96cb",
+    "statusBarItem.remoteBackground": "#2c2776"
+    //"statusBarItem.remoteForeground": "#15202b"
+    //"titleBar.activeBackground": "#aee432",
+    //"titleBar.activeForeground": "#15202b",
+    //"titleBar.inactiveBackground": "#aee43299",
+    //"titleBar.inactiveForeground": "#15202b99",
+    //"commandCenter.border": "#15202b99"
+  },
+  "peacock.color": "#aee432"
+}

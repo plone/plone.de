@@ -197,6 +197,12 @@
 }
 
 //Button
+.ui.button {
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
 .block.__button {
   &.transparent button {
     background-color: transparent;
@@ -243,8 +249,13 @@
         color: #fafafa !important;
       }
       .ui.button {
-        background-color: #fafafa;
-        color: #181818;
+        background-color: transparent;
+        color: #fafafa;
+        border: 1px solid #fafafa;
+        transition: 0.2s;
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
   }

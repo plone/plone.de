@@ -10,7 +10,6 @@ const messages = defineMessages({
     defaultMessage: 'Open in new tab',
   },
 });
-
 export const ButtonBlockSchemaEnhancer = ({ formData, schema, intl }) => {
   const colors = [
     { name: 'transparent', label: 'Transparent' },

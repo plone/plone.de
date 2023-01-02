@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ConditionalLink, Component } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
 import { format, parseISO } from 'date-fns';
 import { de } from 'date-fns/locale';
 
@@ -13,7 +12,6 @@ const EventTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
   let href = linkHref?.[0]?.['@id'] || '';
 
   var deLocale = de;
-  console.log(deLocale);
 
   if (isInternalURL(href)) {
     link = (

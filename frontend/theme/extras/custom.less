@@ -80,8 +80,8 @@
 .ui.secondary.vertical.segment.breadcrumbs {
   padding: 0px;
   border-top: 1px solid #737373;
-  border-bottom: 1px solid #737373;
-  background-color: #edf1f2;
+  border-bottom: 0 solid transparent;
+  background-color: #fafafa;
 
   .section {
     width: auto;
@@ -155,11 +155,14 @@
   justify-content: center;
 }
 
-.grid-teaser-item.default .grid-image-wrapper img {
-  width: 60px;
-  height: 60px;
+.grid-teaser-item.default .grid-image-wrapper {
+  img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: auto;
+  }
 }
-
 //Hero
 .block.hero {
   &.alignLeft {
@@ -219,7 +222,11 @@
 }
 
 .color-picker-widget .button.active {
-  border: 2px solid #007eb6;
+  border: 2px solid #181818;
+  &::after {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .button.grey {

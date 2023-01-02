@@ -15,5 +15,12 @@ export const SliderBlockSchemaEnhancer = ({ schema, intl }) => {
   schema.properties.slides.schema.properties.buttonText = {
     title: intl.formatMessage(messages.buttonText),
   };
+  schema.properties.align = {
+    title: 'Align',
+    widget: 'align',
+    actions: ['center', 'full'],
+    default: 'center',
+  };
+  schema.fieldsets[0].fields = [...schema.fieldsets[0].fields, ...['align']];
   return schema;
 };

@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 import { ConditionalLink, Component } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
+import { format, parseISO } from 'date-fns';
+import { de } from 'date-fns/locale';
 
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
 
 const EventTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
   let link = null;
   let href = linkHref?.[0]?.['@id'] || '';
+
+  var deLocale = de;
+  console.log(deLocale);
 
   if (isInternalURL(href)) {
     link = (
@@ -28,7 +33,27 @@ const EventTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
               <Component componentName="PreviewImage" item={item} alt="" />
               <div className="listing-body">
                 <div className="event-when-where">
-                  <When start={item.start} end={item.end} />
+                  <div className="dates">
+                    {item?.start ? (
+                      <span className="day">
+                        {format(parseISO(item?.start), 'd. MMMM yyyy', {
+                          locale: deLocale,
+                        })}
+                      </span>
+                    ) : (
+                      <span className="day">No date</span>
+                    )}{' '}
+                    &mdash;&nbsp;
+                    {item?.end ? (
+                      <span className="day">
+                        {format(parseISO(item?.end), 'd. MMMM yyyy', {
+                          locale: deLocale,
+                        })}
+                      </span>
+                    ) : (
+                      <span className="day">No date</span>
+                    )}
+                  </div>
                   <p>, {item.location}</p>
                 </div>
                 <h3>{item.title ? item.title : item.id}</h3>

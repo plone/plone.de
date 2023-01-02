@@ -3,7 +3,7 @@ import { useIntl, defineMessages } from 'react-intl';
 import { getTeaserImageURL } from '@kitconcept/volto-slider-block/helpers';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon, MaybeWrap, UniversalLink } from '@plone/volto/components';
-import { Input, Button, Message } from 'semantic-ui-react';
+import { Input, Button, Message, Container } from 'semantic-ui-react';
 import cx from 'classnames';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
@@ -106,18 +106,20 @@ const SliderBody = ({
                 />
               </div>
             )}
-            <div className="teaser-item-title fix-width-issue">
-              <div className="title">
-                {data?.head_title && (
-                  <span className="supertitle">{data?.head_title}</span>
-                )}
-                <h2>{data?.nav_title || data?.title}</h2>
+            <Container>
+              <div className="teaser-item-title fix-width-issue">
+                <div className="title">
+                  {data?.head_title && (
+                    <span className="supertitle">{data?.head_title}</span>
+                  )}
+                  <h2>{data?.nav_title || data?.title}</h2>
+                </div>
+                <p>{data?.description}</p>
+                <Button tabIndex={-1}>
+                  {data.buttonText || intl.formatMessage(messages.ButtonText)}
+                </Button>
               </div>
-              <p>{data?.description}</p>
-              <Button tabIndex={-1}>
-                {data.buttonText || intl.formatMessage(messages.ButtonText)}
-              </Button>
-            </div>
+            </Container>
           </MaybeWrap>
         </div>
       )}

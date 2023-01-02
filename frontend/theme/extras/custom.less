@@ -15,10 +15,11 @@
 }
 
 .ui.basic.segment.header-wrapper {
+  width: 100%;
   height: 80px;
   padding: 0px;
   background-color: #007eb6;
-  position: sticky !important;
+  position: fixed !important;
   z-index: 2;
   top: 0;
 
@@ -73,11 +74,14 @@
 
 //Breadcrumbs
 .siteroot .ui.secondary.vertical.segment.breadcrumbs {
-  display: none;
-  visibility: hidden;
+  .icon {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .ui.secondary.vertical.segment.breadcrumbs {
+  margin-top: 80px;
   padding: 0px;
   border-top: 1px solid #737373;
   border-bottom: 0 solid transparent;
@@ -237,6 +241,17 @@
 }
 
 //Slider
+.block.slider.full-width {
+  .grid-teaser-item.top {
+    display: block;
+  }
+  img {
+    width: 100%;
+    height: 700px;
+    object-position: center;
+  }
+}
+
 .grid-teaser-item.top {
   position: relative;
   .teaser-item.top {
@@ -555,4 +570,61 @@
   .ui.inverted.list .item a:not(.ui):hover {
     color: #007eb1 !important;
   }
+}
+
+//Full width blocks
+.full-width {
+  position: relative;
+  right: 50%;
+  left: 50%;
+  width: 100vw !important;
+  max-width: initial !important;
+  margin-right: -50vw !important;
+  margin-left: -50vw !important;
+}
+
+body .ui.wrapper > .block.align.full,
+body.has-toolbar.has-sidebar .ui.wrapper > .ui.inner .block.align.full,
+body.has-toolbar-collapsed.has-sidebar
+  .ui.wrapper
+  > .ui.inner
+  .block.align.full,
+body.has-toolbar-collapsed.has-sidebar-collapsed
+  .ui.wrapper
+  > .ui.inner
+  .block.align.full,
+body.has-toolbar.has-sidebar-collapsed
+  .ui.wrapper
+  > .ui.inner
+  .block.align.full {
+  width: 100% !important;
+
+  iframe {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+body.has-toolbar.has-sidebar .ui.wrapper > .ui.inner.block.full,
+body.has-toolbar-collapsed.has-sidebar .ui.wrapper > .ui.inner.block.full,
+body.has-toolbar-collapsed.has-sidebar-collapsed
+  .ui.wrapper
+  > .ui.inner.block.full,
+body.has-toolbar.has-sidebar-collapsed .ui.wrapper > .ui.inner.block.full {
+  width: 100% !important;
+
+  iframe {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.block.align:not(.right):not(.left) {
+  clear: both;
 }

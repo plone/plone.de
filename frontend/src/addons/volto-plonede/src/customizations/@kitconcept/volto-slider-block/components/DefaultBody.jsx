@@ -115,7 +115,7 @@ const SliderBody = ({
                   <h2>{data?.nav_title || data?.title}</h2>
                 </div>
                 <p>{data?.description}</p>
-                <Button tabIndex={-1}>
+                <Button className={cx('button')}>
                   {data.buttonText || intl.formatMessage(messages.ButtonText)}
                 </Button>
               </div>

@@ -47,8 +47,8 @@
     "@eeacms/volto-matomo",
     "@kitconcept/volto-separator-block",
     "@kitconcept/volto-button-block",
-    "volto-plonede",
-    "@kitconcept/volto-heading-block"
+    "@kitconcept/volto-heading-block",
+    "volto-plonede"
   ],
   "jest": {
     "modulePathIgnorePatterns": [

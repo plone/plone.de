@@ -9,5 +9,13 @@
     "https": "https://github.com/kitconcept/volto-slider-block.git",
     "path": "src",
     "branch": "master"
+  },
+  "volto-heading-block": {
+    "develop": true,
+    "package": "@kitconcept/volto-heading-block",
+    "url": "git@github.com:kitconcept/volto-heading-block.git",
+    "https": "https://github.com/kitconcept/volto-heading-block.git",
+    "path": "src",
+    "branch": "master"
   }
 }

@@ -3,9 +3,6 @@
         "paths": {
             "@kitconcept/volto-slider-block": [
                 "addons/volto-slider-block/src"
-            ],
-            "volto-plonede": [
-                "addons/volto-plonede/src"
             ]
         },
         "baseUrl": "src"

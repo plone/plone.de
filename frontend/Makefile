@@ -28,6 +28,10 @@ install: ## Install the frontend
 	@echo "Install frontend"
 	yarn install
 
+.PHONY: develop
+develop: ## Runs missdev in the local project (mrs.developer.json should be present)
+	npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
+
 .PHONY: build
 build: install ## Build the frontend
 	@echo "Build Frontend"

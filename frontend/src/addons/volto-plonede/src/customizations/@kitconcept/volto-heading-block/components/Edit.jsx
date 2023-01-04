@@ -41,9 +41,9 @@ class HeadingEdit extends React.Component {
       <div
         className={cx('block heading', {
           selected: selected,
-          alignLeft: data.align === 'left',
-          alignCenter: data.align === 'center',
-          alignRight: data.align === 'right',
+          'align-left': data.align === 'left',
+          'align-center': data.align === 'center',
+          'align-right': data.align === 'right',
         })}
       >
         <div className="heading-wrapper">

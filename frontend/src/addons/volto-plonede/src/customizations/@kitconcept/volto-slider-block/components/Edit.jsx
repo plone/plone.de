@@ -15,7 +15,7 @@ const SliderEdit = (props) => {
       className={cx('block slider', {
         selected: props.selected,
         alignCenter: props.data.align === 'center',
-        alignFull: props.data.align === 'full',
+        'full-width': props.data.align === 'full',
       })}
     >
       <View

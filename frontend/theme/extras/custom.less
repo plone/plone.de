@@ -16,30 +16,21 @@
 
 .ui.basic.segment.header-wrapper {
   width: 100%;
-  height: 80px;
+  height: 68px;
   padding: 0px;
+  border-bottom: 1px solid #cdcdcd;
   background-color: #007eb6;
   position: fixed !important;
   z-index: 1;
   top: 0;
 
   #navigation .item.active {
-    padding: 7px;
-    border: 0px solid transparent;
-    margin-bottom: 6px;
-    margin-right: 25px;
-    background-color: #1a0b31;
-    border-radius: 4px;
+    padding-bottom: 21px;
+    border-color: #fafafa;
     color: #fafafa;
   }
 
   #navigation .item {
-    padding: 7px;
-    border: 0px solid transparent;
-    margin-bottom: 6px;
-    margin-right: 25px;
-    background-color: transparent;
-    border-radius: 4px;
     color: #fafafa;
   }
 
@@ -61,8 +52,8 @@
 }
 
 .logo {
-  width: 195px;
-  height: 50px;
+  width: 155px;
+  height: 40px;
   margin: 15px;
   margin-left: 0px;
   margin-right: 0px;
@@ -79,9 +70,9 @@
 }
 
 .ui.secondary.vertical.segment.breadcrumbs {
-  margin-top: 80px;
+  margin-top: 68px;
   padding: 0px;
-  border-top: 1px solid #737373;
+  border-top: 0x solid transparent;
   border-bottom: 0 solid transparent;
   background-color: #fafafa;
 
@@ -108,7 +99,7 @@
 
 //Content
 .ui.basic.segment.content-area {
-  padding-top: 80px;
+  padding-top: 68px;
   margin: 0px;
   background-color: #fafafa !important;
 
@@ -175,9 +166,10 @@
 
 .grid-teaser-item.default .grid-image-wrapper {
   img {
-    width: 60px;
+    width: 100%;
     height: 60px;
     object-fit: contain;
+    object-position: center;
     margin: auto;
   }
 }
@@ -288,14 +280,12 @@
         padding-left: 0;
         background-color: transparent;
         p {
-          cursor: text;
           color: #181818 !important;
           ::selection {
             background: #b4d5ff;
           }
         }
         h2 {
-          cursor: text;
           color: #181818 !important;
           ::selection {
             background-color: #b4d5ff;
@@ -327,13 +317,20 @@
 
 //Listing
 .listing-body {
-  h3 {
+  h3:last-child {
     margin-top: 0;
+    &:hover {
+      text-decoration: underline;
+    }
   }
-}
-.event-when-where {
-  display: flex;
-  flex-direction: row;
+  a {
+    height: 34px;
+    max-width: fit-content;
+  }
+  .event-when-where {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 //Footer

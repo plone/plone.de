@@ -27,37 +27,37 @@ const EventTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
       <div className="items">
         {items.map((item) => (
           <div className="listing-item" key={item['@id']}>
-            <ConditionalLink item={item} condition={!isEditMode}>
-              <Component componentName="PreviewImage" item={item} alt="" />
-              <div className="listing-body">
-                <div className="event-when-where">
-                  <div className="dates">
-                    {item?.start ? (
-                      <span className="day">
-                        {format(parseISO(item?.start), 'd. MMMM yyyy', {
-                          locale: deLocale,
-                        })}
-                      </span>
-                    ) : (
-                      <span className="day">No date</span>
-                    )}{' '}
-                    &mdash;&nbsp;
-                    {item?.end ? (
-                      <span className="day">
-                        {format(parseISO(item?.end), 'd. MMMM yyyy', {
-                          locale: deLocale,
-                        })}
-                      </span>
-                    ) : (
-                      <span className="day">No date</span>
-                    )}
-                  </div>
-                  <p>, {item.location}</p>
+            <Component componentName="PreviewImage" item={item} alt="" />
+            <div className="listing-body">
+              <div className="event-when-where">
+                <div className="dates">
+                  {item?.start ? (
+                    <span className="day">
+                      {format(parseISO(item?.start), 'd. MMMM yyyy', {
+                        locale: deLocale,
+                      })}
+                    </span>
+                  ) : (
+                    <span className="day">No date</span>
+                  )}{' '}
+                  &mdash;&nbsp;
+                  {item?.end ? (
+                    <span className="day">
+                      {format(parseISO(item?.end), 'd. MMMM yyyy', {
+                        locale: deLocale,
+                      })}
+                    </span>
+                  ) : (
+                    <span className="day">No date</span>
+                  )}
                 </div>
-                <h3>{item.title ? item.title : item.id}</h3>
-                <p>{item.description}</p>
+                <p>, {item.location}</p>
               </div>
-            </ConditionalLink>
+              <ConditionalLink item={item} condition={!isEditMode}>
+                <h3>{item.title ? item.title : item.id}</h3>
+              </ConditionalLink>
+              <p>{item.description}</p>
+            </div>
           </div>
         ))}
       </div>

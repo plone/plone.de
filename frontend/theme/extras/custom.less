@@ -74,10 +74,8 @@
 
 //Breadcrumbs
 .siteroot .ui.secondary.vertical.segment.breadcrumbs {
-  .icon {
-    display: none;
-    visibility: hidden;
-  }
+  display: none;
+  visibility: hidden;
 }
 
 .ui.secondary.vertical.segment.breadcrumbs {
@@ -110,6 +108,7 @@
 
 //Content
 .ui.basic.segment.content-area {
+  padding-top: 80px;
   margin: 0px;
   background-color: #fafafa !important;
 
@@ -133,8 +132,6 @@
 }
 
 #view .ui.container {
-  padding: 5px;
-
   p {
     color: #181818;
   }
@@ -269,48 +266,60 @@
 //Slider
 .block.slider {
   height: 726px;
-}
-
-.block.slider.full-width {
-  height: 726px;
-  .grid-teaser-item.top {
-    display: block;
-  }
-  img {
-    width: 100%;
+  &.full-width {
     height: 726px;
-    object-position: center;
+    .grid-teaser-item.top {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: 726px;
+      object-position: center;
+    }
   }
-}
-
-.grid-teaser-item.top {
-  position: relative;
-  .teaser-item.top {
-    .teaser-item-title.fix-width-issue {
-      width: 350px;
-      position: absolute;
-      top: 140px;
-      padding: 20px;
-      padding-left: 0;
-      background-color: transparent;
-      p {
-        cursor: text;
-        color: #181818 !important;
-        ::selection {
-          background: #b4d5ff;
-        }
-      }
-      h2 {
-        cursor: text;
-        color: #181818 !important;
-        ::selection {
-          background-color: #b4d5ff;
-        }
-      }
-      .ui.button {
+  .grid-teaser-item.top {
+    position: relative;
+    .teaser-item.top {
+      .teaser-item-title.fix-width-issue {
+        width: 350px;
+        position: absolute;
+        top: 140px;
+        padding: 20px;
+        padding-left: 0;
         background-color: transparent;
-        color: #181818;
-        border: 1px solid #181818;
+        p {
+          cursor: text;
+          color: #181818 !important;
+          ::selection {
+            background: #b4d5ff;
+          }
+        }
+        h2 {
+          cursor: text;
+          color: #181818 !important;
+          ::selection {
+            background-color: #b4d5ff;
+          }
+        }
+        .ui.button {
+          background-color: transparent;
+          color: #181818;
+          border: 1px solid #181818;
+        }
+      }
+    }
+  }
+  .slick-dots {
+    bottom: 40px;
+    li {
+      button::before {
+        opacity: 1;
+        color: #fafafa;
+      }
+      &.slick-active {
+        button::before {
+          color: #007eb6;
+        }
       }
     }
   }

@@ -92,9 +92,7 @@ const SliderBody = ({
         <div className="teaser-item top">
           <MaybeWrap
             condition={!isEditMode}
-            as={UniversalLink}
-            href={href['@id']}
-            target={data.openLinkInNewTab ? '_blank' : null}
+            //as={UniversalLink}
             tabIndex={-1}
           >
             {(href?.hasPreviewImage || image) && (
@@ -115,9 +113,13 @@ const SliderBody = ({
                   <h2>{data?.nav_title || data?.title}</h2>
                 </div>
                 <p>{data?.description}</p>
-                <Button className={cx('button')}>
+                <UniversalLink
+                  className="ui button"
+                  href={href['@id']}
+                  target={data.openLinkInNewTab ? '_blank' : null}
+                >
                   {data.buttonText || intl.formatMessage(messages.ButtonText)}
-                </Button>
+                </UniversalLink>
               </div>
             </Container>
           </MaybeWrap>

@@ -17,5 +17,13 @@
     "https": "https://github.com/kitconcept/volto-heading-block.git",
     "path": "src",
     "branch": "master"
+  },
+  "volto-blocks-grid": {
+    "develop": true,
+    "package": "@kitconcept/volto-blocks-grid",
+    "url": "git@github.com:kitconcept/volto-blocks-grid.git",
+    "https": "https://github.com/kitconcept/volto-blocks-grid.git",
+    "path": "src",
+    "branch": "master"
   }
 }

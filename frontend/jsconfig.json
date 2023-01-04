@@ -9,6 +9,9 @@
             ],
             "volto-plonede": [
                 "addons/volto-plonede/src"
+            ],
+            "@kitconcept/volto-blocks-grid": [
+                "addons/volto-blocks-grid/src"
             ]
         },
         "baseUrl": "src"

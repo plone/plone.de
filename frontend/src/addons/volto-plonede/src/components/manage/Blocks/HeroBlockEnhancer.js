@@ -5,6 +5,10 @@ const messages = defineMessages({
     id: 'Backgroundcolor',
     defaultMessage: 'Backgroundcolor',
   },
+  buttonText: {
+    id: 'Button text',
+    defaultMessage: 'Button text',
+  },
 });
 
 export const HeroBlockSchemaEnhancer = ({ formData, schema, intl }) => {
@@ -24,6 +28,12 @@ export const HeroBlockSchemaEnhancer = ({ formData, schema, intl }) => {
     title: intl.formatMessage(messages.backgroundColor),
     colors,
     default: 'grey',
+  };
+
+  schema.fieldsets[0].fields = [...schema.fieldsets[0].fields, 'buttonText'];
+
+  schema.properties.buttonText = {
+    title: intl.formatMessage(messages.buttonText),
   };
   schema.fieldsets[0].fields = [
     ...schema.fieldsets[0].fields,

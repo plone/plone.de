@@ -11,12 +11,13 @@ import { readAsDataURL } from 'promise-file-reader';
 import { Button, Dimmer, Loader, Message } from 'semantic-ui-react';
 import { isEqual } from 'lodash';
 import { defineMessages, injectIntl } from 'react-intl';
+import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL, getBaseUrl } from '@plone/volto/helpers';
 import { createContent } from '@plone/volto/actions';
-import { Icon, SidebarPortal, LinkMore } from '@plone/volto/components';
+import { Icon, SidebarPortal } from '@plone/volto/components';
 
 import clearSVG from '@plone/volto/icons/clear.svg';
 
@@ -305,6 +306,7 @@ class EditComponent extends Component {
     if (__SERVER__) {
       return <div />;
     }
+    const href = this.props.data.linkHref?.[0];
     const { Editor } = this.props.draftJs;
     const placeholder =
       this.props.data.placeholder ||
@@ -457,7 +459,16 @@ class EditComponent extends Component {
                 }}
               />
             </div>
-            <LinkMore data={this.props.data} isEditMode={true} />
+            {href && this.props.data.buttonText && (
+              <UniversalLink
+                className="ui button"
+                href={href['@id']}
+                target={this.props.data.openLinkInNewTab ? '_blank' : null}
+              >
+                {this.props.data.buttonText ||
+                  this.props.intl.formatMessage(messages.ButtonText)}
+              </UniversalLink>
+            )}
           </div>
         </div>
         <SidebarPortal selected={this.props.selected}>

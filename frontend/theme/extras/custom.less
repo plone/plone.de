@@ -18,7 +18,7 @@
   width: 100%;
   height: 68px;
   padding: 0px;
-  border-bottom: 1px solid #cdcdcd;
+  border-bottom: 0px solid #cdcdcd;
   background-color: #007eb6;
   position: fixed !important;
   z-index: 1;
@@ -32,6 +32,7 @@
 
   #navigation .item {
     color: #fafafa;
+    padding: auto;
   }
 
   .ui.form .searchbox.field button {
@@ -54,9 +55,8 @@
 .logo {
   width: 155px;
   height: 40px;
-  margin: 15px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .ui.transparent.input {
@@ -64,9 +64,14 @@
 }
 
 //Breadcrumbs
-.siteroot .ui.secondary.vertical.segment.breadcrumbs {
-  display: none;
-  visibility: hidden;
+.siteroot {
+  .ui.basic.segment.content-area {
+    padding-top: 68px;
+  }
+  .ui.secondary.vertical.segment.breadcrumbs {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .ui.secondary.vertical.segment.breadcrumbs {
@@ -99,7 +104,6 @@
 
 //Content
 .ui.basic.segment.content-area {
-  padding-top: 68px;
   margin: 0px;
   background-color: #fafafa !important;
 
@@ -179,6 +183,14 @@
 
   h1 {
     color: #181818;
+  }
+
+  .ui.button {
+    max-width: fit-content;
+    border: 1px solid #181818;
+    a {
+      color: #181818;
+    }
   }
 }
 
@@ -626,6 +638,23 @@
   max-width: initial !important;
   margin-right: -50vw !important;
   margin-left: -50vw !important;
+}
+
+@media screen and (max-width: 2560px) {
+  .block.slider {
+    height: 826px;
+    &.full-width {
+      height: 826px;
+      .grid-teaser-item.top {
+        display: block;
+      }
+      img {
+        width: 100%;
+        height: 826px;
+        object-position: center;
+      }
+    }
+  }
 }
 
 body .ui.wrapper > .block.align.full,

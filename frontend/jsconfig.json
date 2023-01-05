@@ -7,11 +7,11 @@
             "@kitconcept/volto-heading-block": [
                 "addons/volto-heading-block/src"
             ],
-            "volto-plonede": [
-                "addons/volto-plonede/src"
-            ],
             "@kitconcept/volto-blocks-grid": [
                 "addons/volto-blocks-grid/src"
+            ],
+            "volto-plonede": [
+                "addons/volto-plonede/src"
             ]
         },
         "baseUrl": "src"

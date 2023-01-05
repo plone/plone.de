@@ -115,10 +115,8 @@
     color: #181818;
   }
 
-  .ui.container {
-    a {
-      color: #007eb6;
-    }
+  a {
+    color: #007eb6;
   }
 }
 
@@ -185,11 +183,12 @@
     color: #181818;
   }
 
-  .ui.button {
+  a.ui.button {
     max-width: fit-content;
     border: 1px solid #181818;
-    a {
-      color: #181818;
+    color: #181818;
+    &:hover {
+      background-color: transparent;
     }
   }
 }
@@ -642,15 +641,15 @@
 
 @media screen and (max-width: 2560px) {
   .block.slider {
-    height: 826px;
+    height: 886px;
     &.full-width {
-      height: 826px;
+      height: 886px;
       .grid-teaser-item.top {
         display: block;
       }
       img {
         width: 100%;
-        height: 826px;
+        height: 886px;
         object-position: center;
       }
     }

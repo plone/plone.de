@@ -1,7 +1,7 @@
 from kitconcept import api
+from kitconcept.contentcreator.creator import content_creator_from_folder
+from pathlib import Path
 from plonede import logger
-from plonede.setuphandlers import content
-from plonede.setuphandlers import users
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
 
@@ -18,17 +18,28 @@ class HiddenProfiles(object):
 def populate_portal(context):
     """Post install script"""
     portal = api.portal.get()
-    # Delete content
-    content.delete_content(portal)
-    logger.info("Deleted default portal content")
-    user = users.create_default_user()
-    creators = [user.id]
-    logger.info("Created default user")
-    # Create other users
-    users.create_team_accounts()
-    logger.info("Created team accounts")
+    post_install(portal)
     # Create Initial content
-    content.populate_portal(portal, creators)
+    import_content(portal)
     logger.info("Created initial content")
-    # Update cover content
-    content.update_home(portal, creators)
+
+
+def post_install(context):
+    """Post install script"""
+    portal = api.portal.get()
+    logger.info(portal.title)
+
+
+def package_root_folder() -> Path:
+    """Get the dlr.internet fs path."""
+    current_folder = Path(__file__).parent.resolve()
+    return current_folder.parent
+
+
+def import_content(context):
+    """Creates dlr content"""
+    cc_folder = package_root_folder() / "content_creator"
+    content_creator_from_folder(
+        folder_name=cc_folder,
+        base_image_path=cc_folder / "images",
+    )

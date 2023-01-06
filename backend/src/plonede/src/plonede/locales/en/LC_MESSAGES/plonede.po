@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-25 17:12+0000\n"
+"POT-Creation-Date: 2023-01-06 16:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,3 +13,39 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#: plonede/vocabularies/__init__.py:11
+msgid "Education"
+msgstr ""
+
+#: plonede/vocabularies/__init__.py:9
+msgid "Government"
+msgstr ""
+
+#: plonede/profiles.zcml:22
+msgid "Initial content for our website."
+msgstr ""
+
+#: plonede/vocabularies/__init__.py:10
+msgid "NGO"
+msgstr ""
+
+#: plonede/profiles.zcml:22
+msgid "Plonede: Initial content"
+msgstr ""
+
+#: plonede/profiles.zcml:13
+msgid "Plonede: Install"
+msgstr ""
+
+#: plonede/profiles.zcml:30
+msgid "Plonede: Uninstall"
+msgstr ""
+
+#: plonede/profiles.zcml:13
+msgid "Policy package to install our site"
+msgstr ""
+
+#: plonede/profiles.zcml:30
+msgid "Uninstall Plonede setup."
+msgstr ""

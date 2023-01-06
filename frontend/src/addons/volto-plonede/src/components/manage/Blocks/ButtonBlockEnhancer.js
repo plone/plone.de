@@ -10,17 +10,16 @@ const messages = defineMessages({
     defaultMessage: 'Open in new tab',
   },
 });
-export const ButtonBlockSchemaEnhancer = ({ formData, schema, intl }) => {
+export const ButtonBlockSchemaEnhancer = ({ schema, intl }) => {
   const colors = [
-    { name: 'transparent', label: 'Transparent' },
-    { name: 'grey', label: 'Grey' },
-    { name: 'plone-blue', label: 'Plone-blue' },
+    { name: 'white', label: 'White' },
+    { name: 'blue', label: 'Blue' },
   ];
   schema.properties.backgroundColor = {
     widget: 'color_picker',
     title: intl.formatMessage(messages.backgroundColor),
     colors,
-    default: 'grey',
+    default: 'blue',
   };
   schema.fieldsets[0].fields = [
     ...schema.fieldsets[0].fields,

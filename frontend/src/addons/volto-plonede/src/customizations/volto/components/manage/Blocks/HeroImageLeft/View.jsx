@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { useIntl, defineMessages } from 'react-intl';
+import { Button } from 'semantic-ui-react';
 import cx from 'classnames';
 
 /**
@@ -61,11 +62,12 @@ const View = ({ data }) => {
           </div>
           {href && data.buttonText && (
             <UniversalLink
-              className="ui button"
               href={href['@id']}
               target={data.openLinkInNewTab ? '_blank' : null}
             >
-              {data.buttonText || intl.formatMessage(messages.ButtonText)}
+              <Button className={(cx('button'), data.buttonColor)}>
+                {data.buttonText || intl.formatMessage(messages.ButtonText)}
+              </Button>
             </UniversalLink>
           )}
         </div>

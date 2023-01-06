@@ -35,7 +35,7 @@ const View = ({ data, isEditMode, className }) => {
         to={data.href.length > 0 ? flattenToAppURL(data.href[0]['@id']) : ''}
         condition={!isEditMode}
       >
-        <Button className={(cx('button'), data.align)}>
+        <Button className={(cx('button'), data.align, data.backgroundColor)}>
           {data.title || intl.formatMessage(messages.ButtonText)}
         </Button>
       </ConditionalLink>
@@ -46,27 +46,20 @@ const View = ({ data, isEditMode, className }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <Button className={(cx('button'), data.align)}>
+          <Button className={(cx('button'), data.align, data.backgroundColor)}>
             {data.title || intl.formatMessage(messages.ButtonText)}
           </Button>
         </a>
       )
     )
   ) : (
-    <Button className="noLink">
+    <Button className={(cx('noLink'), data.align, data.backgroundColor)}>
       {data.title || intl.formatMessage(messages.ButtonText)}
     </Button>
   );
 
   return (
-    <div
-      className={cx(
-        'block __button',
-        className,
-        data.backgroundColor,
-        data.newTab,
-      )}
-    >
+    <div className={cx('block __button', className, data.newTab)}>
       <div className="button container">
         <div className={cx(`align ${data?.inneralign}`)}>{link}</div>
       </div>

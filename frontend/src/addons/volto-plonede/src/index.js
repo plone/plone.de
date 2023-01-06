@@ -9,7 +9,19 @@ import { defineMessages } from 'react-intl';
 
 defineMessages({ Imprint: { id: 'Imprint', defaultMessage: 'Imprint' } });
 
+const serverConfig =
+  typeof __SERVER__ !== 'undefined' && __SERVER__
+    ? require('./server').default
+    : false;
+
 const applyConfig = (config) => {
+  if (serverConfig) {
+    config.settings.expressMiddleware = [
+      ...config.settings.expressMiddleware,
+      ...serverConfig,
+    ];
+  }
+
   config.settings = {
     ...config.settings,
     supportedLanguages: ['de', 'en'],

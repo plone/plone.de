@@ -48,6 +48,7 @@ setup(
         "Plone",
         "prettyconf",
         "kitconcept.api",
+        "kitconcept.contentcreator",
     ],
     extras_require={
         "test": [

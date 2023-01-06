@@ -158,6 +158,7 @@
     "@kitconcept/volto-slider-block": "*",
     "@plone/volto": "16.0.0-alpha.35",
     "node-jq": "2.3.4",
+    "date-fns": "*",
     "volto-slate": "*"
   },
   "devDependencies": {

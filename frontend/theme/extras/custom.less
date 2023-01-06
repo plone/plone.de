@@ -2,6 +2,7 @@
 .ui.olive.buttons .button,
 .ui.olive.button {
   background-color: #007eb6;
+
   &:hover {
     background-color: #007eb6;
   }
@@ -15,14 +16,14 @@
 }
 
 .ui.basic.segment.header-wrapper {
+  position: fixed !important;
+  z-index: 1;
+  top: 0;
   width: 100%;
   height: 68px;
   padding: 0px;
   border-bottom: 0px solid #cdcdcd;
   background-color: #007eb6;
-  position: fixed !important;
-  z-index: 1;
-  top: 0;
 
   #navigation .item.active {
     padding-bottom: 21px;
@@ -31,8 +32,8 @@
   }
 
   #navigation .item {
-    color: #fafafa;
     padding: auto;
+    color: #fafafa;
   }
 
   .ui.form .searchbox.field button {
@@ -68,6 +69,7 @@
   .ui.basic.segment.content-area {
     padding-top: 68px;
   }
+
   .ui.secondary.vertical.segment.breadcrumbs {
     display: none;
     visibility: hidden;
@@ -75,10 +77,10 @@
 }
 
 .ui.secondary.vertical.segment.breadcrumbs {
-  margin-top: 68px;
   padding: 0px;
   border-top: 0x solid transparent;
   border-bottom: 0 solid transparent;
+  margin-top: 68px;
   background-color: #fafafa;
 
   .section {
@@ -170,14 +172,15 @@
   img {
     width: 100%;
     height: 60px;
+    margin: auto;
     object-fit: contain;
     object-position: center;
-    margin: auto;
   }
 }
 //Hero
 .block.hero {
   z-index: 0;
+
   &.alignLeft {
     .block-inner-wrapper {
       flex-direction: row;
@@ -210,6 +213,7 @@
       color: #fafafa !important;
     }
   }
+
   .hero-body {
     display: block;
     background-color: #e0e1e2;
@@ -227,23 +231,27 @@
 //Button
 .block button.ui.button {
   transition: all 0.2s ease-out;
+
   &.blue {
-    background: linear-gradient(to right, #fafafa 50%, #007eb6 50%);
-    background-size: calc(200% + 1px) 100%;
-    background-position: right;
-    color: #fafafa;
     border: 1px solid #007eb6;
+    background: linear-gradient(to right, #fafafa 50%, #007eb6 50%);
+    background-position: right;
+    background-size: calc(200% + 1px) 100%;
+    color: #fafafa;
+
     &:hover {
       background-position: left;
       color: #007eb6;
     }
   }
+
   &.white {
-    background: linear-gradient(to right, #007eb6 50%, #fafafa 50%);
-    background-size: calc(200% + 1px) 100%;
-    background-position: right;
-    color: #007eb6;
     border: 1px solid #fafafa;
+    background: linear-gradient(to right, #007eb6 50%, #fafafa 50%);
+    background-position: right;
+    background-size: calc(200% + 1px) 100%;
+    color: #007eb6;
+
     &:hover {
       background-position: left;
       color: #fafafa;
@@ -253,6 +261,7 @@
 
 .color-picker-widget .button.active {
   border: 2px solid #181818;
+
   &::after {
     display: none;
     visibility: hidden;
@@ -267,46 +276,57 @@
 //Slider
 .block.slider {
   height: 726px;
+
   &.full-width {
     height: 726px;
+
     .grid-teaser-item.top {
       display: block;
     }
+
     img {
       width: 100%;
       height: 726px;
       object-position: center;
     }
   }
+
   .grid-teaser-item.top {
     position: relative;
+
     .teaser-item.top {
       .teaser-item-title.fix-width-issue {
-        width: 350px;
         position: absolute;
         top: 140px;
+        width: 350px;
         padding: 20px;
         padding-left: 0;
         background-color: transparent;
+
         p {
           color: #181818 !important;
+
           ::selection {
             background: #b4d5ff;
           }
         }
+
         h2 {
           color: #181818 !important;
         }
       }
     }
   }
+
   .slick-dots {
     bottom: 40px;
+
     li {
       button::before {
-        opacity: 1;
         color: #fafafa;
+        opacity: 1;
       }
+
       &.slick-active {
         button::before {
           color: #007eb6;
@@ -320,14 +340,17 @@
 .listing-body {
   h3:last-child {
     margin-top: 0;
+
     &:hover {
       text-decoration: underline;
     }
   }
+
   a {
-    height: 34px;
     max-width: fit-content;
+    height: 34px;
   }
+
   .event-when-where {
     display: flex;
     flex-direction: row;
@@ -457,11 +480,14 @@
   //Slider
   .block.slider {
     height: 886px;
+
     &.full-width {
       height: 886px;
+
       .grid-teaser-item.top {
         display: block;
       }
+
       img {
         width: 100%;
         height: 886px;
@@ -475,11 +501,14 @@
   //Slider
   .block.slider {
     height: 726px;
+
     &.full-width {
       height: 726px;
+
       .grid-teaser-item.top {
         display: block;
       }
+
       img {
         width: 100%;
         height: 726px;
@@ -500,6 +529,7 @@
       opacity: 1;
     }
   }
+
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
@@ -510,6 +540,7 @@
   .ui.basic.segment.header-wrapper .header a {
     color: #181818;
   }
+
   .mobile-menu-nav .ui.pointing.secondary.stackable.menu {
     display: flex;
     flex-direction: column;
@@ -518,9 +549,11 @@
       align-self: center;
     }
   }
+
   .ui.basic.segment.header-wrapper #navigation .item {
     color: #181818;
   }
+
   .item.active {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
@@ -531,6 +564,7 @@
     display: none;
     visibility: hidden;
   }
+
   .ui.secondary.vertical.segment.breadcrumbs {
     height: auto;
   }
@@ -540,6 +574,7 @@
     display: none;
     visibility: hidden;
   }
+
   .ui.transparent.input {
     display: none;
     visibility: hidden;
@@ -553,12 +588,14 @@
   //Slider
   .grid-teaser-item.top {
     position: static;
+
     .teaser-item.top {
       .teaser-item-title.fix-width-issue {
         position: static;
         width: auto;
         padding: 20px;
         background-color: transparent;
+
         p {
           color: #181818 !important;
         }
@@ -590,6 +627,7 @@
       opacity: 1;
     }
   }
+
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
@@ -600,6 +638,7 @@
   .ui.basic.segment.header-wrapper .header a {
     color: #181818;
   }
+
   .item.active {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
@@ -627,6 +666,7 @@
     display: flex;
     flex-direction: column-reverse;
   }
+
   .block.hero .block-inner-wrapper {
     display: flex;
     flex-direction: column-reverse;
@@ -647,11 +687,13 @@
   //Slider
   .grid-teaser-item.top {
     position: static;
+
     .teaser-item.top {
       .teaser-item-title.fix-width-issue {
         position: static;
         padding: 20px;
         background-color: #113156;
+
         p {
           color: #fafafa !important;
         }

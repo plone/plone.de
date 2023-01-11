@@ -1,2 +1,8 @@
--r requirements/unreleased.txt
-src/plonede
+-c constraints.txt
+-e src/plonede[test]
+
+zope.testrunner
+
+# Add required add-ons
+# (Ideally add them in setup.py for plonede)
+# collective.easyform

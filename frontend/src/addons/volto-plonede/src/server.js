@@ -1,3 +1,4 @@
+/* eslint no-console: 0 */
 import express from 'express';
 import { run } from 'node-jq';
 import { fromPairs, isEmpty, map } from 'lodash';

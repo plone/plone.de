@@ -16,28 +16,6 @@ A new project using Plone 6.
 - yarn
 - Docker
 
-### Install
-
-```shell
-git clone git@github.com:plone/plonede.git
-cd plonede
-make install
-```
-
-### Start
-
-Start the Backend (http://localhost:8080/)
-
-```shell
-make start-backend
-```
-
-Start the Frontend (http://localhost:3000/)
-
-```shell
-make start-frontend
-```
-
 ## Structure
 
 This monorepo is composed by two distinct codebases: api and frontend.

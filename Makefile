@@ -44,6 +44,10 @@ install-backend:  ## Create virtualenv and install Plone
 	$(MAKE) -C "./backend/" build-dev
 	$(MAKE) create-site
 
+.PHONY: build-backend
+build-backend:  ## Build Backend
+	$(MAKE) -C "./backend/" build-dev
+
 .PHONY: create-site
 create-site: ## Create a Plone site with default content
 	$(MAKE) -C "./backend/" create-site
@@ -58,11 +62,14 @@ install:  ## Install
 	$(MAKE) install-backend
 	$(MAKE) install-frontend
 
+# TODO production build
+
 .PHONY: build
-build:  ## Build
+build:  ## Build in development mode
 	@echo "Build"
 	$(MAKE) build-backend
-	$(MAKE) build-frontend
+	$(MAKE) install-frontend
+
 
 .PHONY: start
 start:  ## Start
@@ -122,22 +129,22 @@ stop-stack:  ## Stop local stack
 .PHONY: build-acceptance-servers
 build-acceptance-servers: ## Build Acceptance Servers
 	@echo "Build acceptance backend"
-	@docker build backend -t plone/plonede-backend:acceptance -f backend/Dockerfile.acceptance
+	@docker build backend -t collective/jonasproject-backend:acceptance -f backend/Dockerfile.acceptance
 	@echo "Build acceptance frontend"
-	@docker build frontend -t plone/plonede-frontend:acceptance -f frontend/Dockerfile
+	@docker build frontend -t collective/jonasproject-frontend:acceptance -f frontend/Dockerfile
 
 .PHONY: start-acceptance-servers
 start-acceptance-servers: build-acceptance-servers ## Start Acceptance Servers
 	@echo "Start acceptance backend"
-	@docker run --rm -p 55001:55001 --name plonede-backend-acceptance -d plone/plonede-backend:acceptance
+	@docker run --rm -p 55001:55001 --name jonasproject-backend-acceptance -d collective/jonasproject-backend:acceptance
 	@echo "Start acceptance frontend"
-	@docker run --rm -p 3000:3000 --name plonede-frontend-acceptance --link plonede-backend-acceptance:backend -e RAZZLE_API_PATH=http://localhost:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d plone/plonede-frontend:acceptance
+	@docker run --rm -p 3000:3000 --name jonasproject-frontend-acceptance --link jonasproject-backend-acceptance:backend -e RAZZLE_API_PATH=http://localhost:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d collective/jonasproject-frontend:acceptance
 
 .PHONY: stop-acceptance-servers
 stop-acceptance-servers: ## Stop Acceptance Servers
 	@echo "Stop acceptance containers"
-	@docker stop plonede-frontend-acceptance
-	@docker stop plonede-backend-acceptance
+	@docker stop jonasproject-frontend-acceptance
+	@docker stop jonasproject-backend-acceptance
 
 .PHONY: run-acceptance-tests
 run-acceptance-tests: ## Run Acceptance tests

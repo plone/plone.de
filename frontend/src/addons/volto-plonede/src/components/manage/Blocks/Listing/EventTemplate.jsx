@@ -2,16 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ConditionalLink, Component } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { format, parseISO } from 'date-fns';
-import { de } from 'date-fns/locale';
-
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
+import FormattedDate from '@plone/volto/components/theme/FormattedDate/FormattedDate';
 
 const EventTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
   let link = null;
   let href = linkHref?.[0]?.['@id'] || '';
-
-  var deLocale = de;
 
   if (isInternalURL(href)) {
     link = (
@@ -32,21 +28,13 @@ const EventTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
               <div className="event-when-where">
                 <div className="dates">
                   {item?.start ? (
-                    <span className="day">
-                      {format(parseISO(item?.start), 'd. MMMM yyyy', {
-                        locale: deLocale,
-                      })}
-                    </span>
+                    <FormattedDate date={item.start} locale="de" />
                   ) : (
                     <span className="day">No date</span>
                   )}{' '}
                   &mdash;&nbsp;
                   {item?.end ? (
-                    <span className="day">
-                      {format(parseISO(item?.end), 'd. MMMM yyyy', {
-                        locale: deLocale,
-                      })}
-                    </span>
+                    <FormattedDate date={item.end} />
                   ) : (
                     <span className="day">No date</span>
                   )}

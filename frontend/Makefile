@@ -7,7 +7,7 @@ SHELL:=bash
 .DELETE_ON_ERROR:
 MAKEFLAGS+=--warn-undefined-variables
 MAKEFLAGS+=--no-builtin-rules
-IMAGE_NAME=ghcr.io/plone/plonede-frontend
+IMAGE_NAME=collective/jonasproject-frontend
 IMAGE_TAG=latest
 
 NODEBIN = ./node_modules/.bin
@@ -22,15 +22,6 @@ help: ## This help message
 clean: ## Clean installation
 	@echo "Clean installation"
 	rm -Rf node_modules
-
-.PHONY: install
-install: ## Install the frontend
-	@echo "Install frontend"
-	yarn install
-
-.PHONY: develop
-develop: ## Runs missdev in the local project (mrs.developer.json should be present)
-	npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
 
 .PHONY: build
 build: install ## Build the frontend
@@ -56,6 +47,29 @@ format-lint: ## Format Code with Lint
 .PHONY: format
 format: format-prettier format-stylelint format-lint ## Format the codebase according to our standards
 
+.PHONY: install
+install: ## Install the frontend
+	@echo "Install frontend"
+	$(MAKE) omelette
+	$(MAKE) preinstall
+	yarn install
+
+.PHONY: preinstall
+preinstall: ## Preinstall task, checks if missdev (mrs-developer) is present and runs it
+	if [ -f $$(pwd)/mrs.developer.json ]; then make develop; fi
+
+.PHONY: develop
+develop: ## Runs missdev in the local project (mrs.developer.json should be present)
+	npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
+
+.PHONY: omelette
+omelette: ## Creates the omelette folder that contains a link to the installed version of Volto (a softlink pointing to node_modules/@plone/volto)
+	if [ ! -d omelette ]; then ln -sf node_modules/@plone/volto omelette; fi
+
+.PHONY: patches
+patches:
+	/bin/bash patches/patchit.sh > /dev/null 2>&1 ||true
+
 .PHONY: i18n
 i18n: ## Sync i18n
 	yarn i18n
@@ -63,6 +77,7 @@ i18n: ## Sync i18n
 .PHONY: i18n-ci
 i18n-ci: ## Check if i18n is not synced
 	yarn i18n && git diff -G'^[^\"POT]' --exit-code
+
 
 .PHONY: test
 test: ## Run tests

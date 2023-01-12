@@ -259,12 +259,37 @@
   }
 }
 
-.color-picker-widget .button.active {
-  border: 2px solid #181818;
+//Color picker widget
+.color-picker-widget .button {
+  border: 1px solid #ccc;
+  &.active {
+    border: 1px solid #3c4048;
+  }
 
   &::after {
     display: none;
     visibility: hidden;
+  }
+
+  &.blue {
+    background: #007eb1;
+  }
+}
+
+.ui.blue.button {
+  background-color: #007eb1;
+  &:focus {
+    background-color: #007eb1;
+  }
+}
+
+.ui.blue.active.button {
+  background-color: #007eb1;
+}
+
+.ui.blue.button {
+  &:hover {
+    background-color: #007eb1;
   }
 }
 

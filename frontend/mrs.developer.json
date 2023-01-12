@@ -24,6 +24,14 @@
     "url": "git@github.com:kitconcept/volto-blocks-grid.git",
     "https": "https://github.com/kitconcept/volto-blocks-grid.git",
     "path": "src",
+    "branch": "main"
+  },
+  "volto-button-block": {
+    "develop": true,
+    "package": "@kitconcept/volto-button-block",
+    "url": "git@github.com:kitconcept/volto-button-block.git",
+    "https": "https://github.com/kitconcept/volto-button-block.git",
+    "path": "src",
     "branch": "master"
   }
 }

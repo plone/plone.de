@@ -11,6 +11,7 @@ const messages = defineMessages({
   },
 });
 export const ButtonBlockSchemaEnhancer = ({ schema, intl }) => {
+  //Color
   const colors = [
     { name: 'white', label: 'White' },
     { name: 'blue', label: 'Blue' },
@@ -25,5 +26,6 @@ export const ButtonBlockSchemaEnhancer = ({ schema, intl }) => {
     ...schema.fieldsets[0].fields,
     ...['backgroundColor'],
   ];
+
   return schema;
 };

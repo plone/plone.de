@@ -10,6 +10,9 @@
             "@kitconcept/volto-blocks-grid": [
                 "addons/volto-blocks-grid/src"
             ],
+            "@kitconcept/volto-button-block": [
+                "addons/volto-button-block/src"
+            ],
             "volto-plonede": [
                 "addons/volto-plonede/src"
             ]

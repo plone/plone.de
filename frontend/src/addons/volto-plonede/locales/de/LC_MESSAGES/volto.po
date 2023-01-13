@@ -11,11 +11,34 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#: index
+# defaultMessage: Accessibility
+msgid "Accessibility"
+msgstr "Barrierefreiheit"
+
 #: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/HeroBlockEnhancer
 # defaultMessage: Backgroundcolor
 msgid "Backgroundcolor"
 msgstr "Hintergrundfarbe"
+
+#: components/manage/Blocks/HeroBlockEnhancer
+#: components/manage/Blocks/SliderBlockEnhancer
+# defaultMessage: Button color
+msgid "Button color"
+msgstr "Button farbe"
+
+#: components/manage/Blocks/HeroBlockEnhancer
+#: components/manage/Blocks/SliderBlockEnhancer
+#: index
+# defaultMessage: Button text
+msgid "Button text"
+msgstr "Button text"
+
+#: index
+# defaultMessage: undefined
+msgid "Contact"
+msgstr "Kontact"
 
 #: index
 # defaultMessage: Imprint
@@ -26,3 +49,8 @@ msgstr "Impressum"
 # defaultMessage: Open in new tab
 msgid "Open in new tab"
 msgstr "In neuem Tab öffnen"
+
+#: index
+# defaultMessage: undefined
+msgid "Site Map"
+msgstr "Sitemap"

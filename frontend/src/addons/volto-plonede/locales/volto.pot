@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-12-16T10:12:06.774Z\n"
+"POT-Creation-Date: 2023-01-13T09:18:52.228Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -13,10 +13,33 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
+#: index
+# defaultMessage: Accessibility
+msgid "Accessibility"
+msgstr ""
+
 #: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/HeroBlockEnhancer
 # defaultMessage: Backgroundcolor
 msgid "Backgroundcolor"
+msgstr ""
+
+#: components/manage/Blocks/HeroBlockEnhancer
+#: components/manage/Blocks/SliderBlockEnhancer
+# defaultMessage: Button color
+msgid "Button color"
+msgstr ""
+
+#: components/manage/Blocks/HeroBlockEnhancer
+#: components/manage/Blocks/SliderBlockEnhancer
+#: index
+# defaultMessage: Button text
+msgid "Button text"
+msgstr ""
+
+#: index
+# defaultMessage: undefined
+msgid "Contact"
 msgstr ""
 
 #: index
@@ -27,4 +50,9 @@ msgstr ""
 #: components/manage/Blocks/ButtonBlockEnhancer
 # defaultMessage: Open in new tab
 msgid "Open in new tab"
+msgstr ""
+
+#: index
+# defaultMessage: undefined
+msgid "Site Map"
 msgstr ""

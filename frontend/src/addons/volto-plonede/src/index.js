@@ -7,7 +7,13 @@ import {
 } from 'volto-plonede/components';
 import { defineMessages } from 'react-intl';
 
-defineMessages({ Imprint: { id: 'Imprint', defaultMessage: 'Imprint' } });
+defineMessages({
+  Imprint: { id: 'Imprint', defaultMessage: 'Imprint' },
+  Accessibility: { id: 'Accessibility', defaultMessage: 'Accessibility' },
+  Contact: { id: 'Contact', defineMessage: 'Contact' },
+  'Site Map': { id: 'Site Map', defineMessage: 'Site Map' },
+  'Button text': { id: 'Button text', defaultMessage: 'Button text' },
+});
 
 const applyConfig = (config) => {
   config.settings = {

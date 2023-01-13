@@ -84,6 +84,8 @@ public/critical.css
 src/addons/*
 /cache
 
+!src/addons/volto-plonede
+
 # yarn 3
 .pnp.*
 .yarn/*
@@ -92,3 +94,4 @@ src/addons/*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+.yarn

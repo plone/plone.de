@@ -8,9 +8,8 @@ import { Container, List, Segment } from 'semantic-ui-react';
 
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 import { useSelector } from 'react-redux';
-import { UniversalLink } from '@plone/volto/components';
+import { UniversalLink, Logo } from '@plone/volto/components';
 import config from '@plone/volto/registry';
-import Logo from '../Logo/Logo';
 
 const messages = defineMessages({
   copyright: {

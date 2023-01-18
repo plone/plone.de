@@ -38,7 +38,7 @@ msgstr "Button text"
 #: index
 # defaultMessage: undefined
 msgid "Contact"
-msgstr "Kontact"
+msgstr "Kontakt"
 
 #: index
 # defaultMessage: Imprint

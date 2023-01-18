@@ -278,8 +278,6 @@
 
 //Slider
 .block.slider {
-  height: 726px;
-
   &.full-width {
     height: 726px;
 
@@ -291,6 +289,18 @@
       width: 100%;
       height: 726px;
       object-position: center;
+    }
+
+    .slick-slider {
+      .slick-arrow.slick-prev {
+        color: #fafafa;
+        margin-left: 48px;
+        z-index: 1;
+      }
+      .slick-arrow.slick-next {
+        color: #fafafa;
+        margin-right: 48px;
+      }
     }
   }
 

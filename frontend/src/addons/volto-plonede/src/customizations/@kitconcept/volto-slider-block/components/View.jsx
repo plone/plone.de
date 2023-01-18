@@ -5,9 +5,9 @@ import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import Body from '@kitconcept/volto-slider-block/components/Body';
 import { withBlockExtensions } from '@plone/volto/helpers';
-//import { Icon } from '@plone/volto/components';
-//import rightArrowSVG from '@plone/volto/icons/right-key.svg';
-//import leftArrowSVG from '@plone/volto/icons/left-key.svg';
+import { Icon } from '@plone/volto/components';
+import rightArrowSVG from '@plone/volto/icons/right-key.svg';
+import leftArrowSVG from '@plone/volto/icons/left-key.svg';
 import teaserTemplate from '@kitconcept/volto-slider-block/icons/teaser-template.svg';
 
 const messages = defineMessages({
@@ -18,25 +18,25 @@ const messages = defineMessages({
   },
 });
 
-// const PrevArrow = ({ className, style, onClick }) => (
-//   <button
-//     className={className}
-//     style={{ ...style, display: 'block' }}
-//     onClick={onClick}
-//   >
-//     <Icon name={leftArrowSVG} size="48px" />
-//   </button>
-// );
+const PrevArrow = ({ className, style, onClick }) => (
+  <button
+    className={className}
+    style={{ ...style, display: 'block' }}
+    onClick={onClick}
+  >
+    <Icon name={leftArrowSVG} size="48px" />
+  </button>
+);
 
-// const NextArrow = ({ className, style, onClick }) => (
-//   <button
-//     className={className}
-//     style={{ ...style, display: 'block' }}
-//     onClick={onClick}
-//   >
-//     <Icon name={rightArrowSVG} size="48px" />
-//   </button>
-// );
+const NextArrow = ({ className, style, onClick }) => (
+  <button
+    className={className}
+    style={{ ...style, display: 'block' }}
+    onClick={onClick}
+  >
+    <Icon name={rightArrowSVG} size="48px" />
+  </button>
+);
 
 const SliderView = (props) => {
   const {
@@ -86,8 +86,8 @@ const SliderView = (props) => {
           slidesToShow={1}
           slidesToScroll={1}
           draggable={false}
-          // nextArrow={<NextArrow />}
-          // prevArrow={<PrevArrow />}
+          nextArrow={<NextArrow />}
+          prevArrow={<PrevArrow />}
           slideWidth="1200px"
           // This syncs the current slide with the SliderContext state
           // responding to the slide change event from the slider itself

@@ -77,8 +77,8 @@ const SliderView = (props) => {
       )}
       {data.slides?.length > 0 && (
         <Slider
-          autoplay
-          autoplaySpeed={4500}
+          //autoplay
+          //autoplaySpeed={4500}
           ref={sliderRef}
           dots
           infinite

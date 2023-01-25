@@ -45,14 +45,16 @@ class Header extends Component {
       <Segment basic className="header-wrapper" role="banner">
         <Container>
           <div className="header">
-            <div className="logo-nav-wrapper">
-              <div className="logo">
-                <Logo />
-              </div>
-              <Navigation pathname={this.props.pathname} />
+            <div className="logo">
+              <Logo />
             </div>
-            <div className="search">
-              <SearchWidget />
+            <div className="logo-nav-wrapper">
+              <div className="navigation">
+                <Navigation pathname={this.props.pathname} />
+              </div>
+              <div className="search">
+                <SearchWidget />
+              </div>
             </div>
           </div>
         </Container>

@@ -11,12 +11,6 @@
 }
 
 //Header
-.ui.basic.segment.header-wrapper .header {
-  a {
-    color: #181818;
-  }
-}
-
 .ui.basic.segment.header-wrapper {
   position: fixed !important;
   z-index: 1;
@@ -26,6 +20,20 @@
   padding: 0px;
   border-bottom: 1px solid #cdcdcd;
   background-color: #fafafa;
+
+  .header {
+    flex-direction: row;
+    .logo {
+      display: flex;
+      width: 155px;
+      height: 40px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    a {
+      color: #181818;
+    }
+  }
 
   #navigation .item.active {
     padding-bottom: 21px;
@@ -37,47 +45,26 @@
     padding: auto;
     color: #181818;
   }
-
-  .ui.transparent.input {
-    width: 160px;
-  }
-}
-
-.logo {
-  width: 155px;
-  height: 40px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.ui.transparent.input {
-  width: 190px;
 }
 
 //Search
 .search {
-  .field.search-icon {
-    button {
-      .icon {
-        height: 24px !important;
-        margin-top: 22px;
-      }
-    }
-  }
-}
-
-//Searchbox
-.ui.form {
+  display: flex;
+  margin-left: auto;
   .field.search-icon {
     button {
       border: 0 solid transparent;
       background-color: transparent;
       cursor: pointer;
       svg.icon {
+        height: 24px !important;
         fill: #0086c3 !important;
       }
     }
   }
+}
+
+.ui.form {
   .field.searchbox {
     padding-left: 0;
     border-left: 0;
@@ -592,6 +579,33 @@
 }
 
 @media screen and (max-width: 1012px) {
+  .logo-nav-wrapper {
+    flex-direction: row-reverse;
+    justify-content: right !important;
+  }
+  .navigation {
+    height: 68px;
+    display: flex;
+  }
+  .search {
+    display: flex;
+    margin-left: 0;
+    .ui.form {
+      .field.search-icon {
+        button {
+          height: 68px;
+          border: 0;
+          cursor: pointer;
+          background-color: transparent;
+          margin-right: 15px;
+          svg.icon {
+            height: 29px !important;
+            fill: #181818 !important;
+          }
+        }
+      }
+    }
+  }
   //Hamburger
   .hamburger {
     padding: 0;

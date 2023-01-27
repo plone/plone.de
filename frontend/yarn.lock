@@ -2474,6 +2474,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kitconcept/volto-export@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@kitconcept/volto-export@npm:1.1.0"
+  checksum: 7e144a795edb7ac6e96379682af7947a09c630853c8011ba2eeb794933dfeaedc8dded4c6d9221604d479aa468992b3c0cbaef193e67fe13e34870ce6c60632e
+  languageName: node
+  linkType: hard
+
 "@kitconcept/volto-heading-block@npm:*":
   version: 2.1.2
   resolution: "@kitconcept/volto-heading-block@npm:2.1.2"
@@ -12059,6 +12066,7 @@ __metadata:
     "@eeacms/volto-matomo": "*"
     "@kitconcept/volto-blocks-grid": "*"
     "@kitconcept/volto-button-block": "*"
+    "@kitconcept/volto-export": 1.1.0
     "@kitconcept/volto-heading-block": "*"
     "@kitconcept/volto-separator-block": "*"
     "@kitconcept/volto-slider-block": "*"

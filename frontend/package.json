@@ -32,6 +32,7 @@
     "@kitconcept/volto-separator-block",
     "@kitconcept/volto-button-block",
     "@kitconcept/volto-heading-block",
+    "@kitconcept/volto-export",
     "volto-plonede"
   ],
   "jest": {
@@ -139,6 +140,7 @@
     "@eeacms/volto-matomo": "*",
     "@kitconcept/volto-blocks-grid": "*",
     "@kitconcept/volto-button-block": "*",
+    "@kitconcept/volto-export": "1.1.0",
     "@kitconcept/volto-heading-block": "*",
     "@kitconcept/volto-separator-block": "*",
     "@kitconcept/volto-slider-block": "*",

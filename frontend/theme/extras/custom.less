@@ -440,10 +440,18 @@
 
 .ui.inverted.list .item a:not(.ui) {
   color: #007eb6 !important;
+  &:hover {
+    color: #007eb6 !important;
+  }
 }
 
-.ui.inverted.list .item a:not(.ui):hover {
-  color: #007eb6 !important;
+.ui.horizontal.inverted.list {
+  a {
+    img.ui.image {
+      display: flex;
+      margin: auto;
+    }
+  }
 }
 
 //Login
@@ -669,22 +677,14 @@
   }
 
   //Slider
-  .grid-teaser-item.top {
-    position: static;
-
-    .teaser-item.top {
-      .teaser-item-title.fix-width-issue {
-        position: static;
-        width: auto;
-        padding: 20px;
-        background-color: transparent;
-
-        p {
-          color: #181818 !important;
-        }
+  .block.slider {
+    .slick-slider {
+      button.slick-arrow {
+        visibility: hidden;
       }
     }
   }
+
   //Listing
   .listing-item {
     img {

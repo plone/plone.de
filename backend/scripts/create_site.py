@@ -51,7 +51,7 @@ payload = {
     ],
     "setup_content": False,
     "default_language": "de",
-    "portal_timezone": "America/Sao_Paulo",
+    "portal_timezone": "Europe/Berlin",
 }
 
 if site_id in app.objectIds() and DELETE_EXISTING:

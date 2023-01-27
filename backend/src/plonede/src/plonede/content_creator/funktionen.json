@@ -1,0 +1,913 @@
+{
+  "@type": "Document",
+  "id": "funktionen",
+  "title": "Funktionen",
+  "description": "",
+  "review_state": "published",
+  "subjects": [],
+  "blocks": {
+    "2aa1ee4e-5c67-4239-a2ce-7e157ffe9876": {
+      "@type": "slate",
+      "plaintext": "Features",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Features"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "49fb5dd0-c2ce-4dd0-8cba-9a8681484107": {
+      "@type": "slate",
+      "plaintext": "Plone ist ein Open-Source Enterprise-CMS. Es ist in Python geschrieben und verwendet das Web-Framework Zope als Basis.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Plone ist ein Open-Source Enterprise-CMS. Es ist in Python geschrieben und verwendet das Web-Framework Zope als Basis."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "5595a1fb-966a-4acf-bfc4-7d6a849aded1": {
+      "@type": "slate",
+      "plaintext": "Zur Datenhaltung wird in erster Linie die objektorientierte „Zope  Object Database“ (ZODB) verwendet. Zudem kann man Plone mit Hilfe  objekt- relationaler Mapper auch mit relationalen Datenbanken wie MySQL,  PostgreSQL oder Oracle betreiben.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Zur Datenhaltung wird in erster Linie die objektorientierte „Zope  Object Database“ (ZODB) verwendet. Zudem kann man Plone mit Hilfe  objekt- relationaler Mapper auch mit relationalen Datenbanken wie MySQL,  PostgreSQL oder Oracle betreiben."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "a1fa3641-f1a9-4927-a518-b25c9ae8656d": {
+      "@type": "slate",
+      "plaintext": "Es kann auf Linux, Mac OS, BSD, Solaris, NixOS und Windows betrieben werden, sowie auf Virtual Machines.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Es kann auf Linux, Mac OS, BSD, Solaris, NixOS und Windows betrieben werden, sowie auf Virtual Machines."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "2be9247b-be3c-4940-875b-86557f132c28": {
+      "@type": "slate",
+      "plaintext": "Herausragende Eigenschaften von Plone sind",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Herausragende Eigenschaften von Plone sind"
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "fd1bfb95-2c61-42f9-8fe8-6b1369fef9d7": {
+      "@type": "slate",
+      "plaintext": "Das ausgefeilte und sichere Zugangsmanagement für Benutzer und Gruppen, die Qualitätssicherung im Content-Management, die Workflow-gesteuerte, kollaborative Verwaltung der Inhalte, die universale Benutzerfreundlichkeit sowie die leistungsfähigen Werkzeuge zur Systemadministration.",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Das ausgefeilte und sichere Zugangsmanagement für Benutzer und Gruppen, die Qualitätssicherung im Content-Management,"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "text": "die Workflow-gesteuerte, kollaborative Verwaltung der Inhalte,"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "text": "die universale Benutzerfreundlichkeit sowie"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "text": "die leistungsfähigen Werkzeuge zur Systemadministration."
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "98b1cc00-baac-45e6-bd39-4ed7e657b916": {
+      "@type": "slate",
+      "plaintext": "Außerdem zeichnet sich Plone durch nahezu grenzenlose Erweiterbarkeit  aus. Die modulare und offene Architektur erlaubt es, alle Funktionen in  Plone zu erweitern oder zu verändern und damit nahezu beliebige  Anforderungen umzusetzen.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Außerdem zeichnet sich Plone durch nahezu grenzenlose Erweiterbarkeit  aus. Die modulare und offene Architektur erlaubt es, alle Funktionen in  Plone zu erweitern oder zu verändern und damit nahezu beliebige  Anforderungen umzusetzen."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "45d6e803-1f7b-450c-aa62-fdcc7a682d92": {
+      "@type": "slate",
+      "plaintext": "Im Folgenden werden die Kernfunktionen von Plone beschrieben.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Im Folgenden werden die Kernfunktionen von Plone beschrieben."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "d406ee67-9c35-4aa1-b3bc-638adfa6754d": {
+      "@type": "slate",
+      "plaintext": "REST API",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "REST API"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "5d2ed961-67d4-4203-9972-5578732ee1cd": {
+      "@type": "slate",
+      "plaintext": "Plone  verfügt über eine RESTful hypermedia API, die es erlaubt mit beliebigen  Anwendungen über diesen offenen Standard zu kommunizieren. Moderne  Javascript-Anwendungen oder Mobile Apps können Plone z.B. als Backend  verwenden.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Plone  verfügt über eine RESTful hypermedia API, die es erlaubt mit beliebigen  Anwendungen über diesen offenen Standard zu kommunizieren. Moderne  Javascript-Anwendungen oder Mobile Apps können Plone z.B. als Backend  verwenden."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "bfb8f4dd-cc56-45fe-afed-495c2027d244": {
+      "@type": "slate",
+      "plaintext": "Inhaltstypen",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Inhaltstypen"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "12b961cf-0a75-464f-b59a-9f2b4e40492e": {
+      "@type": "slate",
+      "plaintext": "Plone bietet eine Reihe vordefinierter Standard-Inhaltstypen wie  Seite, Ordner, Nachricht oder Bild. Weitere Typen können über das  Framework „Dexterity“ erstellt werden. Typ-übergreifend lassen sich  Funktionalitäten über sogenannte Behaviors entwickeln, die für Inhalte  aktiviert und deaktiviert werden. Inhaltstypen können auch im  User-Interface ohne Programmierkenntnisse angelegt und verändert werden.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Plone bietet eine Reihe vordefinierter Standard-Inhaltstypen wie  Seite, Ordner, Nachricht oder Bild. Weitere Typen können über das  Framework „Dexterity“ erstellt werden. Typ-übergreifend lassen sich  Funktionalitäten über sogenannte Behaviors entwickeln, die für Inhalte  aktiviert und deaktiviert werden. Inhaltstypen können auch im  User-Interface ohne Programmierkenntnisse angelegt und verändert werden."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "e8d6ff73-af1e-4462-ae84-8f46df8ef9c1": {
+      "@type": "slate",
+      "plaintext": "Dateneingabe",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Dateneingabe"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "9ad65457-30c8-4c1f-942d-12403d64b07a": {
+      "@type": "slate",
+      "plaintext": "Zur Eingabe von Daten für diese Inhalte werden automatisch aus dem  Schema der Inhalte generierte Formulare verwendet. Die Eingabe wird  entsprechend der im Schema eines Inhaltstypen definierten  Einschränkungen validiert.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Zur Eingabe von Daten für diese Inhalte werden automatisch aus dem  Schema der Inhalte generierte Formulare verwendet. Die Eingabe wird  entsprechend der im Schema eines Inhaltstypen definierten  Einschränkungen validiert."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "b4d52d3c-5906-4cf2-8090-c6c9521b4733": {
+      "@type": "slate",
+      "plaintext": "Layout",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Layout"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "ee7bfb70-1e4f-4ef1-94e6-58f7f314a7a3": {
+      "@type": "slate",
+      "plaintext": "Für die Darstellung eines Inhalts kann entweder eine  Standarddarstellung verwendet oder frei definiert werden, indem Daten  aus den Schema- Feldern sowie frei hinzufügbare Daten (Text, Bilder,  andere Inhaltsobjekte etc.) frei in einem Gridsystem positioniert werden  können. Manuell erstellte Layouts lassen sich als wiederverwendbare  Ansichten für bestimmte Inhaltstypen speichern.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Für die Darstellung eines Inhalts kann entweder eine  Standarddarstellung verwendet oder frei definiert werden, indem Daten  aus den Schema- Feldern sowie frei hinzufügbare Daten (Text, Bilder,  andere Inhaltsobjekte etc.) frei in einem Gridsystem positioniert werden  können. Manuell erstellte Layouts lassen sich als wiederverwendbare  Ansichten für bestimmte Inhaltstypen speichern."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "da4490f8-bde3-431b-ae92-a00e277dd56d": {
+      "@type": "slate",
+      "plaintext": "Ansichten",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Ansichten"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "1932c455-8290-4596-9722-4de349a69cdf": {
+      "@type": "slate",
+      "plaintext": "Für Inhaltstypen lassen sich beliebige viele Ansichten definieren,  die den Redakteuren zur Verfügung stehen. Bei dem Standardtyp Ordner  werden z.B. Ansichten als Tabelle, Liste, Gallerie oder Vorschau  angeboten. Alternativ kann ein Inhaltsobjekt als Darstellung für einen  Ordner ausgewählt werden - dieser Inhalt ersetzt dann die  Ordnerdarstellung.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Für Inhaltstypen lassen sich beliebige viele Ansichten definieren,  die den Redakteuren zur Verfügung stehen. Bei dem Standardtyp Ordner  werden z.B. Ansichten als Tabelle, Liste, Gallerie oder Vorschau  angeboten. Alternativ kann ein Inhaltsobjekt als Darstellung für einen  Ordner ausgewählt werden - dieser Inhalt ersetzt dann die  Ordnerdarstellung."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "0a7fc100-cf00-43dd-8b29-f95969d9bcad": {
+      "@type": "slate",
+      "plaintext": "Kollektionen / gespeicherte Suchen",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Kollektionen / gespeicherte Suchen"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "cda7cb86-2e01-4b53-9e82-9a8ae0956339": {
+      "@type": "slate",
+      "plaintext": "Auflistungen von Inhalten lassen sich über Kollektionen generieren  wobei Redakteure frei definieren können, welche Inhalte angezeigt  werden. Diese Kriterien kann man in einem intuitiven Frontend mit  Vorschaufunktion erstellen.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Auflistungen von Inhalten lassen sich über Kollektionen generieren  wobei Redakteure frei definieren können, welche Inhalte angezeigt  werden. Diese Kriterien kann man in einem intuitiven Frontend mit  Vorschaufunktion erstellen."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "4f1b832c-ca1a-471d-aad7-b5f128cb3bae": {
+      "@type": "slate",
+      "plaintext": "Metadaten",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Metadaten"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "88f3d31b-7e21-4860-bea4-8a56004ffc87": {
+      "@type": "slate",
+      "plaintext": "Alle Inhaltstypen können mit umfangreichen Metadaten nach dem  Dublin-Core-Schema versehen werden. Dazu gehören u.a. Schlagworte,  Beschreibung, Freigabedatum, Ablaufdatum, Autoren u.v.a",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Alle Inhaltstypen können mit umfangreichen Metadaten nach dem  Dublin-Core-Schema versehen werden. Dazu gehören u.a. Schlagworte,  Beschreibung, Freigabedatum, Ablaufdatum, Autoren u.v.a"
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "0ad90eba-8918-4df9-8cc4-109fce0b820b": {
+      "@type": "slate",
+      "plaintext": "Benutzer, Gruppen, Rollen und Rechte",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Benutzer, Gruppen, Rollen und Rechte"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "f1284651-0478-45c5-80cf-93b8611d8800": {
+      "@type": "slate",
+      "plaintext": "Plone bietet eine ausgefeilte Benutzer- und Gruppenverwaltung, die  sich gut mit LDAP verbinden lassen. Berechtigungen sind an Rollen  gebunden und werden für jede einzelne Aktion an einem Inhaltsobjekt  anhand der Rollen des aktuellen Benutzers geprüft. Benutzer werden  normalerweise in Gruppen verwaltet. Diesen Gruppen werden dann gewisse  Rollen zugestanden mit denen die Benutzer entsprechende Berechtigungen  bekommen. Zusätzlich können Rollen einzelnen Benutzern gegeben werden.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Plone bietet eine ausgefeilte Benutzer- und Gruppenverwaltung, die  sich gut mit LDAP verbinden lassen. Berechtigungen sind an Rollen  gebunden und werden für jede einzelne Aktion an einem Inhaltsobjekt  anhand der Rollen des aktuellen Benutzers geprüft. Benutzer werden  normalerweise in Gruppen verwaltet. Diesen Gruppen werden dann gewisse  Rollen zugestanden mit denen die Benutzer entsprechende Berechtigungen  bekommen. Zusätzlich können Rollen einzelnen Benutzern gegeben werden."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "857c9327-5a1b-4f36-ab91-1a95c8964e1f": {
+      "@type": "slate",
+      "plaintext": "Auch auf einzelnen Inhalten oder auf ganzen Inhaltsbäumen können  Rollen als lokale Rollen an Gruppen und Benutzer vergeben werden.  Zusätzliche Flexibilität gewinnt Plone indem einzelne Rollen je nach  Workflowstatus und Typ eines Inhaltes bestimmte Rechte haben können oder  nicht. Letztlich lassen sich Rollen auch dynamisch per Code definieren,  z.B. könnte ein User abhängig davon ob der Name im Feld 'Teilnehmer'  einer Veranstaltung steht darauf Lesezugriff haben oder eben nicht.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Auch auf einzelnen Inhalten oder auf ganzen Inhaltsbäumen können  Rollen als lokale Rollen an Gruppen und Benutzer vergeben werden.  Zusätzliche Flexibilität gewinnt Plone indem einzelne Rollen je nach  Workflowstatus und Typ eines Inhaltes bestimmte Rechte haben können oder  nicht. Letztlich lassen sich Rollen auch dynamisch per Code definieren,  z.B. könnte ein User abhängig davon ob der Name im Feld 'Teilnehmer'  einer Veranstaltung steht darauf Lesezugriff haben oder eben nicht."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "31eed962-ef96-42e8-91af-65b044a607a0": {
+      "@type": "slate",
+      "plaintext": "Workflow",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Workflow"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "38176ba8-8676-436c-a29c-a22e4d6e1a1f": {
+      "@type": "slate",
+      "plaintext": "Plone verfügt über mehrere eingebaute Arbeitsabläufe, die eine  arbeitsteilige Erstellung und Verwaltung von Inhalten ermöglichen.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Plone verfügt über mehrere eingebaute Arbeitsabläufe, die eine  arbeitsteilige Erstellung und Verwaltung von Inhalten ermöglichen."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "cb794916-25b2-4ade-a040-be5ac6289511": {
+      "@type": "slate",
+      "plaintext": "Die eingebauten Arbeitsabläufe regeln die Art und Weise, wie Inhalte  in Plone veröffentlicht werden. Wird kein Arbeitsablauf verwendet, sind  neu angelegte Artikel sofort für jedermann zugänglich, wenn sie sich in  einem öffentlichen Bereich (Ordner) befinden. Beim den meisten  Arbeitsabläufen entscheidet eine Redaktion darüber, ob ein Artikel  öffentlich zugänglich sein soll.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Die eingebauten Arbeitsabläufe regeln die Art und Weise, wie Inhalte  in Plone veröffentlicht werden. Wird kein Arbeitsablauf verwendet, sind  neu angelegte Artikel sofort für jedermann zugänglich, wenn sie sich in  einem öffentlichen Bereich (Ordner) befinden. Beim den meisten  Arbeitsabläufen entscheidet eine Redaktion darüber, ob ein Artikel  öffentlich zugänglich sein soll."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "561efa4c-f747-479c-a70e-ba3d7e69567f": {
+      "@type": "slate",
+      "plaintext": "Die Arbeitsabläufe können global für die gesamte Website, für  bestimmte Bereiche der Website und für einzelne Artikeltypen gesondert  eingerichtet werden. über das User-Interface können individuelle  Workflows modelliert werden um spezielle Nutzeranforderungen zu  erfüllen.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Die Arbeitsabläufe können global für die gesamte Website, für  bestimmte Bereiche der Website und für einzelne Artikeltypen gesondert  eingerichtet werden. über das User-Interface können individuelle  Workflows modelliert werden um spezielle Nutzeranforderungen zu  erfüllen."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "b87a55a7-02b4-4c36-b144-2b11b0869487": {
+      "@type": "slate",
+      "plaintext": "Versionierung",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Versionierung"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "e70d7ddc-9e3e-4a13-a8ea-1bb2a76cc79f": {
+      "@type": "slate",
+      "plaintext": "Inhalte und Metadaten unterliegen einer Versionierung, so dass  Änderungen nachvollzogen und bei Bedarf zurückgenommen werden können.  Bei jeder Speicherung wird eine neue Version angelegt.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Inhalte und Metadaten unterliegen einer Versionierung, so dass  Änderungen nachvollzogen und bei Bedarf zurückgenommen werden können.  Bei jeder Speicherung wird eine neue Version angelegt."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "27fe589c-c1c9-4254-9241-a585b3b0b2d0": {
+      "@type": "slate",
+      "plaintext": "Arbeitskopien",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Arbeitskopien"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "dc32108b-ff1d-4ec0-8e85-ec27f2cae864": {
+      "@type": "slate",
+      "plaintext": "Bereits existierende Artikel können in einer Arbeitskopie bearbeitet werden, die erst später den alten Artikel ersetzt.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Bereits existierende Artikel können in einer Arbeitskopie bearbeitet werden, die erst später den alten Artikel ersetzt."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "f61e8115-9352-4bcd-881b-48724ae43abc": {
+      "@type": "slate",
+      "plaintext": "Locking",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Locking"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "0495f7c6-828c-4369-92a5-ae3194d15433": {
+      "@type": "slate",
+      "plaintext": "Ein Locking-Mechanismus sorgt dafür, dass nicht zwei Benutzer  gleichzeitig an ein und demselben Artikel arbeiten und ihre Änderungen  gegenseitig überschreiben.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Ein Locking-Mechanismus sorgt dafür, dass nicht zwei Benutzer  gleichzeitig an ein und demselben Artikel arbeiten und ihre Änderungen  gegenseitig überschreiben."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "f5a39f8f-3e93-45c0-a109-4cb8786f682f": {
+      "@type": "slate",
+      "plaintext": "Linkintegritätsprüfung",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Linkintegritätsprüfung"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "b7d2fa62-f2a8-405e-b508-f8c66fee251d": {
+      "@type": "slate",
+      "plaintext": "Soll ein Artikel gelöscht werden, auf den intern von anderen Artikeln  aus verwiesen wird, gibt Plone eine Warnung und Hinweise zum weiteren  Vorgehen aus.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Soll ein Artikel gelöscht werden, auf den intern von anderen Artikeln  aus verwiesen wird, gibt Plone eine Warnung und Hinweise zum weiteren  Vorgehen aus."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "127c2b6b-b108-4f33-91c5-94745fca33bb": {
+      "@type": "slate",
+      "plaintext": "Dynamische Navigation",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Dynamische Navigation"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "7a8e1909-d959-4add-ab6f-d19002b8c38f": {
+      "@type": "slate",
+      "plaintext": "Die Navigation wird dynamisch aus denjenigen Inhalten generiert, die  an einer bestimmten Stelle im Inhaltsbaum existieren und auf die der  aktuelle Benutzer Zugriff hat.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Die Navigation wird dynamisch aus denjenigen Inhalten generiert, die  an einer bestimmten Stelle im Inhaltsbaum existieren und auf die der  aktuelle Benutzer Zugriff hat."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "ca2af5b7-cd9d-4758-83c4-81ab07bb31e9": {
+      "@type": "slate",
+      "plaintext": "Mehrsprachigkeit",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Mehrsprachigkeit"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "7800fba5-936b-409b-b94f-c9f00ad67327": {
+      "@type": "slate",
+      "plaintext": "Das User-Interface von Plone ist in ca. 50 Sprachen übersetzt.  Inhalte können übersetzt und übersetzungen miteinander verbunden werden.  Bei der übersetzung werden Redakteure u.a. durch eine Ansicht  unterstützt, die die Texte des Originals und die Eingabefelder der  Zielsprache nebeneinander anzeigt. Einzelne Felder auf Inhaltstypen  können auch als sprachunabhängig definiert werden und werden automatisch  zwischen den verschiedenen Sprachen synchronisiert.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Das User-Interface von Plone ist in ca. 50 Sprachen übersetzt.  Inhalte können übersetzt und übersetzungen miteinander verbunden werden.  Bei der übersetzung werden Redakteure u.a. durch eine Ansicht  unterstützt, die die Texte des Originals und die Eingabefelder der  Zielsprache nebeneinander anzeigt. Einzelne Felder auf Inhaltstypen  können auch als sprachunabhängig definiert werden und werden automatisch  zwischen den verschiedenen Sprachen synchronisiert."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "d89eac34-d780-4d8a-9f8d-231db9cad211": {
+      "@type": "slate",
+      "plaintext": "Interne Suchmaschine",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Interne Suchmaschine"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "949468ab-5f8d-42bf-ad21-96aa8d60f9c2": {
+      "@type": "slate",
+      "plaintext": "Plone verfügt über einen integrierten Catalog, der in diversen  Indexen Metadaten über die Inhalte speichert um diese schnell verfügbar  zu machen. Diese Indexe werden für die interne Suchmaschine verwendet  und lassen sich beliebig erweitern. Zusätzlich kann Apache Solr oder  Elasticsearch angebunden werden, was es erlaubt, erweiterte  Suchfunktionen wie Fuzzy Search oder systemübergreifende Suche  umzusetzen.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Plone verfügt über einen integrierten Catalog, der in diversen  Indexen Metadaten über die Inhalte speichert um diese schnell verfügbar  zu machen. Diese Indexe werden für die interne Suchmaschine verwendet  und lassen sich beliebig erweitern. Zusätzlich kann Apache Solr oder  Elasticsearch angebunden werden, was es erlaubt, erweiterte  Suchfunktionen wie Fuzzy Search oder systemübergreifende Suche  umzusetzen."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "d6dbe040-f7e8-4af8-98bd-b9493dfa1372": {
+      "@type": "slate",
+      "plaintext": "Valides und sicheres XHTML",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Valides und sicheres XHTML"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "20b14b06-a7c8-47ae-96b4-f98723eba9cc": {
+      "@type": "slate",
+      "plaintext": "Bei der Eingabe von Text lässt Plone dem Benutzer viele Freiheiten.  Inhalte können über Formulare mit Widgets eingepflegt werden. Zur  Eingabe von HTML wird TinyMCE als WYSIWYG-Editor verwendet. Optional  kann auch reines HTML RestructuredText oder Markdown für die Eingabe  verwendet werden. Plone sorgt automatisch dafür, dass unerwünschte  HTML-Tags und -Attribute vor der Speicherung entfernt werden und die  angezeigten Seiten valides XHTML enthalten. Die entsprechenden  Filterregeln sind frei konfigurierbar.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Bei der Eingabe von Text lässt Plone dem Benutzer viele Freiheiten.  Inhalte können über Formulare mit Widgets eingepflegt werden. Zur  Eingabe von HTML wird TinyMCE als WYSIWYG-Editor verwendet. Optional  kann auch reines HTML RestructuredText oder Markdown für die Eingabe  verwendet werden. Plone sorgt automatisch dafür, dass unerwünschte  HTML-Tags und -Attribute vor der Speicherung entfernt werden und die  angezeigten Seiten valides XHTML enthalten. Die entsprechenden  Filterregeln sind frei konfigurierbar."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "8d9aa1e9-3b75-433f-bfa0-6acc8177672a": {
+      "@type": "slate",
+      "plaintext": "CSRF Schutz",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "CSRF Schutz"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "03f530f7-ead6-44b0-9aa5-ef26b16f2356": {
+      "@type": "slate",
+      "plaintext": "Plone beinhaltet automatischen integriertem CSRF (Cross-Site Request  Forgery) Schutz bis in die Datenbankschicht, der sich auch auf  installierte Add-ons erstreckt.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Plone beinhaltet automatischen integriertem CSRF (Cross-Site Request  Forgery) Schutz bis in die Datenbankschicht, der sich auch auf  installierte Add-ons erstreckt."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "39e087cb-bc5a-40a6-b077-a31d82cf6cab": {
+      "@type": "slate",
+      "plaintext": "Objektbasierte Sicherheit",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Objektbasierte Sicherheit"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "818aafd8-21e9-422a-864f-06045aef67cd": {
+      "@type": "slate",
+      "plaintext": "Bei jedem Zugriff auf einen Inhalt, sei es bei der direkten Ansicht,  beim Bearbeiten oder beim Auflisten in der Suche oder in Kollektionen  wird geprüft ob der aktuelle Nutzer Zugriff auf dieses Objekt hat. Dabei  wird der Workflowzustand des Inhalts, der Kontext und die Ansicht für  die verwendet wird sowie die Rollen (globale, lokale und aus Gruppen  vererbte) des Benutzers berücksichtigt. Dies garantiert, dass Benutzer  keine Inhalte zu sehen bekommen oder Aktionen durchführen können für die  sie nicht berechtigt sind.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Bei jedem Zugriff auf einen Inhalt, sei es bei der direkten Ansicht,  beim Bearbeiten oder beim Auflisten in der Suche oder in Kollektionen  wird geprüft ob der aktuelle Nutzer Zugriff auf dieses Objekt hat. Dabei  wird der Workflowzustand des Inhalts, der Kontext und die Ansicht für  die verwendet wird sowie die Rollen (globale, lokale und aus Gruppen  vererbte) des Benutzers berücksichtigt. Dies garantiert, dass Benutzer  keine Inhalte zu sehen bekommen oder Aktionen durchführen können für die  sie nicht berechtigt sind."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "e3e68ffb-dbb0-48b2-b233-74b79b8da237": {
+      "@type": "slate",
+      "plaintext": "Portlets",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Portlets"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "b314ca88-0e12-4e4d-b4ab-8d2454ca08a8": {
+      "@type": "slate",
+      "plaintext": "Portlets sind von Redakteuren je nach Berechtigungen bearbeitbare  Informationsblöcke, die an beliebigen Inhalten angelegt werden können.  Diese können sortiert und in der Seitenhierarchie nach unten vererbt  werden. Es steht ein Vielzahl von Portlets zur Verfügung, z.B. ein  Portlet mit Freitext, der in TinyMCE bearbeitbar ist, ein Portlet mit  Links zu Inhalten, die für Reviewer zur Freigabe eingereicht wurden.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Portlets sind von Redakteuren je nach Berechtigungen bearbeitbare  Informationsblöcke, die an beliebigen Inhalten angelegt werden können.  Diese können sortiert und in der Seitenhierarchie nach unten vererbt  werden. Es steht ein Vielzahl von Portlets zur Verfügung, z.B. ein  Portlet mit Freitext, der in TinyMCE bearbeitbar ist, ein Portlet mit  Links zu Inhalten, die für Reviewer zur Freigabe eingereicht wurden."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "50223742-1519-4ad7-9319-20b3ef8dee1f": {
+      "@type": "slate",
+      "plaintext": "Theming",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Theming"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "4a9899a5-a792-4625-9d35-7d3b8c9ca586": {
+      "@type": "slate",
+      "plaintext": "Das Design von Plone ist frei definierbar. Mittels der Theming Engine  können z.B. statische html-templates mit dynamischen Inhalten verbunden  werden oder die serverseitig gerenderte html-Struktur nach Belieben  modifiziert werden. Die Theming Engine unterstützt LESS und SASS und  ermöglicht das Kompilieren der Regeln direkt im Browser.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Das Design von Plone ist frei definierbar. Mittels der Theming Engine  können z.B. statische html-templates mit dynamischen Inhalten verbunden  werden oder die serverseitig gerenderte html-Struktur nach Belieben  modifiziert werden. Die Theming Engine unterstützt LESS und SASS und  ermöglicht das Kompilieren der Regeln direkt im Browser."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "28248d05-2179-4bd3-85d7-2d132ac0e893": {
+      "@type": "slate",
+      "plaintext": "Events und Content Rules",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Events und Content Rules"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "51c75cff-d287-4efc-9762-d1f85fce8ef5": {
+      "@type": "slate",
+      "plaintext": "Bei Plone basieren viele Funktionen auf einem System an internen  Ereignissen. Wird z.B. ein Objekt neu erstellt oder bearbeitet werden  eine Reihe von Events getriggert. Auf diese Ereignisse 'hören' andere  Funktionen und reagieren z.B. mit dem Anlegen einer neuen Version oder  der Neuindizierung des geänderten Inhalts.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Bei Plone basieren viele Funktionen auf einem System an internen  Ereignissen. Wird z.B. ein Objekt neu erstellt oder bearbeitet werden  eine Reihe von Events getriggert. Auf diese Ereignisse 'hören' andere  Funktionen und reagieren z.B. mit dem Anlegen einer neuen Version oder  der Neuindizierung des geänderten Inhalts."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "85b15cf3-c1d3-4dc6-83cd-abd5218c1596": {
+      "@type": "slate",
+      "plaintext": "Plone bietet zudem ein User-Interface über das man auf viele dieser  Ereignisse automatisch eigene Aktionen folgen lassen kann. So kann z.B.  ein Redakteur eine Email erhalten nachdem ein Inhalt zur  Veröffentlichung eingereicht wurde.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Plone bietet zudem ein User-Interface über das man auf viele dieser  Ereignisse automatisch eigene Aktionen folgen lassen kann. So kann z.B.  ein Redakteur eine Email erhalten nachdem ein Inhalt zur  Veröffentlichung eingereicht wurde."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "e647255e-9b16-48ba-ac9d-116cc5a62d1f": {
+      "@type": "slate",
+      "plaintext": "Konfiguration",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Konfiguration"
+            }
+          ],
+          "type": "h2"
+        }
+      ]
+    },
+    "0e574919-dcb2-4be1-a1af-18d13980c45f": {
+      "@type": "slate",
+      "plaintext": "Über ein zentrales Controlpanel sind die meisten Funktionen vom Plone konfigurierbar.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Über ein zentrales Controlpanel sind die meisten Funktionen vom Plone konfigurierbar."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "2aa1ee4e-5c67-4239-a2ce-7e157ffe9876",
+      "49fb5dd0-c2ce-4dd0-8cba-9a8681484107",
+      "5595a1fb-966a-4acf-bfc4-7d6a849aded1",
+      "a1fa3641-f1a9-4927-a518-b25c9ae8656d",
+      "2be9247b-be3c-4940-875b-86557f132c28",
+      "fd1bfb95-2c61-42f9-8fe8-6b1369fef9d7",
+      "98b1cc00-baac-45e6-bd39-4ed7e657b916",
+      "45d6e803-1f7b-450c-aa62-fdcc7a682d92",
+      "d406ee67-9c35-4aa1-b3bc-638adfa6754d",
+      "5d2ed961-67d4-4203-9972-5578732ee1cd",
+      "bfb8f4dd-cc56-45fe-afed-495c2027d244",
+      "12b961cf-0a75-464f-b59a-9f2b4e40492e",
+      "e8d6ff73-af1e-4462-ae84-8f46df8ef9c1",
+      "9ad65457-30c8-4c1f-942d-12403d64b07a",
+      "b4d52d3c-5906-4cf2-8090-c6c9521b4733",
+      "ee7bfb70-1e4f-4ef1-94e6-58f7f314a7a3",
+      "da4490f8-bde3-431b-ae92-a00e277dd56d",
+      "1932c455-8290-4596-9722-4de349a69cdf",
+      "0a7fc100-cf00-43dd-8b29-f95969d9bcad",
+      "cda7cb86-2e01-4b53-9e82-9a8ae0956339",
+      "4f1b832c-ca1a-471d-aad7-b5f128cb3bae",
+      "88f3d31b-7e21-4860-bea4-8a56004ffc87",
+      "0ad90eba-8918-4df9-8cc4-109fce0b820b",
+      "f1284651-0478-45c5-80cf-93b8611d8800",
+      "857c9327-5a1b-4f36-ab91-1a95c8964e1f",
+      "31eed962-ef96-42e8-91af-65b044a607a0",
+      "38176ba8-8676-436c-a29c-a22e4d6e1a1f",
+      "cb794916-25b2-4ade-a040-be5ac6289511",
+      "561efa4c-f747-479c-a70e-ba3d7e69567f",
+      "b87a55a7-02b4-4c36-b144-2b11b0869487",
+      "e70d7ddc-9e3e-4a13-a8ea-1bb2a76cc79f",
+      "27fe589c-c1c9-4254-9241-a585b3b0b2d0",
+      "dc32108b-ff1d-4ec0-8e85-ec27f2cae864",
+      "f61e8115-9352-4bcd-881b-48724ae43abc",
+      "0495f7c6-828c-4369-92a5-ae3194d15433",
+      "f5a39f8f-3e93-45c0-a109-4cb8786f682f",
+      "b7d2fa62-f2a8-405e-b508-f8c66fee251d",
+      "127c2b6b-b108-4f33-91c5-94745fca33bb",
+      "7a8e1909-d959-4add-ab6f-d19002b8c38f",
+      "ca2af5b7-cd9d-4758-83c4-81ab07bb31e9",
+      "7800fba5-936b-409b-b94f-c9f00ad67327",
+      "d89eac34-d780-4d8a-9f8d-231db9cad211",
+      "949468ab-5f8d-42bf-ad21-96aa8d60f9c2",
+      "d6dbe040-f7e8-4af8-98bd-b9493dfa1372",
+      "20b14b06-a7c8-47ae-96b4-f98723eba9cc",
+      "8d9aa1e9-3b75-433f-bfa0-6acc8177672a",
+      "03f530f7-ead6-44b0-9aa5-ef26b16f2356",
+      "39e087cb-bc5a-40a6-b077-a31d82cf6cab",
+      "818aafd8-21e9-422a-864f-06045aef67cd",
+      "e3e68ffb-dbb0-48b2-b233-74b79b8da237",
+      "b314ca88-0e12-4e4d-b4ab-8d2454ca08a8",
+      "50223742-1519-4ad7-9319-20b3ef8dee1f",
+      "4a9899a5-a792-4625-9d35-7d3b8c9ca586",
+      "28248d05-2179-4bd3-85d7-2d132ac0e893",
+      "51c75cff-d287-4efc-9762-d1f85fce8ef5",
+      "85b15cf3-c1d3-4dc6-83cd-abd5218c1596",
+      "e647255e-9b16-48ba-ac9d-116cc5a62d1f",
+      "0e574919-dcb2-4be1-a1af-18d13980c45f"
+    ]
+  }
+}

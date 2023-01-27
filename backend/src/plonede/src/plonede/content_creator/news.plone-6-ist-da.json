@@ -1,0 +1,22 @@
+{
+  "@type": "News Item",
+  "id": "plone-6-ist-da",
+  "title": "Plone 6 ist da!",
+  "description": "Plone 6 wurde nun endlich released! Guck dir an was alles neu ist.",
+  "review_state": "published",
+  "subjects": [],
+  "blocks": {
+    "e8089b34-2c92-4f29-a629-de993d6111f9": {
+      "@type": "title"
+    },
+    "1b31b8dc-6e7a-4665-ab34-1acb2a2ba512": {
+      "@type": "slate"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "e8089b34-2c92-4f29-a629-de993d6111f9",
+      "1b31b8dc-6e7a-4665-ab34-1acb2a2ba512"
+    ]
+  }
+}

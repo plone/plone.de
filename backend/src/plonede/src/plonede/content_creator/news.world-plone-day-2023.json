@@ -1,0 +1,41 @@
+{
+  "@type": "Event",
+  "id": "world-plone-day-2023",
+  "title": "World Plone Day 2023",
+  "description": "Plone feiert mit einem großen Online Event den 22 Geburtstag von Plone!",
+  "review_state": "published",
+  "subjects": [],
+  "blocks": {
+    "077dd524-2eb1-476b-bef4-c8bef3e984ee": {
+      "@type": "heading",
+      "align": "center",
+      "alignment": "left",
+      "heading": "World Plone Day 2023 ",
+      "tag": "h2"
+    },
+    "8bca14aa-e16e-41fd-8dba-246b45146b93": {
+      "@type": "slate"
+    },
+    "4ef3153a-e02d-48c6-93c3-7faf8c78a6c5": {
+      "@type": "slate",
+      "plaintext": "",
+      "value": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "077dd524-2eb1-476b-bef4-c8bef3e984ee",
+      "8bca14aa-e16e-41fd-8dba-246b45146b93",
+      "4ef3153a-e02d-48c6-93c3-7faf8c78a6c5"
+    ]
+  }
+}

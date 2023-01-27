@@ -1,0 +1,18 @@
+{
+  "@type": "Document",
+  "id": "community",
+  "title": "Community",
+  "description": "",
+  "review_state": "published",
+  "subjects": [],
+  "blocks": {
+    "742a8e0c-4a48-45ac-9083-af3cce4d4362": {
+      "@type": "slate"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "742a8e0c-4a48-45ac-9083-af3cce4d4362"
+    ]
+  }
+}

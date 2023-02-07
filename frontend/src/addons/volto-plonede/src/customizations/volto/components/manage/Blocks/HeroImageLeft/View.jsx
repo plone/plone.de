@@ -60,16 +60,14 @@ const View = ({ data }) => {
             {data.title && <h1>{data.title}</h1>}
             {data.description && <p>{data.description}</p>}
           </div>
-          {href && data.buttonText && (
-            <UniversalLink
-              href={href['@id']}
-              target={data.openLinkInNewTab ? '_blank' : null}
-            >
-              <Button className={(cx('button'), data.buttonColor)}>
-                {data.buttonText || intl.formatMessage(messages.ButtonText)}
-              </Button>
-            </UniversalLink>
-          )}
+          <UniversalLink
+            href={href['@id']}
+            target={data.openLinkInNewTab ? '_blank' : null}
+          >
+            <Button className={(cx('button'), data.buttonColor)}>
+              {data.buttonText || intl.formatMessage(messages.ButtonText)}
+            </Button>
+          </UniversalLink>
         </div>
       </div>
     </div>

@@ -19,21 +19,6 @@ const messages = defineMessages({
 });
 
 export const HeroBlockSchemaEnhancer = ({ schema, intl }) => {
-  //Button
-  const buttonColors = [
-    { name: 'white', label: 'White' },
-    { name: 'blue', label: 'Blue' },
-  ];
-  schema.properties.buttonColor = {
-    widget: 'color_picker',
-    title: intl.formatMessage(messages.buttonColor),
-    colors: buttonColors,
-    default: 'blue',
-  };
-  schema.properties.buttonText = {
-    title: intl.formatMessage(messages.buttonText),
-  };
-
   //Alignment
   schema.properties.align = {
     title: 'Align',
@@ -53,6 +38,21 @@ export const HeroBlockSchemaEnhancer = ({ schema, intl }) => {
     title: intl.formatMessage(messages.backgroundColor),
     colors: backgroundColors,
     default: 'grey',
+  };
+
+  //Button
+  const buttonColors = [
+    { name: 'white', label: 'White' },
+    { name: 'blue', label: 'Blue' },
+  ];
+  schema.properties.buttonColor = {
+    widget: 'color_picker',
+    title: intl.formatMessage(messages.buttonColor),
+    colors: buttonColors,
+    default: 'blue',
+  };
+  schema.properties.buttonText = {
+    title: intl.formatMessage(messages.buttonText),
   };
 
   schema.fieldsets[0].fields = [

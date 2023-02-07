@@ -10,7 +10,7 @@ import { compose } from 'redux';
 import { readAsDataURL } from 'promise-file-reader';
 import { Button, Dimmer, Loader, Message } from 'semantic-ui-react';
 import { isEqual } from 'lodash';
-import { defineMessages, injectIntl } from 'react-intl';
+import { defineMessages, injectIntl, useIntl } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 
@@ -306,6 +306,8 @@ class EditComponent extends Component {
     if (__SERVER__) {
       return <div />;
     }
+    const intl = useIntl;
+    const data = this.props.data;
     const href = this.props.data.linkHref?.[0];
     const { Editor } = this.props.draftJs;
     const placeholder =
@@ -459,16 +461,14 @@ class EditComponent extends Component {
                 }}
               />
             </div>
-            {href && this.props.data.buttonText && (
-              <UniversalLink
-                className="ui button"
-                href={href['@id']}
-                target={this.props.data.openLinkInNewTab ? '_blank' : null}
-              >
-                {this.props.data.buttonText ||
-                  this.props.intl.formatMessage(messages.ButtonText)}
-              </UniversalLink>
-            )}
+            <UniversalLink
+              href={href['@id']}
+              target={data.openLinkInNewTab ? '_blank' : null}
+            >
+              <Button className={(cx('button'), data.buttonColor)}>
+                {data.buttonText || intl.formatMessage(messages.ButtonText)}
+              </Button>
+            </UniversalLink>
           </div>
         </div>
         <SidebarPortal selected={this.props.selected}>

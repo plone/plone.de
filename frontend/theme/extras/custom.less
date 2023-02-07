@@ -1,3 +1,8 @@
+@black: #181818;
+@light-grey: #cdcdcd;
+@plone-blue: #0086c3;
+@white: #fafafa;
+
 .ui.basic.segment.content-area {
   cursor: default !important;
 }
@@ -7,7 +12,7 @@
 }
 
 .has--backgroundColor--grey {
-  background-color: #cdcdcd;
+  background-color: @light-grey;
 }
 
 //Header
@@ -18,8 +23,8 @@
   width: 100%;
   height: 68px;
   padding: 0px;
-  border-bottom: 1px solid #cdcdcd;
-  background-color: #fafafa;
+  border-bottom: 1px solid @light-grey;
+  background-color: @white;
 
   .header {
     flex-direction: row;
@@ -31,19 +36,19 @@
       margin-bottom: 15px;
     }
     a {
-      color: #181818;
+      color: @black;
     }
   }
 
   #navigation .item.active {
     padding-bottom: 21px;
-    border-color: #181818;
-    color: #181818;
+    border-color: @black;
+    color: @black;
   }
 
   #navigation .item {
     padding: auto;
-    color: #181818;
+    color: @black;
   }
 }
 
@@ -58,7 +63,7 @@
       cursor: pointer;
       svg.icon {
         height: 24px !important;
-        fill: #0086c3 !important;
+        fill: @plone-blue !important;
       }
     }
   }
@@ -70,10 +75,10 @@
     border-left: 0;
     .search-button {
       width: 124px;
-      color: #fafafa;
+      color: @white;
       text-transform: uppercase;
       text-align: center;
-      background-color: #0086c3;
+      background-color: @plone-blue;
       border-radius: 2px;
     }
   }
@@ -121,14 +126,14 @@
   border-top: 0x solid transparent;
   border-bottom: 0 solid transparent;
   margin-top: 68px;
-  background-color: #fafafa;
+  background-color: @white;
 
   .section {
     width: auto;
     height: 25px;
     margin-top: 10px;
     margin-bottom: auto;
-    color: #181818;
+    color: @black;
     text-align: center;
   }
 
@@ -140,21 +145,21 @@
   }
 
   .divider {
-    color: #181818;
+    color: @black;
   }
 }
 
 //Content
 .ui.basic.segment.content-area {
   margin: 0px;
-  background-color: #fafafa !important;
+  background-color: @white !important;
 
   .content {
-    color: #181818;
+    color: @black;
   }
 
   body {
-    color: #181818;
+    color: @black;
   }
 
   a {
@@ -163,12 +168,12 @@
 }
 
 .documentFirstHeading {
-  color: #181818;
+  color: @black;
 }
 
 #view .ui.container {
   p {
-    color: #181818;
+    color: @black;
   }
 }
 
@@ -243,14 +248,14 @@
   }
 
   &.plone-blue .hero-body {
-    background-color: #0086c3;
+    background-color: @plone-blue;
 
     h1 {
-      color: #fafafa;
+      color: @white;
     }
 
     p {
-      color: #fafafa !important;
+      color: @white !important;
     }
   }
 
@@ -259,7 +264,7 @@
     background-color: #e0e1e2;
 
     h1 {
-      color: #181818;
+      color: @black;
     }
 
     p {
@@ -273,28 +278,28 @@
   transition: all 0.2s ease-out;
 
   &.blue {
-    border: 1px solid #0086c3;
-    background: linear-gradient(to right, #fafafa 50%, #0086c3 50%);
+    border: 1px solid @plone-blue;
+    background: linear-gradient(to right, @white 50%, @plone-blue 50%);
     background-position: right;
     background-size: calc(200% + 1px) 100%;
-    color: #fafafa;
+    color: @white;
 
     &:hover {
       background-position: left;
-      color: #0086c3;
+      color: @plone-blue;
     }
   }
 
   &.white {
-    border: 1px solid #fafafa;
-    background: linear-gradient(to right, #0086c3 50%, #fafafa 50%);
+    border: 1px solid @white;
+    background: linear-gradient(to right, @plone-blue 50%, @white 50%);
     background-position: right;
     background-size: calc(200% + 1px) 100%;
-    color: #0086c3;
+    color: @plone-blue;
 
     &:hover {
       background-position: left;
-      color: #fafafa;
+      color: @white;
     }
   }
 }
@@ -312,24 +317,24 @@
   }
 
   &.blue {
-    background: #0086c3;
+    background: @plone-blue;
   }
 }
 
 .ui.blue.button {
-  background-color: #0086c3;
+  background-color: @plone-blue;
   &:focus {
-    background-color: #0086c3;
+    background-color: @plone-blue;
   }
 }
 
 .ui.blue.active.button {
-  background-color: #0086c3;
+  background-color: @plone-blue;
 }
 
 .ui.blue.button {
   &:hover {
-    background-color: #0086c3;
+    background-color: @plone-blue;
   }
 }
 
@@ -345,6 +350,30 @@
 
     .grid-teaser-item.top {
       display: block;
+      position: relative;
+
+      .teaser-item.top {
+        .teaser-item-title.fix-width-issue {
+          position: absolute;
+          top: 140px;
+          width: 350px;
+          padding: 20px;
+          padding-left: 0;
+          background-color: transparent;
+
+          p {
+            color: @white !important;
+
+            ::selection {
+              background: #b4d5ff;
+            }
+          }
+
+          h2 {
+            color: @white !important;
+          }
+        }
+      }
     }
 
     img {
@@ -354,40 +383,13 @@
     }
     .slick-slider {
       .slick-arrow.slick-prev {
-        color: #fafafa;
+        color: @white;
         margin-left: 48px;
         z-index: 1;
       }
       .slick-arrow.slick-next {
-        color: #fafafa;
+        color: @white;
         margin-right: 48px;
-      }
-    }
-  }
-
-  .grid-teaser-item.top {
-    position: relative;
-
-    .teaser-item.top {
-      .teaser-item-title.fix-width-issue {
-        position: absolute;
-        top: 140px;
-        width: 350px;
-        padding: 20px;
-        padding-left: 0;
-        background-color: transparent;
-
-        p {
-          color: #fafafa !important;
-
-          ::selection {
-            background: #b4d5ff;
-          }
-        }
-
-        h2 {
-          color: #fafafa !important;
-        }
       }
     }
   }
@@ -397,13 +399,13 @@
 
     li {
       button::before {
-        color: #fafafa;
+        color: @white;
         opacity: 1;
       }
 
       &.slick-active {
         button::before {
-          color: #0086c3;
+          color: @plone-blue;
         }
       }
     }
@@ -420,20 +422,20 @@
     display: flex;
     flex-direction: row;
     .dates {
-      color: #181818;
+      color: @black;
     }
   }
 }
 
 //Footer
 .ui.padded.segment.vertical.segment {
-  border-color: #fafafa;
-  border-top: 1px solid #cdcdcd;
+  border-color: @white;
+  border-top: 1px solid @light-grey;
 }
 
 .ui.inverted.grey.segment {
-  background-color: #fafafa !important;
-  color: #181818 !important;
+  background-color: @white !important;
+  color: @black !important;
 
   a.item {
     color: #007eb6;
@@ -459,31 +461,31 @@
 //Login
 #page-login {
   .ui.form {
-    background-color: #fafafa;
+    background-color: @white;
   }
 
   .ui.raised.segments {
-    border-color: #fafafa;
+    border-color: @white;
   }
 
   .ui.form .field .wrapper > label {
-    color: #181818;
+    color: @black;
   }
 
   .ui.segment.primary {
-    color: #181818;
+    color: @black;
   }
 
   .ui.secondary.segment {
-    color: #181818;
+    color: @black;
   }
 
   .iu.input {
-    background-color: #fafafa;
+    background-color: @white;
   }
 
   #login .placeholder {
-    color: #fafafa;
+    color: @white;
   }
 
   .ui.form input:not([type]),
@@ -498,15 +500,15 @@
   .ui.form input[type='text'],
   .ui.form input[type='file'],
   .ui.form input[type='url'] {
-    background-color: #fafafa;
+    background-color: @white;
   }
 
   .ui.segment {
-    background-color: #fafafa;
+    background-color: @white;
   }
 
   .ui.clearing.section.actions {
-    border-color: #fafafa;
+    border-color: @white;
   }
 
   #login-from-submit.icon.circled {
@@ -530,7 +532,7 @@
 
 #toolbar-body {
   .toolbar-body {
-    background-color: #fafafa;
+    background-color: @white;
   }
 }
 
@@ -608,7 +610,7 @@
           margin-right: 15px;
           svg.icon {
             height: 29px !important;
-            fill: #181818 !important;
+            fill: @black !important;
           }
         }
       }
@@ -617,8 +619,7 @@
   //Hamburger
   .hamburger {
     padding: 0;
-    margin-top: 23px;
-    margin-right: 3px;
+    margin-top: 21px;
 
     &:hover {
       opacity: 1;
@@ -637,27 +638,28 @@
   .ui.basic.segment.header-wrapper {
     &.header {
       a {
-        color: #181818;
+        color: @black;
       }
     }
     position: fixed !important;
+    display: flex;
+    align-items: center;
     z-index: 1;
-    top: 0;
     width: 100%;
     height: 68px;
     padding: 0px;
-    background-color: #fafafa;
+    background-color: @white;
 
     #navigation .item {
       padding: auto;
-      color: #181818;
+      color: @black;
     }
 
     #navigation .item.active {
       margin-top: 0;
       padding-bottom: 21px;
-      border-color: #181818;
-      color: #181818;
+      border-color: @black;
+      color: @black;
     }
   }
 
@@ -701,41 +703,32 @@
 
 @media screen and (max-width: 769px) {
   //Hamburger
-  .hamburger {
-    padding: 0;
-    margin-top: 27px;
-    margin-right: 3px;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
   //Hamburger open
   .ui.basic.segment.header-wrapper {
     &.header {
       a {
-        color: #181818;
+        color: @black;
       }
     }
     position: fixed !important;
+    display: flex;
+    align-items: center;
     z-index: 1;
-    top: 0;
     width: 100%;
     height: 68px;
     padding: 0px;
-    background-color: #fafafa;
+    background-color: @white;
 
     #navigation .item {
       padding: auto;
-      color: #181818;
+      color: @black;
     }
 
     #navigation .item.active {
       margin-top: 0;
       padding-bottom: 21px;
-      border-color: #181818;
-      color: #181818;
+      border-color: @black;
+      color: @black;
     }
   }
 
@@ -774,18 +767,28 @@
   }
 
   //Slider
-  .grid-teaser-item.top {
-    position: static;
+  .block.slider {
+    &.full-width {
+      height: 468px;
 
-    .teaser-item.top {
-      .teaser-item-title.fix-width-issue {
-        position: static;
-        padding: 20px;
-        background-color: #113156;
-
-        p {
-          color: #fafafa !important;
+      .grid-teaser-item.top {
+        display: block;
+        position: relative;
+        .teaser-item.top {
+          .teaser-item-title.fix-width-issue {
+            position: absolute;
+            width: 350px;
+            padding: 20px;
+            padding-left: 0;
+            background-color: transparent;
+          }
         }
+      }
+
+      img {
+        width: 100%;
+        height: 468px;
+        object-position: center;
       }
     }
   }

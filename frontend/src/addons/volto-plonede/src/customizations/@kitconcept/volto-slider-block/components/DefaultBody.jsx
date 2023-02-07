@@ -112,15 +112,20 @@ const SliderBody = ({
                   )}
                   <h2>{data?.nav_title || data?.title}</h2>
                 </div>
-                <p>{data?.description}</p>
-                <UniversalLink
-                  href={href['@id']}
-                  target={data.openLinkInNewTab ? '_blank' : null}
-                >
-                  <Button className={(cx('button'), data.buttonColor)}>
-                    {data.buttonText || intl.formatMessage(messages.ButtonText)}
-                  </Button>
-                </UniversalLink>
+                <div>
+                  <p>{data?.description}</p>
+                </div>
+                <div>
+                  <UniversalLink
+                    href={href['@id']}
+                    target={data.openLinkInNewTab ? '_blank' : null}
+                  >
+                    <Button className={(cx('button'), data.buttonColor)}>
+                      {data.buttonText ||
+                        intl.formatMessage(messages.ButtonText)}
+                    </Button>
+                  </UniversalLink>
+                </div>
               </div>
             </Container>
           </MaybeWrap>

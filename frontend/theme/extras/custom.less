@@ -350,7 +350,11 @@
 .block.slider {
   &.full-width {
     height: 726px;
-
+    img {
+      width: 100%;
+      height: 726px;
+      object-position: center;
+    }
     .grid-teaser-item.top {
       display: block;
       position: relative;
@@ -360,29 +364,15 @@
           position: absolute;
           top: 140px;
           width: 350px;
-          padding: 20px;
-          padding-left: 0;
-          background-color: transparent;
-
+          padding: 0;
           p {
             color: @white !important;
-
-            ::selection {
-              background: #b4d5ff;
-            }
           }
-
-          h2 {
+          .title h2 {
             color: @white !important;
           }
         }
       }
-    }
-
-    img {
-      width: 100%;
-      height: 726px;
-      object-position: center;
     }
     .slick-slider {
       .slick-arrow.slick-prev {
@@ -772,26 +762,32 @@
   //Slider
   .block.slider {
     &.full-width {
-      height: 468px;
+      height: 568px;
 
+      img {
+        width: 100%;
+        height: 568px;
+        object-position: center;
+      }
       .grid-teaser-item.top {
         display: block;
         position: relative;
         .teaser-item.top {
-          .teaser-item-title.fix-width-issue {
+          .highlight-image-wrapper {
             position: absolute;
-            width: 350px;
-            padding: 20px;
-            padding-left: 0;
-            background-color: transparent;
+          }
+          .ui.container {
+            height: 568px;
+            display: flex;
+            .teaser-item-title.fix-width-issue {
+              padding: 0;
+              width: 350px;
+              .title h2 {
+                margin-top: 0;
+              }
+            }
           }
         }
-      }
-
-      img {
-        width: 100%;
-        height: 468px;
-        object-position: center;
       }
     }
   }

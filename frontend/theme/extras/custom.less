@@ -19,6 +19,15 @@ body {
   background-color: @light-grey;
 }
 
+.documentFirstHeading {
+  font-size: 3rem;
+  font-weight: 600;
+  border-bottom: 0 solid transparent;
+  &::before {
+    border-bottom: 0 solid transparent;
+  }
+}
+
 //Header
 .ui.basic.segment.header-wrapper {
   position: fixed !important;
@@ -77,7 +86,7 @@ body {
   }
 }
 
-.ui.form {
+.ui.container .container .ui.form {
   .field.searchbox {
     padding-left: 0;
     border-left: 0;
@@ -160,7 +169,6 @@ body {
 //Content
 .ui.basic.segment.content-area {
   margin: 0px;
-  background-color: @white !important;
 
   .content {
     color: @black;
@@ -175,18 +183,10 @@ body {
   }
 }
 
-.documentFirstHeading {
-  color: @black;
-}
-
 #view .ui.container {
   p {
     color: @black;
   }
-}
-
-.documentFirstHeading::before {
-  border-bottom-color: #1a0b31;
 }
 
 //Blocks
@@ -195,12 +195,14 @@ body {
   .heading-wrapper {
     h2 {
       text-align: left;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
+      font-weight: 600;
       line-height: 1.5;
     }
     h3 {
       text-align: left;
       font-size: 2rem;
+      font-weight: 600;
       line-height: 1.5;
     }
   }
@@ -210,12 +212,14 @@ body {
   .heading-wrapper {
     h2 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
+      font-weight: 600;
       line-height: 1.5;
     }
     h3 {
       text-align: center;
       font-size: 2rem;
+      font-weight: 600;
       line-height: 1.5;
     }
   }
@@ -225,12 +229,14 @@ body {
   .heading-wrapper {
     h2 {
       text-align: right;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
+      font-weight: 600;
       line-height: 1.5;
     }
     h3 {
       text-align: right;
       font-size: 2rem;
+      font-weight: 600;
       line-height: 1.5;
     }
   }
@@ -370,6 +376,13 @@ body {
 //Img
 .block.align.center {
   text-align: left;
+}
+
+//Separator
+.block.separator {
+  .separator {
+    top: 0;
+  }
 }
 
 //Slider

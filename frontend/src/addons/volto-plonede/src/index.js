@@ -25,6 +25,7 @@ const applyConfig = (config) => {
     defaultLanguage: 'de',
   };
 
+  //Heading
   config.blocks.blocksConfig.heading = {
     ...config.blocks.blocksConfig.heading,
     schemaEnhancer: composeSchema(
@@ -33,6 +34,7 @@ const applyConfig = (config) => {
     ),
   };
 
+  //Hero
   config.blocks.blocksConfig.hero = {
     ...config.blocks.blocksConfig.hero,
     schemaEnhancer: composeSchema(
@@ -41,6 +43,7 @@ const applyConfig = (config) => {
     ),
   };
 
+  //Button
   config.blocks.blocksConfig.__button = {
     ...config.blocks.blocksConfig.__button,
     schemaEnhancer: composeSchema(
@@ -57,18 +60,11 @@ const applyConfig = (config) => {
     defaultLanguage: 'de',
   };
 
+  //Listing
   config.blocks.blocksConfig.listing = {
     ...config.blocks.blocksConfig.listing,
     schemaEnhancer: composeSchema(
       ListingBlockSchemaEnhancer,
-      DefaultStylingSchemaEnhancer,
-    ),
-  };
-
-  config.blocks.blocksConfig.slider = {
-    ...config.blocks.blocksConfig.slider,
-    schemaEnhancer: composeSchema(
-      SliderBlockSchemaEnhancer,
       DefaultStylingSchemaEnhancer,
     ),
   };
@@ -81,6 +77,15 @@ const applyConfig = (config) => {
       template: EventTemplate,
     },
   ];
+
+  //Slider
+  config.blocks.blocksConfig.slider = {
+    ...config.blocks.blocksConfig.slider,
+    schemaEnhancer: composeSchema(
+      SliderBlockSchemaEnhancer,
+      DefaultStylingSchemaEnhancer,
+    ),
+  };
 
   delete config.blocks.blocksConfig.text;
   config.blocks.blocksConfig.__grid.gridAllowedBlocks = [

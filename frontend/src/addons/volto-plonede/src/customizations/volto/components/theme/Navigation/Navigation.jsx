@@ -187,6 +187,7 @@ class Navigation extends Component {
                         </li>
                       ))}
                   </ul>
+                  <div className="divider" />
                 </div>
               </div>
             ))}

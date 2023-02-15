@@ -67,6 +67,38 @@ body {
       border-color: @black;
     }
   }
+
+  .header .logo-nav-wrapper {
+    position: relative;
+  }
+
+  .desktop-menu {
+    display: flex;
+    .nav-menu-wrapper {
+      &:hover .sub-menu-wrapper {
+        display: block;
+        width: 100%;
+        left: 0;
+        background-color: @white;
+        border-top: 1px solid @light-grey;
+        .sub-menu {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          .sub-item {
+            padding-left: 20px;
+            margin-bottom: 14px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .sub-menu-wrapper {
+      position: absolute;
+      display: none;
+    }
+  }
 }
 
 //Search

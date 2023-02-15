@@ -23,6 +23,7 @@ const applyConfig = (config) => {
     ...config.settings,
     supportedLanguages: ['de', 'en'],
     defaultLanguage: 'de',
+    navDepth: 2,
   };
 
   //Heading

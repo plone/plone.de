@@ -82,6 +82,7 @@ body {
         background-color: @white;
         border-top: 1px solid @light-grey;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding-top: 14px;
         .sub-menu {
           list-style-type: none;
           margin: 0;
@@ -91,6 +92,12 @@ body {
             padding-left: 20px;
             margin-bottom: 14px;
             opacity: 1;
+            a {
+              color: #595959;
+              &:hover {
+                color: #007eb6;
+              }
+            }
           }
         }
         .divider {
@@ -222,7 +229,7 @@ body {
 
 #view .ui.container {
   p {
-    color: @black;
+    color: #595959;
   }
 }
 

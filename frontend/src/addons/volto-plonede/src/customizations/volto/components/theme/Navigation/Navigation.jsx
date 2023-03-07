@@ -168,6 +168,7 @@ class Navigation extends Component {
           className="computer large screen widescreen only"
           onClick={this.closeMobileMenu}
         >
+          {' '}
           <div className="desktop-menu">
             {this.props.items.map((item) => (
               <div className="nav-menu-wrapper">

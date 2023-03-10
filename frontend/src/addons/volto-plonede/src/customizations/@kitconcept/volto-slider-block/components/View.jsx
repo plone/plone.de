@@ -63,7 +63,7 @@ const SliderView = (props) => {
   return (
     <div
       className={cx('block slider', className, {
-        alignCenter: data.align === 'center',
+        'align-center': data.align === 'center',
         'full-width': data.align === 'full',
       })}
     >

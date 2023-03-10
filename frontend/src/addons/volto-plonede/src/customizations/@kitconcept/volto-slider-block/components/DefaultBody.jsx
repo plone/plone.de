@@ -120,7 +120,7 @@ const SliderBody = ({
                     href={href['@id']}
                     target={data.openLinkInNewTab ? '_blank' : null}
                   >
-                    <Button className={(cx('button'), data.buttonColor)}>
+                    <Button className={(cx('__button'), data.buttonColor)}>
                       {data.buttonText ||
                         intl.formatMessage(messages.ButtonText)}
                     </Button>

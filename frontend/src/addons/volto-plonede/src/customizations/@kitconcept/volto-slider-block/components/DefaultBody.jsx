@@ -120,10 +120,12 @@ const SliderBody = ({
                     href={href['@id']}
                     target={data.openLinkInNewTab ? '_blank' : null}
                   >
-                    <Button className={(cx('__button'), data.buttonColor)}>
-                      {data.buttonText ||
-                        intl.formatMessage(messages.ButtonText)}
-                    </Button>
+                    <div className="button container">
+                      <Button className={(cx(), data.buttonColor)}>
+                        {data.buttonText ||
+                          intl.formatMessage(messages.ButtonText)}
+                      </Button>
+                    </div>
                   </UniversalLink>
                 </div>
               </div>

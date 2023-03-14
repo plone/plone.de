@@ -396,16 +396,49 @@
     }
   }
 
-  .hero-body {
-    display: block;
-    background-color: #e0e1e2;
+  .block-inner-wrapper {
+    .default-container-width();
+    .hero-body {
+      display: block;
+      background-color: #e0e1e2;
 
-    h1 {
-      color: @black;
-    }
+      h1 {
+        color: @black;
+      }
 
-    p {
-      margin-bottom: 14px;
+      p {
+        margin-bottom: 14px;
+      }
+
+      .ui.button {
+        transition: all 0.2s ease-out;
+
+        &.blue {
+          border: 1px solid @plone-blue;
+          background: linear-gradient(to right, @white 50%, @plone-blue 50%);
+          background-position: right;
+          background-size: calc(200% + 1px) 100%;
+          color: @white;
+
+          &:hover {
+            background-position: left;
+            color: @plone-blue;
+          }
+        }
+
+        &.white {
+          border: 1px solid @white;
+          background: linear-gradient(to right, @plone-blue 50%, @white 50%);
+          background-position: right;
+          background-size: calc(200% + 1px) 100%;
+          color: @plone-blue;
+
+          &:hover {
+            background-position: left;
+            color: @white;
+          }
+        }
+      }
     }
   }
 }
@@ -503,9 +536,7 @@
 
 //Slider
 .block.slider {
-  width: 940px;
   &.full-width {
-    height: 726px;
     img {
       width: 100%;
       height: 726px;
@@ -516,16 +547,58 @@
       position: relative;
 
       .teaser-item.top {
-        .teaser-item-title.fix-width-issue {
-          position: absolute;
-          top: 140px;
-          width: 350px;
-          padding: 0;
-          p {
-            color: @white !important;
-          }
-          .title h2 {
-            color: @white !important;
+        .ui.container {
+          .default-container-width();
+          .teaser-item-title.fix-width-issue {
+            position: absolute;
+            top: 140px;
+            width: 350px;
+            padding: 0;
+            .title h2 {
+              color: @white !important;
+            }
+            .body p {
+              color: @white !important;
+            }
+            .button {
+              .ui.button {
+                transition: all 0.2s ease-out;
+
+                &.blue {
+                  border: 1px solid @plone-blue;
+                  background: linear-gradient(
+                    to right,
+                    @white 50%,
+                    @plone-blue 50%
+                  );
+                  background-position: right;
+                  background-size: calc(200% + 1px) 100%;
+                  color: @white;
+
+                  &:hover {
+                    background-position: left;
+                    color: @plone-blue;
+                  }
+                }
+
+                &.white {
+                  border: 1px solid @white;
+                  background: linear-gradient(
+                    to right,
+                    @plone-blue 50%,
+                    @white 50%
+                  );
+                  background-position: right;
+                  background-size: calc(200% + 1px) 100%;
+                  color: @plone-blue;
+
+                  &:hover {
+                    background-position: left;
+                    color: @white;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -968,50 +1041,4 @@
   .ui.inverted.list .item a:not(.ui):hover {
     color: #007eb6 !important;
   }
-}
-
-body .ui.wrapper > .block.align.full,
-body.has-toolbar.has-sidebar .ui.wrapper > .ui.inner .block.align.full,
-body.has-toolbar-collapsed.has-sidebar
-  .ui.wrapper
-  > .ui.inner
-  .block.align.full,
-body.has-toolbar-collapsed.has-sidebar-collapsed
-  .ui.wrapper
-  > .ui.inner
-  .block.align.full,
-body.has-toolbar.has-sidebar-collapsed
-  .ui.wrapper
-  > .ui.inner
-  .block.align.full {
-  width: 100% !important;
-
-  iframe {
-    width: 100%;
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
-body.has-toolbar.has-sidebar .ui.wrapper > .ui.inner.block.full,
-body.has-toolbar-collapsed.has-sidebar .ui.wrapper > .ui.inner.block.full,
-body.has-toolbar-collapsed.has-sidebar-collapsed
-  .ui.wrapper
-  > .ui.inner.block.full,
-body.has-toolbar.has-sidebar-collapsed .ui.wrapper > .ui.inner.block.full {
-  width: 100% !important;
-
-  iframe {
-    width: 100%;
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
-.block.align:not(.right):not(.left) {
-  clear: both;
 }

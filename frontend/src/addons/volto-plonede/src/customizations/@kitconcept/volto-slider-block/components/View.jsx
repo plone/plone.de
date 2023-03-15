@@ -63,8 +63,8 @@ const SliderView = (props) => {
   return (
     <div
       className={cx('block slider', className, {
-        'align-center': data.align === 'center',
-        'full-width': data.align === 'full',
+        'default-container-width': data.align === 'center',
+        'full-container-width': data.align === 'full',
       })}
     >
       {(data.slides?.length === 0 || !data.slides) && isEditMode && (

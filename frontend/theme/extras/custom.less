@@ -3,6 +3,10 @@
 @plone-blue: #0086c3;
 @white: #fff;
 
+p {
+  color: #474747 !important;
+}
+
 .has--backgroundColor--transparent {
   background-color: transparent;
 }
@@ -320,10 +324,17 @@
     }
   }
   &.align.center {
+    .default-container-width();
     .large {
       .default-container-width();
       display: flex;
     }
+  }
+  &.align.left {
+    .default-container-width();
+  }
+  &.align.right {
+    .default-container-width();
   }
 }
 

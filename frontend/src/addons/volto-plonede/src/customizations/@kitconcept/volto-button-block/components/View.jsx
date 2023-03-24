@@ -12,7 +12,8 @@ const messages = defineMessages({
   },
 });
 
-const View = ({ data, isEditMode, className }) => {
+const View = (props) => {
+  const { data, isEditMode, className } = props;
   const [hasLink, setHasLink] = React.useState(false);
   const intl = useIntl();
 

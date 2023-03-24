@@ -22,9 +22,13 @@ const messages = defineMessages({
     id: 'Source',
     defaultMessage: 'Source',
   },
-  ButtonText: {
+  buttonText: {
     id: 'Continue reading',
     defaultMessage: 'Continue reading',
+  },
+  buttonColor: {
+    id: 'Button color',
+    defaultMessage: 'Button color',
   },
 });
 
@@ -122,7 +126,7 @@ const SliderBody = ({
                   >
                     <Button className={(cx(), data.buttonColor)}>
                       {data.buttonText ||
-                        intl.formatMessage(messages.ButtonText)}
+                        intl.formatMessage(messages.buttonText)}
                     </Button>
                   </UniversalLink>
                 </div>

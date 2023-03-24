@@ -16,9 +16,13 @@ const messages = defineMessages({
     id: 'Backgroundcolor',
     defaultMessage: 'Backgroundcolor',
   },
+  showButton: {
+    id: 'Show Button',
+    defineMessage: 'Show Button',
+  },
 });
 
-export const HeroBlockSchemaEnhancer = ({ schema, intl }) => {
+export const HeroBlockSchemaEnhancer = ({ schema, formData, intl }) => {
   //Alignment
   schema.properties.align = {
     title: 'Align',
@@ -41,6 +45,12 @@ export const HeroBlockSchemaEnhancer = ({ schema, intl }) => {
   };
 
   //Button
+  schema.properties.showButton = {
+    type: 'boolean',
+    default: false,
+    title: intl.formatMessage(messages.showButton),
+  };
+
   const buttonColors = [
     { name: 'white', label: 'White' },
     { name: 'blue', label: 'Blue' },
@@ -55,9 +65,20 @@ export const HeroBlockSchemaEnhancer = ({ schema, intl }) => {
     title: intl.formatMessage(messages.buttonText),
   };
 
-  schema.fieldsets[0].fields = [
-    ...schema.fieldsets[0].fields,
-    ...['align', 'backgroundColor', 'buttonText', 'buttonColor'],
+  schema.fieldsets[0].fields = ['align', 'backgroundColor'];
+
+  schema.fieldsets = [
+    ...schema.fieldsets,
+    {
+      id: 'button',
+      title: 'button',
+      fields: [
+        ...(formData.showButton
+          ? ['showButton', 'linkHref', 'buttonText', 'buttonColor']
+          : ['showButton']),
+      ],
+    },
   ];
+
   return schema;
 };

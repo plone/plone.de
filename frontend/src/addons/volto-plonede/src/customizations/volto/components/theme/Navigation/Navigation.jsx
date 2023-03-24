@@ -122,6 +122,13 @@ class Navigation extends Component {
     this.setState({ isMobileMenuOpen: false });
   }
 
+  // hoverExtendedNavigation = () => {
+  //   this.setState({ isExtendedNavigationOpen: true });
+  // };
+  // leaveExtendedNavigation = () => {
+  //   this.setState({ isExtendedNavigationOpen: false });
+  // };
+
   /**
    * Render method.
    * @method render

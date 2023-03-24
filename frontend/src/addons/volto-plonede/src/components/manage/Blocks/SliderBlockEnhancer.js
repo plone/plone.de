@@ -10,9 +10,13 @@ const messages = defineMessages({
     id: 'Button text',
     defaultMessage: 'Button text',
   },
+  showButton: {
+    id: 'Show button',
+    defaultMessage: 'Show button',
+  },
 });
 
-export const SliderBlockSchemaEnhancer = ({ schema, intl }) => {
+export const SliderBlockSchemaEnhancer = ({ schema, intl, formData }) => {
   //Slides
   //Button
   const buttonColors = [
@@ -33,7 +37,7 @@ export const SliderBlockSchemaEnhancer = ({ schema, intl }) => {
     ...['buttonText', 'buttonColor'],
   ];
 
-  //Slider block
+  //Slider
   //Alignment
   schema.properties.align = {
     title: 'Align',

@@ -8,7 +8,7 @@
 }
 
 .has--backgroundColor--grey {
-  background-color: @light-grey;
+  background-color: #edf1f2;
 }
 
 .documentFirstHeading {
@@ -322,6 +322,7 @@
   &.align.center {
     .large {
       .default-container-width();
+      display: flex;
     }
   }
 }
@@ -433,34 +434,18 @@
     }
   }
 
-  &.transparent .block-inner-wrapper {
-    padding-left: 0;
-    background-color: transparent;
-  }
-
   &.grey .block-inner-wrapper {
-    background-color: #e0e1e2;
+    background-color: #edf1f2;
   }
 
   &.plone-blue .block-inner-wrapper {
-    background-color: @plone-blue;
-
-    h1 {
-      text-align: center;
-
-      color: @white;
-    }
-
-    p {
-      color: @white !important;
-    }
+    background-color: rgba(0, 134, 195, 0.8);
   }
 
   .block-inner-wrapper {
     .default-container-width();
     .hero-body {
       display: block;
-      background-color: #e0e1e2;
 
       .hero-text {
         h1 {

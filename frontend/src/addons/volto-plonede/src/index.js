@@ -26,6 +26,27 @@ const applyConfig = (config) => {
     navDepth: 2,
   };
 
+  //Button
+  config.blocks.blocksConfig.__button = {
+    ...config.blocks.blocksConfig.__button,
+    schemaEnhancer: composeSchema(
+      ButtonBlockSchemaEnhancer,
+      DefaultStylingSchemaEnhancer,
+    ),
+  };
+
+  //Image
+  config.blocks.blocksConfig.image = {
+    ...config.blocks.blocksConfig.image,
+    schemaEnhancer: composeSchema(DefaultStylingSchemaEnhancer),
+  };
+
+  //Separator
+  config.blocks.blocksConfig.separator = {
+    ...config.blocks.blocksConfig.separator,
+    schemaEnhancer: composeSchema(DefaultStylingSchemaEnhancer),
+  };
+
   //Heading
   config.blocks.blocksConfig.heading = {
     ...config.blocks.blocksConfig.heading,
@@ -40,15 +61,6 @@ const applyConfig = (config) => {
     ...config.blocks.blocksConfig.hero,
     schemaEnhancer: composeSchema(
       HeroBlockSchemaEnhancer,
-      DefaultStylingSchemaEnhancer,
-    ),
-  };
-
-  //Button
-  config.blocks.blocksConfig.__button = {
-    ...config.blocks.blocksConfig.__button,
-    schemaEnhancer: composeSchema(
-      ButtonBlockSchemaEnhancer,
       DefaultStylingSchemaEnhancer,
     ),
   };

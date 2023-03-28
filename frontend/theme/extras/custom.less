@@ -4,7 +4,13 @@
 @white: #fff;
 
 p {
-  color: #474747 !important;
+  color: #525252 !important;
+}
+li {
+  color: #525252 !important;
+  &::marker {
+    color: @plone-blue;
+  }
 }
 
 .has--backgroundColor--transparent {
@@ -17,11 +23,13 @@ p {
 
 .documentFirstHeading {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: bold;
+  padding-bottom: 55px;
   border-bottom: 0 solid transparent;
   &::before {
     border-bottom: 0 solid transparent;
   }
+  .default-container-width();
 }
 
 .full-container-width() {
@@ -40,16 +48,16 @@ p {
 }
 
 .default-heading-size() {
-  font-size: 2.4rem;
-  font-weight: 600;
+  font-size: 2.6rem;
+  font-weight: bold;
   line-height: 1.5;
   width: max-content;
-  margin: auto;
+  margin: 45px auto 25px auto;
   cursor: text;
 }
 .small-heading-size() {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: bold;
   line-height: 1.5;
   width: max-content;
   margin: auto;
@@ -417,9 +425,9 @@ p {
             justify-content: center;
             img {
               width: 100%;
-              height: 60px;
+              height: auto;
               margin: auto;
-              object-fit: contain;
+              object-fit: cover;
               object-position: center;
             }
           }
@@ -508,6 +516,13 @@ p {
 }
 #page-document > ul {
   .text-container-width();
+}
+
+//Search
+.block.search {
+  .ui.stackable.grid.searchBlock-facets.right-column-facets {
+    .default-container-width();
+  }
 }
 
 //Button
@@ -612,14 +627,17 @@ p {
             padding: 20px;
             .supertitle {
               color: @white !important;
+              max-width: 520px;
             }
             .title h2 {
               .default-heading-size();
               margin: 0 !important;
               color: @white !important;
+              max-width: 520px;
             }
             .body p {
               color: @white !important;
+              max-width: 520px;
             }
             .button {
               .ui.button {
@@ -722,6 +740,9 @@ p {
 
 //Listing
 .block.listing {
+  .headline {
+    .default-container-width();
+  }
   .listing-wrapper {
     .default-container-width();
   }

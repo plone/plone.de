@@ -40,7 +40,7 @@ const EventTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                       <span className="day">No date</span>
                     )}
                   </div>
-                  <p>, {item.location}</p>
+                  {item?.location ? <p>, {item.location}</p> : <></>}
                 </div>
 
                 <h3>{item.title ? item.title : item.id}</h3>

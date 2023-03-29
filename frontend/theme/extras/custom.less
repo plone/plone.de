@@ -522,6 +522,32 @@ li {
 .block.search {
   .ui.stackable.grid.searchBlock-facets.right-column-facets {
     .default-container-width();
+    .listing-wrapper {
+      .default-container-width();
+      .items {
+        display: flex;
+        .listing-item {
+          border: 1px solid #cdcdcd;
+          border-radius: 8px;
+          margin: 14px;
+          display: block;
+
+          .listing-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+          }
+          .listing-body {
+            padding: 20px;
+            .listing-header {
+              margin-top: 0;
+              width: fit-content;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -745,6 +771,29 @@ li {
   }
   .listing-wrapper {
     .default-container-width();
+    .items {
+      display: flex;
+      .listing-item {
+        border: 1px solid #cdcdcd;
+        border-radius: 8px;
+        margin: 14px;
+        display: block;
+
+        .listing-image {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 8px 8px 0 0;
+        }
+        .listing-body {
+          padding: 20px;
+          .listing-header {
+            margin-top: 0;
+            width: fit-content;
+          }
+        }
+      }
+    }
   }
 }
 

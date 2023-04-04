@@ -3,15 +3,12 @@
 @plone-blue: #0086c3;
 @white: #fff;
 
-p {
-  color: #525252 !important;
-  .text-container-width();
-}
-ul li {
-  color: #525252 !important;
+#main p,
+#main ul li {
+  color: #525252;
   .text-container-width();
   &::marker {
-    color: @plone-blue;
+    color: @plone-blue !important;
   }
 }
 
@@ -37,10 +34,12 @@ ul li {
 .full-container-width() {
   width: 1440px !important;
   margin: auto !important;
+  margin-bottom: 14px !important;
 }
 .default-container-width() {
   max-width: 940px !important;
   margin: auto !important;
+  margin-bottom: 14px !important;
 }
 .text-container-width() {
   max-width: 620px !important;
@@ -66,6 +65,35 @@ ul li {
   max-width: 940px;
   margin: 24px auto 14px auto;
   cursor: text;
+}
+
+.button-blue() {
+  &.blue {
+    border: 1px solid @plone-blue;
+    background: linear-gradient(to right, transparent 50%, @plone-blue 50%);
+    background-position: right;
+    background-size: calc(200% + 1px) 100%;
+    color: @white;
+
+    &:hover {
+      background-position: left;
+      color: @plone-blue;
+    }
+  }
+}
+.button-white() {
+  &.white {
+    border: 1px solid @white;
+    background: linear-gradient(to right, transparent 50%, @white 50%);
+    background-position: right;
+    background-size: calc(200% + 1px) 100%;
+    color: @plone-blue;
+
+    &:hover {
+      background-position: left;
+      color: @white;
+    }
+  }
 }
 
 .siteroot .ui.secondary.vertical.segment.breadcrumbs {
@@ -236,9 +264,6 @@ ul li {
       #page-document.ui.container {
         .full-container-width();
         body {
-          color: @black;
-        }
-        p {
           color: @black;
         }
         a {
@@ -529,40 +554,12 @@ ul li {
           color: @black;
           text-align: center;
         }
-
-        p {
-          margin-bottom: 14px;
-        }
       }
 
       .ui.button {
         transition: all 0.2s ease-out;
-
-        &.blue {
-          border: 1px solid @plone-blue;
-          background: linear-gradient(to right, @white 50%, @plone-blue 50%);
-          background-position: right;
-          background-size: calc(200% + 1px) 100%;
-          color: @white;
-
-          &:hover {
-            background-position: left;
-            color: @plone-blue;
-          }
-        }
-
-        &.white {
-          border: 1px solid @white;
-          background: linear-gradient(to right, @plone-blue 50%, @white 50%);
-          background-position: right;
-          background-size: calc(200% + 1px) 100%;
-          color: @plone-blue;
-
-          &:hover {
-            background-position: left;
-            color: @white;
-          }
-        }
+        .button-blue();
+        .button-white();
       }
     }
   }
@@ -618,32 +615,8 @@ ul li {
     .default-container-width();
     .ui.button {
       transition: all 0.2s ease-out;
-
-      &.blue {
-        border: 1px solid @plone-blue;
-        background: linear-gradient(to right, @white 50%, @plone-blue 50%);
-        background-position: right;
-        background-size: calc(200% + 1px) 100%;
-        color: @white;
-
-        &:hover {
-          background-position: left;
-          color: @plone-blue;
-        }
-      }
-
-      &.white {
-        border: 1px solid @white;
-        background: linear-gradient(to right, @plone-blue 50%, @white 50%);
-        background-position: right;
-        background-size: calc(200% + 1px) 100%;
-        color: @plone-blue;
-
-        &:hover {
-          background-position: left;
-          color: @white;
-        }
-      }
+      .button-blue();
+      .button-white();
     }
   }
 }
@@ -729,40 +702,8 @@ ul li {
             .button {
               .ui.button {
                 transition: all 0.2s ease-out;
-
-                &.blue {
-                  border: 1px solid @plone-blue;
-                  background: linear-gradient(
-                    to right,
-                    @white 50%,
-                    @plone-blue 50%
-                  );
-                  background-position: right;
-                  background-size: calc(200% + 1px) 100%;
-                  color: @white;
-
-                  &:hover {
-                    background-position: left;
-                    color: @plone-blue;
-                  }
-                }
-
-                &.white {
-                  border: 1px solid @white;
-                  background: linear-gradient(
-                    to right,
-                    @plone-blue 50%,
-                    @white 50%
-                  );
-                  background-position: right;
-                  background-size: calc(200% + 1px) 100%;
-                  color: @plone-blue;
-
-                  &:hover {
-                    background-position: left;
-                    color: @white;
-                  }
-                }
+                .button-blue();
+                .button-white();
               }
             }
           }

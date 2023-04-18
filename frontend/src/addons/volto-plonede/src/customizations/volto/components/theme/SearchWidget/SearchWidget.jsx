@@ -81,7 +81,7 @@ class SearchWidget extends Component {
       <Form action="/search" onSubmit={this.onSubmit}>
         <Form.Field className="search-icon">
           <button>
-            <Icon name={zoomSVG} size="18px" />
+            <Icon name={zoomSVG} size="" />
           </button>
         </Form.Field>
       </Form>

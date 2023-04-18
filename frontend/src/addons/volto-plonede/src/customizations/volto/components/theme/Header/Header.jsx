@@ -49,11 +49,13 @@ class Header extends Component {
               <div className="logo">
                 <Logo />
               </div>
-              <div className="navigation">
-                <Navigation pathname={this.props.pathname} />
-              </div>
-              <div className="search">
-                <SearchWidget />
+              <div className="nav-search-wrapper">
+                <div className="navigation">
+                  <Navigation pathname={this.props.pathname} />
+                </div>
+                <div className="search">
+                  <SearchWidget />
+                </div>
               </div>
             </div>
           </div>

@@ -4,12 +4,16 @@
 @white: #fff;
 
 #main p,
-#main ul li {
+#main ul li :not(.slick-dots) {
   color: #525252;
   .text-container-width();
   &::marker {
     color: @plone-blue !important;
   }
+}
+
+#main button {
+  cursor: pointer !important;
 }
 
 .has--backgroundColor--transparent {
@@ -52,7 +56,7 @@
   font-size: 2.6rem;
   font-weight: bold;
   line-height: 1.5;
-  width: max-content;
+  width: 100%;
   max-width: 940px;
   margin: 45px auto 25px auto;
   cursor: text;
@@ -61,7 +65,7 @@
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.5;
-  width: max-content;
+  width: 100%;
   max-width: 940px;
   margin: 24px auto 14px auto;
   cursor: text;
@@ -684,30 +688,34 @@
       position: relative;
 
       .teaser-item.top {
-        .ui.container {
-          width: 100% !important;
-          .teaser-item-title.fix-width-issue {
-            position: absolute;
-            top: 30%;
-            padding: 0;
-            background-color: rgba(0, 134, 195, 0.8);
-            padding: 20px;
-            .supertitle {
-              color: @white !important;
-            }
-            .title h2 {
-              .default-heading-size();
-              margin: 0 !important;
-              color: @white !important;
-            }
-            .body p {
-              color: @white !important;
-            }
-            .button {
-              .ui.button {
-                transition: all 0.2s ease-out;
-                .button-blue();
-                .button-white();
+        div {
+          width: 100%;
+          .ui.container {
+            width: 100% !important;
+            .teaser-item-title.fix-width-issue {
+              position: absolute;
+              width: 530px;
+              top: 30%;
+              padding: 0;
+              background-color: rgba(0, 134, 195, 0.8);
+              padding: 20px;
+              .supertitle {
+                color: @white !important;
+              }
+              .title h2 {
+                .default-heading-size();
+                margin: 0 !important;
+                color: @white !important;
+              }
+              .body p {
+                color: @white !important;
+              }
+              .button {
+                .ui.button {
+                  transition: all 0.2s ease-out;
+                  .button-blue();
+                  .button-white();
+                }
               }
             }
           }
@@ -938,6 +946,7 @@
             .logo {
               margin-top: auto;
               margin-bottom: auto;
+              margin-left: 1rem;
             }
             .nav-search-wrapper {
               display: flex;
@@ -996,33 +1005,21 @@
         position: relative;
 
         .teaser-item.top {
-          .ui.container {
-            .teaser-item-title.fix-width-issue {
-              position: relative;
-              width: 100%;
-              padding: 0;
-              background-color: rgba(0, 134, 195, 0.8);
-              padding: 20px;
-              .supertitle {
-                color: @white !important;
-                max-width: 520px;
-              }
-              .title h2 {
-                .default-heading-size();
-                margin: 0 !important;
-                color: @white !important;
-                max-width: 520px;
-              }
-              .body p {
-                color: @white !important;
-                max-width: 520px;
-                margin: 0 !important;
-              }
-              .button {
-                .ui.button {
-                  transition: all 0.2s ease-out;
-                  .button-blue();
-                  .button-white();
+          div {
+            .ui.container {
+              margin: 0 !important;
+              .teaser-item-title.fix-width-issue {
+                position: relative;
+                width: 100%;
+                padding: 0;
+                background-color: rgba(0, 134, 195, 0.8);
+                padding: 20px;
+                .button {
+                  .ui.button {
+                    transition: all 0.2s ease-out;
+                    .button-blue();
+                    .button-white();
+                  }
                 }
               }
             }
@@ -1032,10 +1029,12 @@
     }
     .slick-slider {
       .slick-arrow.slick-prev {
-        color: @black;
+        display: none;
+        visibility: hidden;
       }
       .slick-arrow.slick-next {
-        color: @black;
+        display: none;
+        visibility: hidden;
       }
     }
 
@@ -1051,11 +1050,15 @@
     }
 
     .slick-dots {
+      display: flex !important;
+      justify-content: center;
       bottom: -25px;
       li {
         height: 7px;
         width: 55px;
         background-color: #ccc;
+        margin: 0.5rem !important;
+
         button {
           border: 0;
           height: auto;
@@ -1082,13 +1085,33 @@
     }
   }
 
+  //Listing
+  .block.listing {
+    .listing-wrapper {
+      .items {
+        .listing-item {
+          width: 45%;
+        }
+      }
+    }
+  }
+
+  //Search
+  .block.search
+    .ui.stackable.grid.searchBlock-facets.right-column-facets
+    .listing-wrapper
+    .items
+    .listing-item {
+    width: 45%;
+  }
+
   //Footer
   .ui.inverted.list .item a:not(.ui):hover {
     color: #007eb6 !important;
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 620px) {
   //Hamburger
   //Hamburger open
   .ui.basic.segment.header-wrapper {
@@ -1126,14 +1149,13 @@
   }
 
   //Hero
-  .block.hero.alignRight .block-inner-wrapper {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .block.hero .block-inner-wrapper {
-    display: flex;
-    flex-direction: column-reverse;
+  .block.hero {
+    .block-inner-wrapper {
+      flex-direction: column !important;
+      .hero-image {
+        max-width: none;
+      }
+    }
   }
 
   //Button
@@ -1141,6 +1163,26 @@
     .align.center {
       text-align: left;
     }
+  }
+
+  //Listing
+  .block.listing {
+    .listing-wrapper {
+      .items {
+        .listing-item {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  //Search
+  .block.search
+    .ui.stackable.grid.searchBlock-facets.right-column-facets
+    .listing-wrapper
+    .items
+    .listing-item {
+    width: 100%;
   }
 
   //Footer

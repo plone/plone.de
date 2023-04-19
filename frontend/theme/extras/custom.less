@@ -1,11 +1,15 @@
+:root {
+  --text-color: #525252;
+}
+
 @black: #181818;
 @light-grey: #cdcdcd;
 @plone-blue: #0086c3;
 @white: #fff;
 
 #main p,
-#main ul li :not(.slick-dots) {
-  color: #525252;
+#main ul li {
+  color: var(--text-color);
   .text-container-width();
   &::marker {
     color: @plone-blue !important;
@@ -25,6 +29,7 @@
 }
 
 .documentFirstHeading {
+  .default-container-width();
   font-size: 3rem;
   font-weight: bold;
   padding-bottom: 55px;
@@ -32,7 +37,6 @@
   &::before {
     border-bottom: 0 solid transparent;
   }
-  .default-container-width();
 }
 
 .full-container-width() {
@@ -578,11 +582,16 @@
 }
 
 //Text
-#page-document > p {
+#page-document p {
+  color: #525252;
   .text-container-width();
 }
-#page-document > ul {
+#page-document > ul li {
+  color: #525252;
   .text-container-width();
+  &::marker {
+    color: @plone-blue !important;
+  }
 }
 
 //Search
@@ -791,7 +800,7 @@
         border-radius: 8px;
         margin: 14px;
         display: block;
-        width: 428px;
+        width: 442px;
 
         .listing-image {
           width: 100%;
@@ -1090,7 +1099,7 @@
     .listing-wrapper {
       .items {
         .listing-item {
-          width: 45%;
+          width: 46%;
         }
       }
     }
@@ -1102,7 +1111,7 @@
     .listing-wrapper
     .items
     .listing-item {
-    width: 45%;
+    width: 46%;
   }
 
   //Footer

@@ -9,11 +9,11 @@
     // "activityBarBadge.background": "#1a91c5",
     // "activityBarBadge.foreground": "#e7e7e7",
     // "sash.hoverBorder": "#c0ea5f",
-    "statusBar.background": "#5a3693",
+    "statusBar.background": "#0086c3",
     //"statusBar.foreground": "#15202b"
     //"statusBarItem.hoverBackground": "#b0bef0",
-    "statusBarItem.hoverBackground": "#9b96cb",
-    "statusBarItem.remoteBackground": "#2c2776"
+    "statusBarItem.hoverBackground": "#0c9bde",
+    "statusBarItem.remoteBackground": "#00334a"
     //"statusBarItem.remoteForeground": "#15202b"
     //"titleBar.activeBackground": "#aee432",
     //"titleBar.activeForeground": "#15202b",

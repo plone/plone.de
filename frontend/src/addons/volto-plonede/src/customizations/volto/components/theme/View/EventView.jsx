@@ -14,14 +14,18 @@ const EventTextfieldView = ({ content }) => (
   <React.Fragment>
     {content.title && <h1 className="documentFirstHeading">{content.title}</h1>}
     {content.description && (
-      <p className="documentDescription">{content.description}</p>
+      <>
+        <p className="documentDescription">{content.description}</p>
+      </>
     )}
     {content.image && (
-      <Image
-        className="document-image"
-        src={content.image.scales.thumb.download}
-        floated="right"
-      />
+      <>
+        <Image
+          className="document-image"
+          src={content.image.scales.thumb.download}
+          floated="right"
+        />
+      </>
     )}
     {content.text && (
       <div
@@ -53,15 +57,21 @@ const EventView = (props) => {
         </Grid.Column>
         <Grid.Column className="event-content mobile hidden">
           {hasBlocksData(content) ? (
-            <RenderBlocks {...props} />
+            <>
+              <RenderBlocks {...props} />
+            </>
           ) : (
-            <EventTextfieldView {...props} />
+            <>
+              <EventTextfieldView {...props} />
+            </>
           )}
         </Grid.Column>
-
         <Grid.Column width={12} only="mobile">
           {hasBlocksData(content) ? (
             <>
+              <h1 className="documentFirstHeading">{content.title}</h1>
+              <p className="documentDescription">{content.description}</p>
+              <EventDetails content={content} display_as="div" />
               <RenderBlocks
                 {...props}
                 content={{
@@ -71,7 +81,6 @@ const EventView = (props) => {
                   },
                 }}
               />
-              <EventDetails content={content} display_as="div" />
               <RenderBlocks
                 {...props}
                 content={{

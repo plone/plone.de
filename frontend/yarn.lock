@@ -2482,12 +2482,11 @@ __metadata:
   linkType: hard
 
 "@kitconcept/volto-heading-block@npm:*":
-  version: 2.1.2
-  resolution: "@kitconcept/volto-heading-block@npm:2.1.2"
+  version: 2.2.0
+  resolution: "@kitconcept/volto-heading-block@npm:2.2.0"
   dependencies:
-    "@plone/scripts": "*"
     react-contenteditable: 3.3.6
-  checksum: 83492ac50bc3bf4e4da687c42d6e14f35594772dc142f8a27ea0a6b7d4c0446ccc2c91a0e9c5c5209ca5265d827af83307d272743d4562d298910f071593b0bc
+  checksum: ac417809bc7f2f4a4c1b0392fee872b4662c9b4414aed4cc76f9664b61c13364169a1a01f65ced9303f7d08d46b0692e7a814c5c50b5d10866f5adb8adea8df7
   languageName: node
   linkType: hard
 

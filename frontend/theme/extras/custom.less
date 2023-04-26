@@ -600,10 +600,6 @@
 }
 
 //Text
-#page-document p {
-  color: #525252;
-  .text-container-width();
-}
 #page-document > ul li {
   color: #525252;
   .text-container-width();
@@ -1226,6 +1222,24 @@
     }
   }
 
+  //Document first Heading
+  .mobile.only.twelve.wide.column .documentFirstHeading {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  //Image
+  .mobile.only.twelve.wide.column .block.image.align.center {
+    img {
+      padding: 0;
+    }
+  }
+
+  //Heading
+  .block.heading {
+    padding: 0 1rem;
+  }
+
   //Button
   .button.container {
     .align.center {
@@ -1256,5 +1270,9 @@
   //Footer
   .ui.inverted.list .item a:not(.ui):hover {
     color: #007eb6 !important;
+  }
+
+  #page-document > p {
+    padding: 0 1rem;
   }
 }

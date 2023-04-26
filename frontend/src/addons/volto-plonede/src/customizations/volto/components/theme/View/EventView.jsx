@@ -58,30 +58,14 @@ const EventView = (props) => {
             <EventTextfieldView {...props} />
           )}
         </Grid.Column>
-
+        <Grid.Column width={12} only="mobile">
+          <h1 className="documentFirstHeading">{content.title}</h1>
+          <p className="documentDescription">{content.description}</p>
+          <EventDetails content={content} display_as="div" />
+        </Grid.Column>
         <Grid.Column width={12} only="mobile">
           {hasBlocksData(content) ? (
-            <>
-              <RenderBlocks
-                {...props}
-                content={{
-                  ...content,
-                  blocks_layout: {
-                    items: props.content.blocks_layout.items.slice(0, 1),
-                  },
-                }}
-              />
-              <EventDetails content={content} display_as="div" />
-              <RenderBlocks
-                {...props}
-                content={{
-                  ...content,
-                  blocks_layout: {
-                    items: props.content.blocks_layout.items.slice(1),
-                  },
-                }}
-              />
-            </>
+            <RenderBlocks {...props} />
           ) : (
             <EventTextfieldView {...props} />
           )}

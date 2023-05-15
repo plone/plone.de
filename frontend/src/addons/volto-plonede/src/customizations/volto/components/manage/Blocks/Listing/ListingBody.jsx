@@ -97,7 +97,7 @@ const ListingBody = withQuerystringResults((props) => {
       </Dimmer>
     </div>
   ) : (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       {hasLoaded && (
         <FormattedMessage
           id="No results found."

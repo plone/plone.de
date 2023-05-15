@@ -52,14 +52,6 @@
     },
     {
       "@type": "Image",
-      "id": "forest.jpeg",
-      "title": "forest.jpeg",
-      "set_local_image": {
-        "image": "forest.jpeg"
-      }
-    },
-    {
-      "@type": "Image",
       "id": "plone6.png",
       "title": "plone6.png",
       "set_local_image": {

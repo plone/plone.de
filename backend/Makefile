@@ -143,11 +143,11 @@ lint-zpretty: ## validate ZCML/XML using zpretty
 
 .PHONY: test
 test: ## run tests
-	./bin/pytest src/plonede
+	bin/pytest src/plonede
 
 .PHONY: test_quiet
 test_quiet: ## run tests removing deprecation warnings
-	./bin/pytest src/plonede  --disable-warnings
+	bin/pytest src/plonede  --disable-warnings
 
 .PHONY: create-site
 create-site: instance/etc/zope.ini ## Create a new site from scratch

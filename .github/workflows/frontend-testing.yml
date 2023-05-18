@@ -101,7 +101,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/plone/ploneorg-frontend
+            ghcr.io/plone/plonede-frontend
           flavor: |
             latest=false
           tags: |

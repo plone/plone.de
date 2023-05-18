@@ -146,11 +146,11 @@
     "@kitconcept/volto-heading-block": "*",
     "@kitconcept/volto-separator-block": "*",
     "@kitconcept/volto-slider-block": "*",
-    "@plone/volto": "17.0.0-alpha.3",
+    "@plone/volto": "17.0.0-alpha.7",
     "date-fns": "2.29.3"
   },
   "devDependencies": {
-    "@plone/scripts": "^2.2.2",
+    "@plone/scripts": "^3.0.0",
     "@storybook/addon-actions": "^6.3.0",
     "@storybook/addon-controls": "6.3.0",
     "@storybook/addon-essentials": "^6.3.0",

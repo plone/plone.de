@@ -137,17 +137,17 @@
     "node": "^14 || ^16"
   },
   "dependencies": {
-    "@eeacms/volto-accordion-block": "*",
-    "@eeacms/volto-matomo": "*",
-    "@kitconcept/volto-blocks-grid": "*",
-    "@kitconcept/volto-button-block": "*",
-    "@kitconcept/volto-carousel-block": "*",
+    "@eeacms/volto-accordion-block": "8.0.0",
+    "@eeacms/volto-matomo": "3.0.1",
+    "@kitconcept/volto-blocks-grid": "7.0.0",
+    "@kitconcept/volto-button-block": "2.1.0",
+    "@kitconcept/volto-carousel-block": "1.0.0",
     "@kitconcept/volto-export": "1.1.0",
-    "@kitconcept/volto-heading-block": "*",
-    "@kitconcept/volto-separator-block": "*",
-    "@kitconcept/volto-slider-block": "*",
+    "@kitconcept/volto-heading-block": "2.2.0",
+    "@kitconcept/volto-separator-block": "3.0.2",
+    "@kitconcept/volto-slider-block": "4.3.0",
     "@plone/volto": "17.0.0-alpha.7",
-    "date-fns": "2.29.3"
+    "date-fns": "2.30.0"
   },
   "devDependencies": {
     "@plone/scripts": "^3.0.0",

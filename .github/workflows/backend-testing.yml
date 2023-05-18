@@ -92,7 +92,7 @@ jobs:
 
       - name: Run tests
         run: |
-          make test_quiet
+          pytest
 
   release:
     if: ${{ github.ref == 'refs/heads/main' }}

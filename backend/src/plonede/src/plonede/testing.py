@@ -9,7 +9,7 @@ from plone.testing.zope import WSGI_SERVER_FIXTURE
 import plonede
 
 
-class PLONEDELayer(PloneSandboxLayer):
+class Layer(PloneSandboxLayer):
 
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
 
@@ -27,26 +27,26 @@ class PLONEDELayer(PloneSandboxLayer):
         applyProfile(portal, "plonede:initial")
 
 
-PLONEDE_FIXTURE = PLONEDELayer()
+FIXTURE = Layer()
 
 
-PLONEDE_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(PLONEDE_FIXTURE,),
-    name="PLONEDELayer:IntegrationTesting",
+INTEGRATION_TESTING = IntegrationTesting(
+    bases=(FIXTURE,),
+    name="Layer:IntegrationTesting",
 )
 
 
-PLONEDE_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(PLONEDE_FIXTURE, WSGI_SERVER_FIXTURE),
-    name="PLONEDELayer:FunctionalTesting",
+FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(FIXTURE, WSGI_SERVER_FIXTURE),
+    name="Layer:FunctionalTesting",
 )
 
 
-PLONEDEACCEPTANCE_TESTING = FunctionalTesting(
+ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
-        PLONEDE_FIXTURE,
+        FIXTURE,
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         WSGI_SERVER_FIXTURE,
     ),
-    name="PLONEDELayer:AcceptanceTesting",
+    name="Layer:AcceptanceTesting",
 )

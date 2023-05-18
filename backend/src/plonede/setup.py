@@ -52,7 +52,9 @@ setup(
     ],
     extras_require={
         "test": [
-            "parameterized",
+            "pytest",
+            "pytest-cov",
+            "pytest-plone>=0.2.0",
             "zest.releaser[recommended]",
             "plone.app.testing[robot]>=7.0.0a3",
             "plone.restapi[test]",

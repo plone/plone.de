@@ -1,3 +1,6 @@
+[tool.pytest.ini_options]
+addopts = "--cov-report term-missing --cov=plonede"
+
 [tool.black]
 line-length = 88
 target-version = ['py38']

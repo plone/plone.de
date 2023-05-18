@@ -19,7 +19,7 @@ PLONE_VERSION=6.0.4
 
 BACKEND_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
-CODE_QUALITY_VERSION=2.0.2
+CODE_QUALITY_VERSION=2
 ifndef LOG_LEVEL
 	LOG_LEVEL=INFO
 endif
@@ -143,11 +143,11 @@ lint-zpretty: ## validate ZCML/XML using zpretty
 
 .PHONY: test
 test: ## run tests
-	./bin/zope-testrunner --auto-color --auto-progress --test-path src/plonede/src/
+	./bin/pytest src/plonede
 
 .PHONY: test_quiet
 test_quiet: ## run tests removing deprecation warnings
-	PYTHONWARNINGS=ignore ./bin/zope-testrunner --auto-color --auto-progress --test-path src/plonede/src/
+	./bin/pytest src/plonede  --disable-warnings
 
 .PHONY: create-site
 create-site: instance/etc/zope.ini ## Create a new site from scratch

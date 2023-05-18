@@ -16,9 +16,7 @@ jobs:
   meta:
     runs-on: ubuntu-latest
     outputs:
-      PLONE_VERSION: ${{ steps.vars.outputs.PLONE_VERSION }}
       TAG: ${{ steps.vars.outputs.TAG }}
-      VOLTO_VERSION: ${{ steps.vars.outputs.VOLTO_VERSION }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -26,9 +24,7 @@ jobs:
       - name: Set Env Vars
         id: vars
         run: |
-          echo "PLONE_VERSION=$(cat backend/version.txt)" >> $GITHUB_OUTPUT
           echo "TAG=sha-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-          echo "VOLTO_VERSION=$(cat frontend/version.txt)" >> $GITHUB_OUTPUT
 
   release-frontend:
     runs-on: ubuntu-latest
@@ -62,9 +58,7 @@ jobs:
         with:
           platforms: linux/amd64
           context: frontend
-          file: frontend/dockerfiles/Dockerfile
-          build-args: |
-            VOLTO_VERSION=${{ needs.meta.outputs.VOLTO_VERSION }}
+          file: frontend/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -81,7 +75,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            ${{ vars.IMAGE_NAME_PREFIX }}-${{ env.BACKEND_IMAGE_NAME_SUFFIX }}
+            ${{ env.IMAGE_NAME_PREFIX }}-${{ env.BACKEND_IMAGE_NAME_SUFFIX }}
           flavor: |
             latest=false
           tags: |
@@ -104,9 +98,7 @@ jobs:
         with:
           platforms: linux/amd64
           context: backend
-          file: backend/dockerfiles/Dockerfile
-          build-args: |
-            PLONE_VERSION=${{ needs.meta.outputs.PLONE_VERSION }}
+          file: backend/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -129,7 +121,7 @@ jobs:
         with:
           registry: "ghcr.io"
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.DEPLOY_GHCR_READ_TOKEN }}
           remote_host: ${{ vars.DEPLOY_HOST }}
           remote_port: ${{ vars.DEPLOY_PORT }}
           remote_user: ${{ vars.DEPLOY_USER }}

@@ -1,0 +1,82 @@
+version: '3.3'
+
+services:
+
+  frontend:
+    image: ghcr.io/plone/plonede-frontend:${STACK_PARAM:-latest}
+    environment:
+      RAZZLE_INTERNAL_API_PATH: http://testing_plonede-backend:8080/Plone
+    depends_on:
+      - backend
+    networks:
+      - public
+      - testing_plonede
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.type == app
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=public
+        - traefik.constraint-label=public
+        # SERVICE
+        - traefik.http.services.testing_plonede-frontend.loadbalancer.server.port=3000
+        # MIDDLEWARES
+        ### ClassicUI Access Authentication
+        - traefik.http.middlewares.testing_plonede-frontend-auth.basicauth.users=plonede:$$apr1$$SAOhBRqM$$HqoYLlr//h7PfUWidoFg//
+        # HOSTS: Main
+        - traefik.http.routers.testing_plonede-frontend.rule=Host(`testing.plone.de`)
+        - traefik.http.routers.testing_plonede-frontend.entrypoints=https
+        - traefik.http.routers.testing_plonede-frontend.tls=true
+        - traefik.http.routers.testing_plonede-frontend.tls.certresolver=le
+        - traefik.http.routers.testing_plonede-frontend.service=testing_plonede-frontend
+        - traefik.http.routers.testing_plonede-frontend.middlewares=gzip,testing_plonede-frontend-auth
+
+  backend:
+    image: ghcr.io/plone/plonede-backend:${STACK_PARAM:-latest}
+    environment:
+      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-plone}'"
+    networks:
+    - testing_plonede
+    - public
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.type == app
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=public
+        - traefik.constraint-label=public
+        # SERVICE
+        - traefik.http.services.testing_plonede-backend.loadbalancer.server.port=8080
+        # MIDDLEWARES
+        ### ClassicUI Access Authentication
+        - traefik.http.middlewares.testing_plonede-backend-auth.basicauth.users=plonede:$$apr1$$SAOhBRqM$$HqoYLlr//h7PfUWidoFg//
+        ### Backend ++api++ VHM
+        - "traefik.http.middlewares.testing_plonede-vhm.replacepathregex.regex=^/\\+\\+api\\+\\+($$|/.*)"
+        - "traefik.http.middlewares.testing_plonede-vhm.replacepathregex.replacement=/VirtualHostBase/https/testing.plone.de/Plone/++api++/VirtualHostRoot/$$1"
+        ### Backend ClassicUI VHM
+        - "traefik.http.middlewares.testing_plonede-vhm-classicui.replacepathregex.regex=^/ClassicUI($$|/.*)"
+        - "traefik.http.middlewares.testing_plonede-vhm-classicui.replacepathregex.replacement=/VirtualHostBase/https/testing.plone.de/Plone/VirtualHostRoot/_vh_ClassicUI/$$1"
+        # ROUTES
+        ## ploneconf.org API
+        - traefik.http.routers.testing_plonede-backend.rule=Host(`testing.plone.de`) && (PathPrefix(`/++api++`))
+        - traefik.http.routers.testing_plonede-backend.entrypoints=https
+        - traefik.http.routers.testing_plonede-backend.tls=true
+        - traefik.http.routers.testing_plonede-backend.service=testing_plonede-backend
+        - traefik.http.routers.testing_plonede-backend.middlewares=gzip,testing_plonede-vhm
+        ### ploneconf.org /ClassicUI - protected with basic auth (prevent SEOs from crawl it)
+        - traefik.http.routers.testing_plonede-classicui.rule=Host(`testing.plone.de`) && (PathPrefix(`/ClassicUI`))
+        - traefik.http.routers.testing_plonede-classicui.entrypoints=https
+        - traefik.http.routers.testing_plonede-classicui.tls=true
+        - traefik.http.routers.testing_plonede-classicui.service=testing_plonede-backend
+        - traefik.http.routers.testing_plonede-classicui.middlewares=gzip,testing_plonede-backend-auth,testing_plonede-vhm-classicui
+
+networks:
+  public:
+    external: true
+    driver: overlay
+  testing_plonede:
+    driver: overlay

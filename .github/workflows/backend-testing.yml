@@ -92,7 +92,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest
+          pytest src/plonede/tests
 
   release:
     if: ${{ github.ref == 'refs/heads/main' }}

@@ -49,6 +49,13 @@ setup(
         "prettyconf",
         "kitconcept.api",
         "kitconcept.contentcreator",
+        "collective.exportimport",
+        "pas.plugins.authomatic",
+        "collective.volto.socialsettings",
+        "collective.volto.formsupport[norobots]",
+        "collective.z3cform.norobots",
+        "collective.honeypot"
+
     ],
     extras_require={
         "test": [

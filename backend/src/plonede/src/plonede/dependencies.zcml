@@ -4,5 +4,7 @@
   <include package="plone.volto" />
   <include package="plone.restapi" />
   <include package="kitconcept.contentcreator" />
+  <include package="pas.plugins.authomatic" />
+  <include package="collective.volto.formsupport" />
 
 </configure>

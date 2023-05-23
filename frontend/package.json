@@ -26,14 +26,16 @@
   },
   "addons": [
     "@eeacms/volto-accordion-block",
+    "@eeacms/volto-matomo",
     "@kitconcept/volto-blocks-grid",
     "@kitconcept/volto-slider-block",
-    "@eeacms/volto-matomo",
     "@kitconcept/volto-separator-block",
     "@kitconcept/volto-button-block",
     "@kitconcept/volto-heading-block",
     "@kitconcept/volto-export",
     "@kitconcept/volto-carousel-block",
+    "@plone-collective/volto-authomatic",
+    "volto-form-block",
     "volto-plonede"
   ],
   "jest": {
@@ -146,6 +148,8 @@
     "@kitconcept/volto-heading-block": "2.2.0",
     "@kitconcept/volto-separator-block": "3.0.2",
     "@kitconcept/volto-slider-block": "4.3.0",
+    "@plone-collective/volto-authomatic": "1.3.0",
+    "volto-form-block": "3.0.1",
     "@plone/volto": "17.0.0-alpha.7",
     "date-fns": "2.30.0"
   },

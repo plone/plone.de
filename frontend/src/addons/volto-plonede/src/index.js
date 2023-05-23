@@ -25,7 +25,7 @@ const applyConfig = (config) => {
     defaultLanguage: 'de',
     navDepth: 2,
     matomoSiteId: '11',
-    matomoUrlBase: 'https://stats.plone.de',
+    matomoUrlBase: 'https://stats.plone.de/',
   };
 
   //Button

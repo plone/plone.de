@@ -1,2 +1,3 @@
 @import 'custom';
 @import 'separator';
+@import 'slider';

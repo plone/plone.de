@@ -1,0 +1,112 @@
+// Slider
+.block.slider {
+  &.full-container-width {
+    .grid-teaser-item.top {
+      position: relative;
+      display: block;
+
+      .teaser-item.top {
+        div {
+          width: 100%;
+
+          .ui.container {
+            width: 100% !important;
+
+            .teaser-item-title.fix-width-issue {
+              position: absolute;
+              top: 30%;
+              width: 530px;
+              padding: 0;
+              padding: 20px;
+              background-color: rgba(0, 134, 195, 0.8);
+
+              .supertitle {
+                color: @white !important;
+              }
+
+              .title h2 {
+                .default-heading-size();
+                margin: 0 !important;
+                color: @white !important;
+              }
+
+              .body p {
+                color: @white !important;
+              }
+
+              .button {
+                .ui.button {
+                  transition: all 0.2s ease-out;
+                  .button-blue();
+                  .button-white();
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slick-slider {
+    .slick-arrow.slick-prev {
+      color: @black;
+    }
+
+    .slick-arrow.slick-next {
+      color: @black;
+    }
+  }
+
+  &.default-container-width {
+    .slick-slider {
+      .default-container-width();
+
+      .grid-teaser-item.top {
+        .teaser-item.top {
+          .default-container-width();
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    bottom: -25px;
+
+    li {
+      width: 55px;
+      height: 7px;
+      background-color: #ccc;
+
+      button {
+        width: 55px;
+        height: auto;
+        border: 0;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      &.slick-active {
+        width: 55px;
+        height: 7px;
+        background-color: #181818;
+
+        button {
+          width: 55px;
+          height: auto;
+          border: 0;
+
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-editor-slider {
+  max-width: 1440px;
+}

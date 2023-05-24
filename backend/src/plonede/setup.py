@@ -54,8 +54,7 @@ setup(
         "collective.volto.socialsettings",
         "collective.volto.formsupport[norobots]",
         "collective.z3cform.norobots",
-        "collective.honeypot"
-
+        "collective.honeypot",
     ],
     extras_require={
         "test": [

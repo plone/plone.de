@@ -1,0 +1,61 @@
+// Separator Block
+.block.separator {
+  .default-container-width();
+  top: unset;
+  display: block;
+  height: unset;
+  border: none;
+  margin: 50px 0;
+  clear: both;
+
+  &:not(.inner):not([role='presentation']) {
+    padding: 25px 0 !important;
+  }
+
+  .line {
+    &::after {
+      position: relative;
+      top: 50%;
+      display: block;
+      border-top: 1px solid #000;
+      margin-top: -1px;
+      content: '';
+    }
+  }
+
+  &.has--align--left {
+    .line {
+      margin-left: 0;
+
+      &::after {
+        width: 165px;
+      }
+    }
+  }
+
+  &.has--noLine--true {
+    .line::after {
+      display: none;
+    }
+  }
+}
+
+.block-editor-separator {
+  clear: both;
+
+  &.has--align--left .block.separator {
+    .line {
+      margin-left: 0;
+
+      &::after {
+        width: 165px;
+      }
+    }
+  }
+
+  &.has--noLine--true {
+    .line::after {
+      display: none;
+    }
+  }
+}

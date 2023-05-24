@@ -9,6 +9,7 @@ import {
 } from 'volto-plonede/components';
 import { defineMessages } from 'react-intl';
 import { composeSchema } from '@plone/volto/helpers';
+import { SeparatorStyleEnhancer } from '@kitconcept/volto-separator-block/components/schema.js';
 
 defineMessages({
   Imprint: { id: 'Imprint', defaultMessage: 'Imprint' },
@@ -46,7 +47,7 @@ const applyConfig = (config) => {
   //Separator
   config.blocks.blocksConfig.separator = {
     ...config.blocks.blocksConfig.separator,
-    schemaEnhancer: composeSchema(DefaultStylingSchemaEnhancer),
+    schemaEnhancer: composeSchema(SeparatorStyleEnhancer),
   };
 
   //Heading

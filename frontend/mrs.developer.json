@@ -33,5 +33,13 @@
     "https": "https://github.com/kitconcept/volto-button-block.git",
     "path": "src",
     "branch": "master"
+  },
+  "volto-separator-block": {
+    "develop": true,
+    "package": "@kitconcept/volto-separator-block",
+    "url": "git@github.com:kitconcept/volto-separator-block.git",
+    "https": "https://github.com/kitconcept/volto-separator-block.git",
+    "path": "src",
+    "branch": "main"
   }
 }

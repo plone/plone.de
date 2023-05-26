@@ -13,7 +13,18 @@
   .text-container-width();
 
   &::marker {
-    color: @plone-blue !important;
+    color: @plone-blue;
+  }
+}
+
+.block-editor-slate {
+  ul li {
+    color: var(--text-color);
+    .text-container-width();
+
+    &::marker {
+      color: @plone-blue;
+    }
   }
 }
 

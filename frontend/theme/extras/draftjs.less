@@ -1,0 +1,18 @@
+// Blockquote
+blockquote {
+  .default-container-width();
+  color: var(--text-color);
+  position: relative;
+  margin: 3rem 4rem;
+  font-size: 29px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+
+  &:before {
+    position: absolute;
+    top: -1rem;
+    left: -3.75rem;
+    content: url('./quote-icon.svg');
+  }
+}

@@ -2,3 +2,4 @@
 @import 'separator';
 @import 'slider';
 @import 'hero';
+@import 'search';

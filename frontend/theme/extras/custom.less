@@ -340,29 +340,25 @@
       .container {
         .ui.form {
           .field.searchbox {
+            height: 40px;
             padding-left: 0;
             border-left: 0;
+            justify-content: space-between;
 
             .ui.transparent.input {
-              width: 445px;
-              height: 54px;
-              border: 1px solid #3c4048;
+              width: 100%;
+              border-bottom: 1px solid #c7d5d8;
               margin-right: 20px;
-              border-radius: 2px;
-
-              input {
-                margin-right: 20px;
-                margin-left: 20px;
-              }
             }
 
             .search-button {
-              width: 124px;
+              width: 84px;
+              min-height: 1em;
               background-color: @plone-blue;
-              border-radius: 2px;
+              border-radius: 4px;
               color: @white;
               text-align: center;
-              text-transform: uppercase;
+              font-weight: bold;
             }
           }
         }
@@ -595,47 +591,6 @@
 
   &::marker {
     color: @plone-blue !important;
-  }
-}
-
-//Search
-.block.search {
-  .ui.stackable.grid.searchBlock-facets.right-column-facets {
-    .default-container-width();
-
-    .listing-wrapper {
-      .default-container-width();
-
-      .items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .listing-item {
-          display: block;
-          width: 428px;
-          border: 1px solid #cdcdcd;
-          margin: 14px;
-          border-radius: 8px;
-
-          .listing-image {
-            width: 100%;
-            height: 150px;
-            border-radius: 8px 8px 0 0;
-            object-fit: cover;
-          }
-
-          .listing-body {
-            padding: 20px;
-
-            .listing-header {
-              width: fit-content;
-              margin-top: 0;
-            }
-          }
-        }
-      }
-    }
   }
 }
 

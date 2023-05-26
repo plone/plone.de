@@ -467,37 +467,6 @@
 }
 
 //Blocks
-//Image
-.block.image {
-  &.align.full {
-    .full-container-width();
-
-    img {
-      .full-container-width();
-      right: 0;
-      left: 0;
-    }
-  }
-
-  &.align.center {
-    .default-container-width();
-    display: flex;
-
-    .large {
-      display: flex;
-      width: 100%;
-    }
-  }
-
-  &.align.left {
-    .default-container-width();
-  }
-
-  &.align.right {
-    .default-container-width();
-  }
-}
-
 //Video
 .block.video {
   z-index: 0;
@@ -772,11 +741,6 @@
   &:hover {
     background-color: @plone-blue;
   }
-}
-
-//Img
-.block.align.center {
-  text-align: left;
 }
 
 //Listing

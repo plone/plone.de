@@ -72,7 +72,6 @@
 .default-heading-size() {
   width: fit-content;
   max-width: 940px;
-  margin: 45px auto 25px auto;
   cursor: text;
   font-size: 2.6rem;
   font-weight: bold;
@@ -81,7 +80,6 @@
 .small-heading-size() {
   width: fit-content;
   max-width: 940px;
-  margin: 24px auto 14px auto;
   cursor: text;
   font-size: 2rem;
   font-weight: bold;
@@ -489,57 +487,6 @@
 
   &.align.center {
     .default-container-width();
-  }
-}
-
-//Heading
-.block.heading {
-  &.align-left {
-    .heading-wrapper {
-      .default-container-width();
-
-      h2 {
-        text-align: left;
-        .default-heading-size();
-      }
-
-      h3 {
-        text-align: left;
-        .small-heading-size();
-      }
-    }
-  }
-
-  &.align-center {
-    .heading-wrapper {
-      .default-container-width();
-
-      h2 {
-        text-align: center;
-        .default-heading-size();
-      }
-
-      h3 {
-        text-align: center;
-        .small-heading-size();
-      }
-    }
-  }
-
-  &.align-right {
-    .heading-wrapper {
-      .default-container-width();
-
-      h2 {
-        text-align: right;
-        .default-heading-size();
-      }
-
-      h3 {
-        text-align: right;
-        .small-heading-size();
-      }
-    }
   }
 }
 

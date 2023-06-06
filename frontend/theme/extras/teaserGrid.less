@@ -1,0 +1,30 @@
+//TeaserGrid
+.block.teaserGrid {
+  .ui.stackable.stretched.column.grid {
+    .default-container-width();
+
+    .column.grid-block-teaser {
+      .block.teaser {
+        .grid-teaser-item.default {
+          .grid-image-wrapper {
+            display: flex;
+            justify-content: center;
+
+            img.object-fit {
+              width: 100%;
+              height: auto;
+              margin: auto;
+              object-position: center;
+              &.cover {
+                object-fit: cover;
+              }
+              &.contain {
+                object-fit: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

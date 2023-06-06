@@ -4,6 +4,7 @@ import { HeadingBlockSchemaEnhancer } from './manage/Blocks/HeadingBlockEnhancer
 import { HeroBlockSchemaEnhancer } from './manage/Blocks/HeroBlockEnhancer';
 import { ListingBlockSchemaEnhancer } from './manage/Blocks/ListingBlockEnhancer';
 import { SliderBlockSchemaEnhancer } from './manage/Blocks/SliderBlockEnhancer';
+import { TeaserBlockSchemaEnhancer } from './manage/Blocks/TeaserBlockEnhancer';
 import EventTemplate from './manage/Blocks/Listing/EventTemplate';
 
 export {
@@ -13,5 +14,6 @@ export {
   HeroBlockSchemaEnhancer,
   ListingBlockSchemaEnhancer,
   SliderBlockSchemaEnhancer,
+  TeaserBlockSchemaEnhancer,
   EventTemplate,
 };

@@ -5,11 +5,13 @@ import {
   HeroBlockSchemaEnhancer,
   ListingBlockSchemaEnhancer,
   SliderBlockSchemaEnhancer,
+  TeaserBlockSchemaEnhancer,
   EventTemplate,
 } from 'volto-plonede/components';
 import { defineMessages } from 'react-intl';
 import { composeSchema } from '@plone/volto/helpers';
 import { SeparatorStyleEnhancer } from '@kitconcept/volto-separator-block/components/schema.js';
+import { gridTeaserDisableStylingSchema } from '@kitconcept/volto-blocks-grid/components/Teaser/schema';
 
 defineMessages({
   Imprint: { id: 'Imprint', defaultMessage: 'Imprint' },
@@ -101,6 +103,27 @@ const applyConfig = (config) => {
       SliderBlockSchemaEnhancer,
       DefaultStylingSchemaEnhancer,
     ),
+  };
+
+  //TeaserGrid
+  config.blocks.blocksConfig.teaserGrid = {
+    ...config.blocks.blocksConfig.teaserGrid,
+    schemaEnhancer: DefaultStylingSchemaEnhancer,
+  };
+
+  config.blocks.blocksConfig.__grid = {
+    ...config.blocks.blocksConfig.__grid,
+    //schemaEnhancer: ...,
+    blocksConfig: {
+      ...config.blocks.blocksConfig,
+      teaser: {
+        ...config.blocks.blocksConfig.teaser,
+        schemaEnhancer: composeSchema(
+          gridTeaserDisableStylingSchema,
+          TeaserBlockSchemaEnhancer,
+        ),
+      },
+    },
   };
 
   delete config.blocks.blocksConfig.text;

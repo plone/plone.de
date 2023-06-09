@@ -42,3 +42,37 @@
     }
   }
 }
+
+@media screen and (max-width: 620px) {
+  .mobile.only.twelve.wide.column {
+    .block.image.align {
+      &.center {
+        img {
+          padding: 0;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .ui.basic.segment.content-area {
+    .block.image.align {
+      &.center {
+        img {
+          max-width: 100%;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+      &.wide {
+        img {
+          max-width: 100%;
+        }
+      }
+      &.full {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

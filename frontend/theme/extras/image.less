@@ -1,0 +1,44 @@
+//Image
+
+.block.image.align {
+  &.center {
+    img {
+      max-width: 620px;
+      margin: auto;
+    }
+  }
+  &.wide {
+    img {
+      max-width: 940px;
+      display: flex;
+      margin: auto;
+    }
+  }
+  &.full {
+    img {
+      max-width: 1440px;
+      display: flex;
+      margin: auto;
+    }
+  }
+  &.left {
+    img.large {
+      max-width: 620px;
+    }
+  }
+  &.right {
+    img.large {
+      max-width: 620px;
+    }
+  }
+}
+
+.block-editor-image {
+  .block.image.align {
+    &.left {
+      .large {
+        max-width: 620px;
+      }
+    }
+  }
+}

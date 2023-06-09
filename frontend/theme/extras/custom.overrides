@@ -6,3 +6,4 @@
 @import 'draftjs';
 @import 'heading';
 @import 'teaserGrid';
+@import 'image';

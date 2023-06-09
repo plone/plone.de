@@ -3,6 +3,7 @@ import {
   DefaultStylingSchemaEnhancer,
   HeadingBlockSchemaEnhancer,
   HeroBlockSchemaEnhancer,
+  ImageBlockSchemaEnhancer,
   ListingBlockSchemaEnhancer,
   SliderBlockSchemaEnhancer,
   TeaserBlockSchemaEnhancer,
@@ -43,7 +44,10 @@ const applyConfig = (config) => {
   //Image
   config.blocks.blocksConfig.image = {
     ...config.blocks.blocksConfig.image,
-    schemaEnhancer: composeSchema(DefaultStylingSchemaEnhancer),
+    schemaEnhancer: composeSchema(
+      DefaultStylingSchemaEnhancer,
+      ImageBlockSchemaEnhancer,
+    ),
   };
 
   //Separator

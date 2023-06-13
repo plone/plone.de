@@ -1,0 +1,11 @@
+/*-------------------
+     Breakpoints
+--------------------*/
+
+@mobileBreakpoint: 320px;
+@largestMobileScreen: 767px;
+@tabletBreakpoint: 768px;
+@largestTabletScreen: 1011px;
+@computerBreakpoint: 1012px;
+@largestComputerScreen: 1199px;
+@largeMonitorBreakpoint: 1200px;

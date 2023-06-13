@@ -3,7 +3,7 @@
   .ui.stackable.grid.searchBlock-facets.right-column-facets {
     .default-container-width();
 
-    .twelve.wide.computer.twelve.wide.mobile.twelve.wide.tablet.column {
+    .wide.computer.wide.mobile.wide.tablet.column {
       padding: 0;
 
       .search-wrapper .search-input {
@@ -16,34 +16,65 @@
           padding-left: 0;
         }
       }
-    }
-    .listing-wrapper {
-      .default-container-width();
 
-      .items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+      .listing-wrapper {
+        .default-container-width();
 
-        .listing-item {
-          display: block;
-          max-width: 458px;
-          border: 1px solid #cdcdcd;
-          border-radius: 8px;
+        .items {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
 
-          .listing-image {
-            width: 100%;
-            height: 150px;
-            border-radius: 8px 8px 0 0;
-            object-fit: cover;
+          .listing-item {
+            display: block;
+            max-width: 458px;
+            border: 1px solid #cdcdcd;
+            border-radius: 8px;
+
+            .listing-image {
+              width: 100%;
+              height: 150px;
+              border-radius: 8px 8px 0 0;
+              object-fit: cover;
+            }
+
+            .listing-body {
+              padding: 20px;
+
+              .listing-header {
+                width: fit-content;
+                margin-top: 0;
+              }
+            }
           }
-
-          .listing-body {
-            padding: 20px;
-
-            .listing-header {
-              width: fit-content;
-              margin-top: 0;
+        }
+      }
+    }
+    .wide.computer.wide.mobile.wide.tablet.column {
+      .facets {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 1.25rem;
+        h3 {
+          color: #222;
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+        .ui.basic.segment.facet {
+          .checkbox-facet {
+            h4 {
+              color: var(--text-color);
+              font-size: 1.25rem;
+              font-weight: 600;
+            }
+            .entries {
+              .entry {
+                .ui.checkbox {
+                  label {
+                    color: var(--text-color);
+                  }
+                }
+              }
             }
           }
         }

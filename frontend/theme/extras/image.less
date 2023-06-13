@@ -3,29 +3,36 @@
 .block.image.align {
   &.center {
     img {
+      width: 100%;
       max-width: 620px;
       margin: auto;
     }
   }
+
   &.wide {
     img {
-      max-width: 940px;
       display: flex;
+      width: 100%;
+      max-width: 940px;
       margin: auto;
     }
   }
+
   &.full {
     img {
-      max-width: 1440px;
       display: flex;
+      width: 100%;
+      max-width: 1440px;
       margin: auto;
     }
   }
+
   &.left {
     img.large {
       max-width: 620px;
     }
   }
+
   &.right {
     img.large {
       max-width: 620px;
@@ -38,40 +45,6 @@
     &.left {
       .large {
         max-width: 620px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .mobile.only.twelve.wide.column {
-    .block.image.align {
-      &.center {
-        img {
-          padding: 0;
-          max-width: 100%;
-        }
-      }
-    }
-  }
-  .ui.basic.segment.content-area {
-    .block.image.align {
-      &.center {
-        img {
-          max-width: 100%;
-          padding-left: 1rem;
-          padding-right: 1rem;
-        }
-      }
-      &.wide {
-        img {
-          max-width: 100%;
-        }
-      }
-      &.full {
-        img {
-          max-width: 100%;
-        }
       }
     }
   }

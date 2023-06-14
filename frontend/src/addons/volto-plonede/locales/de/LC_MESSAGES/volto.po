@@ -16,6 +16,11 @@ msgstr ""
 msgid "Accessibility"
 msgstr "Barrierefreiheit"
 
+#: components/manage/Blocks/DefaultStylingEnhancer
+# defaultMessage: Background color
+msgid "Background color"
+msgstr ""
+
 #: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/HeroBlockEnhancer
 # defaultMessage: Backgroundcolor
@@ -49,6 +54,16 @@ msgstr "Impressum"
 # defaultMessage: Open in new tab
 msgid "Open in new tab"
 msgstr "In neuem Tab öffnen"
+
+#: components/manage/Blocks/HeroBlockEnhancer
+# defaultMessage: undefined
+msgid "Show Button"
+msgstr ""
+
+#: components/manage/Blocks/SliderBlockEnhancer
+# defaultMessage: Show button
+msgid "Show button"
+msgstr ""
 
 #: index
 # defaultMessage: undefined

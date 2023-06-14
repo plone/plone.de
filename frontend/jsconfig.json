@@ -18,6 +18,9 @@
             ],
             "volto-plonede": [
                 "addons/volto-plonede/src"
+            ],
+            "@kitconcept/volto-introduction-block": [
+                "addons/volto-introduction-block/src"
             ]
         },
         "baseUrl": "src"

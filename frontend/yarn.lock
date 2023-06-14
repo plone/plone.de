@@ -1756,6 +1756,55 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dnd-kit/accessibility@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "@dnd-kit/accessibility@npm:3.0.1"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 0afc2c0fce9a1c107453620ca0da1778f182d340e74ffbc6e369ef0ac8943cafb929d3a6c0891d9b915aa23b2b92137ff4fad958f43118466586d8129a3359d5
+  languageName: node
+  linkType: hard
+
+"@dnd-kit/core@npm:6.0.8":
+  version: 6.0.8
+  resolution: "@dnd-kit/core@npm:6.0.8"
+  dependencies:
+    "@dnd-kit/accessibility": ^3.0.0
+    "@dnd-kit/utilities": ^3.2.1
+    tslib: ^2.0.0
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: abe48ff7395f84fd8c15e6c8b13da4df153dc1f1076096d783acd0c25539516c77e4854ea59be6621dde55739cb0df1d62924ad069df3267fe05ad90ef729b2f
+  languageName: node
+  linkType: hard
+
+"@dnd-kit/sortable@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@dnd-kit/sortable@npm:7.0.2"
+  dependencies:
+    "@dnd-kit/utilities": ^3.2.0
+    tslib: ^2.0.0
+  peerDependencies:
+    "@dnd-kit/core": ^6.0.7
+    react: ">=16.8.0"
+  checksum: 4ce705aceb15766a0deefe25a9d95a87e9413c3fb9088ea3eb0962e57f844895000117fcec7c0944a0d4ae4e1e889cfa69e3d3778164d4d23115fb1edb218283
+  languageName: node
+  linkType: hard
+
+"@dnd-kit/utilities@npm:^3.2.0, @dnd-kit/utilities@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "@dnd-kit/utilities@npm:3.2.1"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 038fd5cc1328bf4c9dca17cd48046e5a687bbf9d904c7197f851aab869ab52d9dee2734b2e255256fd6158245acd00063a23deed962c7673c0fadfbf061f04ca
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-accordion-block@npm:8.0.0":
   version: 8.0.0
   resolution: "@eeacms/volto-accordion-block@npm:8.0.0"
@@ -2477,30 +2526,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-blocks-grid@npm:7.0.0":
-  version: 7.0.0
-  resolution: "@kitconcept/volto-blocks-grid@npm:7.0.0"
+"@kitconcept/volto-blocks-grid@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@kitconcept/volto-blocks-grid@npm:8.0.0"
+  dependencies:
+    "@dnd-kit/core": 6.0.8
+    "@dnd-kit/sortable": 7.0.2
   peerDependencies:
     "@plone/volto": ">=16.0.0"
-  checksum: 7ab37292fc2c7160c20855b98ee36e990d74e086d5f1aa91a93a6e38f9197fe7f62157f925d69c969787396b9b8558797fbd7604228253f263751bd18266805f
+  checksum: c715d1b49294ff866af514a0b80416a467c02682fb7baf1b5d054f1d89ae5216c691e1af557f4aef2b82d0ef950d1e55e1d58a3c492a4583a1422cd284880e6a
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-button-block@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@kitconcept/volto-button-block@npm:2.1.0"
-  checksum: fc14bdd8196bc1a1c0fc1e0df61795245bfe34ca063b07a9a4668dfc7eb7d8869129a2fdf25983166120384d159e07e9825412e19916dbef951762f84cc0ce86
+"@kitconcept/volto-button-block@npm:2.2.0":
+  version: 2.2.0
+  resolution: "@kitconcept/volto-button-block@npm:2.2.0"
+  checksum: 4299209a94b3387e802aeac077e796314827bd740b74ef6dac1e8acb22b2b22848a993c87694ff341f4c4e01aee644a7a2715e362ca7f93814b0ebb2bed6a3aa
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-carousel-block@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@kitconcept/volto-carousel-block@npm:1.0.0"
+"@kitconcept/volto-carousel-block@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@kitconcept/volto-carousel-block@npm:1.1.0"
   dependencies:
-    "@plone/scripts": "*"
     react-slick: 0.25.2
     slick-carousel: 1.8.1
-  checksum: 45a0bf61c8384e61bf190a91e3be058b03cb198b259487b2cecd625435068a8f1d262a856c44f78f6cfa129238d112ba0d9cbf1f544eff109bebdf4104043651
+  checksum: 7a3f2a70277ee4dd3ab255db42a667d5e15b3c404ef90f6bba3fd621b2a35e6e70c965871a0f4ed89501800d3e6ecf7038d9a4467784195f07d74f6fb2d965c8
   languageName: node
   linkType: hard
 
@@ -2511,21 +2562,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-heading-block@npm:2.2.0":
-  version: 2.2.0
-  resolution: "@kitconcept/volto-heading-block@npm:2.2.0"
+"@kitconcept/volto-heading-block@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@kitconcept/volto-heading-block@npm:2.3.0"
   dependencies:
     react-contenteditable: 3.3.6
-  checksum: ac417809bc7f2f4a4c1b0392fee872b4662c9b4414aed4cc76f9664b61c13364169a1a01f65ced9303f7d08d46b0692e7a814c5c50b5d10866f5adb8adea8df7
+  checksum: af89953eff837718c5bbc69f165ba4cffa3730353a87dda3ad96417822afac4eaeb21df71e417b9f72471bd29fc735a6bd9f89e0910cf1adcbe9c3641b07503c
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-separator-block@npm:3.0.2":
-  version: 3.0.2
-  resolution: "@kitconcept/volto-separator-block@npm:3.0.2"
+"@kitconcept/volto-separator-block@npm:3.1.0":
+  version: 3.1.0
+  resolution: "@kitconcept/volto-separator-block@npm:3.1.0"
   peerDependencies:
     "@plone/volto": ">=16.0.0"
-  checksum: 31bb6d9ba068088b128b692628701d0119433b2749d0ebedd73462ab43c00e4dfad10fd65a96192325d6e8e02374f17715053236c0ade8a024db750ec92e336d
+  checksum: 8a17dbe9b3bccf4025d610c15fc424a5fe794351ddadb4d1253acd51e795d38fcc126e16f7fb85de83386376347771d0200141012d6d0f8578309e0f28285a9a
   languageName: node
   linkType: hard
 
@@ -2748,27 +2799,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/scripts@npm:*":
-  version: 2.2.2
-  resolution: "@plone/scripts@npm:2.2.2"
-  dependencies:
-    babel-plugin-react-intl: 5.1.17
-    babel-preset-razzle: 4.2.17
-    chalk: 4
-    commander: 8.2.0
-    fs-extra: 10.1.0
-    git-url-parse: ^11.6.0
-    mrs-developer: "*"
-    pofile: 1.0.10
-    simple-git: 3.5.0
-  bin:
-    addon: addon/index.js
-    changelogupdater: changelogupdater.cjs
-    i18n: i18n.cjs
-  checksum: 33d63c1d0fe096984aa3a37b0842f65f13ef84065ffa88f66b6ada38c73a545f2236c8d24987881c50be36c903ec4b96bf5dc63dc3e4409985174efc122f737a
-  languageName: node
-  linkType: hard
-
 "@plone/scripts@npm:2.1.2":
   version: 2.1.2
   resolution: "@plone/scripts@npm:2.1.2"
@@ -2810,9 +2840,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/volto@npm:17.0.0-alpha.7":
-  version: 17.0.0-alpha.7
-  resolution: "@plone/volto@npm:17.0.0-alpha.7"
+"@plone/volto@npm:17.0.0-alpha.11":
+  version: 17.0.0-alpha.11
+  resolution: "@plone/volto@npm:17.0.0-alpha.11"
   dependencies:
     "@babel/core": ^7.0.0
     "@babel/plugin-proposal-export-default-from": 7.18.9
@@ -2993,7 +3023,7 @@ __metadata:
     webpack-node-externals: 3.0.0
     xmlrpc: 1.3.2
     yarnhook: 0.5.1
-  checksum: 4de62e290577bf2f07440c3f8e745c9a708bfc12ccfdbe1b94e3a7e6e2a2776c64af4e5ce1b2bfbfe1d482721f3381b4dc9af08db7a3db76d62812aece7e2c92
+  checksum: 118435f777c9c071165de68c8225da32754281a18121e34368630e8799a9d65f6b15e640d70f208f7c31d61ed9c50794b98b9a9dcb59e062e333fd1e44705f05
   languageName: node
   linkType: hard
 
@@ -11894,16 +11924,16 @@ __metadata:
   dependencies:
     "@eeacms/volto-accordion-block": 8.0.0
     "@eeacms/volto-matomo": 3.0.1
-    "@kitconcept/volto-blocks-grid": 7.0.0
-    "@kitconcept/volto-button-block": 2.1.0
-    "@kitconcept/volto-carousel-block": 1.0.0
+    "@kitconcept/volto-blocks-grid": 8.0.0
+    "@kitconcept/volto-button-block": 2.2.0
+    "@kitconcept/volto-carousel-block": 1.1.0
     "@kitconcept/volto-export": 1.1.0
-    "@kitconcept/volto-heading-block": 2.2.0
-    "@kitconcept/volto-separator-block": 3.0.2
+    "@kitconcept/volto-heading-block": 2.3.0
+    "@kitconcept/volto-separator-block": 3.1.0
     "@kitconcept/volto-slider-block": 4.3.0
     "@plone-collective/volto-authomatic": 1.3.0
     "@plone/scripts": ^3.0.0
-    "@plone/volto": 17.0.0-alpha.7
+    "@plone/volto": 17.0.0-alpha.11
     "@storybook/addon-actions": ^6.3.0
     "@storybook/addon-controls": 6.3.0
     "@storybook/addon-essentials": ^6.3.0

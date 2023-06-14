@@ -1,16 +1,28 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "@kitconcept/volto-slider-block": ["addons/volto-slider-block/src"],
-      "@kitconcept/volto-heading-block": ["addons/volto-heading-block/src"],
-      "@kitconcept/volto-blocks-grid": ["addons/volto-blocks-grid/src"],
-      "@kitconcept/volto-button-block": ["addons/volto-button-block/src"],
-      "@kitconcept/volto-separator-block": ["addons/volto-separator-block/src"],
-      "@kitconcept/volto-introduction-block": [
-        "addons/volto-introduction-block/src"
-      ],
-      "volto-plonede": ["addons/volto-plonede/src"]
-    },
-    "baseUrl": "src"
-  }
+    "compilerOptions": {
+        "paths": {
+            "@kitconcept/volto-slider-block": [
+                "addons/volto-slider-block/src"
+            ],
+            "@kitconcept/volto-heading-block": [
+                "addons/volto-heading-block/src"
+            ],
+            "@kitconcept/volto-blocks-grid": [
+                "addons/volto-blocks-grid/src"
+            ],
+            "@kitconcept/volto-button-block": [
+                "addons/volto-button-block/src"
+            ],
+            "@kitconcept/volto-separator-block": [
+                "addons/volto-separator-block/src"
+            ],
+            "@kitconcept/volto-introduction-block": [
+                "addons/volto-introduction-block/src"
+            ],
+            "volto-plonede": [
+                "addons/volto-plonede/src"
+            ]
+        },
+        "baseUrl": "src"
+    }
 }

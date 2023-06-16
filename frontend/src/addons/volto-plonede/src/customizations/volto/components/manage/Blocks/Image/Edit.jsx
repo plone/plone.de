@@ -251,30 +251,42 @@ class Edit extends Component {
         )}
       >
         {data.url ? (
-          <img
-            className={cx({
+          <figure
+            className={cx('figure stage-figure', {
               large: data.size === 'l',
               medium: data.size === 'm',
               small: data.size === 's',
             })}
-            src={
-              isInternalURL(data.url)
-                ? // Backwards compat in the case that the block is storing the full server URL
-                  (() => {
-                    if (data.size === 'l')
-                      return `${flattenToAppURL(data.url)}/@@images/image`;
-                    if (data.size === 'm')
-                      return `${flattenToAppURL(
-                        data.url,
-                      )}/@@images/image/preview`;
-                    if (data.size === 's')
-                      return `${flattenToAppURL(data.url)}/@@images/image/mini`;
-                    return `${flattenToAppURL(data.url)}/@@images/image`;
-                  })()
-                : data.url
-            }
-            alt={data.alt || ''}
-          />
+          >
+            <div className="figure-media">
+              <img
+                src={
+                  isInternalURL(data.url)
+                    ? // Backwards compat in the case that the block is storing the full server URL
+                      (() => {
+                        if (data.size === 'l')
+                          return `${flattenToAppURL(data.url)}/@@images/image`;
+                        if (data.size === 'm')
+                          return `${flattenToAppURL(
+                            data.url,
+                          )}/@@images/image/preview`;
+                        if (data.size === 's')
+                          return `${flattenToAppURL(
+                            data.url,
+                          )}/@@images/image/mini`;
+                        return `${flattenToAppURL(data.url)}/@@images/image`;
+                      })()
+                    : data.url
+                }
+                alt={data.alt || ''}
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="figure-caption">
+              <button className="figure-copyright"></button>
+              <div className="copyright-popup"></div>
+            </figcaption>
+          </figure>
         ) : (
           <div>
             {this.props.editable && (

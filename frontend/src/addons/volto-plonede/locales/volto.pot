@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-16T09:08:47.894Z\n"
+"POT-Creation-Date: 2023-06-16T13:47:38.280Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,6 @@ msgstr ""
 #: index
 # defaultMessage: Accessibility
 msgid "Accessibility"
-msgstr ""
-
-#: components/manage/Blocks/SliderBlockEnhancer
-# defaultMessage: undefined
-msgid "Alignment"
 msgstr ""
 
 #: components/manage/Blocks/ButtonBlockEnhancer
@@ -46,6 +41,11 @@ msgstr ""
 #: index
 # defaultMessage: undefined
 msgid "Contact"
+msgstr ""
+
+#: components/manage/Blocks/ImageBlockEnhancer
+# defaultMessage: Copyright
+msgid "Copyright"
 msgstr ""
 
 #: components/manage/Blocks/SliderBlockEnhancer

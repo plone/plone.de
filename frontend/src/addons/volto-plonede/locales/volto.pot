@@ -16,58 +16,58 @@ msgstr ""
 #: index
 # defaultMessage: Accessibility
 msgid "Accessibility"
-msgstr ""
+msgstr "Barrierefreiheit"
 
 #: components/manage/Blocks/DefaultStylingEnhancer
 # defaultMessage: Background color
 msgid "Background color"
-msgstr ""
+msgstr "Hintergrundfarbe"
 
 #: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/HeroBlockEnhancer
 # defaultMessage: Backgroundcolor
 msgid "Backgroundcolor"
-msgstr ""
+msgstr "Hintergrundfarbe"
 
 #: components/manage/Blocks/HeroBlockEnhancer
 #: components/manage/Blocks/SliderBlockEnhancer
 # defaultMessage: Button color
 msgid "Button color"
-msgstr ""
+msgstr "Knopf Farbe"
 
 #: components/manage/Blocks/HeroBlockEnhancer
 #: components/manage/Blocks/SliderBlockEnhancer
 #: index
 # defaultMessage: Button text
 msgid "Button text"
-msgstr ""
+msgstr "Knopf Text"
 
 #: index
 # defaultMessage: undefined
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: index
 # defaultMessage: Imprint
 msgid "Imprint"
-msgstr ""
+msgstr "Impressum"
 
 #: components/manage/Blocks/ButtonBlockEnhancer
 # defaultMessage: Open in new tab
 msgid "Open in new tab"
-msgstr ""
+msgstr "In neuem Tab öffnen"
 
 #: components/manage/Blocks/HeroBlockEnhancer
 # defaultMessage: undefined
 msgid "Show Button"
-msgstr ""
+msgstr "Knopf anzeigen"
 
 #: components/manage/Blocks/SliderBlockEnhancer
 # defaultMessage: Show button
 msgid "Show button"
-msgstr ""
+msgstr "Knopf anzeigen"
 
 #: index
 # defaultMessage: undefined
 msgid "Site Map"
-msgstr ""
+msgstr "Sitemap"

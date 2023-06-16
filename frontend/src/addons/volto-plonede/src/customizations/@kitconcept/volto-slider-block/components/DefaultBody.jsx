@@ -3,7 +3,7 @@ import { useIntl, defineMessages } from 'react-intl';
 import { getTeaserImageURL } from '@kitconcept/volto-slider-block/helpers';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon, MaybeWrap, UniversalLink } from '@plone/volto/components';
-import { Input, Button, Message, Container } from 'semantic-ui-react';
+import { Input, Button, Message } from 'semantic-ui-react';
 import cx from 'classnames';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
@@ -102,50 +102,41 @@ const SliderBody = ({
       )}
       {href && (
         <div className="teaser-item top">
-          <MaybeWrap
-            condition={!isEditMode}
-            //as={UniversalLink}
-            tabIndex={-1}
+          {(href?.hasPreviewImage || image) && (
+            <div className="highlight-image-wrapper gradient">
+              <Image
+                src={hasImageComponent ? href : defaultImageSrc}
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          )}
+          <div
+            className={cx('teaser-item-title fix-width-issue', {
+              'align-right': data.flagAlign === 'right',
+              'align-left': data.flagAlign === 'left',
+            })}
           >
-            {(href?.hasPreviewImage || image) && (
-              <div className="highlight-image-wrapper gradient">
-                <Image
-                  src={hasImageComponent ? href : defaultImageSrc}
-                  alt=""
-                  loading="lazy"
-                />
-              </div>
-            )}
-            <Container>
-              <div
-                className={cx('teaser-item-title fix-width-issue', {
-                  'align-right': data.flagAlign === 'right',
-                  'align-left': data.flagAlign === 'left',
-                })}
+            <div className="title">
+              {data?.head_title && (
+                <span className="supertitle">{data?.head_title}</span>
+              )}
+              <h2>{data?.nav_title || data?.title}</h2>
+            </div>
+            <div className="body">
+              <p>{data?.description}</p>
+            </div>
+            <div className="button">
+              <UniversalLink
+                href={href['@id']}
+                target={data.openLinkInNewTab ? '_blank' : null}
               >
-                <div className="title">
-                  {data?.head_title && (
-                    <span className="supertitle">{data?.head_title}</span>
-                  )}
-                  <h2>{data?.nav_title || data?.title}</h2>
-                </div>
-                <div className="body">
-                  <p>{data?.description}</p>
-                </div>
-                <div className="button">
-                  <UniversalLink
-                    href={href['@id']}
-                    target={data.openLinkInNewTab ? '_blank' : null}
-                  >
-                    <Button className="white">
-                      {data.buttonText ||
-                        intl.formatMessage(messages.buttonText)}
-                    </Button>
-                  </UniversalLink>
-                </div>
-              </div>
-            </Container>
-          </MaybeWrap>
+                <Button className="white">
+                  {data.buttonText || intl.formatMessage(messages.buttonText)}
+                </Button>
+              </UniversalLink>
+            </div>
+          </div>
         </div>
       )}
     </div>

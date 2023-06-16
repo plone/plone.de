@@ -16,34 +16,40 @@ msgstr ""
 msgid "Accessibility"
 msgstr "Barrierefreiheit"
 
-#: components/manage/Blocks/DefaultStylingEnhancer
-# defaultMessage: Background color
-msgid "Background color"
-msgstr "Hintergrundfarbe"
+#: components/manage/Blocks/SliderBlockEnhancer
+# defaultMessage: undefined
+msgid "Alignment"
+msgstr "Ausrichtung"
 
 #: components/manage/Blocks/ButtonBlockEnhancer
+#: components/manage/Blocks/DefaultStylingEnhancer
 #: components/manage/Blocks/HeroBlockEnhancer
-# defaultMessage: Backgroundcolor
-msgid "Backgroundcolor"
+# defaultMessage: Background color
+msgid "Background color"
 msgstr "Hintergrundfarbe"
 
 #: components/manage/Blocks/HeroBlockEnhancer
 #: components/manage/Blocks/SliderBlockEnhancer
 # defaultMessage: Button color
 msgid "Button color"
-msgstr "Knopf Farbe"
+msgstr "Button Farbe"
 
 #: components/manage/Blocks/HeroBlockEnhancer
 #: components/manage/Blocks/SliderBlockEnhancer
 #: index
 # defaultMessage: Button text
 msgid "Button text"
-msgstr "Knopf Text"
+msgstr "Button Text"
 
 #: index
 # defaultMessage: undefined
 msgid "Contact"
 msgstr "Kontakt"
+
+#: components/manage/Blocks/SliderBlockEnhancer
+# defaultMessage: Flag alignment
+msgid "Flag alginment"
+msgstr "Flagge Ausrichtung"
 
 #: index
 # defaultMessage: Imprint
@@ -56,14 +62,10 @@ msgid "Open in new tab"
 msgstr "In neuem Tab öffnen"
 
 #: components/manage/Blocks/HeroBlockEnhancer
-# defaultMessage: undefined
-msgid "Show Button"
-msgstr "Knopf anzeigen"
-
 #: components/manage/Blocks/SliderBlockEnhancer
-# defaultMessage: Show button
+# defaultMessage: undefined
 msgid "Show button"
-msgstr "Knopf anzeigen"
+msgstr "Button anzeigen"
 
 #: index
 # defaultMessage: undefined

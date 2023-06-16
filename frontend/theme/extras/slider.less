@@ -1,24 +1,24 @@
 // Slider
 .block.slider {
-  &.full-container-width {
-    .grid-teaser-item.top {
-      position: relative;
-      display: block;
+  .grid-teaser-item.top {
+    position: relative;
+    display: block;
 
-      .teaser-item.top {
-        div {
-          width: 100%;
+    .teaser-item.top {
+      div {
+        width: 100%;
 
-          .ui.container {
-            width: 100% !important;
+        .ui.container {
+          width: 100% !important;
 
-            .teaser-item-title.fix-width-issue {
+          .teaser-item-title.fix-width-issue {
+            &.align-left {
               position: absolute;
               top: 50%;
+              transform: translateY(-50%);
               width: 530px;
               padding: 20px;
               background-color: rgba(0, 134, 195, 0.8);
-              transform: translateY(-50%);
 
               .supertitle {
                 color: @white !important;
@@ -37,7 +37,37 @@
               .button {
                 .ui.button {
                   transition: all 0.2s ease-out;
-                  .button-blue();
+                  .button-white();
+                }
+              }
+            }
+
+            &.align-right {
+              right: 0;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 530px;
+              padding: 20px;
+              background-color: rgba(0, 134, 195, 0.8);
+
+              .supertitle {
+                color: @white !important;
+              }
+
+              .title h2 {
+                .default-heading-size();
+                margin: 0 !important;
+                color: @white !important;
+              }
+
+              .body p {
+                color: @white !important;
+              }
+
+              .button {
+                .ui.button {
+                  transition: all 0.2s ease-out;
                   .button-white();
                 }
               }
@@ -55,18 +85,6 @@
 
     .slick-arrow.slick-next {
       color: @black;
-    }
-  }
-
-  &.default-container-width {
-    .slick-slider {
-      .default-container-width();
-
-      .grid-teaser-item.top {
-        .teaser-item.top {
-          .default-container-width();
-        }
-      }
     }
   }
 

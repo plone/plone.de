@@ -117,7 +117,12 @@ const SliderBody = ({
               </div>
             )}
             <Container>
-              <div className="teaser-item-title fix-width-issue">
+              <div
+                className={cx('teaser-item-title fix-width-issue', {
+                  'align-right': data.flagAlign === 'right',
+                  'align-left': data.flagAlign === 'left',
+                })}
+              >
                 <div className="title">
                   {data?.head_title && (
                     <span className="supertitle">{data?.head_title}</span>
@@ -132,7 +137,7 @@ const SliderBody = ({
                     href={href['@id']}
                     target={data.openLinkInNewTab ? '_blank' : null}
                   >
-                    <Button className={(cx(), data.buttonColor)}>
+                    <Button className="white">
                       {data.buttonText ||
                         intl.formatMessage(messages.buttonText)}
                     </Button>

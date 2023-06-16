@@ -2,8 +2,8 @@ import { defineMessages } from 'react-intl';
 
 const messages = defineMessages({
   backgroundColor: {
-    id: 'Backgroundcolor',
-    defaultMessage: 'Backgroundcolor',
+    id: 'Background color',
+    defaultMessage: 'Background color',
   },
   newTab: {
     id: 'Open in new tab',

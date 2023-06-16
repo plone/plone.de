@@ -1,7 +1,6 @@
 import React from 'react';
 import { Message } from 'semantic-ui-react';
 import Slider from 'react-slick';
-import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import Body from '@kitconcept/volto-slider-block/components/Body';
 import { withBlockExtensions } from '@plone/volto/helpers';
@@ -40,7 +39,6 @@ const NextArrow = ({ className, style, onClick }) => (
 
 const SliderView = (props) => {
   const {
-    className,
     data,
     isEditMode,
     block,
@@ -61,12 +59,7 @@ const SliderView = (props) => {
   }
 
   return (
-    <div
-      className={cx('block slider', className, {
-        'default-container-width': data.align === 'center',
-        'full-container-width': data.align === 'full',
-      })}
-    >
+    <div className="block slider">
       {(data.slides?.length === 0 || !data.slides) && isEditMode && (
         <Message>
           <div className="teaser-item default">

@@ -13,12 +13,12 @@ const messages = defineMessages({
 
   //Backgroundcolor
   backgroundColor: {
-    id: 'Backgroundcolor',
-    defaultMessage: 'Backgroundcolor',
+    id: 'Background color',
+    defaultMessage: 'Background color',
   },
   showButton: {
-    id: 'Show Button',
-    defineMessage: 'Show Button',
+    id: 'Show button',
+    defineMessage: 'Show button',
   },
 });
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-14T15:29:51.458Z\n"
+"POT-Creation-Date: 2023-06-16T09:08:47.894Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -16,58 +16,60 @@ msgstr ""
 #: index
 # defaultMessage: Accessibility
 msgid "Accessibility"
-msgstr "Barrierefreiheit"
+msgstr ""
 
-#: components/manage/Blocks/DefaultStylingEnhancer
-# defaultMessage: Background color
-msgid "Background color"
-msgstr "Hintergrundfarbe"
+#: components/manage/Blocks/SliderBlockEnhancer
+# defaultMessage: undefined
+msgid "Alignment"
+msgstr ""
 
 #: components/manage/Blocks/ButtonBlockEnhancer
+#: components/manage/Blocks/DefaultStylingEnhancer
 #: components/manage/Blocks/HeroBlockEnhancer
-# defaultMessage: Backgroundcolor
-msgid "Backgroundcolor"
-msgstr "Hintergrundfarbe"
+# defaultMessage: Background color
+msgid "Background color"
+msgstr ""
 
 #: components/manage/Blocks/HeroBlockEnhancer
 #: components/manage/Blocks/SliderBlockEnhancer
 # defaultMessage: Button color
 msgid "Button color"
-msgstr "Knopf Farbe"
+msgstr ""
 
 #: components/manage/Blocks/HeroBlockEnhancer
 #: components/manage/Blocks/SliderBlockEnhancer
 #: index
 # defaultMessage: Button text
 msgid "Button text"
-msgstr "Knopf Text"
+msgstr ""
 
 #: index
 # defaultMessage: undefined
 msgid "Contact"
-msgstr "Kontakt"
+msgstr ""
+
+#: components/manage/Blocks/SliderBlockEnhancer
+# defaultMessage: Flag alignment
+msgid "Flag alginment"
+msgstr ""
 
 #: index
 # defaultMessage: Imprint
 msgid "Imprint"
-msgstr "Impressum"
+msgstr ""
 
 #: components/manage/Blocks/ButtonBlockEnhancer
 # defaultMessage: Open in new tab
 msgid "Open in new tab"
-msgstr "In neuem Tab öffnen"
+msgstr ""
 
 #: components/manage/Blocks/HeroBlockEnhancer
-# defaultMessage: undefined
-msgid "Show Button"
-msgstr "Knopf anzeigen"
-
 #: components/manage/Blocks/SliderBlockEnhancer
-# defaultMessage: Show button
+# defaultMessage: undefined
 msgid "Show button"
-msgstr "Knopf anzeigen"
+msgstr ""
 
 #: index
 # defaultMessage: undefined
 msgid "Site Map"
-msgstr "Sitemap"
+msgstr ""

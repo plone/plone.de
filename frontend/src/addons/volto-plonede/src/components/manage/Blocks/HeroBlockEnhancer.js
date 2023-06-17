@@ -20,6 +20,10 @@ const messages = defineMessages({
     id: 'Show button',
     defineMessage: 'Show button',
   },
+  buttonSettings: {
+    id: 'Button settings',
+    defineMessage: 'Button settings',
+  },
 });
 
 export const HeroBlockSchemaEnhancer = ({ schema, formData, intl }) => {
@@ -70,8 +74,8 @@ export const HeroBlockSchemaEnhancer = ({ schema, formData, intl }) => {
   schema.fieldsets = [
     ...schema.fieldsets,
     {
-      id: 'button',
-      title: 'button',
+      id: 'button settings',
+      title: intl.formatMessage(messages.buttonSettings),
       fields: [
         ...(formData.showButton
           ? ['showButton', 'linkHref', 'buttonText', 'buttonColor']

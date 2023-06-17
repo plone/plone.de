@@ -1,9 +1,25 @@
 import { defineMessages } from 'react-intl';
 
 const messages = defineMessages({
-  copyRight: {
-    id: 'Copyright',
-    defaultMessage: 'Copyright',
+  title: {
+    id: 'Title',
+    defaultMessage: 'Title',
+  },
+  credits: {
+    id: 'Credits',
+    defaultMessage: 'Credits',
+  },
+  linkTo: {
+    id: 'Link to',
+    defineMessage: 'Link to',
+  },
+  creditSettings: {
+    id: 'Credit settings',
+    defaultMessage: 'Credit settings',
+  },
+  openLinkInNewTab: {
+    id: 'Open in new tab',
+    defaultMessage: 'Open in new tab',
   },
 });
 
@@ -16,14 +32,37 @@ export const ImageBlockSchemaEnhancer = ({ intl, formData, schema }) => {
     formData.align === 'wide' ||
     formData.align === 'center';
 
-  schema.properties.copyRight = {
-    title: intl.formatMessage(messages.copyRight),
+  schema.properties.credits = {
+    title: intl.formatMessage(messages.credits),
   };
 
-  schema.fieldsets[0].fields = [
-    ...schema.fieldsets[0].fields,
-    ...['copyRight'],
+  schema.properties.title = {
+    title: intl.formatMessage(messages.title),
+  };
+
+  schema.properties.linkTo = {
+    title: intl.formatMessage(messages.linkTo),
+    widget: 'object_browser',
+    mode: 'link',
+    selectedItemAttrs: ['Title', 'Description', 'hasPreviewImage'],
+    allowExternals: true,
+  };
+
+  schema.properties.openLinkInNewTab = {
+    title: intl.formatMessage(messages.openLinkInNewTab),
+    type: 'boolean',
+  };
+
+  schema.fieldsets = [
+    ...schema.fieldsets,
+    {
+      id: 'credit settings',
+      title: intl.formatMessage(messages.creditSettings),
+      fields: [...['title', 'credits', 'linkTo', 'openLinkInNewTab']],
+    },
   ];
+
+  //schema.fieldsets[0].fields = [...schema.fieldsets[0].fields, ...['']];
 
   return schema;
 };

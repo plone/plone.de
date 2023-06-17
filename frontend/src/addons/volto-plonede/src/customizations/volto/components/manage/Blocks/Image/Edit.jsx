@@ -40,6 +40,10 @@ const messages = defineMessages({
     id: 'Uploading image',
     defaultMessage: 'Uploading image',
   },
+  credits: {
+    id: 'Credits',
+    defaultMessage: 'Credits',
+  },
 });
 
 /**
@@ -258,33 +262,30 @@ class Edit extends Component {
               small: data.size === 's',
             })}
           >
-            <div className="figure-media">
-              <img
-                src={
-                  isInternalURL(data.url)
-                    ? // Backwards compat in the case that the block is storing the full server URL
-                      (() => {
-                        if (data.size === 'l')
-                          return `${flattenToAppURL(data.url)}/@@images/image`;
-                        if (data.size === 'm')
-                          return `${flattenToAppURL(
-                            data.url,
-                          )}/@@images/image/preview`;
-                        if (data.size === 's')
-                          return `${flattenToAppURL(
-                            data.url,
-                          )}/@@images/image/mini`;
+            <img
+              src={
+                isInternalURL(data.url)
+                  ? // Backwards compat in the case that the block is storing the full server URL
+                    (() => {
+                      if (data.size === 'l')
                         return `${flattenToAppURL(data.url)}/@@images/image`;
-                      })()
-                    : data.url
-                }
-                alt={data.alt || ''}
-                loading="lazy"
-              />
-            </div>
+                      if (data.size === 'm')
+                        return `${flattenToAppURL(
+                          data.url,
+                        )}/@@images/image/preview`;
+                      if (data.size === 's')
+                        return `${flattenToAppURL(
+                          data.url,
+                        )}/@@images/image/mini`;
+                      return `${flattenToAppURL(data.url)}/@@images/image`;
+                    })()
+                  : data.url
+              }
+              alt={data.alt || ''}
+              loading="lazy"
+            />
             <figcaption className="figure-caption">
-              <button className="figure-copyright"></button>
-              <div className="copyright-popup"></div>
+              <div className="credits"></div>
             </figcaption>
           </figure>
         ) : (

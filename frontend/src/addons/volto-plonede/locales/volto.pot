@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-16T13:47:38.280Z\n"
+"POT-Creation-Date: 2023-06-17T12:45:47.306Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -32,6 +32,11 @@ msgid "Button color"
 msgstr ""
 
 #: components/manage/Blocks/HeroBlockEnhancer
+# defaultMessage: undefined
+msgid "Button settings"
+msgstr ""
+
+#: components/manage/Blocks/HeroBlockEnhancer
 #: components/manage/Blocks/SliderBlockEnhancer
 #: index
 # defaultMessage: Button text
@@ -44,8 +49,13 @@ msgid "Contact"
 msgstr ""
 
 #: components/manage/Blocks/ImageBlockEnhancer
-# defaultMessage: Copyright
-msgid "Copyright"
+# defaultMessage: Credit settings
+msgid "Credit settings"
+msgstr ""
+
+#: components/manage/Blocks/ImageBlockEnhancer
+# defaultMessage: Credits
+msgid "Credits"
 msgstr ""
 
 #: components/manage/Blocks/SliderBlockEnhancer
@@ -58,7 +68,13 @@ msgstr ""
 msgid "Imprint"
 msgstr ""
 
+#: components/manage/Blocks/ImageBlockEnhancer
+# defaultMessage: undefined
+msgid "Link to"
+msgstr ""
+
 #: components/manage/Blocks/ButtonBlockEnhancer
+#: components/manage/Blocks/ImageBlockEnhancer
 # defaultMessage: Open in new tab
 msgid "Open in new tab"
 msgstr ""
@@ -72,4 +88,9 @@ msgstr ""
 #: index
 # defaultMessage: undefined
 msgid "Site Map"
+msgstr ""
+
+#: components/manage/Blocks/ImageBlockEnhancer
+# defaultMessage: Title
+msgid "Title"
 msgstr ""

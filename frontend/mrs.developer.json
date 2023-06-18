@@ -49,5 +49,13 @@
     "https": "https://github.com/kitconcept/volto-introduction-block.git",
     "path": "src",
     "branch": "main"
+  },
+  "volto-dsgvo-banner": {
+    "develop": true,
+    "package": "@kitconcept/volto-dsgvo-banner",
+    "url": "git@github.com:kitconcept/volto-dsgvo-banner.git",
+    "https": "https://github.com/kitconcept/volto-dsgvo-banner.git",
+    "path": "src",
+    "branch": "master"
   }
 }

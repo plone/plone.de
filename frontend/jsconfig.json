@@ -19,6 +19,9 @@
             "@kitconcept/volto-introduction-block": [
                 "addons/volto-introduction-block/src"
             ],
+            "@kitconcept/volto-dsgvo-banner": [
+                "addons/volto-dsgvo-banner/src"
+            ],
             "volto-plonede": [
                 "addons/volto-plonede/src"
             ]

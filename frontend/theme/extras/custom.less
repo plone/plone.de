@@ -457,6 +457,27 @@
 }
 
 //Blocks
+//Message
+.block .ui.message {
+  max-width: 940px;
+  flex-direction: row;
+  margin: auto;
+  border: 2px solid var(--text-color);
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: #ff2222;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+  }
+
+  b {
+    text-transform: uppercase;
+  }
+}
+
 //Video
 .block.video {
   z-index: 0;
@@ -539,24 +560,6 @@
 
   &.blue {
     background: @plone-blue;
-  }
-}
-
-.ui.blue.button {
-  background-color: @plone-blue;
-
-  &:focus {
-    background-color: @plone-blue;
-  }
-}
-
-.ui.blue.active.button {
-  background-color: @plone-blue;
-}
-
-.ui.blue.button {
-  &:hover {
-    background-color: @plone-blue;
   }
 }
 

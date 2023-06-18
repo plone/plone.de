@@ -16,11 +16,6 @@ msgstr ""
 msgid "Accessibility"
 msgstr "Barrierefreiheit"
 
-#: components/manage/Blocks/SliderBlockEnhancer
-# defaultMessage: undefined
-msgid "Alignment"
-msgstr "Ausrichtung"
-
 #: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/DefaultStylingEnhancer
 #: components/manage/Blocks/HeroBlockEnhancer
@@ -35,6 +30,11 @@ msgid "Button color"
 msgstr "Button Farbe"
 
 #: components/manage/Blocks/HeroBlockEnhancer
+# defaultMessage: undefined
+msgid "Button settings"
+msgstr "Button Einstellungen"
+
+#: components/manage/Blocks/HeroBlockEnhancer
 #: components/manage/Blocks/SliderBlockEnhancer
 #: index
 # defaultMessage: Button text
@@ -46,6 +46,16 @@ msgstr "Button Text"
 msgid "Contact"
 msgstr "Kontakt"
 
+#: components/manage/Blocks/ImageBlockEnhancer
+# defaultMessage: Credit settings
+msgid "Credit settings"
+msgstr "Credit Einstellungen"
+
+#: components/manage/Blocks/ImageBlockEnhancer
+# defaultMessage: Credits
+msgid "Credits"
+msgstr "Credits"
+
 #: components/manage/Blocks/SliderBlockEnhancer
 # defaultMessage: Flag alignment
 msgid "Flag alginment"
@@ -56,7 +66,13 @@ msgstr "Flagge Ausrichtung"
 msgid "Imprint"
 msgstr "Impressum"
 
+#: components/manage/Blocks/ImageBlockEnhancer
+# defaultMessage: undefined
+msgid "Link to"
+msgstr "Link auf"
+
 #: components/manage/Blocks/ButtonBlockEnhancer
+#: components/manage/Blocks/ImageBlockEnhancer
 # defaultMessage: Open in new tab
 msgid "Open in new tab"
 msgstr "In neuem Tab öffnen"
@@ -71,3 +87,8 @@ msgstr "Button anzeigen"
 # defaultMessage: undefined
 msgid "Site Map"
 msgstr "Sitemap"
+
+#: components/manage/Blocks/ImageBlockEnhancer
+# defaultMessage: Title
+msgid "Title"
+msgstr "Titel"

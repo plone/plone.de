@@ -14,7 +14,12 @@ import loadable from '@loadable/component';
 import cx from 'classnames';
 import { isEqual } from 'lodash';
 
-import { Icon, ImageSidebar, SidebarPortal } from '@plone/volto/components';
+import {
+  Icon,
+  ImageSidebar,
+  SidebarPortal,
+  UniversalLink,
+} from '@plone/volto/components';
 import { withBlockExtensions } from '@plone/volto/helpers';
 import { createContent } from '@plone/volto/actions';
 import {
@@ -39,6 +44,10 @@ const messages = defineMessages({
   uploadingImage: {
     id: 'Uploading image',
     defaultMessage: 'Uploading image',
+  },
+  credits: {
+    id: 'Credits',
+    defaultMessage: 'Credits',
   },
 });
 
@@ -240,6 +249,7 @@ class Edit extends Component {
     const placeholder =
       this.props.data.placeholder ||
       this.props.intl.formatMessage(messages.ImageBlockInputPlaceholder);
+    const creditHref = data?.linkTo?.[0]?.['@id'] || '';
     return (
       <div
         className={cx(
@@ -251,30 +261,57 @@ class Edit extends Component {
         )}
       >
         {data.url ? (
-          <img
-            className={cx({
+          <figure
+            className={cx('figure stage-figure', {
               large: data.size === 'l',
               medium: data.size === 'm',
               small: data.size === 's',
             })}
-            src={
-              isInternalURL(data.url)
-                ? // Backwards compat in the case that the block is storing the full server URL
-                  (() => {
-                    if (data.size === 'l')
+          >
+            <img
+              src={
+                isInternalURL(data.url)
+                  ? // Backwards compat in the case that the block is storing the full server URL
+                    (() => {
+                      if (data.size === 'l')
+                        return `${flattenToAppURL(data.url)}/@@images/image`;
+                      if (data.size === 'm')
+                        return `${flattenToAppURL(
+                          data.url,
+                        )}/@@images/image/preview`;
+                      if (data.size === 's')
+                        return `${flattenToAppURL(
+                          data.url,
+                        )}/@@images/image/mini`;
                       return `${flattenToAppURL(data.url)}/@@images/image`;
-                    if (data.size === 'm')
-                      return `${flattenToAppURL(
-                        data.url,
-                      )}/@@images/image/preview`;
-                    if (data.size === 's')
-                      return `${flattenToAppURL(data.url)}/@@images/image/mini`;
-                    return `${flattenToAppURL(data.url)}/@@images/image`;
-                  })()
-                : data.url
-            }
-            alt={data.alt || ''}
-          />
+                    })()
+                  : data.url
+              }
+              alt={data.alt || ''}
+              loading="lazy"
+            />
+            <figcaption className="figure-caption">
+              <div className="title">{data.title}</div>
+              {(() => {
+                if (creditHref) {
+                  return (
+                    <div className="credits">
+                      Credit:{' '}
+                      <UniversalLink href={creditHref}>
+                        {data.credits}
+                      </UniversalLink>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div className="credits">
+                      Credit: <div>{data.credits}</div>
+                    </div>
+                  );
+                }
+              })()}
+            </figcaption>
+          </figure>
         ) : (
           <div>
             {this.props.editable && (

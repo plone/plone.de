@@ -48,17 +48,12 @@ export const ImageBlockSchemaEnhancer = ({ intl, formData, schema }) => {
     allowExternals: true,
   };
 
-  schema.properties.openLinkInNewTab = {
-    title: intl.formatMessage(messages.openLinkInNewTab),
-    type: 'boolean',
-  };
-
   schema.fieldsets = [
     ...schema.fieldsets,
     {
       id: 'credit settings',
       title: intl.formatMessage(messages.creditSettings),
-      fields: [...['title', 'credits', 'linkTo', 'openLinkInNewTab']],
+      fields: [...['title', 'credits', 'linkTo']],
     },
   ];
 

@@ -14,7 +14,12 @@ import loadable from '@loadable/component';
 import cx from 'classnames';
 import { isEqual } from 'lodash';
 
-import { Icon, ImageSidebar, SidebarPortal } from '@plone/volto/components';
+import {
+  Icon,
+  ImageSidebar,
+  SidebarPortal,
+  UniversalLink,
+} from '@plone/volto/components';
 import { withBlockExtensions } from '@plone/volto/helpers';
 import { createContent } from '@plone/volto/actions';
 import {
@@ -244,6 +249,7 @@ class Edit extends Component {
     const placeholder =
       this.props.data.placeholder ||
       this.props.intl.formatMessage(messages.ImageBlockInputPlaceholder);
+    const creditHref = data?.linkTo?.[0]?.['@id'] || '';
     return (
       <div
         className={cx(
@@ -285,7 +291,25 @@ class Edit extends Component {
               loading="lazy"
             />
             <figcaption className="figure-caption">
-              <div className="credits"></div>
+              <div className="title">{data.title}</div>
+              {(() => {
+                if (creditHref) {
+                  return (
+                    <div className="credits">
+                      Credit:{' '}
+                      <UniversalLink href={creditHref}>
+                        {data.credits}
+                      </UniversalLink>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div className="credits">
+                      Credit: <div>{data.credits}</div>
+                    </div>
+                  );
+                }
+              })()}
             </figcaption>
           </figure>
         ) : (

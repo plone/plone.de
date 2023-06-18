@@ -17,6 +17,8 @@ import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers';
 export const View = ({ data, detached }) => {
   const href = data?.href?.[0]?.['@id'] || '';
 
+  const creditHref = data?.linkTo?.[0]?.['@id'] || '';
+
   return (
     <div
       className={cx(
@@ -65,7 +67,24 @@ export const View = ({ data, detached }) => {
                 />
                 <figcaption className="figure-caption">
                   <div className="title">{data.title}</div>
-                  <div className="credits">Credit: {data.credits}</div>
+                  {(() => {
+                    if (creditHref) {
+                      return (
+                        <div className="credits">
+                          Credit:{' '}
+                          <UniversalLink href={creditHref}>
+                            {data.credits}
+                          </UniversalLink>
+                        </div>
+                      );
+                    } else {
+                      return (
+                        <div className="credits">
+                          Credit: <div>{data.credits}</div>
+                        </div>
+                      );
+                    }
+                  })()}
                 </figcaption>
               </figure>
             );

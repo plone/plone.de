@@ -8,6 +8,14 @@ import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 import { withBlockExtensions } from '@plone/volto/helpers';
 import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers';
+import { useIntl, defineMessages } from 'react-intl';
+
+const messages = defineMessages({
+  defaultCredits: {
+    id: '© Plone Foundation',
+    defaultMessage: '© Plone Foundation',
+  },
+});
 
 /**
  * View image block class.
@@ -16,8 +24,8 @@ import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers';
  */
 export const View = ({ data, detached }) => {
   const href = data?.href?.[0]?.['@id'] || '';
-
   const creditHref = data?.linkTo?.[0]?.['@id'] || '';
+  const intl = useIntl();
 
   return (
     <div
@@ -67,24 +75,13 @@ export const View = ({ data, detached }) => {
                 />
                 <figcaption className="figure-caption">
                   <div className="title">{data.title}</div>
-                  {(() => {
-                    if (creditHref) {
-                      return (
-                        <div className="credits">
-                          Credit:{' '}
-                          <UniversalLink href={creditHref}>
-                            {data.credits}
-                          </UniversalLink>
-                        </div>
-                      );
-                    } else {
-                      return (
-                        <div className="credits">
-                          Credit: <div>{data.credits}</div>
-                        </div>
-                      );
-                    }
-                  })()}
+                  <div className="credits">
+                    Credit:{' '}
+                    <UniversalLink href={creditHref || '/imprint'}>
+                      {data.credits ||
+                        intl.formatMessage(messages.defaultCredits)}
+                    </UniversalLink>
+                  </div>
                 </figcaption>
               </figure>
             );

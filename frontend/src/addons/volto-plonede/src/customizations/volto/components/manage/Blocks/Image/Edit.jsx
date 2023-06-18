@@ -49,6 +49,10 @@ const messages = defineMessages({
     id: 'Credits',
     defaultMessage: 'Credits',
   },
+  defaultCredits: {
+    id: '© Plone Foundation',
+    defaultMessage: '© Plone Foundation',
+  },
 });
 
 /**
@@ -292,24 +296,13 @@ class Edit extends Component {
             />
             <figcaption className="figure-caption">
               <div className="title">{data.title}</div>
-              {(() => {
-                if (creditHref) {
-                  return (
-                    <div className="credits">
-                      Credit:{' '}
-                      <UniversalLink href={creditHref}>
-                        {data.credits}
-                      </UniversalLink>
-                    </div>
-                  );
-                } else {
-                  return (
-                    <div className="credits">
-                      Credit: <div>{data.credits}</div>
-                    </div>
-                  );
-                }
-              })()}
+              <div className="credits">
+                Credit:{' '}
+                <UniversalLink href={creditHref || '/imprint'}>
+                  {data.credits ||
+                    this.props.intl.formatMessage(messages.defaultCredits)}
+                </UniversalLink>
+              </div>
             </figcaption>
           </figure>
         ) : (

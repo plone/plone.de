@@ -7,7 +7,7 @@ Plone Germany site
 ### Development Setup
 
 - Python 3.9
-- Node 16
+- Node ^16 || ^18
 - yarn
 - Docker
 

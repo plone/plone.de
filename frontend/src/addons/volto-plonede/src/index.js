@@ -20,6 +20,21 @@ defineMessages({
   Contact: { id: 'Contact', defineMessage: 'Contact' },
   'Site Map': { id: 'Site Map', defineMessage: 'Site Map' },
   'Button text': { id: 'Button text', defaultMessage: 'Button text' },
+  EnableCookies: {
+    id: 'Enable {module} cookies',
+    defaultMessage: 'Enable {module} cookies',
+    values: {
+      module: <b>{module}</b>,
+    },
+  },
+  CustomizePrivacySettings: {
+    id: 'Customize your Privacy Settings',
+    defaultMessage: 'Customize your Privacy Settings',
+  },
+  Or: {
+    id: ', or ',
+    defaultMessage: ', or ',
+  },
 });
 
 const applyConfig = (config) => {
@@ -129,6 +144,8 @@ const applyConfig = (config) => {
       },
     },
   };
+
+  config.settings.DSGVOBanner.modules = ['youtube'];
 
   delete config.blocks.blocksConfig.text;
   delete config.blocks.blocksConfig.description;

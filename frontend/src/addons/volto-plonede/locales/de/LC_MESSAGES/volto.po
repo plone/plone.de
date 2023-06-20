@@ -12,6 +12,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: index
+# defaultMessage: , or
+msgid ", or "
+msgstr ", oder "
+
+#: index
 # defaultMessage: Accessibility
 msgid "Accessibility"
 msgstr "Barrierefreiheit"
@@ -55,6 +60,16 @@ msgstr "Credit Einstellungen"
 # defaultMessage: Credits
 msgid "Credits"
 msgstr "Credits"
+
+#: index
+# defaultMessage: Customize your Privacy Settings
+msgid "Customize your Privacy Settings"
+msgstr "passen Sie ihre Datenschutzeinstellungen an"
+
+#: index
+# defaultMessage: Enable {module} cookies
+msgid "Enable {module} cookies"
+msgstr "Aktivieren Sie die {module} cookies"
 
 #: components/manage/Blocks/SliderBlockEnhancer
 # defaultMessage: Flag alignment

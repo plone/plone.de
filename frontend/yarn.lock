@@ -1731,6 +1731,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@datapunt/matomo-tracker-js@npm:0.5.1":
+  version: 0.5.1
+  resolution: "@datapunt/matomo-tracker-js@npm:0.5.1"
+  checksum: b6ed7f9120c896a93c342a3e8c53eec7cd5fcf85106f2b206fff33aa3144a9b008de79d922024db8b376be0c135e06e51b7da0699dbdd37f53c1cff27eb85cd3
+  languageName: node
+  linkType: hard
+
 "@datapunt/matomo-tracker-js@npm:^0.3.1":
   version: 0.3.1
   resolution: "@datapunt/matomo-tracker-js@npm:0.3.1"
@@ -2552,6 +2559,16 @@ __metadata:
     react-slick: 0.25.2
     slick-carousel: 1.8.1
   checksum: 7a3f2a70277ee4dd3ab255db42a667d5e15b3c404ef90f6bba3fd621b2a35e6e70c965871a0f4ed89501800d3e6ecf7038d9a4467784195f07d74f6fb2d965c8
+  languageName: node
+  linkType: hard
+
+"@kitconcept/volto-dsgvo-banner@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@kitconcept/volto-dsgvo-banner@npm:2.1.0"
+  dependencies:
+    "@datapunt/matomo-tracker-js": 0.5.1
+    react-ga4: ^2.1.0
+  checksum: 997b60841950700b5649a50d068c41c40477778bd616b7fc5d010027cc15e04d9f24b11228bc84f57fb16bcfb49e02ae869c22349943b636f6c10a1dafe5a5eb
   languageName: node
   linkType: hard
 
@@ -11927,6 +11944,7 @@ __metadata:
     "@kitconcept/volto-blocks-grid": 8.0.0
     "@kitconcept/volto-button-block": 2.2.0
     "@kitconcept/volto-carousel-block": 1.1.0
+    "@kitconcept/volto-dsgvo-banner": 2.1.0
     "@kitconcept/volto-export": 1.1.0
     "@kitconcept/volto-heading-block": 2.3.0
     "@kitconcept/volto-separator-block": 3.1.0
@@ -19600,6 +19618,13 @@ __metadata:
   version: 3.2.0
   resolution: "react-fast-compare@npm:3.2.0"
   checksum: 8ef272c825ae329f61633ce4ce7f15aa5b84e5214d88bc0823880236e03e985a13195befa2c7a4eda7db3b017dc7985729152d88445823f652403cf36c2b86aa
+  languageName: node
+  linkType: hard
+
+"react-ga4@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "react-ga4@npm:2.1.0"
+  checksum: f7fb41141418d4ad14756f1126a1e9958db37d4d84ae6cd798043dc03a390b6dba74d69311af0349f0b9580a43bda8930138194ccc29c4100efe446e2d6eb057
   languageName: node
   linkType: hard
 

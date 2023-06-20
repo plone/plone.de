@@ -2,7 +2,6 @@
   .ui.container {
     min-height: 200px;
     padding-bottom: 1rem;
-    width: 940px !important;
     margin-top: calc(100px + 1em);
   }
 
@@ -35,7 +34,7 @@
       }
     }
 
-    &.ffffff-bg-color {
+    &.white {
       border-top: 1px solid #d5dde2;
       border-bottom: 1px solid #d5dde2;
     }
@@ -76,11 +75,15 @@
   }
 
   .quotation {
-    max-width: 600px;
+    max-width: 940px;
     margin: 20px auto 0;
 
+    p {
+      max-width: 940px !important;
+    }
+
     .quote-text {
-      color: @black;
+      // color: @black;
       font-family: 'Roboto Slab';
       font-size: 2em;
 
@@ -101,7 +104,7 @@
     }
   }
 
-  &.ffffff-bg-color {
+  &.white {
     border-top: 1px solid #d5dde2;
 
     .quotation {

@@ -8,3 +8,4 @@
 @import 'teaserGrid';
 @import 'image';
 @import 'introduction';
+@import 'quote';

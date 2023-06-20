@@ -14,6 +14,11 @@ import { composeSchema } from '@plone/volto/helpers';
 import { SeparatorStyleEnhancer } from '@kitconcept/volto-separator-block/components/schema.js';
 import { gridTeaserDisableStylingSchema } from '@kitconcept/volto-blocks-grid/components/Teaser/schema';
 
+// Quote Block
+import quoteSVG from '@plone/volto/icons/quote.svg';
+import QuoteBlockView from './components/manage/Blocks/volto-quote-block/View';
+import QuoteBlockEdit from './components/manage/Blocks/volto-quote-block/Edit';
+
 defineMessages({
   Imprint: { id: 'Imprint', defaultMessage: 'Imprint' },
   Accessibility: { id: 'Accessibility', defaultMessage: 'Accessibility' },
@@ -115,6 +120,20 @@ const applyConfig = (config) => {
     },
   ];
 
+  // Quote
+  config.blocks.blocksConfig.quote = {
+    id: 'quote',
+    title: 'Quote',
+    icon: quoteSVG,
+    group: 'text',
+    view: QuoteBlockView,
+    edit: QuoteBlockEdit,
+    blockHasOwnFocusManagement: true,
+    restricted: false,
+    mostUsed: false,
+    sidebarTab: 1,
+  };
+
   //Slider
   config.blocks.blocksConfig.slider = {
     ...config.blocks.blocksConfig.slider,
@@ -152,6 +171,7 @@ const applyConfig = (config) => {
   config.blocks.blocksConfig.__grid.gridAllowedBlocks = [
     ...config.blocks.blocksConfig.__grid.gridAllowedBlocks,
     '__button',
+    'quote',
   ];
 
   return config;

@@ -2552,16 +2552,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-carousel-block@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@kitconcept/volto-carousel-block@npm:1.1.0"
-  dependencies:
-    react-slick: 0.25.2
-    slick-carousel: 1.8.1
-  checksum: 7a3f2a70277ee4dd3ab255db42a667d5e15b3c404ef90f6bba3fd621b2a35e6e70c965871a0f4ed89501800d3e6ecf7038d9a4467784195f07d74f6fb2d965c8
-  languageName: node
-  linkType: hard
-
 "@kitconcept/volto-dsgvo-banner@npm:2.1.0":
   version: 2.1.0
   resolution: "@kitconcept/volto-dsgvo-banner@npm:2.1.0"
@@ -11943,7 +11933,6 @@ __metadata:
     "@eeacms/volto-matomo": 3.0.1
     "@kitconcept/volto-blocks-grid": 8.0.0
     "@kitconcept/volto-button-block": 2.2.0
-    "@kitconcept/volto-carousel-block": 1.1.0
     "@kitconcept/volto-dsgvo-banner": 2.1.0
     "@kitconcept/volto-export": 1.1.0
     "@kitconcept/volto-heading-block": 2.3.0
@@ -20036,22 +20025,6 @@ __metadata:
     react: ^16.0.0
     react-dom: ^16.0.0
   checksum: 1f8670b4a0d5bd676101a3fabd4fd4e02b4b6009191adc39261095c1255744b8062bf15c7f8a622a29a2f18ec80eac9d70d20906a5546ba621d387d726f62cab
-  languageName: node
-  linkType: hard
-
-"react-slick@npm:0.25.2":
-  version: 0.25.2
-  resolution: "react-slick@npm:0.25.2"
-  dependencies:
-    classnames: ^2.2.5
-    enquire.js: ^2.1.6
-    json2mq: ^0.2.0
-    lodash.debounce: ^4.0.8
-    resize-observer-polyfill: ^1.5.0
-  peerDependencies:
-    react: ^0.14.0 || ^15.0.1 || ^16.0.0
-    react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0
-  checksum: a728161f6d6dd09a626db9d0c089d3eed3e8087246c0307c7e1343f6420c645d1760498c41733fce67138eadaf14a67552fd9e5d85227617cd54c750f4f542dc
   languageName: node
   linkType: hard
 

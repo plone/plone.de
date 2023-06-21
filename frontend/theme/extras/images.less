@@ -1,0 +1,345 @@
+figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Image  Block */
+
+.block.image {
+  margin: 0;
+
+  &.align.left,
+  &.align.right {
+    // This is to equal the heading margin in case of the
+    // floating image + heading use case
+    // It matches the mocks for standalone images anyways
+    margin: 50px auto 0 auto;
+    width: 940px;
+  }
+
+  &.align.left.has--backgroundColor--grey,
+  &.align.right.has--backgroundColor--grey {
+    margin-top: 0;
+
+    figure {
+      // Paddings do not collapse, so we have to substract the ever
+      // present padding bottom for every block
+      padding-top: 50px - 25px;
+    }
+  }
+
+  figure {
+    img {
+      width: 100% !important;
+      height: auto;
+      object-fit: contain;
+    }
+
+    &.right {
+      margin-bottom: 16px;
+      margin-left: 2rem;
+      float: right;
+
+      img {
+        margin-right: 0 !important;
+        margin-bottom: 0px;
+        margin-left: 0 !important;
+        float: none;
+        object-fit: contain;
+        object-position: right;
+      }
+    }
+
+    &.left {
+      margin-right: 2rem;
+      margin-bottom: 16px;
+      float: left;
+
+      img {
+        margin-right: 0 !important;
+        margin-bottom: 0px;
+        float: none;
+        object-fit: contain;
+        object-position: left;
+      }
+    }
+
+    &.left,
+    &.right {
+      &.large {
+        width: 50%;
+        height: auto;
+
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+
+      &.medium {
+        width: 50%;
+        height: auto;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+
+      &.small {
+        width: 25%;
+        height: auto;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+        figcaption {
+          padding: 15px 10px;
+
+          &.rights {
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+
+    &.center {
+      width: 620px !important;
+      margin-right: auto;
+      margin-left: auto;
+      object-fit: cover;
+
+      img {
+        height: auto;
+        margin-right: initial;
+        margin-left: initial;
+      }
+
+      &.large {
+        figcaption {
+          text-align: start;
+        }
+      }
+    }
+
+    &.wide {
+      width: 940px !important;
+      margin-right: auto;
+      margin-left: auto;
+      object-fit: cover;
+
+      img {
+        height: auto;
+        margin-right: initial;
+        margin-left: initial;
+      }
+
+      &.large {
+        figcaption {
+          text-align: start;
+        }
+      }
+    }
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto;
+  }
+}
+
+/* image/video captions */
+figcaption {
+  margin: 0 0 9px 0;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: left;
+  white-space: initial;
+
+  .title {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .description {
+    margin-bottom: 10px;
+  }
+
+  .credits {
+    margin-bottom: 10px;
+    -webkit-font-smoothing: anitaliased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    div {
+      display: inline;
+    }
+
+    p {
+      display: inline;
+      color: inherit;
+      line-height: inherit;
+    }
+
+    a {
+      color: @plone-blue;
+    }
+  }
+}
+
+/* Video  Block */
+
+#page-document .block.video.align.left,
+.block.video.align.left,
+#page-document .block.video.align.right,
+.block.video.align.right {
+  .default-container-width();
+}
+
+#page-document .block.video.align.center figure,
+.block.video.align.center figure {
+  .default-container-width();
+}
+
+.block.video {
+  .figure {
+    width: 100%;
+  }
+
+  &.full figcaption {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  &.align.left.has--backgroundColor--grey figure,
+  &.align.right.has--backgroundColor--grey figure {
+    padding-top: 25px;
+  }
+
+  &.align.left.has--backgroundColor--grey,
+  &.align.right.has--backgroundColor--grey {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  &.align.left,
+  &.align.right {
+    margin-top: 50px;
+
+    figure.video-inner {
+      @media only screen and (max-width: @tabletBreakpoint) {
+        width: 100%;
+      }
+    }
+
+    img {
+      margin: 0 !important;
+    }
+  }
+}
+
+.block.video,
+.block.imageslider,
+.block.maps {
+  .ui.message.cookie-consent-buttons {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+    background: transparent;
+
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.99) 100%
+    );
+    @media only screen and (max-width: @tabletBreakpoint) {
+      flex-flow: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      background-color: @black;
+    }
+
+    p {
+      width: 70%;
+      padding-right: 15px;
+      margin-bottom: 0;
+      color: @white;
+      text-align: left;
+      @media only screen and (max-width: @tabletBreakpoint) {
+        width: 100%;
+        padding-right: 0px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      a {
+        color: @white;
+        text-decoration: underline;
+
+        &[href^="https://"]:not([href^="https://dlr-internet"]):not([href^="https://dlr"]):after
+        {
+          content: ''
+            url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='external-link-alt' class='svg-inline--fa fa-external-link-alt fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 512 512'%3E%3Cpath fill='white' d='M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z'%3E%3C/path%3E%3C/svg%3E");
+        }
+      }
+    }
+
+    .ui.button {
+      width: 30%;
+      // border: 1px solid @black;
+      background: @white;
+      border-radius: 0;
+      color: @black;
+      font-size: 14px;
+      @media only screen and (max-width: @tabletBreakpoint) {
+        width: 50%;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .cookie-consent-overlay {
+    position: relative;
+    height: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+/* Maps  Block */
+
+.block.maps.align {
+  &.left,
+  &.right {
+    .cookie-consent-overlay {
+      width: 472px;
+      height: 265px;
+
+      @media only screen and (max-width: @tabletBreakpoint) {
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.full {
+    height: 45vh;
+
+    img {
+      object-fit: cover;
+      object-position: top right;
+    }
+  }
+}

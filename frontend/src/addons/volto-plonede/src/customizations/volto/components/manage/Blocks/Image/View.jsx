@@ -43,7 +43,7 @@ export const View = ({ data, detached }) => {
           {(() => {
             const image = (
               <figure
-                className={cx('figure stage-figure', {
+                className={cx('figure', data.align, {
                   large: data.size === 'l',
                   medium: data.size === 'm',
                   small: data.size === 's',

@@ -6,6 +6,6 @@
 @import 'draftjs';
 @import 'heading';
 @import 'teaserGrid';
-@import 'image';
+@import 'images';
 @import 'introduction';
 @import 'quote';

@@ -485,7 +485,16 @@ body.section-search {
 
 //Blocks
 //Message
-.block:not(.__grid):not(.image):not(.video):not(.teaserGrid):not(.imagesGrid):not(.slider):not(.hero):not(.maps):not(.toc)
+.block
+  :not(.__grid)
+  :not(.image)
+  :not(.video)
+  :not(.teaserGrid)
+  :not(.imagesGrid)
+  :not(.slider)
+  :not(.hero)
+  :not(.maps)
+  :not(.toc)
   .ui.message {
   max-width: 940px;
   flex-direction: row;
@@ -797,9 +806,6 @@ body.section-search {
 
       .block.listing {
         .listing-wrapper {
-          padding-right: 1rem;
-          padding-left: 1rem;
-
           .items {
             .listing-item {
               width: 100%;
@@ -891,21 +897,6 @@ body.section-search {
               }
             }
           }
-        }
-      }
-    }
-
-    .ui.ui.secondary.vertical.segment.breadcrumbs {
-      width: 100vw;
-    }
-
-    .ui.basic.segment.content-area {
-      width: 100vw;
-
-      .block.listing {
-        .listing-wrapper {
-          padding-right: 1rem;
-          padding-left: 1rem;
         }
       }
     }

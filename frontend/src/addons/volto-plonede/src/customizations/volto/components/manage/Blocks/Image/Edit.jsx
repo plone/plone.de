@@ -266,7 +266,7 @@ class Edit extends Component {
       >
         {data.url ? (
           <figure
-            className={cx('figure stage-figure', {
+            className={cx('figure', data.align, {
               large: data.size === 'l',
               medium: data.size === 'm',
               small: data.size === 's',

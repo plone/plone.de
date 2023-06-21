@@ -485,7 +485,8 @@ body.section-search {
 
 //Blocks
 //Message
-.block:not(.__grid) .ui.message {
+.block:not(.__grid):not(.image):not(.video):not(.teaserGrid):not(.imagesGrid):not(.slider):not(.hero):not(.maps):not(.toc)
+  .ui.message {
   max-width: 940px;
   flex-direction: row;
   margin: auto;

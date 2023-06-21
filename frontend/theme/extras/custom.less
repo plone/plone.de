@@ -56,12 +56,14 @@
 }
 .default-container-width() {
   max-width: 940px !important;
-  margin: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   margin-bottom: 14px !important;
 }
 .text-container-width() {
   max-width: 620px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 14px;
   cursor: text;
 }
@@ -280,7 +282,7 @@ body.section-search {
     background-color: @white;
 
     .ui.container {
-      .default-container-width();
+      .full-container-width();
 
       .ui.breadcrumb {
         margin-top: 10px;

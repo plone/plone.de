@@ -1,7 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Container } from 'semantic-ui-react';
 import QuoteImage from './quote.png';
 import QuoteImageGrey from './quote-grey.png';
 
@@ -12,11 +11,14 @@ const QuoteBlockView = (props) => {
       {data && (
         <div
           className={cx('block quote', data.backgroundColor, {
-            'no-image': !data.image,
+            'no-image': !data.image?.length > 0,
+            // The image is returned in an array (empty array = true)
+            // so we are checking the length of the array to set the 'no-image'
+            // class when the array is empty.
             'align-left': data.align === 'left',
           })}
         >
-          <Container>
+          <div className="inner-wrapper">
             {data?.image?.[0] && (
               <div className="quote-image-wrapper">
                 <img
@@ -31,8 +33,8 @@ const QuoteBlockView = (props) => {
                 />
               </div>
             )}
-            <div className="quotation">
-              <p className="quote-text">
+            <figure className="quotation">
+              <blockquote className="quote-text">
                 {data.align !== 'left' && (
                   <img
                     className="quotation-mark"
@@ -49,14 +51,14 @@ const QuoteBlockView = (props) => {
                 )}
                 {data.align === 'left' ? '„' : null}
                 {data.text}“
-              </p>
-              <p className="author">
+              </blockquote>
+              <figcaption className="author">
                 <span className="person">{data.person}</span>
                 {data.position && ', '}
                 {data.position}
-              </p>
-            </div>
-          </Container>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       )}
     </>

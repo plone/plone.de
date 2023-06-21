@@ -1,8 +1,8 @@
 .block.quote {
   .inner-wrapper {
     min-height: 200px;
-    padding-bottom: 1rem;
-    margin-top: calc(100px + 1em);
+    padding: 1rem;
+    padding-top: calc(100px + 1em);
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
@@ -46,7 +46,6 @@
   &.no-image {
     .inner-wrapper {
       padding: 1rem;
-      margin-top: 0;
     }
   }
 
@@ -81,10 +80,6 @@
     max-width: 940px;
     margin: 20px auto 0;
 
-    p {
-      max-width: 940px !important;
-    }
-
     .quote-text {
       // color: @black;
       font-family: 'Roboto Slab';
@@ -112,20 +107,6 @@
 
     .quotation {
       max-width: 1000px;
-    }
-  }
-}
-
-.block-editor-quote {
-  .block.quote {
-    .inner-wrapper {
-      margin-top: calc(100px + 1rem);
-    }
-
-    &.no-image {
-      .inner-wrapper {
-        margin-top: 0;
-      }
     }
   }
 }

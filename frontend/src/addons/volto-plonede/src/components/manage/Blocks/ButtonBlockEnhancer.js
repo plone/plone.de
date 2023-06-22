@@ -9,6 +9,10 @@ const messages = defineMessages({
     id: 'Open in new tab',
     defaultMessage: 'Open in new tab',
   },
+  outerAlign: {
+    id: 'Alignment',
+    defaultMessage: 'Alignment',
+  },
 });
 export const ButtonBlockSchemaEnhancer = ({ schema, intl }) => {
   //Color
@@ -22,10 +26,17 @@ export const ButtonBlockSchemaEnhancer = ({ schema, intl }) => {
     colors,
     default: 'blue',
   };
-  schema.fieldsets[0].fields = [
-    ...schema.fieldsets[0].fields,
-    ...['backgroundColor'],
-  ];
+  schema.properties.outerAlign = {
+    widget: 'align',
+    title: intl.formatMessage(messages.outerAlign),
+    actions: ['center', 'wide'],
+    default: 'wide',
+  };
+
+  const arr = schema.fieldsets[0].fields;
+  arr.splice(2, 0, 'outerAlign');
+  arr.push('backgroundColor');
+  schema.fieldsets[0].fields = arr;
 
   return schema;
 };

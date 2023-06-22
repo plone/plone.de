@@ -10,6 +10,7 @@
 #main p,
 #main ul li :not(.block.slider) {
   color: var(--text-color);
+  font-weight: 300;
   .text-container-width();
 
   &::marker {
@@ -132,11 +133,15 @@ body.section-search {
   }
 }
 
+#toolbar .toolbar-content.show {
+  z-index: 999;
+}
+
 #main {
   //Header
   .ui.basic.segment.header-wrapper {
     position: fixed !important;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     width: 100%;
     height: 69px;
@@ -572,15 +577,15 @@ body.section-search {
 }
 
 //Button
-.block.__button {
+.block.__button.has--align--center {
+  .button.container {
+    .text-container-width();
+  }
+}
+
+.block.__button.has--align--wide {
   .button.container {
     .default-container-width();
-
-    .ui.button {
-      transition: all 0.2s ease-out;
-      .button-blue();
-      .button-white();
-    }
   }
 }
 

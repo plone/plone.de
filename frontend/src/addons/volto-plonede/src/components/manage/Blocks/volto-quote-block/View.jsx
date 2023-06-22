@@ -3,6 +3,8 @@ import cx from 'classnames';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import QuoteImage from './quote.png';
 import QuoteImageGrey from './quote-grey.png';
+// import quoteSVG from '@plone/volto/icons/quote.svg';
+// import { Icon } from '@plone/volto/components';
 
 const QuoteBlockView = (props) => {
   const { data } = props;
@@ -53,7 +55,10 @@ const QuoteBlockView = (props) => {
                 {data.text}“
               </blockquote>
               <figcaption className="author">
-                <span className="person">{data.person}</span>
+                <span className="person">
+                  {'- '}
+                  {data.person}
+                </span>
                 {data.position && ', '}
                 {data.position}
               </figcaption>

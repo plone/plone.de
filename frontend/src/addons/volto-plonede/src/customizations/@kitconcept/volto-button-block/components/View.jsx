@@ -13,7 +13,7 @@ const messages = defineMessages({
 });
 
 const View = (props) => {
-  const { data, isEditMode, className } = props;
+  const { data, isEditMode } = props;
   const [hasLink, setHasLink] = React.useState(false);
   const intl = useIntl();
 
@@ -30,13 +30,13 @@ const View = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data.href]);
 
-  let link = hasLink ? (
+  const link = hasLink ? (
     data.href.length > 0 && isInternalURL(data.href[0]['@id']) ? (
       <ConditionalLink
         to={data.href.length > 0 ? flattenToAppURL(data.href[0]['@id']) : ''}
         condition={!isEditMode}
       >
-        <Button className={(cx('__button'), data.align, data.backgroundColor)}>
+        <Button className={(cx('__button'), data.backgroundColor)}>
           {data.title || intl.formatMessage(messages.ButtonText)}
         </Button>
       </ConditionalLink>
@@ -47,16 +47,14 @@ const View = (props) => {
           target="_blank"
           rel="noreferrer"
         >
-          <Button
-            className={(cx('__button'), data.align, data.backgroundColor)}
-          >
+          <Button className={(cx('__button'), data.backgroundColor)}>
             {data.title || intl.formatMessage(messages.ButtonText)}
           </Button>
         </a>
       )
     )
   ) : (
-    <Button className={(cx('noLink'), data.align, data.backgroundColor)}>
+    <Button className={(cx('noLink'), data.backgroundColor)}>
       {data.title || intl.formatMessage(messages.ButtonText)}
     </Button>
   );
@@ -65,12 +63,13 @@ const View = (props) => {
     <div
       className={cx(
         'block __button',
-        className,
-        `align-${data?.inneralign}`,
+        `has--align--${data.outerAlign}`,
         data.newTab,
       )}
     >
-      <div className="button container">{link}</div>
+      <div className="button container">
+        <div className={cx(`align-${data?.inneralign}`)}>{link}</div>
+      </div>
     </div>
   );
 };

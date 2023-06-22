@@ -1,11 +1,11 @@
 // Separator Block
 .block.separator {
-  .default-container-width();
+  max-width: 940px;
   top: unset;
   display: block;
   height: unset;
   border: none;
-  margin: 50px 0;
+  margin: 50px auto;
   clear: both;
 
   &:not(.inner):not([role='presentation']) {
@@ -23,7 +23,13 @@
     }
   }
 
+  &.has--align--center {
+    max-width: 620px;
+  }
+
   &.has--align--left {
+    max-width: 620px;
+
     .line {
       margin-left: 0;
 
@@ -43,7 +49,13 @@
 .block-editor-separator {
   clear: both;
 
+  &.has--align--center .block.separator {
+    max-width: 620px;
+  }
+
   &.has--align--left .block.separator {
+    max-width: 620px;
+
     .line {
       margin-left: 0;
 

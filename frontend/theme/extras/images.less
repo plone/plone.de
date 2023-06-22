@@ -11,11 +11,16 @@ figure {
 
   &.align.left,
   &.align.right {
-    // This is to equal the heading margin in case of the
-    // floating image + heading use case
-    // It matches the mocks for standalone images anyways
     margin: 50px auto 0 auto;
     width: 940px;
+
+    &.medium {
+      width: 620px;
+    }
+
+    &.small {
+      width: 620px;
+    }
   }
 
   &.align.left.has--backgroundColor--grey,
@@ -23,8 +28,6 @@ figure {
     margin-top: 0;
 
     figure {
-      // Paddings do not collapse, so we have to substract the ever
-      // present padding bottom for every block
       padding-top: 50px - 25px;
     }
   }
@@ -89,14 +92,6 @@ figure {
         height: auto;
         @media only screen and (max-width: 768px) {
           width: 100%;
-        }
-
-        figcaption {
-          padding: 15px 10px;
-
-          &.rights {
-            padding-top: 5px;
-          }
         }
       }
     }

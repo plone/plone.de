@@ -36,6 +36,11 @@ export const View = ({ data, detached }) => {
           detached,
         },
         data.align,
+        {
+          large: data.size === 'l',
+          medium: data.size === 'm',
+          small: data.size === 's',
+        },
       )}
     >
       {data.url && (

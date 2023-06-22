@@ -262,6 +262,11 @@ class Edit extends Component {
             center: !Boolean(data.align),
           },
           data.align,
+          {
+            large: data.size === 'l',
+            medium: data.size === 'm',
+            small: data.size === 's',
+          },
         )}
       >
         {data.url ? (

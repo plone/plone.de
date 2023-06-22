@@ -3,7 +3,7 @@ export const HeadingBlockSchemaEnhancer = ({ schema }) => {
     title: 'Align',
     widget: 'align',
     actions: ['left', 'center', 'right'],
-    default: 'center',
+    default: 'left',
   };
   schema.fieldsets[0].fields = [...schema.fieldsets[0].fields, ...['align']];
   return schema;

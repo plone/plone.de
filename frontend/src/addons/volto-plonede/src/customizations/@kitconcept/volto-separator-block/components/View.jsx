@@ -6,7 +6,7 @@ const SeparatorView = (props) => {
   const { className, data } = props;
   return (
     <div className="block separator">
-      <div className={cx('inner-wrapper', className)}>
+      <div className={cx('inner-separator', className)}>
         <div className="line" />
       </div>
     </div>

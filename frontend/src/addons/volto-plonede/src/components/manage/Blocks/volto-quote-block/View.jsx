@@ -55,10 +55,7 @@ const QuoteBlockView = (props) => {
                 {data.text}“
               </blockquote>
               <figcaption className="author">
-                <span className="person">
-                  {'- '}
-                  {data.person}
-                </span>
+                <span className="person">{data.person}</span>
                 {data.position && ', '}
                 {data.position}
               </figcaption>

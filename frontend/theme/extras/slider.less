@@ -15,17 +15,31 @@
           top: 50%;
           transform: translateY(-50%);
           width: 530px;
-          padding: 20px;
+          padding: 40px;
           background-color: rgba(0, 134, 195, 0.8);
 
-          .supertitle {
-            color: @white !important;
-          }
+          .title {
+            margin-bottom: 60px;
 
-          .title h2 {
-            .default-heading-size();
-            margin: 0 !important;
-            color: @white !important;
+            .supertitle {
+              color: var(--primary-white);
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 36px;
+            }
+
+            h2 {
+              margin: 15px 0 0 0;
+              color: var(--primary-white);
+              font-size: 48px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 54px;
+              overflow-wrap: break-word;
+              word-break: break-word;
+              word-wrap: break-word;
+            }
           }
 
           .body p {
@@ -34,29 +48,48 @@
 
           .button {
             .ui.button {
-              transition: all 0.2s ease-out;
-              .button-white();
+              background: transparent;
+              padding: 11px 29px;
+              border: 2px solid #fff;
+              color: var(--primary-white);
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 30px;
             }
           }
         }
 
         &.align-right {
-          right: 0;
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
           width: 530px;
-          padding: 20px;
+          padding: 40px;
           background-color: rgba(0, 134, 195, 0.8);
 
-          .supertitle {
-            color: @white !important;
-          }
+          .title {
+            margin-bottom: 60px;
 
-          .title h2 {
-            .default-heading-size();
-            margin: 0 !important;
-            color: @white !important;
+            .supertitle {
+              color: var(--primary-white);
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 36px;
+            }
+
+            h2 {
+              margin: 15px 0 0 0;
+              color: var(--primary-white);
+              font-size: 48px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 54px;
+              overflow-wrap: break-word;
+              word-break: break-word;
+              word-wrap: break-word;
+            }
           }
 
           .body p {
@@ -65,8 +98,9 @@
 
           .button {
             .ui.button {
-              transition: all 0.2s ease-out;
-              .button-white();
+              border: 1px solid #fff;
+              background: transparent;
+              color: var(--primary-white);
             }
           }
         }

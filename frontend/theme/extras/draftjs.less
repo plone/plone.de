@@ -10,11 +10,37 @@ blockquote {
   line-height: 1.5;
 }
 
-#main h2,
-#main h3 {
-  max-width: 620px;
+#page-document > h2,
+#page-document > h3 {
+  max-width: var(--text-container-width);
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-style: normal;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-style: normal;
+  line-height: 30px;
+}
+
+.block-editor-slate h2,
+.block-editor-slate h3 {
+  max-width: var(--text-container-width);
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .block.__grid {

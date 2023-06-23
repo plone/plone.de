@@ -1,5 +1,8 @@
 :root {
   --text-color: #525252;
+  --text-container-width: 620px;
+  --default-container-width: 940px;
+  --full-container-width: 1440px;
 }
 
 @black: #181818;
@@ -37,16 +40,23 @@
   background-color: #edf1f2;
 }
 
-.documentFirstHeading {
-  .default-container-width();
-  padding-bottom: 55px;
-  border-bottom: 0 solid transparent;
-  font-size: 3rem;
-  font-weight: bold;
+#page-document h1.documentFirstHeading {
+  width: var(--full-container-width);
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  &::before {
-    border-bottom: 0 solid transparent;
-  }
+.documentFirstHeading,
+.documentFirstHeading::before {
+  border-bottom: none;
+}
+
+.documentFirstHeading {
+  margin-bottom: 55px;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px;
 }
 
 .full-container-width() {
@@ -72,10 +82,10 @@
 .default-heading-size() {
   max-width: 940px !important;
   color: #000;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 2.4rem;
+  line-height: 2.44444444rem;
 }
 .small-heading-size() {
   max-width: 940px !important;

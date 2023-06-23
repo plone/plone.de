@@ -1,6 +1,5 @@
 // Separator Block
 .block.separator {
-  max-width: 940px;
   top: unset;
   display: block;
   height: unset;
@@ -9,39 +8,46 @@
   clear: both;
 
   &:not(.inner):not([role='presentation']) {
-    padding: 25px 0 !important;
+    padding: 0 !important;
   }
 
-  .line {
-    &::after {
-      position: relative;
-      top: 50%;
-      display: block;
-      border-top: 1px solid #000;
-      margin-top: -1px;
-      content: '';
-    }
-  }
-
-  &.has--align--center {
-    max-width: 620px;
-  }
-
-  &.has--align--left {
-    max-width: 620px;
+  .inner-wrapper {
+    max-width: var(--default-container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 0;
 
     .line {
-      margin-left: 0;
-
       &::after {
-        width: 165px;
+        position: relative;
+        top: 50%;
+        display: block;
+        border-top: 1px solid #000;
+        margin-top: -1px;
+        content: '';
       }
     }
-  }
 
-  &.has--noLine--true {
-    .line::after {
-      display: none;
+    &.has--align--center {
+      max-width: var(--text-container-width);
+    }
+
+    &.has--align--left {
+      max-width: var(--text-container-width);
+
+      .line {
+        margin-left: 0;
+
+        &::after {
+          width: 165px;
+        }
+      }
+    }
+
+    &.has--noLine--true {
+      .line::after {
+        display: none;
+      }
     }
   }
 }
@@ -49,25 +55,29 @@
 .block-editor-separator {
   clear: both;
 
-  &.has--align--center .block.separator {
-    max-width: 620px;
-  }
+  .inner-wrapper {
+    max-width: var(--default-container-width);
 
-  &.has--align--left .block.separator {
-    max-width: 620px;
+    &.has--align--center {
+      max-width: var(--text-container-width) !important;
+    }
 
-    .line {
-      margin-left: 0;
+    &.has--align--left {
+      max-width: var(--text-container-width) !important;
 
-      &::after {
-        width: 165px;
+      .line {
+        margin-left: 0;
+
+        &::after {
+          width: 165px;
+        }
       }
     }
-  }
 
-  &.has--noLine--true {
-    .line::after {
-      display: none;
+    &.has--noLine--true {
+      .line::after {
+        display: none;
+      }
     }
   }
 }

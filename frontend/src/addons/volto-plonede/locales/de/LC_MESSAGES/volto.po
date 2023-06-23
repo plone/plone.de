@@ -22,8 +22,14 @@ msgid "Accessibility"
 msgstr "Barrierefreiheit"
 
 #: components/manage/Blocks/ButtonBlockEnhancer
+# defaultMessage: Alignment
+msgid "Alignment"
+msgstr ""
+
+#: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/DefaultStylingEnhancer
 #: components/manage/Blocks/HeroBlockEnhancer
+#: components/manage/Blocks/volto-quote-block/schema
 # defaultMessage: Background color
 msgid "Background color"
 msgstr "Hintergrundfarbe"
@@ -52,11 +58,13 @@ msgid "Contact"
 msgstr "Kontakt"
 
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: Credit settings
 msgid "Credit settings"
 msgstr "Credit Einstellungen"
 
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: Credits
 msgid "Credits"
 msgstr "Credits"
@@ -76,21 +84,59 @@ msgstr "Aktivieren Sie die {module} cookies"
 msgid "Flag alginment"
 msgstr "Flagge Ausrichtung"
 
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Image
+msgid "Image"
+msgstr "Bild"
+
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Image Alignment
+msgid "Image Alignment"
+msgstr "Bild Ausrichtung"
+
 #: index
 # defaultMessage: Imprint
 msgid "Imprint"
 msgstr "Impressum"
 
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: undefined
 msgid "Link to"
 msgstr "Link auf"
 
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Name
+msgid "Name"
+msgstr "Name"
+
 #: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: Open in new tab
 msgid "Open in new tab"
 msgstr "In neuem Tab öffnen"
+
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Position
+msgid "Position"
+msgstr "Position"
+
+#: components/manage/Blocks/volto-quote-block/Data
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Quote
+msgid "Quote"
+msgstr "Zitat"
+
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Quote-text
+msgid "Quote-text"
+msgstr "Zitat"
+
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Quoted person
+msgid "Quoted person"
+msgstr "Zitierte Person"
 
 #: components/manage/Blocks/HeroBlockEnhancer
 #: components/manage/Blocks/SliderBlockEnhancer
@@ -104,6 +150,7 @@ msgid "Site Map"
 msgstr "Sitemap"
 
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: Title
 msgid "Title"
 msgstr "Titel"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-20T10:04:34.674Z\n"
+"POT-Creation-Date: 2023-06-23T09:04:24.740Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -24,8 +24,14 @@ msgid "Accessibility"
 msgstr ""
 
 #: components/manage/Blocks/ButtonBlockEnhancer
+# defaultMessage: Alignment
+msgid "Alignment"
+msgstr ""
+
+#: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/DefaultStylingEnhancer
 #: components/manage/Blocks/HeroBlockEnhancer
+#: components/manage/Blocks/volto-quote-block/schema
 # defaultMessage: Background color
 msgid "Background color"
 msgstr ""
@@ -54,11 +60,13 @@ msgid "Contact"
 msgstr ""
 
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: Credit settings
 msgid "Credit settings"
 msgstr ""
 
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: Credits
 msgid "Credits"
 msgstr ""
@@ -78,20 +86,58 @@ msgstr ""
 msgid "Flag alginment"
 msgstr ""
 
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Image
+msgid "Image"
+msgstr ""
+
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Image Alignment
+msgid "Image Alignment"
+msgstr ""
+
 #: index
 # defaultMessage: Imprint
 msgid "Imprint"
 msgstr ""
 
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: undefined
 msgid "Link to"
 msgstr ""
 
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Name
+msgid "Name"
+msgstr ""
+
 #: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: Open in new tab
 msgid "Open in new tab"
+msgstr ""
+
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Position
+msgid "Position"
+msgstr ""
+
+#: components/manage/Blocks/volto-quote-block/Data
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Quote
+msgid "Quote"
+msgstr ""
+
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Quote-text
+msgid "Quote-text"
+msgstr ""
+
+#: components/manage/Blocks/volto-quote-block/schema
+# defaultMessage: Quoted person
+msgid "Quoted person"
 msgstr ""
 
 #: components/manage/Blocks/HeroBlockEnhancer
@@ -106,6 +152,7 @@ msgid "Site Map"
 msgstr ""
 
 #: components/manage/Blocks/ImageBlockEnhancer
+#: components/manage/Blocks/VideoBlockEnhancer
 # defaultMessage: Title
 msgid "Title"
 msgstr ""

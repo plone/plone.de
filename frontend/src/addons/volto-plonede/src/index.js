@@ -7,6 +7,7 @@ import {
   ListingBlockSchemaEnhancer,
   SliderBlockSchemaEnhancer,
   TeaserBlockSchemaEnhancer,
+  VideoBlockSchemaEnhancer,
   EventTemplate,
 } from 'volto-plonede/components';
 import { defineMessages } from 'react-intl';
@@ -162,6 +163,15 @@ const applyConfig = (config) => {
         ),
       },
     },
+  };
+
+  // Video  Block
+  config.blocks.blocksConfig.video = {
+    ...config.blocks.blocksConfig.video,
+    schemaEnhancer: composeSchema(
+      VideoBlockSchemaEnhancer,
+      DefaultStylingSchemaEnhancer,
+    ),
   };
 
   config.settings.DSGVOBanner.modules = ['youtube'];

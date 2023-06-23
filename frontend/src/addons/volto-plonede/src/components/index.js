@@ -6,6 +6,7 @@ import { ImageBlockSchemaEnhancer } from './manage/Blocks/ImageBlockEnhancer';
 import { ListingBlockSchemaEnhancer } from './manage/Blocks/ListingBlockEnhancer';
 import { SliderBlockSchemaEnhancer } from './manage/Blocks/SliderBlockEnhancer';
 import { TeaserBlockSchemaEnhancer } from './manage/Blocks/TeaserBlockEnhancer';
+import { VideoBlockSchemaEnhancer } from './manage/Blocks/VideoBlockEnhancer';
 import EventTemplate from './manage/Blocks/Listing/EventTemplate';
 
 export {
@@ -17,5 +18,6 @@ export {
   ListingBlockSchemaEnhancer,
   SliderBlockSchemaEnhancer,
   TeaserBlockSchemaEnhancer,
+  VideoBlockSchemaEnhancer,
   EventTemplate,
 };

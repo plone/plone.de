@@ -150,11 +150,23 @@ const applyConfig = (config) => {
     schemaEnhancer: DefaultStylingSchemaEnhancer,
   };
 
+  const EnhancedSlateViewComponent = config.blocks.blocksConfig.slate.view;
   config.blocks.blocksConfig.__grid = {
     ...config.blocks.blocksConfig.__grid,
     //schemaEnhancer: ...,
     blocksConfig: {
       ...config.blocks.blocksConfig,
+      slate: {
+        ...config.blocks.blocksConfig.slate,
+        // Slate in grids must have an extra wrapper with the `slate` className
+        view: (props) => {
+          return (
+            <div className="slate">
+              <EnhancedSlateViewComponent {...props} />
+            </div>
+          );
+        },
+      },
       teaser: {
         ...config.blocks.blocksConfig.teaser,
         schemaEnhancer: composeSchema(
@@ -172,6 +184,19 @@ const applyConfig = (config) => {
       VideoBlockSchemaEnhancer,
       DefaultStylingSchemaEnhancer,
     ),
+  };
+
+  // Slate  Block
+  config.blocks.blocksConfig.slate = {
+    ...config.blocks.blocksConfig.slate,
+    // Slate in grids must have an extra wrapper with the `slate` className
+    view: (props) => {
+      return (
+        <div className="slate">
+          <EnhancedSlateViewComponent {...props} />
+        </div>
+      );
+    },
   };
 
   config.settings.DSGVOBanner.modules = ['youtube'];

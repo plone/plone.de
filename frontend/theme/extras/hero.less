@@ -39,7 +39,7 @@
 
       .hero-text {
         h1 {
-          color: @black;
+          color: var(--primary-black);
           cursor: text;
           text-align: center;
         }
@@ -75,13 +75,13 @@
 
         .hero-text {
           .title-editor {
-            color: @black;
+            color: var(--primary-black);
             cursor: text;
             text-align: center;
           }
 
           .description-editor {
-            color: var(--text-color);
+            color: var(--primary-grey);
             cursor: text;
           }
         }
@@ -97,5 +97,5 @@
 }
 
 .public-DraftEditor-content[contenteditable='true'] {
-  caret-color: @black;
+  caret-color: var(--primary-black);
 }

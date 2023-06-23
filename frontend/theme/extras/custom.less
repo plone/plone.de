@@ -1,18 +1,29 @@
 :root {
-  --text-color: #525252;
+  /* White */
+  --primary-white: #fff;
+  --secondary-white: #fafafa;
+
+  /* Grey / Lightgrey*/
+  --primary-grey: #525252;
+
+  --primary-lightGrey: #cdcdcd;
+
+  /* Black */
+  --primary-black: #181818;
+  --secondary-black: #000;
+
+  /* Container widths */
   --text-container-width: 620px;
   --default-container-width: 940px;
   --full-container-width: 1440px;
 }
 
-@black: #181818;
-@light-grey: #cdcdcd;
 @plone-blue: #0086c3;
 @white: #fff;
 
-#main p,
-#main ul li :not(.block.slider) {
-  color: var(--text-color);
+#page-document > .block.slate p,
+#page-document > .block.slate ul li {
+  color: var(--primary-grey);
   font-weight: 300;
   .text-container-width();
 
@@ -23,7 +34,7 @@
 
 .block-editor-slate {
   ul li {
-    color: var(--text-color);
+    color: var(--primary-grey);
     .text-container-width();
 
     &::marker {
@@ -155,7 +166,7 @@ body.section-search {
     width: 100%;
     height: 69px;
     padding: 0;
-    border-bottom: 1px solid @light-grey;
+    border-bottom: 1px solid var(--primary--lightgrey);
     background-color: @white;
 
     .ui.container {
@@ -164,7 +175,7 @@ body.section-search {
         flex-direction: row;
 
         a {
-          color: @black;
+          color: var(--primary-black);
         }
 
         .logo-nav-wrapper {
@@ -192,18 +203,18 @@ body.section-search {
                       .item {
                         padding: auto;
                         padding-bottom: 21px;
-                        color: @black;
+                        color: var(--primary-black);
                         text-transform: none;
 
                         &:hover {
-                          border-color: @black;
+                          border-color: var(--primary-black);
                         }
                       }
 
                       .item.active {
                         padding-bottom: 21px;
-                        border-color: @black;
-                        color: @black;
+                        border-color: var(--primary-black);
+                        color: var(--primary-black);
                       }
 
                       .sub-menu-wrapper {
@@ -237,14 +248,14 @@ body.section-search {
                                 color: #595959;
 
                                 &:hover {
-                                  color: @black;
+                                  color: var(--primary-black);
                                 }
                               }
                             }
                           }
 
                           .divider {
-                            border-bottom: 1px solid @light-grey;
+                            border-bottom: 1px solid var(--primary--lightgrey);
                             margin: 0 20px 14px 20px;
                           }
                         }
@@ -305,12 +316,12 @@ body.section-search {
           width: auto;
           margin-top: auto;
           margin-bottom: auto;
-          color: @black;
+          color: var(--primary-black);
           text-align: center;
         }
 
         .divider {
-          color: @black;
+          color: var(--primary-black);
         }
       }
     }
@@ -329,7 +340,7 @@ body.section-search {
     #view {
       #page-document.ui.container {
         body {
-          color: @black;
+          color: var(--primary-black);
         }
 
         a {
@@ -337,7 +348,7 @@ body.section-search {
         }
 
         .content {
-          color: @black;
+          color: var(--primary-black);
         }
       }
     }
@@ -429,7 +440,7 @@ body.section-search {
           padding: 0;
 
           ul li {
-            color: var(--text-color);
+            color: var(--primary-grey);
             .text-container-width();
 
             &::marker {
@@ -457,7 +468,7 @@ body.section-search {
       max-width: 1440px;
       margin-left: auto;
       margin-right: auto;
-      color: var(--text-color);
+      color: var(--primary-grey);
 
       .discreet {
         background-color: @white;
@@ -466,7 +477,7 @@ body.section-search {
   }
 
   .ui.inverted.segment .inverted.segment {
-    color: @black;
+    color: var(--primary-black);
 
     a {
       color: @plone-blue;
@@ -515,7 +526,7 @@ body.section-search {
   max-width: 940px;
   flex-direction: row;
   margin: auto;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--primary-grey);
 
   button {
     border: none;
@@ -666,7 +677,7 @@ body.section-search {
     flex-direction: row;
 
     .dates {
-      color: @black;
+      color: var(--primary-black);
     }
   }
 }
@@ -682,15 +693,15 @@ body.section-search {
   }
 
   .ui.form .field .wrapper > label {
-    color: @black;
+    color: var(--primary-black);
   }
 
   .ui.segment.primary {
-    color: @black;
+    color: var(--primary-black);
   }
 
   .ui.secondary.segment {
-    color: @black;
+    color: var(--primary-black);
   }
 
   .iu.input {
@@ -779,7 +790,7 @@ body.section-search {
                   }
 
                   .ui.secondary.pointing.menu .active.item {
-                    border-color: @black;
+                    border-color: var(--primary-black);
                   }
                 }
               }
@@ -891,7 +902,7 @@ body.section-search {
                       }
 
                       .item.active {
-                        border-color: @black;
+                        border-color: var(--primary-black);
                       }
                     }
                   }

@@ -161,7 +161,7 @@ const applyConfig = (config) => {
         // Slate in grids must have an extra wrapper with the `slate` className
         view: (props) => {
           return (
-            <div className="slate">
+            <div className="block slate">
               <EnhancedSlateViewComponent {...props} />
             </div>
           );
@@ -192,7 +192,7 @@ const applyConfig = (config) => {
     // Slate in grids must have an extra wrapper with the `slate` className
     view: (props) => {
       return (
-        <div className="slate">
+        <div className="block slate">
           <EnhancedSlateViewComponent {...props} />
         </div>
       );

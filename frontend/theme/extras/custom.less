@@ -32,6 +32,12 @@
   }
 }
 
+b,
+strong {
+  color: var(--primary-black);
+  font-weight: 600;
+}
+
 .block-editor-slate p,
 .block-editor-slate ul li {
   color: var(--primary-grey);
@@ -95,7 +101,7 @@
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 2.44444444rem;
+  line-height: 3rem;
 }
 .small-heading-size() {
   max-width: 940px !important;
@@ -559,32 +565,6 @@ body.section-search {
   }
 }
 
-//Grid
-.block.__grid {
-  .ui.stackable.stretched.column.grid {
-    .default-container-width();
-
-    .column.grid-block-teaser {
-      .block.teaser {
-        .grid-teaser-item.default {
-          .grid-image-wrapper {
-            display: flex;
-            justify-content: center;
-
-            img {
-              width: 100%;
-              height: 60px;
-              margin: auto;
-              object-fit: contain;
-              object-position: center;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 //Text
 #page-document > ul li {
   color: #525252;
@@ -678,84 +658,6 @@ body.section-search {
     .dates {
       color: var(--primary-black);
     }
-  }
-}
-
-//Login
-#page-login {
-  .ui.form {
-    background-color: @white;
-  }
-
-  .ui.raised.segments {
-    border-color: @white;
-  }
-
-  .ui.form .field .wrapper > label {
-    color: var(--primary-black);
-  }
-
-  .ui.segment.primary {
-    color: var(--primary-black);
-  }
-
-  .ui.secondary.segment {
-    color: var(--primary-black);
-  }
-
-  .iu.input {
-    background-color: @white;
-  }
-
-  #login .placeholder {
-    color: @white;
-  }
-
-  .ui.form input:not([type]),
-  .ui.form input[type='date'],
-  .ui.form input[type='datetime-local'],
-  .ui.form input[type='email'],
-  .ui.form input[type='number'],
-  .ui.form input[type='password'],
-  .ui.form input[type='search'],
-  .ui.form input[type='tel'],
-  .ui.form input[type='time'],
-  .ui.form input[type='text'],
-  .ui.form input[type='file'],
-  .ui.form input[type='url'] {
-    background-color: @white;
-  }
-
-  .ui.segment {
-    background-color: @white;
-  }
-
-  .ui.clearing.section.actions {
-    border-color: @white;
-  }
-
-  #login-from-submit.icon.circled {
-    color: #007eb6;
-  }
-
-  #login-from-cancel.icon.circled {
-    color: red !important;
-  }
-
-  .help {
-    padding-top: 17px;
-    padding-bottom: 3px;
-    border: 0;
-
-    a {
-      color: #007eb6;
-    }
-  }
-}
-
-#toolbar-body {
-  .toolbar-body {
-    background-color: @white;
   }
 }
 

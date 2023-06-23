@@ -1,11 +1,7 @@
 @import 'custom';
 @import 'separator';
 @import 'slider';
-@import 'hero';
 @import 'search';
 @import 'draftjs';
-@import 'heading';
+@import 'blocks';
 @import 'teaserGrid';
-@import 'images';
-@import 'introduction';
-@import 'quote';

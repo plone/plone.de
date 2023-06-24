@@ -1,7 +1,9 @@
-@import 'custom';
-@import 'separator';
+/* Blocks */
+
+@import 'blocks';
 @import 'slider';
 @import 'search';
-@import 'draftjs';
-@import 'blocks';
-@import 'teaserGrid';
+
+/* Document */
+
+@import 'custom';

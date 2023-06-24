@@ -42,8 +42,8 @@ const View = ({ data }) => {
   return (
     <div
       className={cx('block hero', data.backgroundColor, {
-        alignLeft: data.align === 'left',
-        alignRight: data.align === 'right',
+        'align-left': data.align === 'left',
+        'align-right': data.align === 'right',
       })}
     >
       <div className="block-inner-wrapper">

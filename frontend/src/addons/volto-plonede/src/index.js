@@ -199,7 +199,7 @@ const applyConfig = (config) => {
     },
   };
 
-  config.settings.DSGVOBanner.modules = ['youtube'];
+  config.settings.DSGVOBanner.modules = ['youtube', 'google'];
 
   delete config.blocks.blocksConfig.text;
   delete config.blocks.blocksConfig.description;

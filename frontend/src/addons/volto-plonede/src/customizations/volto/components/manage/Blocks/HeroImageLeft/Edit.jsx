@@ -320,8 +320,8 @@ class EditComponent extends Component {
       <div
         className={cx('block hero', this.props.data.backgroundColor, {
           selected: this.props.selected,
-          alignLeft: this.props.data.align === 'left',
-          alignRight: this.props.data.align === 'right',
+          'align-left': this.props.data.align === 'left',
+          'align-right': this.props.data.align === 'right',
         })}
       >
         {this.props.selected && this.props.editable && !!this.props.data.url && (

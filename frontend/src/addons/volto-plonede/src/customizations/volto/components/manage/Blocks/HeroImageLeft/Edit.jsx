@@ -318,7 +318,7 @@ class EditComponent extends Component {
       this.props.intl.formatMessage(messages.placeholder);
     return (
       <div
-        className={cx('block hero', this.props.data.backgroundColor, {
+        className={cx('block hero', {
           selected: this.props.selected,
           'align-left': this.props.data.align === 'left',
           'align-right': this.props.data.align === 'right',

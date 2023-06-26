@@ -35,19 +35,6 @@ export const HeroBlockSchemaEnhancer = ({ schema, formData, intl }) => {
     default: 'left',
   };
 
-  //Backgroundcolor
-  const backgroundColors = [
-    { name: 'transparent', label: 'Transparent' },
-    { name: 'grey', label: 'Grey' },
-    { name: 'plone-blue', label: 'Plone-blue' },
-  ];
-  schema.properties.backgroundColor = {
-    widget: 'color_picker',
-    title: intl.formatMessage(messages.backgroundColor),
-    colors: backgroundColors,
-    default: 'grey',
-  };
-
   //Button
   schema.properties.showButton = {
     type: 'boolean',
@@ -69,7 +56,7 @@ export const HeroBlockSchemaEnhancer = ({ schema, formData, intl }) => {
     title: intl.formatMessage(messages.buttonText),
   };
 
-  schema.fieldsets[0].fields = ['align', 'backgroundColor'];
+  schema.fieldsets[0].fields = ['align'];
 
   schema.fieldsets = [
     ...schema.fieldsets,

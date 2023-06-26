@@ -41,7 +41,7 @@ const View = ({ data }) => {
   const href = data.linkHref?.[0];
   return (
     <div
-      className={cx('block hero', data.backgroundColor, {
+      className={cx('block hero', {
         'align-left': data.align === 'left',
         'align-right': data.align === 'right',
       })}

@@ -1,4 +1,107 @@
 // Slider
+
+.block.slider .grid-teaser-item.top .teaser-item.top .teaser-item.link {
+  width: 100%;
+}
+
+.block.slider .teaser-item-title.fix-width-issue {
+  &.align-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 530px;
+    padding: 40px;
+    background-color: rgba(0, 134, 195, 0.8);
+
+    .title {
+      margin-bottom: 60px;
+
+      .supertitle {
+        color: var(--primary-white);
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 36px;
+      }
+
+      h2 {
+        margin: 15px 0 0 0;
+        color: var(--primary-white);
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 54px;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        word-wrap: break-word;
+      }
+    }
+
+    .body p {
+      color: @white !important;
+    }
+
+    button {
+      background: transparent;
+      padding: 11px 29px;
+      border: 2px solid #fff;
+      color: var(--primary-white);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 30px;
+    }
+  }
+
+  &.align-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 530px;
+    padding: 40px;
+    background-color: rgba(0, 134, 195, 0.8);
+
+    .title {
+      margin-bottom: 60px;
+
+      .supertitle {
+        color: var(--primary-white);
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 36px;
+      }
+
+      h2 {
+        margin: 15px 0 0 0;
+        color: var(--primary-white);
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 54px;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        word-wrap: break-word;
+      }
+    }
+
+    .body p {
+      color: @white !important;
+    }
+
+    button {
+      background: transparent;
+      padding: 11px 29px;
+      border: 2px solid #fff;
+      color: var(--primary-white);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 30px;
+    }
+  }
+}
+
 .block.slider {
   .grid-teaser-item.top {
     position: relative;
@@ -7,103 +110,6 @@
     .teaser-item.top {
       .highlight-image-wrapper.gradient {
         width: 100%;
-      }
-
-      .teaser-item-title.fix-width-issue {
-        &.align-left {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 530px;
-          padding: 40px;
-          background-color: rgba(0, 134, 195, 0.8);
-
-          .title {
-            margin-bottom: 60px;
-
-            .supertitle {
-              color: var(--primary-white);
-              font-size: 30px;
-              font-style: normal;
-              font-weight: 300;
-              line-height: 36px;
-            }
-
-            h2 {
-              margin: 15px 0 0 0;
-              color: var(--primary-white);
-              font-size: 48px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 54px;
-              overflow-wrap: break-word;
-              word-break: break-word;
-              word-wrap: break-word;
-            }
-          }
-
-          .body p {
-            color: @white !important;
-          }
-
-          .button {
-            .ui.button {
-              background: transparent;
-              padding: 11px 29px;
-              border: 2px solid #fff;
-              color: var(--primary-white);
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 600;
-              line-height: 30px;
-            }
-          }
-        }
-
-        &.align-right {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 530px;
-          padding: 40px;
-          background-color: rgba(0, 134, 195, 0.8);
-
-          .title {
-            margin-bottom: 60px;
-
-            .supertitle {
-              color: var(--primary-white);
-              font-size: 30px;
-              font-style: normal;
-              font-weight: 300;
-              line-height: 36px;
-            }
-
-            h2 {
-              margin: 15px 0 0 0;
-              color: var(--primary-white);
-              font-size: 48px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 54px;
-              overflow-wrap: break-word;
-              word-break: break-word;
-              word-wrap: break-word;
-            }
-          }
-
-          .body p {
-            color: @white !important;
-          }
-
-          .button {
-            .ui.button {
-              border: 1px solid #fff;
-              background: transparent;
-              color: var(--primary-white);
-            }
-          }
-        }
       }
     }
   }

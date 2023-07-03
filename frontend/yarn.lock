@@ -1830,22 +1830,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-object-widget@npm:*":
-  version: 5.1.2
-  resolution: "@eeacms/volto-object-widget@npm:5.1.2"
-  dependencies:
-    "@eeacms/volto-resize-helper": "*"
-  checksum: e65709823257d2eea04d54501576c19234f0492c1a98bc6617adc917d391bb9656a93fcbb8af1a49d37b21f4b64f608c429905dfcb4a61d6aad7c8b60771c302
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-resize-helper@npm:*":
-  version: 1.3.3
-  resolution: "@eeacms/volto-resize-helper@npm:1.3.3"
-  checksum: 63a7b3f07383df584c46848e5af1a0c7c36d47a96d607292b8f60503890214154c9c62ab2b284a190ab6b8417d80485ee5cf22f26e7e9970904a851f29524244
-  languageName: node
-  linkType: hard
-
 "@eeacms/volto-widget-theme-picker@npm:*":
   version: 1.1.0
   resolution: "@eeacms/volto-widget-theme-picker@npm:1.1.0"
@@ -2226,15 +2210,6 @@ __metadata:
     react: ">= 16.3.0"
     react-dom: ">= 16.3.0"
   checksum: 3b0d6a8c7da8072ba226663d9904051231cc1754936a1082b46764a966004406876971adb8917d3d7c6920283501c1bd5b7886c83e33885c4b8d5218fdc25ff5
-  languageName: node
-  linkType: hard
-
-"@icons/material@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "@icons/material@npm:0.2.4"
-  peerDependencies:
-    react: "*"
-  checksum: 24baa360cb83f7e1a9e6784ac11185d57eb895b0efd3070ec915693378330f35ff9feb248f650b9649fa3e1045601286585dc05795a4c734d4849b33900351ee
   languageName: node
   linkType: hard
 
@@ -2625,17 +2600,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-text-with-background-color-block@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@kitconcept/volto-text-with-background-color-block@npm:1.0.0"
-  dependencies:
-    "@plone/scripts": "*"
-    react-color: 2.19.3
-    volto-slate: 5.3.5
-  checksum: a528789081672f0ac9d8941a6a2e4ca92f35fa2a717f82018c4fd5ea5f4b0f62c55928a077747c628faf580d091a5fef56f4a3c3691e3b0f30e8d46843f1b9e5
-  languageName: node
-  linkType: hard
-
 "@kwsites/file-exists@npm:^1.1.1":
   version: 1.1.1
   resolution: "@kwsites/file-exists@npm:1.1.1"
@@ -2842,26 +2806,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/scripts@npm:*, @plone/scripts@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@plone/scripts@npm:3.0.0"
-  dependencies:
-    babel-plugin-react-intl: 5.1.17
-    babel-preset-razzle: 4.2.17
-    chalk: 4
-    commander: 8.2.0
-    fs-extra: 10.1.0
-    git-url-parse: ^11.6.0
-    mrs-developer: "*"
-    pofile: 1.0.10
-  bin:
-    addon: addon/index.js
-    changelogupdater: changelogupdater.cjs
-    i18n: i18n.cjs
-  checksum: c5a03a68fd16f731fd40bbf94e3bc6addb4395a04049eb98fbb95f1e1ebcc2468e003149b829261a1b577d50cce032d80dc99c8e812a126621f730f6e431cb97
-  languageName: node
-  linkType: hard
-
 "@plone/scripts@npm:2.1.2":
   version: 2.1.2
   resolution: "@plone/scripts@npm:2.1.2"
@@ -2880,6 +2824,26 @@ __metadata:
     changelogupdater: changelogupdater.cjs
     i18n: i18n.cjs
   checksum: 8afc64bd7cd2a60e5c9cdd552e54fe8aef48e91f57824ce4a03158c3ecde2fd40a2b7c66f0a9df90c60caf7e037edf670a1361b36667b6603da1c2e3244c1654
+  languageName: node
+  linkType: hard
+
+"@plone/scripts@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@plone/scripts@npm:3.0.0"
+  dependencies:
+    babel-plugin-react-intl: 5.1.17
+    babel-preset-razzle: 4.2.17
+    chalk: 4
+    commander: 8.2.0
+    fs-extra: 10.1.0
+    git-url-parse: ^11.6.0
+    mrs-developer: "*"
+    pofile: 1.0.10
+  bin:
+    addon: addon/index.js
+    changelogupdater: changelogupdater.cjs
+    i18n: i18n.cjs
+  checksum: c5a03a68fd16f731fd40bbf94e3bc6addb4395a04049eb98fbb95f1e1ebcc2468e003149b829261a1b577d50cce032d80dc99c8e812a126621f730f6e431cb97
   languageName: node
   linkType: hard
 
@@ -11974,7 +11938,6 @@ __metadata:
     "@kitconcept/volto-heading-block": 2.3.0
     "@kitconcept/volto-separator-block": 3.1.0
     "@kitconcept/volto-slider-block": 4.3.0
-    "@kitconcept/volto-text-with-background-color-block": 1.0.0
     "@plone-collective/volto-authomatic": 1.3.0
     "@plone/scripts": ^3.0.0
     "@plone/volto": 17.0.0-alpha.13
@@ -15163,7 +15126,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^16.4.0, jsdom@npm:^16.6.0":
+"jsdom@npm:^16.4.0":
   version: 16.7.0
   resolution: "jsdom@npm:16.7.0"
   dependencies:
@@ -15846,7 +15809,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.21, lodash@npm:^4.0.1, lodash@npm:^4.1.1, lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.6.1, lodash@npm:^4.7.0":
+"lodash@npm:4.17.21, lodash@npm:^4.1.1, lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.6.1, lodash@npm:^4.7.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -16067,13 +16030,6 @@ __metadata:
   peerDependencies:
     react: ">= 0.14.0"
   checksum: 4823f90e8bd6734b9a4ad206d217c55358268974e219e0edf3c64407336a14116921cad8c577c54b4bf0349412751ab25f3b6265c8b5a99207a5f6e364716636
-  languageName: node
-  linkType: hard
-
-"material-colors@npm:^1.2.1":
-  version: 1.2.6
-  resolution: "material-colors@npm:1.2.6"
-  checksum: 72d005ccccb82bab68eef3cd757e802668634fc86976dedb9fc564ce994f2d3258273766b7efecb7404a0031969e2d72201a1b74169763f0a53c0dd8d649209f
   languageName: node
   linkType: hard
 
@@ -19419,23 +19375,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-color@npm:2.19.3":
-  version: 2.19.3
-  resolution: "react-color@npm:2.19.3"
-  dependencies:
-    "@icons/material": ^0.2.4
-    lodash: ^4.17.15
-    lodash-es: ^4.17.15
-    material-colors: ^1.2.1
-    prop-types: ^15.5.10
-    reactcss: ^1.2.0
-    tinycolor2: ^1.4.1
-  peerDependencies:
-    react: "*"
-  checksum: 40b49e1aa2ab27a099cc37a3fa2d5bb906b8def4dbe2d922c0e42365e386d82b03f9b06a2b29a44a51f1e114cef72e61c0ba0740581a128d951936ea4617429b
-  languageName: node
-  linkType: hard
-
 "react-colorful@npm:^5.1.2":
   version: 5.6.1
   resolution: "react-colorful@npm:5.6.1"
@@ -19729,15 +19668,6 @@ __metadata:
   peerDependencies:
     react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
   checksum: 1d4cabaea62d70d551687b9d6561e9892a87f8f4ace46b8bbf006788d36061a49e3c0774a89ad24f1e35dc3dc5ba653ca26064199554ce071a4787823f875ee4
-  languageName: node
-  linkType: hard
-
-"react-intersection-observer@npm:^8.32.0":
-  version: 8.34.0
-  resolution: "react-intersection-observer@npm:8.34.0"
-  peerDependencies:
-    react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
-  checksum: 7713fecfd1512c7f5a60f9f0bf15403b8f8bbd4110bcafaeaea6de36a0e0eb60368c3638f99e9c97b75ad8fc787ea48c241dcb5c694f821d7f2976f709082cc5
   languageName: node
   linkType: hard
 
@@ -20218,18 +20148,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-visibility-sensor@npm:5.1.1":
-  version: 5.1.1
-  resolution: "react-visibility-sensor@npm:5.1.1"
-  dependencies:
-    prop-types: ^15.7.2
-  peerDependencies:
-    react: ">=16.0.0"
-    react-dom: ">=16.0.0"
-  checksum: ebce7bc743071930a2dd333a041c4a99aac24d5059c47a52eff25a8d81ab9307fadc87b8a6655ebb3154f5c1ceafcc309ae04ee07a7d5fad2949a6903d15acd5
-  languageName: node
-  linkType: hard
-
 "react-with-direction@npm:^1.3.1":
   version: 1.4.0
   resolution: "react-with-direction@npm:1.4.0"
@@ -20286,15 +20204,6 @@ __metadata:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
-  languageName: node
-  linkType: hard
-
-"reactcss@npm:^1.2.0":
-  version: 1.2.3
-  resolution: "reactcss@npm:1.2.3"
-  dependencies:
-    lodash: ^4.0.1
-  checksum: c53e386a0881f1477e1cff661f6a6ad4c662230941f3827862193ac30f9b75cdf7bc7b4c7e5ca543d3e4e80fee1a3e9fa0056c206b1c0423726c41773ab3fe45
   languageName: node
   linkType: hard
 
@@ -21798,17 +21707,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slate-history@npm:^0.66.0":
-  version: 0.66.0
-  resolution: "slate-history@npm:0.66.0"
-  dependencies:
-    is-plain-object: ^5.0.0
-  peerDependencies:
-    slate: ">=0.65.3"
-  checksum: e83d4fbf5d4097a5b434df4846420e593598a9a3f90d3e0638f16915b1014bc8a7dc5cd87e3bc0a31a8ad5eae582a18f96bdc04f4b0b0a5a82cf05bd0377601e
-  languageName: node
-  linkType: hard
-
 "slate-hyperscript@npm:0.81.3":
   version: 0.81.3
   resolution: "slate-hyperscript@npm:0.81.3"
@@ -21817,17 +21715,6 @@ __metadata:
   peerDependencies:
     slate: ">=0.65.3"
   checksum: cc3ba04d14e20c66eee5e5b0ca2d60fe92c0d38caf9b412153453d42f32d90bce61d57e3a00b2a4c30a7b15408bf8b14132871fd3c00f75de6ca4b49387637fe
-  languageName: node
-  linkType: hard
-
-"slate-hyperscript@npm:^0.67.0":
-  version: 0.67.0
-  resolution: "slate-hyperscript@npm:0.67.0"
-  dependencies:
-    is-plain-object: ^5.0.0
-  peerDependencies:
-    slate: ">=0.65.3"
-  checksum: 17ca7a30be4fd025ec46d960fade60743f68f11c6c4e7865b1b45972eaf7b26e1949d8246f4768de83a5a577ab119f1af3eac8db168eef98589cb09ef7148d90
   languageName: node
   linkType: hard
 
@@ -21851,26 +21738,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slate-react@npm:^0.71.0":
-  version: 0.71.0
-  resolution: "slate-react@npm:0.71.0"
-  dependencies:
-    "@types/is-hotkey": ^0.1.1
-    "@types/lodash": ^4.14.149
-    direction: ^1.0.3
-    is-hotkey: ^0.1.6
-    is-plain-object: ^5.0.0
-    lodash: ^4.17.4
-    scroll-into-view-if-needed: ^2.2.20
-    tiny-invariant: 1.0.6
-  peerDependencies:
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-    slate: ">=0.65.3"
-  checksum: 5b256f3ebc3d2da40015744e4eab9a1016e0fa785c922a90ca34338b60838b1cf1a367797ce5234a78f1212c6e3a9ef6d2f8d952a0dd26d928b4e16c96ce07f3
-  languageName: node
-  linkType: hard
-
 "slate@npm:0.84.0":
   version: 0.84.0
   resolution: "slate@npm:0.84.0"
@@ -21879,17 +21746,6 @@ __metadata:
     is-plain-object: ^5.0.0
     tiny-warning: ^1.0.3
   checksum: d74de16a40571b2513dbd96efee8fe891909357a7011131f8fae738a0eace5b3c7c2da1c0ebfb1ffe66c8c933507ca618772fb607fbc9e44aa5158d3d874c5a2
-  languageName: node
-  linkType: hard
-
-"slate@npm:^0.71.0":
-  version: 0.71.0
-  resolution: "slate@npm:0.71.0"
-  dependencies:
-    immer: ^9.0.6
-    is-plain-object: ^5.0.0
-    tiny-warning: ^1.0.3
-  checksum: 9c3d3b8464acf8e67eb49c8242aa6435f7e7f4fca36ba794c671a9979b9180635cc392caf569404a5fb269f8ec3797a3cf8e32d9d1f150198c170cbf9fa2ac1d
   languageName: node
   linkType: hard
 
@@ -23341,13 +23197,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinycolor2@npm:^1.4.1":
-  version: 1.6.0
-  resolution: "tinycolor2@npm:1.6.0"
-  checksum: 6df4d07fceeedc0a878d7bac47e2cd47c1ceeb1078340a9eb8a295bc0651e17c750f73d47b3028d829f30b85c15e0572c0fd4142083e4c21a30a597e47f47230
-  languageName: node
-  linkType: hard
-
 "tlds@npm:1.203.1":
   version: 1.203.1
   resolution: "tlds@npm:1.203.1"
@@ -24414,28 +24263,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-slate@npm:5.3.5":
-  version: 5.3.5
-  resolution: "volto-slate@npm:5.3.5"
-  dependencies:
-    "@eeacms/volto-object-widget": "*"
-    classnames: 2.2.6
-    image-extensions: 1.1.0
-    is-url: 1.2.4
-    jsdom: ^16.6.0
-    react-intersection-observer: ^8.32.0
-    react-visibility-sensor: 5.1.1
-    slate: ^0.71.0
-    slate-history: ^0.66.0
-    slate-hyperscript: ^0.67.0
-    slate-react: ^0.71.0
-    weak-key: ^1.0.2
-  peerDependencies:
-    "@plone/volto": ">=12.1.2"
-  checksum: d94646155689950a63661edac5d9b848c643a7732e17cfc9c5a524b1cab737d0e2eb9d0c9b09a951f618006c7373d1e99cb6b2290398ce962ca2bfd66d8540b3
-  languageName: node
-  linkType: hard
-
 "volto-subblocks@npm:^2.0.0":
   version: 2.0.0
   resolution: "volto-subblocks@npm:2.0.0"
@@ -24550,13 +24377,6 @@ __metadata:
   dependencies:
     defaults: ^1.0.3
   checksum: 814e9d1ddcc9798f7377ffa448a5a3892232b9275ebb30a41b529607691c0491de47cba426e917a4d08ded3ee7e9ba2f3fe32e62ee3cd9c7d3bafb7754bd553c
-  languageName: node
-  linkType: hard
-
-"weak-key@npm:^1.0.2":
-  version: 1.0.3
-  resolution: "weak-key@npm:1.0.3"
-  checksum: 2c3268e593f374a4604a8afa2473f0de818cd8e63a50a569355b2e2ff85296761b95380f7f858af8c779cad7be49e9c0ba99e6dd21cc674007d8603f225f6d3c
   languageName: node
   linkType: hard
 

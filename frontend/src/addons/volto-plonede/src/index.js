@@ -11,11 +11,11 @@ import {
   EventTemplate,
 } from 'volto-plonede/components';
 import { defineMessages } from 'react-intl';
-import { composeSchema } from '@plone/volto/helpers';
+import { composeSchema, getPreviousNextBlock } from '@plone/volto/helpers';
 import { SeparatorStyleEnhancer } from '@kitconcept/volto-separator-block/components/schema.js';
 import { gridTeaserDisableStylingSchema } from '@kitconcept/volto-blocks-grid/components/Teaser/schema';
 
-// Quote Block
+/* Quote  Block */
 import quoteSVG from '@plone/volto/icons/quote.svg';
 import QuoteBlockView from './components/manage/Blocks/volto-quote-block/View';
 import QuoteBlockEdit from './components/manage/Blocks/volto-quote-block/Edit';
@@ -53,7 +53,7 @@ const applyConfig = (config) => {
     matomoUrlBase: 'https://stats.plone.de/',
   };
 
-  //Button
+  /* Button  Block */
   config.blocks.blocksConfig.__button = {
     ...config.blocks.blocksConfig.__button,
     schemaEnhancer: composeSchema(
@@ -62,22 +62,25 @@ const applyConfig = (config) => {
     ),
   };
 
-  //Image
+  /* Image  Block */
   config.blocks.blocksConfig.image = {
     ...config.blocks.blocksConfig.image,
     schemaEnhancer: composeSchema(
-      DefaultStylingSchemaEnhancer,
       ImageBlockSchemaEnhancer,
+      DefaultStylingSchemaEnhancer,
     ),
   };
 
-  //Separator
+  /* Separator  Block */
   config.blocks.blocksConfig.separator = {
     ...config.blocks.blocksConfig.separator,
-    schemaEnhancer: composeSchema(SeparatorStyleEnhancer),
+    schemaEnhancer: composeSchema(
+      SeparatorStyleEnhancer,
+      DefaultStylingSchemaEnhancer,
+    ),
   };
 
-  //Heading
+  /* Heading  Block */
   config.blocks.blocksConfig.heading = {
     ...config.blocks.blocksConfig.heading,
     schemaEnhancer: composeSchema(
@@ -86,7 +89,7 @@ const applyConfig = (config) => {
     ),
   };
 
-  //Hero
+  /* Hero  Block */
   config.blocks.blocksConfig.hero = {
     ...config.blocks.blocksConfig.hero,
     schemaEnhancer: composeSchema(
@@ -103,7 +106,7 @@ const applyConfig = (config) => {
     defaultLanguage: 'de',
   };
 
-  //Listing
+  /* Listing  Block */
   config.blocks.blocksConfig.listing = {
     ...config.blocks.blocksConfig.listing,
     schemaEnhancer: composeSchema(
@@ -121,7 +124,7 @@ const applyConfig = (config) => {
     },
   ];
 
-  // Quote
+  /* Quote  Block */
   config.blocks.blocksConfig.quote = {
     id: 'quote',
     title: 'Quote',
@@ -135,7 +138,7 @@ const applyConfig = (config) => {
     sidebarTab: 1,
   };
 
-  //Slider
+  /* Slider  Block */
   config.blocks.blocksConfig.slider = {
     ...config.blocks.blocksConfig.slider,
     schemaEnhancer: composeSchema(
@@ -144,16 +147,21 @@ const applyConfig = (config) => {
     ),
   };
 
-  //TeaserGrid
+  /* Teaser/Image  Grid  Block */
   config.blocks.blocksConfig.teaserGrid = {
     ...config.blocks.blocksConfig.teaserGrid,
+    schemaEnhancer: DefaultStylingSchemaEnhancer,
+  };
+
+  config.blocks.blocksConfig.imagesGrid = {
+    ...config.blocks.blocksConfig.imagesGrid,
     schemaEnhancer: DefaultStylingSchemaEnhancer,
   };
 
   const EnhancedSlateViewComponent = config.blocks.blocksConfig.slate.view;
   config.blocks.blocksConfig.__grid = {
     ...config.blocks.blocksConfig.__grid,
-    //schemaEnhancer: ...,
+    schemaEnhancer: DefaultStylingSchemaEnhancer,
     blocksConfig: {
       ...config.blocks.blocksConfig,
       slate: {
@@ -172,12 +180,13 @@ const applyConfig = (config) => {
         schemaEnhancer: composeSchema(
           gridTeaserDisableStylingSchema,
           TeaserBlockSchemaEnhancer,
+          DefaultStylingSchemaEnhancer,
         ),
       },
     },
   };
 
-  // Video  Block
+  /* Video  Block */
   config.blocks.blocksConfig.video = {
     ...config.blocks.blocksConfig.video,
     schemaEnhancer: composeSchema(
@@ -186,7 +195,7 @@ const applyConfig = (config) => {
     ),
   };
 
-  // Slate  Block
+  /* Slate  Block */
   config.blocks.blocksConfig.slate = {
     ...config.blocks.blocksConfig.slate,
     // Slate in grids must have an extra wrapper with the `slate` className
@@ -198,6 +207,64 @@ const applyConfig = (config) => {
       );
     },
   };
+
+  // Register custom StyleWrapper ClassNames
+  config.settings.styleClassNameExtenders = [
+    ({ block, content, data, classNames }) => {
+      let styles = [];
+      const [previousBlock, nextBlock] = getPreviousNextBlock({
+        content,
+        block,
+      });
+
+      // Inject a class depending of which type is the next block
+      if (nextBlock?.['@type']) {
+        styles.push(`next--is--${nextBlock['@type']}`);
+      }
+
+      // Inject a class depending if previous is the same type of block
+      if (data?.['@type'] === previousBlock?.['@type']) {
+        styles.push('previous--is--same--block-type');
+      }
+
+      // Inject a class depending if next is the same type of block
+      if (data?.['@type'] === nextBlock?.['@type']) {
+        styles.push('next--is--same--block-type');
+      }
+
+      // Inject a class depending if it's the first of block type
+      if (data?.['@type'] !== previousBlock?.['@type']) {
+        styles.push('is--first--of--block-type');
+      }
+
+      // Inject a class depending if it's the last of block type
+      if (data?.['@type'] !== nextBlock?.['@type']) {
+        styles.push('is--last--of--block-type');
+      }
+
+      // Given a StyleWrapper defined `backgroundColor` style
+      const previousColor =
+        previousBlock?.styles?.backgroundColor ?? 'transparent';
+      const currentColor = data?.styles?.backgroundColor ?? 'transparent';
+      const nextColor = nextBlock?.styles?.backgroundColor ?? 'transparent';
+
+      // Inject a class depending if the previous block has the same `backgroundColor`
+      if (currentColor === previousColor) {
+        styles.push('previous--has--same--backgroundColor');
+      } else if (currentColor !== previousColor) {
+        styles.push('previous--has--different--backgroundColor');
+      }
+
+      // Inject a class depending if the next block has the same `backgroundColor`
+      if (currentColor === nextColor) {
+        styles.push('next--has--same--backgroundColor');
+      } else if (currentColor !== nextColor) {
+        styles.push('next--has--different--backgroundColor');
+      }
+
+      return [...classNames, ...styles];
+    },
+  ];
 
   config.settings.DSGVOBanner.modules = ['youtube', 'google'];
 

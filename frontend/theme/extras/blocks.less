@@ -1,11 +1,20 @@
-.public-DraftEditor-content[contenteditable='true'] {
-  caret-color: var(--primary-black);
+#page-document .block.next--is--same--block-type {
+  padding-bottom: 0 !important;
+  margin-bottom: -1rem;
 }
 
-figure {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+#page-document .block.has--backgroundColor--grey {
+  padding-bottom: 25px;
+  margin-bottom: 0 !important;
+}
+
+.block:not(.has--backgroundColor--grey):not(.slider):not(.slate) {
+  padding-bottom: 0 !important;
+  margin-bottom: 25px;
+}
+
+.public-DraftEditor-content[contenteditable='true'] {
+  caret-color: var(--primary-black);
 }
 
 /* Slate  Block */
@@ -53,7 +62,7 @@ strong {
 }
 
 h2,
-h3 {
+h3:not(.listing-header) {
   font-weight: 600;
 }
 
@@ -422,6 +431,13 @@ h2.heading {
   }
 }
 
+/* figure */
+figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
 /* image/video captions */
 figcaption {
   margin: 0 0 9px 0;
@@ -778,43 +794,41 @@ figcaption {
     padding: 0 !important;
   }
 
-  .inner-separator {
+  .line {
+    padding: 25px 0;
     max-width: var(--default-container-width);
     margin-left: auto;
     margin-right: auto;
-    padding: 25px 0;
+
+    &::after {
+      position: relative;
+      top: 50%;
+      display: block;
+      border-top: 1px solid var(--secondary-black);
+      margin-top: -1px;
+      content: '';
+    }
+  }
+
+  &.has--align--center .line {
+    max-width: var(--text-container-width);
+  }
+
+  &.has--align--left {
+    max-width: var(--text-container-width);
 
     .line {
+      margin-left: 0;
+
       &::after {
-        position: relative;
-        top: 50%;
-        display: block;
-        border-top: 1px solid var(--secondary-black);
-        margin-top: -1px;
-        content: '';
+        width: 165px;
       }
     }
+  }
 
-    &.has--align--center {
-      max-width: var(--text-container-width);
-    }
-
-    &.has--align--left {
-      max-width: var(--text-container-width);
-
-      .line {
-        margin-left: 0;
-
-        &::after {
-          width: 165px;
-        }
-      }
-    }
-
-    &.has--noLine--true {
-      .line::after {
-        display: none;
-      }
+  &.has--noLine--true {
+    .line::after {
+      display: none;
     }
   }
 }
@@ -903,6 +917,15 @@ figcaption {
   margin-right: auto;
 }
 
+.block.__grid h2.headline,
+.block-editor-teaserGrid h2.headline,
+.block-editor-imagesGrid h2.headline {
+  margin: 0 auto 0 auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  .default-heading-size();
+}
+
 .block.__grid .grid-image-wrapper img.object-fit {
   height: auto;
 
@@ -930,6 +953,11 @@ figcaption {
     color: var(--primary-grey);
     font-weight: 300;
   }
+}
+
+.block.__grid.has--backgroundColor--grey .grid-block-slate .slate,
+.block-editor-__grid.has--backgroundColor--grey .block.__grid .slate-editor {
+  background: var(--primary-white);
 }
 
 .block.__grid > .ui.grid .column {
@@ -1062,8 +1090,8 @@ figcaption {
   color: var(--primary-black);
 }
 
-.slick-dots {
-  bottom: -25px;
+.block.slider .slick-dots {
+  position: unset;
 
   li {
     width: 55px;
@@ -1088,4 +1116,61 @@ figcaption {
 
 .block-editor-slider {
   max-width: 1440px;
+
+  &.has--backgroundColor--grey
+    .block.slider:not(.inner):not([role='presentation']) {
+    margin-bottom: 25px;
+    padding-bottom: 25px !important;
+  }
+}
+
+/* Listing  Block */
+
+.block.listing .headline,
+.block.listing .listing-wrapper {
+  max-width: var(--default-container-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block.listing .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.block.listing .listing-item {
+  display: block;
+  max-width: 458px;
+  border: 1px solid #cdcdcd;
+  border-radius: 8px;
+
+  .listing-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+  }
+}
+
+.block.listing .listing-body {
+  padding: 20px;
+
+  h3 {
+    width: fit-content;
+    margin-top: 0;
+  }
+
+  p {
+    color: var(--primary-grey);
+  }
+}
+
+.block.listing .listing-body .event-when-where {
+  display: flex;
+  flex-direction: row;
+
+  .dates {
+    color: var(--primary-black);
+  }
 }

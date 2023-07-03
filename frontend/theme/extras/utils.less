@@ -1,0 +1,29 @@
+//Color picker widget
+.color-picker-widget .buttons {
+  /* Colors button block */
+
+  .button.blue,
+  .button.blue.active {
+    background: @plone-blue;
+  }
+
+  .button.white,
+  .button.white.active {
+    background: var(--primary-white);
+  }
+
+  .button.active {
+    border: 1px solid #3c4048;
+  }
+
+  .button::after {
+    display: none;
+    visibility: hidden;
+  }
+
+  .button:hover,
+  .button:focus,
+  .button:active {
+    background-color: none;
+  }
+}

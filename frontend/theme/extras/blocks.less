@@ -953,6 +953,20 @@ figcaption {
   margin: 0;
   background: #ececec;
 
+  ul {
+    margin: 0;
+    padding-left: 15px;
+
+    li {
+      color: var(--primary-grey);
+      font-weight: 300;
+
+      &::marker {
+        color: @plone-blue;
+      }
+    }
+  }
+
   p {
     margin: 0;
     color: var(--primary-grey);

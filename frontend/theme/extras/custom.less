@@ -40,10 +40,10 @@
 }
 .small-heading-size() {
   max-width: 940px !important;
+  cursor: text;
   font-size: 2rem;
   font-weight: 300;
   line-height: 1.5rem;
-  cursor: text;
 }
 
 .button-blue() {
@@ -177,12 +177,12 @@ body.cms-ui .ui.basic.segment.content-area {
                         transform: translateY(0);
 
                         .sub-menu {
-                          max-width: var(--full-container-width);
-                          margin-left: auto;
-                          margin-right: auto;
                           width: 100%;
+                          max-width: var(--full-container-width);
                           padding: 0;
                           margin: 0;
+                          margin-right: auto;
+                          margin-left: auto;
                           list-style-type: none;
 
                           .sub-item {
@@ -253,8 +253,8 @@ body.cms-ui .ui.basic.segment.content-area {
 
   .ui.container {
     max-width: var(--full-container-width);
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 
     .ui.breadcrumb {
       margin-top: 10px;
@@ -296,8 +296,8 @@ body.cms-ui .ui.basic.segment.content-area {
   //Page-search
   #page-search .ui.container {
     max-width: var(--default-container-width);
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 
     .container {
       .ui.form {
@@ -351,10 +351,10 @@ body.cms-ui .ui.basic.segment.content-area {
   #view #page-document.ui.container.viewwrapper.event-view {
     .ui.grid {
       position: relative;
-      flex-direction: column;
       max-width: var(--default-container-width);
-      margin-left: auto;
+      flex-direction: column;
       margin-right: auto;
+      margin-left: auto;
 
       .event-details.column.mobile.hidden {
         right: 0;
@@ -383,10 +383,10 @@ body.cms-ui .ui.basic.segment.content-area {
         padding: 0;
 
         ul li {
-          color: var(--primary-grey);
           max-width: var(--text-container-width);
-          margin-left: auto;
           margin-right: auto;
+          margin-left: auto;
+          color: var(--primary-grey);
 
           &::marker {
             color: @plone-blue !important;
@@ -399,14 +399,14 @@ body.cms-ui .ui.basic.segment.content-area {
 
 #footer {
   padding: 0 0 25px;
-  margin-top: 150px;
   border-top: 1px solid #cdcdcd;
+  margin-top: 150px;
   background-color: @white;
 
   .ui.container {
     max-width: 1440px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     color: var(--primary-grey);
 
     .discreet {
@@ -435,16 +435,16 @@ img.ui.image {
 
 body #page-sitemap .ui.container {
   max-width: var(--default-container-width);
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 #page-document .ui.container,
 #page-edit .ui.container,
 #contact-form .ui.container {
   max-width: var(--full-container-width);
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 //Blocks
@@ -462,16 +462,16 @@ body #page-sitemap .ui.container {
   .ui.message {
   max-width: 940px;
   flex-direction: row;
-  margin: auto;
   border: 2px solid var(--primary-grey);
+  margin: auto;
 
   button {
+    padding: 0;
     border: none;
+    margin: 0;
     background-color: transparent;
     color: #ff2222;
     text-decoration: underline;
-    padding: 0;
-    margin: 0;
   }
 
   b {
@@ -655,15 +655,15 @@ body #page-sitemap .ui.container {
     .header-wrapper
     .ui.container {
     width: unset;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 
   body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
     #page-document.ui.container {
     width: unset;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -673,14 +673,14 @@ body #page-sitemap .ui.container {
     .header-wrapper
     .ui.container {
     width: var(--full-container-width);
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 
   body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
     #page-document.ui.container {
     width: var(--full-container-width);
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 }

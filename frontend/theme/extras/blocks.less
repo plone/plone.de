@@ -242,6 +242,10 @@ h2.heading {
   display: block;
   background: transparent;
 
+  @media only screen and (max-width: @largestMobileScreen) {
+    padding: 1rem;
+  }
+
   h1 {
     color: var(--primary-black);
   }
@@ -252,6 +256,14 @@ h2.heading {
 
   button {
     margin: 1rem 0 0;
+  }
+}
+
+.block.hero .hero-image {
+  @media only screen and (max-width: @largestMobileScreen) {
+    width: 100%;
+    max-width: 620px;
+    margin: auto;
   }
 }
 
@@ -275,6 +287,11 @@ h2.heading {
     margin-right: auto;
     margin-left: auto;
     background-color: #ececec;
+
+    @media only screen and (max-width: @largestMobileScreen) {
+      display: flex;
+      flex-direction: column !important;
+    }
   }
 }
 
@@ -996,6 +1013,10 @@ figcaption {
 
 /* Slider  Block */
 
+.block.slider .teaser-item {
+  display: block;
+}
+
 .block.slider .grid-teaser-item.top {
   display: block;
 }
@@ -1014,8 +1035,19 @@ figcaption {
     background-color: rgba(0, 134, 195, 0.8);
     transform: translateY(-50%);
 
+    @media only screen and (max-width: @largestMobileScreen) {
+      position: static;
+      width: 100%;
+      transform: none;
+      padding: 20px;
+    }
+
     .title {
       margin-bottom: 60px;
+
+      @media only screen and (max-width: @largestMobileScreen) {
+        margin-bottom: 30px;
+      }
 
       .supertitle {
         color: var(--primary-white);
@@ -1023,6 +1055,11 @@ figcaption {
         font-style: normal;
         font-weight: 300;
         line-height: 36px;
+
+        @media only screen and (max-width: @largestMobileScreen) {
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
 
       h2 {
@@ -1035,6 +1072,11 @@ figcaption {
         overflow-wrap: break-word;
         word-break: break-word;
         word-wrap: break-word;
+
+        @media only screen and (max-width: @largestMobileScreen) {
+          font-size: 30px;
+          line-height: 36px;
+        }
       }
     }
 
@@ -1062,8 +1104,19 @@ figcaption {
     background-color: rgba(0, 134, 195, 0.8);
     transform: translateY(-50%);
 
+    @media only screen and (max-width: @largestMobileScreen) {
+      position: static;
+      width: 100%;
+      transform: none;
+      padding: 20px;
+    }
+
     .title {
       margin-bottom: 60px;
+
+      @media only screen and (max-width: @largestMobileScreen) {
+        margin-bottom: 30px;
+      }
 
       .supertitle {
         color: var(--primary-white);
@@ -1071,6 +1124,11 @@ figcaption {
         font-style: normal;
         font-weight: 300;
         line-height: 36px;
+
+        @media only screen and (max-width: @largestMobileScreen) {
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
 
       h2 {
@@ -1083,6 +1141,11 @@ figcaption {
         overflow-wrap: break-word;
         word-break: break-word;
         word-wrap: break-word;
+
+        @media only screen and (max-width: @largestMobileScreen) {
+          font-size: 30px;
+          line-height: 36px;
+        }
       }
     }
 
@@ -1107,6 +1170,11 @@ figcaption {
 .block.slider .slick-arrow,
 .block.slider .slick-arrow {
   color: var(--primary-black);
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .block.slider .slick-dots {
@@ -1163,6 +1231,11 @@ figcaption {
   max-width: 458px;
   border: 1px solid #cdcdcd;
   border-radius: 8px;
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    width: 100%;
+    max-width: none;
+  }
 
   .listing-image {
     width: 100%;

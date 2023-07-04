@@ -269,7 +269,6 @@ const applyConfig = (config) => {
   config.settings.DSGVOBanner.modules = ['youtube', 'google'];
 
   delete config.blocks.blocksConfig.text;
-  delete config.blocks.blocksConfig.description;
   config.blocks.blocksConfig.__grid.gridAllowedBlocks = [
     ...config.blocks.blocksConfig.__grid.gridAllowedBlocks,
     '__button',

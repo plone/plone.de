@@ -196,9 +196,19 @@ const applyConfig = (config) => {
     ),
   };
 
+  /* Introduction  Block */
   config.blocks.blocksConfig.introduction = {
     ...config.blocks.blocksConfig.introduction,
     schemaEnhancer: composeSchema(DefaultStylingSchemaEnhancer),
+  };
+
+  /* Teaser  Block */
+  config.blocks.blocksConfig.teaser = {
+    ...config.blocks.blocksConfig.teaser,
+    schemaEnhancer: composeSchema(
+      TeaserBlockSchemaEnhancer,
+      DefaultStylingSchemaEnhancer,
+    ),
   };
 
   /* Slate  Block */

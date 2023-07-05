@@ -13,7 +13,7 @@ const messages = defineMessages({
 });
 
 const View = (props) => {
-  const { data, isEditMode } = props;
+  const { className, data, isEditMode } = props;
   const [hasLink, setHasLink] = React.useState(false);
   const intl = useIntl();
 
@@ -65,6 +65,7 @@ const View = (props) => {
         'block __button',
         `has--align--${data.outerAlign}`,
         data.newTab,
+        className,
       )}
     >
       <div className="button container">

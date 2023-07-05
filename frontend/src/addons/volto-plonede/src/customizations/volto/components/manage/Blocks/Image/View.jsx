@@ -22,7 +22,8 @@ const messages = defineMessages({
  * @class View
  * @extends Component
  */
-export const View = ({ data, detached }) => {
+export const View = (props) => {
+  const { className, data, detached } = props;
   const href = data?.href?.[0]?.['@id'] || '';
   const creditHref = data?.linkTo?.[0]?.['@id'] || '';
   const intl = useIntl();
@@ -31,6 +32,7 @@ export const View = ({ data, detached }) => {
     <div
       className={cx(
         'block image align',
+        className,
         {
           center: !Boolean(data.align),
           detached,

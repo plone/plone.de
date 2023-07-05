@@ -36,12 +36,13 @@ const messages = defineMessages({
   },
 });
 
-const View = ({ data }) => {
+const View = (props) => {
+  const { className, data } = props;
   const intl = useIntl();
   const href = data.linkHref?.[0];
   return (
     <div
-      className={cx('block hero', {
+      className={cx('block hero', className, {
         'align-left': data.align === 'left',
         'align-right': data.align === 'right',
       })}

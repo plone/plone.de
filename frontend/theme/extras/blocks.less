@@ -3,12 +3,12 @@
   margin-bottom: -1rem;
 }
 
-#page-document .block.has--backgroundColor--grey {
+#page-document .block.has--backgroundColor--grey:not(.separator) {
   padding-bottom: 25px;
   margin-bottom: 0 !important;
 }
 
-.block:not(.has--backgroundColor--grey):not(.slider):not(.slate) {
+.block:not(.has--backgroundColor--grey):not(.slider):not(.slate):not(.separator) {
   padding-bottom: 0 !important;
   margin-bottom: 25px;
 }
@@ -274,6 +274,15 @@ blockquote {
 .block.__button:not(.has--backgroundColor--grey) .button.container {
   margin-top: 75px;
   margin-bottom: 100px;
+}
+
+.block.__button.has--backgroundColor--grey {
+  padding-bottom: 0 !important;
+}
+
+.block.__button.has--backgroundColor--grey .button.container {
+  padding-top: 75px;
+  padding-bottom: 100px;
 }
 
 /* Hero  Block */
@@ -852,13 +861,8 @@ figcaption {
   margin: 0;
   clear: both;
 
-  &:not(.inner):not([role='presentation']) {
-    padding: 0 !important;
-  }
-
   .line {
     max-width: var(--default-container-width);
-    padding: 25px 0;
     margin-right: auto;
     margin-left: auto;
 
@@ -876,15 +880,13 @@ figcaption {
     max-width: var(--text-container-width);
   }
 
-  &.has--align--left {
+  &.has--align--left .line {
     max-width: var(--text-container-width);
+    margin-left: auto;
+    margin-right: auto;
 
-    .line {
-      margin-left: 0;
-
-      &::after {
-        width: 165px;
-      }
+    &::after {
+      width: 165px;
     }
   }
 
@@ -900,34 +902,24 @@ figcaption {
   margin-left: auto;
   clear: both;
 
-  &.has--align--center {
-    .inner-separator {
-      max-width: var(--text-container-width);
-      margin-right: auto;
-      margin-left: auto;
+  &.has--align--center .line {
+    max-width: var(--text-container-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &.has--align--left .block.separator .line {
+    max-width: var(--text-container-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    &::after {
+      width: 165px;
     }
   }
 
-  &.has--align--left {
-    .inner-separator {
-      max-width: var(--text-container-width);
-
-      .line {
-        margin-left: 0;
-
-        &::after {
-          width: 165px;
-        }
-      }
-    }
-  }
-
-  &.has--noLine--true {
-    .inner-separator {
-      .line::after {
-        display: none;
-      }
-    }
+  &.has--noLine--true .line::after {
+    display: none;
   }
 }
 

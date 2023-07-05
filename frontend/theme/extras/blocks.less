@@ -1,9 +1,9 @@
-#page-document .block.next--is--same--block-type {
+#page-document .block.next--is--same--block-type:not(.slate) {
   padding-bottom: 0 !important;
   margin-bottom: -1rem;
 }
 
-#page-document .block.has--backgroundColor--grey:not(.separator) {
+#page-document .block.has--backgroundColor--grey:not(.slate):not(.separator) {
   padding-bottom: 25px;
   margin-bottom: 0 !important;
 }
@@ -20,6 +20,10 @@
 /* Slate  Block */
 
 /* Text */
+#page-document > .block.slate {
+  margin-bottom: 0;
+}
+
 #page-document > .block.slate p,
 #page-document > .block.slate ul li {
   max-width: var(--text-container-width);
@@ -31,6 +35,12 @@
   &::marker {
     color: @plone-blue;
   }
+}
+
+#page-document > .block.slate.has--backgroundColor--grey p,
+#page-document > .block.slate.has--backgroundColor--grey ul li {
+  padding-bottom: 25px;
+  margin-bottom: 0;
 }
 
 b,
@@ -52,8 +62,16 @@ strong {
 }
 
 /* Heading */
-#page-document > .block.slate h2,
-#page-document > .block.slate h3 {
+#page-document > .block.slate.has--backgroundColor--grey h2,
+#page-document > .block.slate.has--backgroundColor--grey h3 {
+  max-width: var(--text-container-width);
+  padding-top: 50px;
+  padding-bottom: 25px;
+  margin: 0 auto 0 auto;
+}
+
+#page-document > .block.slate:not(.has--backgroundColor--grey) h2,
+#page-document > .block.slate:not(.has--backgroundColor--grey) h3 {
   max-width: var(--text-container-width);
   margin-top: 50px;
   margin-right: auto;
@@ -706,33 +724,38 @@ figcaption {
 
 /* Introduction */
 
-.block.introduction {
-  .block-container {
+.block.introduction:not(.has--backgroundColor--grey) {
+  margin-top: 25px;
+}
+
+.block.introduction.has--backgroundColor--grey {
+  padding-top: 25px;
+}
+
+.block.introduction .block-container {
+  max-width: var(--default-container-width);
+  margin-right: auto;
+  margin-left: auto;
+
+  p {
     max-width: var(--default-container-width);
     margin-right: auto;
     margin-left: auto;
-
-    p {
-      max-width: var(--default-container-width);
-      margin-right: auto;
-      margin-left: auto;
-      font-size: 24px;
-      font-weight: 300;
-      line-height: 34px;
-    }
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 34px;
   }
 }
 
-.block-editor-introduction {
-  .block.introduction {
-    p {
-      max-width: var(--default-container-width);
-      margin-right: auto;
-      margin-left: auto;
-      font-size: 24px;
-      font-weight: 300;
-      line-height: 34px;
-    }
+.block-editor-introduction .block.introduction {
+  p {
+    max-width: var(--default-container-width);
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 34px;
   }
 }
 

@@ -14,6 +14,7 @@ import { defineMessages } from 'react-intl';
 import { composeSchema, getPreviousNextBlock } from '@plone/volto/helpers';
 import { SeparatorStyleEnhancer } from '@kitconcept/volto-separator-block/components/schema.js';
 import { gridTeaserDisableStylingSchema } from '@kitconcept/volto-blocks-grid/components/Teaser/schema';
+import cx from 'classnames';
 
 /* Quote  Block */
 import quoteSVG from '@plone/volto/icons/quote.svg';
@@ -195,13 +196,20 @@ const applyConfig = (config) => {
     ),
   };
 
+  config.blocks.blocksConfig.introduction = {
+    ...config.blocks.blocksConfig.introduction,
+    schemaEnhancer: composeSchema(DefaultStylingSchemaEnhancer),
+  };
+
   /* Slate  Block */
   config.blocks.blocksConfig.slate = {
     ...config.blocks.blocksConfig.slate,
+    schemaEnhancer: composeSchema(DefaultStylingSchemaEnhancer),
     // Slate in grids must have an extra wrapper with the `slate` className
     view: (props) => {
+      const { className } = props;
       return (
-        <div className="block slate">
+        <div className={cx('block slate', className)}>
           <EnhancedSlateViewComponent {...props} />
         </div>
       );

@@ -76,8 +76,8 @@ const applyConfig = (config) => {
   config.blocks.blocksConfig.separator = {
     ...config.blocks.blocksConfig.separator,
     schemaEnhancer: composeSchema(
-      SeparatorStyleEnhancer,
       DefaultStylingSchemaEnhancer,
+      SeparatorStyleEnhancer,
     ),
   };
 

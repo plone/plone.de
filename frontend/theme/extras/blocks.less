@@ -19,13 +19,16 @@
 
 /* Slate  Block */
 
-/* Text */
+#page-document .ui.container .event-view .block.slate p {
+  max-width: var(--text-container-width);
+}
+
 #page-document > .block.slate {
   margin-bottom: 0;
 }
 
-#page-document > .block.slate p,
-#page-document > .block.slate ul li {
+#page-document .block.slate p,
+#page-document .block.slate ul li {
   max-width: var(--text-container-width);
   margin-right: auto;
   margin-left: auto;
@@ -37,8 +40,8 @@
   }
 }
 
-#page-document > .block.slate.has--backgroundColor--grey p,
-#page-document > .block.slate.has--backgroundColor--grey ul li {
+#page-document .block.slate.has--backgroundColor--grey p,
+#page-document .block.slate.has--backgroundColor--grey ul li {
   padding-bottom: 25px;
   margin-bottom: 0;
 }
@@ -62,16 +65,16 @@ strong {
 }
 
 /* Heading */
-#page-document > .block.slate.has--backgroundColor--grey h2,
-#page-document > .block.slate.has--backgroundColor--grey h3 {
+#page-document .block.slate.has--backgroundColor--grey h2,
+#page-document .block.slate.has--backgroundColor--grey h3 {
   max-width: var(--text-container-width);
   padding-top: 50px;
   padding-bottom: 25px;
   margin: 0 auto 0 auto;
 }
 
-#page-document > .block.slate:not(.has--backgroundColor--grey) h2,
-#page-document > .block.slate:not(.has--backgroundColor--grey) h3 {
+#page-document .block.slate:not(.has--backgroundColor--grey) h2,
+#page-document .block.slate:not(.has--backgroundColor--grey) h3 {
   max-width: var(--text-container-width);
   margin-top: 50px;
   margin-right: auto;

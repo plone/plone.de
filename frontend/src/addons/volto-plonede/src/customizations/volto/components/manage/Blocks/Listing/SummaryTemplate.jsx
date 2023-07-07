@@ -24,19 +24,21 @@ const SummaryTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
       <div className="items">
         {items.map((item) => (
           <div className="listing-item" key={item['@id']}>
-            <Component
-              className="listing-image"
-              componentName="PreviewImage"
-              item={item}
-              alt=""
-            />
+            <div className="image-wrapper">
+              <Component
+                className="listing-image"
+                componentName="PreviewImage"
+                item={item}
+                alt=""
+              />
+            </div>
             <div className="listing-body">
-              <h3 className="listing-header">
+              <h3>
                 <ConditionalLink item={item} condition={!isEditMode}>
                   {item.title ? item.title : item.id}
                 </ConditionalLink>
               </h3>
-              <p className="listing-text">{item.description}</p>
+              <p>{item.description}</p>
             </div>
           </div>
         ))}

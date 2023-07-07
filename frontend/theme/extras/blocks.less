@@ -28,6 +28,7 @@
 }
 
 #page-document .block.slate p,
+#page-document .block.slate ol li,
 #page-document .block.slate ul li {
   max-width: var(--text-container-width);
   margin-right: auto;
@@ -41,6 +42,7 @@
 }
 
 #page-document .block.slate.has--backgroundColor--grey p,
+#page-document .block.slate.has--backgroundColor--grey ol li,
 #page-document .block.slate.has--backgroundColor--grey ul li {
   padding-bottom: 25px;
   margin-bottom: 0;
@@ -53,6 +55,7 @@ strong {
 }
 
 .block-editor-slate p,
+.block-editor-slate ol li,
 .block-editor-slate ul li {
   max-width: var(--text-container-width);
   margin-right: auto;
@@ -1029,6 +1032,7 @@ figcaption {
   margin: 0;
   background: #ececec;
 
+  ol,
   ul {
     padding-left: 15px;
     margin: 0;
@@ -1047,6 +1051,21 @@ figcaption {
     margin: 0;
     color: var(--primary-grey);
     font-weight: 300;
+  }
+}
+
+.block.__grid.has--backgroundColor--grey .block.teaser .grid-teaser-item,
+.block-editor-teaserGrid.has--backgroundColor--grey
+  .block.teaser
+  .grid-teaser-item {
+  background: var(--primary-white);
+
+  .grid-image-wrapper {
+    margin-bottom: 0;
+  }
+
+  .content {
+    padding: 25px;
   }
 }
 

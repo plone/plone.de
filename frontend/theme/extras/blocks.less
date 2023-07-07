@@ -87,7 +87,7 @@ strong {
 }
 
 h2,
-h3:not(.listing-header) {
+h3:not(.listing-body h3) {
   font-weight: 600;
 }
 
@@ -101,6 +101,14 @@ h3 {
   font-size: 1.8rem;
   font-style: normal;
   line-height: 30px;
+}
+
+h1 a.anchor svg,
+h2 a.anchor svg,
+h3 a.anchor svg,
+h4 a.anchor svg {
+  width: 1ch;
+  padding-bottom: 100%;
 }
 
 .block-editor-slate h2,

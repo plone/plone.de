@@ -1080,9 +1080,17 @@ figcaption {
   display: block;
 }
 
-.block.slider .teaser-item.link,
 .highlight-image-wrapper.gradient {
   width: 100%;
+}
+
+.block.slider .teaser-item.link {
+  width: 100%;
+  display: flex;
+
+  &.right {
+    justify-content: right;
+  }
 }
 
 .block.slider .teaser-item-title {
@@ -1158,7 +1166,6 @@ figcaption {
   &.align-right {
     position: absolute;
     top: 50%;
-    right: 0;
     width: 530px;
     padding: 40px;
     background-color: rgba(0, 134, 195, 0.8);

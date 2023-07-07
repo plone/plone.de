@@ -103,7 +103,10 @@ const SliderBody = ({
       {href && (
         <div className="teaser-item top">
           <MaybeWrap
-            className="teaser-item link"
+            className={cx('teaser-item link', {
+              right: data.flagAlign === 'right',
+              left: data.flagAlign === 'left',
+            })}
             condition={!isEditMode}
             as={UniversalLink}
             href={href['@id']}

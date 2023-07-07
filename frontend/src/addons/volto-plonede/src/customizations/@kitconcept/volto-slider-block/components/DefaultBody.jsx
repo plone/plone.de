@@ -101,7 +101,14 @@ const SliderBody = ({
         </Message>
       )}
       {href && (
-        <div className="teaser-item top">
+        <MaybeWrap
+          className={cx('teaser-item top', {
+            right: data.flagAlign === 'right',
+            left: data.flagAlign === 'left',
+          })}
+          condition={isEditMode}
+          tabIndex="-1"
+        >
           <MaybeWrap
             className={cx('teaser-item link', {
               right: data.flagAlign === 'right',
@@ -122,12 +129,7 @@ const SliderBody = ({
                 />
               </div>
             )}
-            <div
-              className={cx('teaser-item-title fix-width-issue', {
-                'align-right': data.flagAlign === 'right',
-                'align-left': data.flagAlign === 'left',
-              })}
-            >
+            <div className="teaser-item-title fix-width-issue">
               <div className="title">
                 {data?.head_title && (
                   <span className="supertitle">{data?.head_title}</span>
@@ -142,7 +144,7 @@ const SliderBody = ({
               </Button>
             </div>
           </MaybeWrap>
-        </div>
+        </MaybeWrap>
       )}
     </div>
   );

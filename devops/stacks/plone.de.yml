@@ -22,16 +22,13 @@ services:
         - traefik.constraint-label=public
         # SERVICE
         - traefik.http.services.plonede-frontend.loadbalancer.server.port=3000
-        # MIDDLEWARES
-        ### ClassicUI Access Authentication
-        - traefik.http.middlewares.plonede-frontend-auth.basicauth.users=plonede:$$2y$$05$$7jfejsi4CsRQpNBiorquEeuNZqDropPM4Wpox.lB0VsgIXjCk/ubC
         # HOSTS: Main
         - traefik.http.routers.plonede-frontend.rule=Host(`plone.de`)
         - traefik.http.routers.plonede-frontend.entrypoints=https
         - traefik.http.routers.plonede-frontend.tls=true
         - traefik.http.routers.plonede-frontend.tls.certresolver=le
         - traefik.http.routers.plonede-frontend.service=plonede-frontend
-        - traefik.http.routers.plonede-frontend.middlewares=gzip,plonede-frontend-auth
+        - traefik.http.routers.plonede-frontend.middlewares=gzip
 
   backend:
     image: ghcr.io/plone/plonede-backend:${STACK_PARAM:-latest}
@@ -61,13 +58,13 @@ services:
         - "traefik.http.middlewares.plonede-vhm-classicui.replacepathregex.regex=^/ClassicUI($$|/.*)"
         - "traefik.http.middlewares.plonede-vhm-classicui.replacepathregex.replacement=/VirtualHostBase/https/plone.de/Plone/VirtualHostRoot/_vh_ClassicUI/$$1"
         # ROUTES
-        ## ploneconf.org API
+        ## API
         - traefik.http.routers.plonede-backend.rule=Host(`plone.de`) && (PathPrefix(`/++api++`))
         - traefik.http.routers.plonede-backend.entrypoints=https
         - traefik.http.routers.plonede-backend.tls=true
         - traefik.http.routers.plonede-backend.service=plonede-backend
         - traefik.http.routers.plonede-backend.middlewares=gzip,plonede-vhm
-        ### ploneconf.org /ClassicUI - protected with basic auth (prevent SEOs from crawl it)
+        ### /ClassicUI - protected with basic auth (prevent SEOs from crawl it)
         - traefik.http.routers.plonede-classicui.rule=Host(`plone.de`) && (PathPrefix(`/ClassicUI`))
         - traefik.http.routers.plonede-classicui.entrypoints=https
         - traefik.http.routers.plonede-classicui.tls=true

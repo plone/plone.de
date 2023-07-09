@@ -1,7 +1,6 @@
 ## 1.0.1 (unreleased)
 
-
-- Nothing changed yet.
+- Remove basic_auth from live frontend. [fredvd]
 
 
 ## 1.0.0 (2023-07-09)

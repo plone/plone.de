@@ -61,13 +61,13 @@ services:
         - "traefik.http.middlewares.testing_plonede-vhm-classicui.replacepathregex.regex=^/ClassicUI($$|/.*)"
         - "traefik.http.middlewares.testing_plonede-vhm-classicui.replacepathregex.replacement=/VirtualHostBase/https/testing.plone.de/Plone/VirtualHostRoot/_vh_ClassicUI/$$1"
         # ROUTES
-        ## ploneconf.org API
+        ## API
         - traefik.http.routers.testing_plonede-backend.rule=Host(`testing.plone.de`) && (PathPrefix(`/++api++`))
         - traefik.http.routers.testing_plonede-backend.entrypoints=https
         - traefik.http.routers.testing_plonede-backend.tls=true
         - traefik.http.routers.testing_plonede-backend.service=testing_plonede-backend
         - traefik.http.routers.testing_plonede-backend.middlewares=gzip,testing_plonede-vhm
-        ### ploneconf.org /ClassicUI - protected with basic auth (prevent SEOs from crawl it)
+        ### /ClassicUI - protected with basic auth (prevent SEOs from crawl it)
         - traefik.http.routers.testing_plonede-classicui.rule=Host(`testing.plone.de`) && (PathPrefix(`/ClassicUI`))
         - traefik.http.routers.testing_plonede-classicui.entrypoints=https
         - traefik.http.routers.testing_plonede-classicui.tls=true

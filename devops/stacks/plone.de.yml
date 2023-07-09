@@ -5,7 +5,7 @@ services:
   frontend:
     image: ghcr.io/plone/plonede-frontend:${STACK_PARAM:-latest}
     environment:
-      RAZZLE_INTERNAL_API_PATH: http://plonede_backend:8080/Plone
+      RAZZLE_INTERNAL_API_PATH: http://plone-de_backend:8080/Plone
     depends_on:
       - backend
     networks:

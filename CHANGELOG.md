@@ -1,11 +1,10 @@
 ## 1.0.3 (unreleased)
 
+- Use version.txt tag to release to live instead of sha in release to live workflow. [fredvd]
 
-- Nothing changed yet.
-
+- Add redeploy-live workflow. [fredvd]
 
 ## 1.0.2 (2023-07-09)
-
 
 - Fix RAZZLE_INTERNAL_API_PATH in frontend stack. [fredvd]
 
@@ -16,3 +15,5 @@
 
 
 ## 1.0.0 (2023-07-09)
+
+- First release to live. [fredvd]

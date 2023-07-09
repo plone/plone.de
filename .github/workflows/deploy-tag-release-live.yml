@@ -24,7 +24,8 @@ jobs:
       - name: Set Env Vars
         id: vars
         run: |
-          echo "TAG=sha-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+          echo "TAG=$(cat version.txt)" >> $GITHUB_OUTPUT
+
 
   release-frontend:
     runs-on: ubuntu-latest

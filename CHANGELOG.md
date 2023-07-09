@@ -1,7 +1,7 @@
 ## 1.0.2 (unreleased)
 
 
-- Nothing changed yet.
+- Fix RAZZLE_INTERNAL_API_PATH in frontend stack. [fredvd]
 
 
 ## 1.0.1 (2023-07-09)

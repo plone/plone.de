@@ -1,4 +1,4 @@
-## 1.0.4 (unreleased)
+## 1.0.4 (2023-07-10)
 
 - Clean styles. [jonaspiterek]
 

@@ -12,6 +12,7 @@ import { asyncConnect } from '@plone/volto/helpers';
 import { FormattedMessage } from 'react-intl';
 import { Portal } from 'react-portal';
 import {
+  Button,
   Container,
   Pagination,
   Header,
@@ -29,6 +30,7 @@ import { Toolbar, Icon } from '@plone/volto/components';
 
 import paginationLeftSVG from '@plone/volto/icons/left-key.svg';
 import paginationRightSVG from '@plone/volto/icons/right-key.svg';
+import loupeSVG from '@plone/volto/icons/zoom.svg';
 
 const messages = defineMessages({
   search: {
@@ -197,7 +199,9 @@ class Search extends Component {
                     )}
                     title={this.props.intl.formatMessage(messages.search)}
                   />
-                  <button className="search-button">Suche</button>
+                  <Button className="search-button">
+                    <Icon name={loupeSVG} />
+                  </Button>
                 </Form.Field>
               </Form>
               <Header>

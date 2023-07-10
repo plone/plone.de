@@ -1,7 +1,6 @@
 /* Blocks */
 
 @import 'blocks';
-@import 'search';
 
 /* Document */
 

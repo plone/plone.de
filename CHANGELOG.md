@@ -1,7 +1,8 @@
 ## 1.0.4 (unreleased)
 
+- Clean styles. [jonaspiterek]
 
-- Nothing changed yet.
+- Add search design to page search. [jonaspiterek]
 
 
 ## 1.0.3 (2023-07-09)

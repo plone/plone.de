@@ -1,7 +1,7 @@
-## 1.0.5 (unreleased)
+## 1.0.5 (2023-07-28)
 
 
-- Nothing changed yet.
+- Add meta data for google search console [jonaspiterek]
 
 
 ## 1.0.4 (2023-07-10)

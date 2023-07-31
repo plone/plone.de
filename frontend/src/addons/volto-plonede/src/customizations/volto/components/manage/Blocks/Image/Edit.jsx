@@ -49,9 +49,9 @@ const messages = defineMessages({
     id: 'Credits',
     defaultMessage: 'Credits',
   },
-  defaultCredits: {
-    id: '© Plone Foundation',
-    defaultMessage: '© Plone Foundation',
+  creditMessage: {
+    id: 'Plone Foundation',
+    defaultMessage: 'Plone Foundation',
   },
 });
 
@@ -304,8 +304,9 @@ class Edit extends Component {
               <div className="credits">
                 Credit:{' '}
                 <UniversalLink href={creditHref || '/imprint'}>
+                  {'© '}
                   {data.credits ||
-                    this.props.intl.formatMessage(messages.defaultCredits)}
+                    this.props.intl.formatMessage(messages.creditMessage)}
                 </UniversalLink>
               </div>
             </figcaption>

@@ -11,9 +11,13 @@ import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers';
 import { useIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({
-  defaultCredits: {
-    id: '© Plone Foundation',
-    defaultMessage: '© Plone Foundation',
+  credits: {
+    id: 'Credits',
+    defaultMessage: 'Credits',
+  },
+  creditMessage: {
+    id: 'Plone Foundation',
+    defaultMessage: 'Plone Foundation',
   },
 });
 
@@ -85,8 +89,9 @@ export const View = (props) => {
                   <div className="credits">
                     Credit:{' '}
                     <UniversalLink href={creditHref || '/imprint'}>
+                      {'© '}
                       {data.credits ||
-                        intl.formatMessage(messages.defaultCredits)}
+                        intl.formatMessage(messages.creditMessage)}
                     </UniversalLink>
                   </div>
                 </figcaption>

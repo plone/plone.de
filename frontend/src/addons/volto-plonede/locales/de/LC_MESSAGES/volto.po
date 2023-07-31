@@ -24,7 +24,7 @@ msgstr "Barrierefreiheit"
 #: components/manage/Blocks/ButtonBlockEnhancer
 # defaultMessage: Alignment
 msgid "Alignment"
-msgstr ""
+msgstr "Ausrichtung"
 
 #: components/manage/Blocks/ButtonBlockEnhancer
 #: components/manage/Blocks/DefaultStylingEnhancer

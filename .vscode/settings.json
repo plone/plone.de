@@ -1,9 +1,4 @@
 {
   "eslint.workingDirectories": ["./frontend"],
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#0086c3",
-    "statusBarItem.hoverBackground": "#007db9",
-    "statusBarItem.remoteBackground": "#005b85"
-  },
   "peacock.color": "#aee432"
 }

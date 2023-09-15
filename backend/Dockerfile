@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-ARG PLONE_VERSION=6.0.4
+ARG PLONE_VERSION=6.0.7
 FROM plone/plone-backend:${PLONE_VERSION}
 
 LABEL maintainer="Simples Consultoria <comercial@plone.de>" \

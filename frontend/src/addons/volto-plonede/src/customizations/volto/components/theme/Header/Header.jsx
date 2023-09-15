@@ -46,7 +46,7 @@ class Header extends Component {
         <Container>
           <div className="header">
             <div className="logo-nav-wrapper">
-              <div className="logo">
+              <div className="logo-wrapper">
                 <Logo />
               </div>
               <div className="nav-search-wrapper">

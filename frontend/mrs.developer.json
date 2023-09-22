@@ -3,7 +3,7 @@
     "local": "addons/volto-plonede/src"
   },
   "volto-slider-block": {
-    "develop": true,
+    "develop": false,
     "package": "@kitconcept/volto-slider-block",
     "url": "git@github.com:kitconcept/volto-slider-block.git",
     "https": "https://github.com/kitconcept/volto-slider-block.git",
@@ -11,7 +11,7 @@
     "branch": "master"
   },
   "volto-heading-block": {
-    "develop": true,
+    "develop": false,
     "package": "@kitconcept/volto-heading-block",
     "url": "git@github.com:kitconcept/volto-heading-block.git",
     "https": "https://github.com/kitconcept/volto-heading-block.git",
@@ -19,7 +19,7 @@
     "branch": "master"
   },
   "volto-blocks-grid": {
-    "develop": true,
+    "develop": false,
     "package": "@kitconcept/volto-blocks-grid",
     "url": "git@github.com:kitconcept/volto-blocks-grid.git",
     "https": "https://github.com/kitconcept/volto-blocks-grid.git",
@@ -27,7 +27,7 @@
     "branch": "main"
   },
   "volto-button-block": {
-    "develop": true,
+    "develop": false,
     "package": "@kitconcept/volto-button-block",
     "url": "git@github.com:kitconcept/volto-button-block.git",
     "https": "https://github.com/kitconcept/volto-button-block.git",
@@ -35,7 +35,7 @@
     "branch": "master"
   },
   "volto-separator-block": {
-    "develop": true,
+    "develop": false,
     "package": "@kitconcept/volto-separator-block",
     "url": "git@github.com:kitconcept/volto-separator-block.git",
     "https": "https://github.com/kitconcept/volto-separator-block.git",
@@ -43,7 +43,7 @@
     "branch": "main"
   },
   "volto-introduction-block": {
-    "develop": true,
+    "develop": false,
     "package": "@kitconcept/volto-introduction-block",
     "url": "git@github.com:kitconcept/volto-introduction-block.git",
     "https": "https://github.com/kitconcept/volto-introduction-block.git",
@@ -51,7 +51,7 @@
     "branch": "main"
   },
   "volto-dsgvo-banner": {
-    "develop": true,
+    "develop": false,
     "package": "@kitconcept/volto-dsgvo-banner",
     "url": "git@github.com:kitconcept/volto-dsgvo-banner.git",
     "https": "https://github.com/kitconcept/volto-dsgvo-banner.git",

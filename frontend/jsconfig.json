@@ -1,8 +1,10 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "volto-plonede": ["addons/volto-plonede/src"]
-    },
-    "baseUrl": "src"
-  }
+    "compilerOptions": {
+        "paths": {
+            "volto-plonede": [
+                "addons/volto-plonede/src"
+            ]
+        },
+        "baseUrl": "src"
+    }
 }

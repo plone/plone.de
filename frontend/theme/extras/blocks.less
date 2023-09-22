@@ -974,28 +974,43 @@ figcaption {
   margin-left: auto;
 }
 
-.block.teaser .content {
-  width: 100%;
+.block.teaser .teaser-item {
+  display: block;
 
-  h2 {
-    padding: 0 20px 0 0;
-    margin: 0 0 15px;
-    color: var(--primary-black);
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 36px;
-    word-break: break-word;
-    word-wrap: break-word;
-  }
-
-  p {
+  &.default .image-wrapper {
     margin: 0;
-    color: var(--primary-grey);
-    font-weight: 300;
   }
 }
 
+.block.teaser .teaser-item.default {
+  max-width: var(--default-container-width);
+  margin-right: auto;
+  margin-left: auto;
+
+  .content {
+    width: 100%;
+
+    h2 {
+      padding: 0 20px 0 0;
+      margin: 0 0 15px;
+      color: var(--primary-black);
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 36px;
+      word-break: break-word;
+      word-wrap: break-word;
+    }
+
+    p {
+      margin: 0;
+      color: var(--primary-grey);
+      font-weight: 300;
+    }
+  }
+}
+
+#page-edit .block-editor-teaser .teaser-item.default,
 #page-edit .block-editor-teaser .grid-teaser-item.default {
   max-width: var(--default-container-width);
   margin-right: auto;

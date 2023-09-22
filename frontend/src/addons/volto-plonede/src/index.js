@@ -16,6 +16,12 @@ import { SeparatorStyleEnhancer } from '@kitconcept/volto-separator-block/compon
 import { gridTeaserDisableStylingSchema } from '@kitconcept/volto-blocks-grid/components/Teaser/schema';
 import cx from 'classnames';
 
+import TeaserViewBlock from '@plone/volto/components/manage/Blocks/Teaser/View';
+import TeaserEditBlock from '@plone/volto/components/manage/Blocks/Teaser/Edit';
+import TeaserBlockDefaultBody from '@plone/volto/components/manage/Blocks/Teaser/DefaultBody';
+import { TeaserSchema } from '@plone/volto/components/manage/Blocks/Teaser/schema';
+import { TeaserBlockDataAdapter } from '@plone/volto/components/manage/Blocks/Teaser/adapter';
+
 /* Quote  Block */
 import quoteSVG from '@plone/volto/icons/quote.svg';
 import QuoteBlockView from './components/manage/Blocks/volto-quote-block/View';
@@ -52,6 +58,27 @@ const applyConfig = (config) => {
     navDepth: 2,
     matomoSiteId: '11',
     matomoUrlBase: 'https://stats.plone.de/',
+  };
+
+  /* Teaser  Block */
+  config.blocks.blocksConfig.teaser = {
+    ...config.blocks.blocksConfig.teaser,
+    schemaEnhancer: composeSchema(
+      TeaserBlockSchemaEnhancer,
+      DefaultStylingSchemaEnhancer,
+    ),
+    view: TeaserViewBlock,
+    edit: TeaserEditBlock,
+    blockSchema: TeaserSchema,
+    dataAdapter: TeaserBlockDataAdapter,
+    variations: [
+      {
+        id: 'default',
+        isDefault: true,
+        title: 'Default',
+        template: TeaserBlockDefaultBody,
+      },
+    ],
   };
 
   /* Button  Block */
@@ -185,6 +212,35 @@ const applyConfig = (config) => {
         ),
       },
     },
+    restricted: true,
+  };
+
+  // NEW CORE GRID
+  config.blocks.blocksConfig.gridBlock = {
+    ...config.blocks.blocksConfig.gridBlock,
+    schemaEnhancer: DefaultStylingSchemaEnhancer,
+    blocksConfig: {
+      ...config.blocks.blocksConfig,
+      slate: {
+        ...config.blocks.blocksConfig.slate,
+        // Slate in grids must have an extra wrapper with the `slate` className
+        view: (props) => {
+          return (
+            <div className="block slate">
+              <EnhancedSlateViewComponent {...props} />
+            </div>
+          );
+        },
+      },
+      teaser: {
+        ...config.blocks.blocksConfig.teaser,
+        schemaEnhancer: composeSchema(
+          gridTeaserDisableStylingSchema,
+          TeaserBlockSchemaEnhancer,
+          DefaultStylingSchemaEnhancer,
+        ),
+      },
+    },
   };
 
   /* Video  Block */
@@ -200,15 +256,6 @@ const applyConfig = (config) => {
   config.blocks.blocksConfig.introduction = {
     ...config.blocks.blocksConfig.introduction,
     schemaEnhancer: composeSchema(DefaultStylingSchemaEnhancer),
-  };
-
-  /* Teaser  Block */
-  config.blocks.blocksConfig.teaser = {
-    ...config.blocks.blocksConfig.teaser,
-    schemaEnhancer: composeSchema(
-      TeaserBlockSchemaEnhancer,
-      DefaultStylingSchemaEnhancer,
-    ),
   };
 
   /* Slate  Block */

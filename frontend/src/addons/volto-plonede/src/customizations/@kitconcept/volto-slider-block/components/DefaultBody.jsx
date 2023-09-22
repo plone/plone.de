@@ -1,7 +1,5 @@
 import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { getTeaserImageURL } from '@kitconcept/volto-slider-block/helpers';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon, MaybeWrap, UniversalLink } from '@plone/volto/components';
 import { Input, Button, Message } from 'semantic-ui-react';
 import cx from 'classnames';
@@ -48,10 +46,7 @@ const SliderBody = ({
   const href = data.href?.[0];
   const image = data.preview_image?.[0];
 
-  const hasImageComponent = config.getComponent('Image').component;
   const Image = config.getComponent('Image').component || DefaultImage;
-  const defaultImageSrc =
-    href && flattenToAppURL(getTeaserImageURL({ href, image }));
 
   const handleClick = () => {
     openObjectBrowser({
@@ -120,15 +115,19 @@ const SliderBody = ({
             target={data.openLinkInNewTab ? '_blank' : null}
             tabIndex="-1"
           >
-            {(href?.hasPreviewImage || image) && (
+            {/* START CUSTOMSTARTIZATION */}
+            {(href?.hasPreviewImage || href.image_field || image) && (
               <div className="highlight-image-wrapper gradient">
                 <Image
-                  src={hasImageComponent ? href : defaultImageSrc}
+                  item={image || href}
+                  imageField={image ? image.image_field : href.image_field}
                   alt=""
                   loading="lazy"
+                  responsive={true}
                 />
               </div>
             )}
+            {/* END CUSTOMIZATION */}
             <div className="teaser-item-title fix-width-issue">
               <div className="title">
                 {data?.head_title && (

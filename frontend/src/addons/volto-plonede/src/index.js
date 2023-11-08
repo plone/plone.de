@@ -1,7 +1,6 @@
 import {
   ButtonBlockSchemaEnhancer,
   DefaultStylingSchemaEnhancer,
-  HeadingBlockSchemaEnhancer,
   HeroBlockSchemaEnhancer,
   ImageBlockSchemaEnhancer,
   ListingBlockSchemaEnhancer,
@@ -111,10 +110,8 @@ const applyConfig = (config) => {
   /* Heading  Block */
   config.blocks.blocksConfig.heading = {
     ...config.blocks.blocksConfig.heading,
-    schemaEnhancer: composeSchema(
-      HeadingBlockSchemaEnhancer,
-      DefaultStylingSchemaEnhancer,
-    ),
+    show_alignment: true,
+    schemaEnhancer: DefaultStylingSchemaEnhancer,
   };
 
   /* Hero  Block */

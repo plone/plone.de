@@ -49,6 +49,7 @@ setup(
         "prettyconf",
         "kitconcept.api",
         "kitconcept.contentcreator",
+        "kitconcept.seo",
         "collective.exportimport",
         "pas.plugins.authomatic",
         "collective.volto.socialsettings",

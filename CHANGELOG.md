@@ -1,7 +1,7 @@
-## 1.0.6 (unreleased)
+## 1.0.6 (2023-12-14)
 
 
-- Nothing changed yet.
+- Added kitconcept.seo [Molochem]
 
 ## 1.0.5 (2023-07-28)
 

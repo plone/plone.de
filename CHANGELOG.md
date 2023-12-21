@@ -1,3 +1,7 @@
+## 1.0.9 (2023-12-21)
+
+- Updated Robots.txt to disallow any /search URL crawling @Molochem
+
 ## 1.0.6 (2023-12-14)
 
 

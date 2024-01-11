@@ -57,6 +57,7 @@ const applyConfig = (config) => {
     navDepth: 2,
     matomoSiteId: '11',
     matomoUrlBase: 'https://stats.plone.de/',
+    enableFatMenu: false,
   };
 
   /* Teaser  Block */

@@ -1903,55 +1903,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dnd-kit/accessibility@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "@dnd-kit/accessibility@npm:3.0.1"
-  dependencies:
-    tslib: ^2.0.0
-  peerDependencies:
-    react: ">=16.8.0"
-  checksum: 0afc2c0fce9a1c107453620ca0da1778f182d340e74ffbc6e369ef0ac8943cafb929d3a6c0891d9b915aa23b2b92137ff4fad958f43118466586d8129a3359d5
-  languageName: node
-  linkType: hard
-
-"@dnd-kit/core@npm:6.0.8":
-  version: 6.0.8
-  resolution: "@dnd-kit/core@npm:6.0.8"
-  dependencies:
-    "@dnd-kit/accessibility": ^3.0.0
-    "@dnd-kit/utilities": ^3.2.1
-    tslib: ^2.0.0
-  peerDependencies:
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-  checksum: abe48ff7395f84fd8c15e6c8b13da4df153dc1f1076096d783acd0c25539516c77e4854ea59be6621dde55739cb0df1d62924ad069df3267fe05ad90ef729b2f
-  languageName: node
-  linkType: hard
-
-"@dnd-kit/sortable@npm:7.0.2":
-  version: 7.0.2
-  resolution: "@dnd-kit/sortable@npm:7.0.2"
-  dependencies:
-    "@dnd-kit/utilities": ^3.2.0
-    tslib: ^2.0.0
-  peerDependencies:
-    "@dnd-kit/core": ^6.0.7
-    react: ">=16.8.0"
-  checksum: 4ce705aceb15766a0deefe25a9d95a87e9413c3fb9088ea3eb0962e57f844895000117fcec7c0944a0d4ae4e1e889cfa69e3d3778164d4d23115fb1edb218283
-  languageName: node
-  linkType: hard
-
-"@dnd-kit/utilities@npm:^3.2.0, @dnd-kit/utilities@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "@dnd-kit/utilities@npm:3.2.1"
-  dependencies:
-    tslib: ^2.0.0
-  peerDependencies:
-    react: ">=16.8.0"
-  checksum: 038fd5cc1328bf4c9dca17cd48046e5a687bbf9d904c7197f851aab869ab52d9dee2734b2e255256fd6158245acd00063a23deed962c7673c0fadfbf061f04ca
-  languageName: node
-  linkType: hard
-
 "@eeacms/volto-accordion-block@npm:10.3.0":
   version: 10.3.0
   resolution: "@eeacms/volto-accordion-block@npm:10.3.0"
@@ -2697,18 +2648,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-blocks-grid@npm:8.0.3":
-  version: 8.0.3
-  resolution: "@kitconcept/volto-blocks-grid@npm:8.0.3"
-  dependencies:
-    "@dnd-kit/core": 6.0.8
-    "@dnd-kit/sortable": 7.0.2
-  peerDependencies:
-    "@plone/volto": ">=16.0.0"
-  checksum: 34446c00ea0a8c6077bd53e3a5fe8c970315d8fed87ebaba5f8994edd0fe5f76409baf5666d3e096ee52b5e0a216e9acf8d706a8e6cd30eea25b632e8bee3463
-  languageName: node
-  linkType: hard
-
 "@kitconcept/volto-button-block@npm:2.3.1":
   version: 2.3.1
   resolution: "@kitconcept/volto-button-block@npm:2.3.1"
@@ -2746,6 +2685,23 @@ __metadata:
   version: 1.0.0
   resolution: "@kitconcept/volto-introduction-block@npm:1.0.0"
   checksum: 2dd290e7705637e5805d66dfa87bd2d8f5a2eab981faeec78a9aa36b5a6330ee6a1a11003ec251fcbe21b0d185c9b51ac638ade17f45c9fc627468275dc58084
+  languageName: node
+  linkType: hard
+
+"@kitconcept/volto-light-theme@npm:3.0.0-alpha.1":
+  version: 3.0.0-alpha.1
+  resolution: "@kitconcept/volto-light-theme@npm:3.0.0-alpha.1"
+  peerDependencies:
+    "@eeacms/volto-accordion-block": ^10.4.0
+    "@kitconcept/volto-button-block": ^2.3.1
+    "@kitconcept/volto-dsgvo-banner": ^1.3.0
+    "@kitconcept/volto-heading-block": ^2.4.0
+    "@kitconcept/volto-highlight-block": ^3.0.0
+    "@kitconcept/volto-introduction-block": ^1.0.0
+    "@kitconcept/volto-separator-block": ^4.0.0
+    "@kitconcept/volto-slider-block": ^6.1.0
+    "@plone/volto": ^17.8.0
+  checksum: 81a4c8a66f439a16878d1584bd471086135ed2bd280d6da79eb254021694814a9bfbcba5b18440b2a193e116bdf361cfafbc9acfa81e15914ed94d1559cd8c12
   languageName: node
   linkType: hard
 
@@ -12142,12 +12098,12 @@ __metadata:
   dependencies:
     "@eeacms/volto-accordion-block": 10.3.0
     "@eeacms/volto-matomo": 4.1.3
-    "@kitconcept/volto-blocks-grid": 8.0.3
     "@kitconcept/volto-button-block": 2.3.1
     "@kitconcept/volto-dsgvo-banner": 2.2.0
     "@kitconcept/volto-export": 1.1.0
     "@kitconcept/volto-heading-block": 2.4.0
     "@kitconcept/volto-introduction-block": 1.0.0
+    "@kitconcept/volto-light-theme": 3.0.0-alpha.1
     "@kitconcept/volto-separator-block": 4.0.0
     "@kitconcept/volto-slider-block": 5.1.1
     "@plone-collective/volto-authomatic": 1.3.0

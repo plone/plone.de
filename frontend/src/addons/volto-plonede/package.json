@@ -13,7 +13,11 @@
   "scripts": {
     "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon"
   },
+  "addons": [
+    "@kitconcept/volto-light-theme"
+  ],
   "dependencies": {
-    "@plone/scripts": "*"
+    "@plone/scripts": "*",
+    "@kitconcept/volto-light-theme":"3.0.0-alpha.1"
   }
 }

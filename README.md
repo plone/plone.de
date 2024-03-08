@@ -1,13 +1,13 @@
-# plone.de
+# Plone.de Site
 
-Plone Germany site
+The german destination for Plone
 
 ## Quick start
 
 ### Development Setup
 
-- Python 3.9
-- Node ^16 || ^18
+- Python 3.11
+- Node ^18 || ^20
 - yarn
 - Docker
 

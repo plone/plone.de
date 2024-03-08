@@ -1,6 +1,6 @@
-# Gettext Message File for Plone
-# Translators:
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2019.
+#. Gettext Message File for Plone
+#. Translators:
+#. Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"

@@ -21,6 +21,7 @@ help: ## This help message
 .PHONY: clean
 clean: ## Clean installation
 	@echo "Clean installation"
+	rm -Rf yarn.lock
 	rm -Rf node_modules
 
 .PHONY: build

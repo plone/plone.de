@@ -112,6 +112,12 @@
           "**/*.overrides"
         ],
         "customSyntax": "postcss-less"
+      },
+      {
+        "files": [
+          "**/*.scss"
+        ],
+        "customSyntax": "postcss-scss"
       }
     ],
     "rules": {
@@ -155,11 +161,10 @@
     "@plone-collective/volto-authomatic": "2.0.0",
     "@plone/components": "2.0.0-alpha.6",
     "@plone/volto": "17.15.4",
-    "date-fns": "2.30.0",
     "volto-form-block": "3.1.0"
   },
   "devDependencies": {
-    "@plone/scripts": "^3.0.0",
+    "@plone/scripts": "3.5.0",
     "@storybook/addon-actions": "^6.3.0",
     "@storybook/addon-controls": "6.3.0",
     "@storybook/addon-essentials": "^6.3.0",
@@ -174,6 +179,7 @@
     "razzle": "4.2.18",
     "stylelint": "15.10.3",
     "stylelint-config-idiomatic-order": "9.0.0",
+    "stylelint-config-sass-guidelines": "11.0.0",
     "stylelint-prettier": "4.0.2"
   },
   "packageManager": "yarn@3.2.3",

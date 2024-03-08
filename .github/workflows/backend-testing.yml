@@ -3,11 +3,10 @@ name: Backend testing.plone.de CI and Deploy
 on:
   push:
     paths:
-      - "backend/**"
+      - 'backend/**'
   workflow_dispatch:
 
 jobs:
-
   black:
     if: github.ref_type == 'branch'
     runs-on: ubuntu-latest
@@ -69,7 +68,7 @@ jobs:
         python:
           - 3.11
         plone:
-          - "6.0.4"
+          - '6.0.10.1'
 
     defaults:
       run:
@@ -100,7 +99,6 @@ jobs:
     needs: [black, flake8, isort, zpretty, tests]
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -153,14 +151,14 @@ jobs:
       - name: Deploy to testing.plone.de
         uses: kitconcept/docker-stack-deploy@v1.2.0
         with:
-          registry: "ghcr.io"
+          registry: 'ghcr.io'
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           remote_host: ${{ vars.DEPLOY_HOST }}
           remote_port: ${{ vars.DEPLOY_PORT }}
           remote_user: ${{ vars.DEPLOY_USER }}
           remote_private_key: ${{ secrets.DEPLOY_SSH }}
-          stack_file: "devops/stacks/testing.plone.de.yml"
-          stack_name: "testing-plone-de"
+          stack_file: 'devops/stacks/testing.plone.de.yml'
+          stack_name: 'testing-plone-de'
           env_file: ${{ secrets.ENV_FILE }}
           deploy_timeout: 480

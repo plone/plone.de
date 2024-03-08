@@ -4,10 +4,9 @@ on:
   push:
 
 env:
-  node-version: 16.x
+  node-version: 18.x
 
 jobs:
-
   eslint:
     runs-on: ubuntu-latest
     defaults:

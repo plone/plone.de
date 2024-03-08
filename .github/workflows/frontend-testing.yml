@@ -4,17 +4,16 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "frontend/**"
+      - 'frontend/**'
 
 env:
-  node-version: 16.x
+  node-version: 18.x
 
 defaults:
   run:
     working-directory: ./frontend
 
 jobs:
-
   eslint:
     if: github.ref_type == 'branch'
     runs-on: ubuntu-latest
@@ -92,7 +91,6 @@ jobs:
     needs: [eslint, prettier, i18n, unit]
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -129,14 +127,13 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: $${{ steps.meta.outputs.labels }}
 
-
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
     concurrency: deploy_testing
     needs:
       - release
     runs-on: ubuntu-latest
-    environment: 
+    environment:
       name: testing.plone.de
       url: https://testing.plone.de
     steps:
@@ -146,14 +143,14 @@ jobs:
       - name: Deploy to testing.plone.de
         uses: kitconcept/docker-stack-deploy@v1.2.0
         with:
-          registry: "ghcr.io"
+          registry: 'ghcr.io'
           username: ${{ github.actor }}
           password: ${{ secrets.DEPLOY_GHCR_READ_TOKEN }}
           remote_host: ${{ vars.DEPLOY_HOST }}
           remote_port: ${{ vars.DEPLOY_PORT }}
           remote_user: ${{ vars.DEPLOY_USER }}
           remote_private_key: ${{ secrets.DEPLOY_SSH }}
-          stack_file: "devops/stacks/testing.plone.de.yml"
-          stack_name: "testing-plone-de"
+          stack_file: 'devops/stacks/testing.plone.de.yml'
+          stack_name: 'testing-plone-de'
           env_file: ${{ secrets.ENV_FILE }}
           deploy_timeout: 480

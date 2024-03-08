@@ -5,4 +5,9 @@ default_context:
   load_zcml:
     package_includes: ['plonede']
 
+  dos_protection_available: true
+
   db_storage: direct
+
+  db_filestorage_location: ../data/filestorage/Data.fs
+  db_blobs_location: ../data/blobs

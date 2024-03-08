@@ -17,7 +17,9 @@
     "@kitconcept/volto-light-theme"
   ],
   "dependencies": {
-    "@plone/scripts": "*",
-    "@kitconcept/volto-light-theme":"3.0.0-alpha.1"
+    "@kitconcept/volto-light-theme": "3.0.1"
+  },
+  "devDependencies": {
+    "@plone/scripts": "3.5.0"
   }
 }

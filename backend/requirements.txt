@@ -2,6 +2,8 @@
 -e src/plonede[test]
 
 zope.testrunner
+relstorage==4.0.0
+psycopg2==2.9.9
 
 # Add required add-ons
 # (Ideally add them in setup.py for plonede)

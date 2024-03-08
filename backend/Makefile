@@ -15,7 +15,7 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-PLONE_VERSION=6.0.7
+PLONE_VERSION=$$(cat version.txt)
 
 BACKEND_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
@@ -94,6 +94,11 @@ config: bin/pip  ## Create instance configuration
 	@echo "$(GREEN)==> Create instance configuration$(RESET)"
 	bin/cookiecutter -f --no-input --config-file instance.yaml gh:plone/cookiecutter-zope-instance
 
+.PHONY: config-fs
+config-fs: bin/pip  ## Create instance configuration
+	@echo "$(GREEN)==> Create instance configuration$(RESET)"
+	bin/cookiecutter -f --no-input --config-file instance-filestorage.yaml gh:plone/cookiecutter-zope-instance
+
 # i18n
 bin/i18ndude: bin/pip
 	@echo "$(GREEN)==> Install translation tools$(RESET)"
@@ -110,7 +115,15 @@ i18n: bin/i18ndude ## Update locales
 .PHONY: build-dev
 build-dev: config ## pip install Plone packages
 	@echo "$(GREEN)==> Setup Build$(RESET)"
-	bin/mxdev -c mx.ini
+	sed "s/PLONE_VERSION/$(PLONE_VERSION)/g" constraints-template.txt > constraints.txt
+	@bin/mxdev -c mx.ini
+	bin/pip install -r requirements-mxdev.txt
+	
+.PHONY: build-dev-fs
+build-dev-fs: config-fs ## pip install Plone packages
+	@echo "$(GREEN)==> Setup Build$(RESET)"
+	sed "s/PLONE_VERSION/$(PLONE_VERSION)/g" constraints-template.txt > constraints.txt
+	@bin/mxdev -c mx.ini
 	bin/pip install -r requirements-mxdev.txt
 
 .PHONY: format

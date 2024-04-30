@@ -18,7 +18,7 @@ if (configFile) {
     voltoPath = `./${jsConfig.baseUrl}/${pathsConfig['@plone/volto'][0]}`;
 }
 
-const AddonConfigurationRegistry = require(`${voltoPath}/addon-registry.js`);
+const AddonConfigurationRegistry = require('@plone/registry/src/addon-registry');
 const reg = new AddonConfigurationRegistry(__dirname);
 
 // Extends ESlint configuration for adding the aliases to `src` directories in Volto addons
@@ -27,7 +27,9 @@ const addonAliases = Object.keys(reg.packages).map((o) => [
   reg.packages[o].modulePath,
 ]);
 
-module.exports = {
+const addonExtenders = reg.getEslintExtenders().map((m) => require(m));
+
+const defaultConfig = {
   extends: `${voltoPath}/.eslintrc`,
   settings: {
     'import/resolver': {
@@ -35,11 +37,10 @@ module.exports = {
         map: [
           ['@plone/volto', '@plone/volto/src'],
           ...addonAliases,
-          ['@package', `${__dirname}/src`],
           ['@root', `${__dirname}/src`],
           ['~', `${__dirname}/src`],
         ],
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       },
       'babel-plugin-root-import': {
         rootPathSuffix: 'src',
@@ -47,3 +48,10 @@ module.exports = {
     },
   },
 };
+
+const config = addonExtenders.reduce(
+  (acc, extender) => extender.modify(acc),
+  defaultConfig,
+);
+
+module.exports = config;

@@ -9,6 +9,7 @@ const applyConfig = (config) => {
     matomoUrlBase: 'https://stats.plone.de/',
     enableFatMenu: true,
   };
+
   return config;
 };
 

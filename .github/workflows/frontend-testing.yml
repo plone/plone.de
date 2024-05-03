@@ -113,10 +113,9 @@ jobs:
         run: make test
 
   release:
-    # if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
-    # needs: [meta, eslint, prettier, i18n, unit]
-    needs: [meta]
+    needs: [meta, eslint, prettier, i18n, unit]
 
     steps:
       - name: Checkout

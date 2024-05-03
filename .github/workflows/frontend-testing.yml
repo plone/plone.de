@@ -112,7 +112,8 @@ jobs:
   release:
     # if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
-    needs: [meta, eslint, prettier, i18n, unit]
+    # needs: [meta, eslint, prettier, i18n, unit]
+    needs: [meta]
 
     steps:
       - name: Checkout

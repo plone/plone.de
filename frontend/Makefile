@@ -2,12 +2,12 @@
 #     https://tech.davis-hansson.com/p/make/
 SHELL:=bash
 .ONESHELL:
-.SHELLFLAGS:=-xeu -o pipefail -O inherit_errexit -c
+.SHELLFLAGS:=-eu -o pipefail -c
 .SILENT:
 .DELETE_ON_ERROR:
 MAKEFLAGS+=--warn-undefined-variables
 MAKEFLAGS+=--no-builtin-rules
-IMAGE_NAME=collective/jonasproject-frontend
+IMAGE_NAME=ghcr.io/kitconcept/kitconcept.com-frontend
 IMAGE_TAG=latest
 
 NODEBIN = ./node_modules/.bin
@@ -21,7 +21,6 @@ help: ## This help message
 .PHONY: clean
 clean: ## Clean installation
 	@echo "Clean installation"
-	rm -Rf yarn.lock
 	rm -Rf node_modules
 
 .PHONY: build
@@ -46,7 +45,7 @@ format-lint: ## Format Code with Lint
 	yarn run lint:fix
 
 .PHONY: format
-format: format-prettier format-stylelint format-lint ## Format the codebase according to our standards
+format: format-prettier format-lint format-stylelint ## Format the codebase according to our standards
 
 .PHONY: install
 install: ## Install the frontend
@@ -61,7 +60,8 @@ preinstall: ## Preinstall task, checks if missdev (mrs-developer) is present and
 
 .PHONY: develop
 develop: ## Runs missdev in the local project (mrs.developer.json should be present)
-	npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
+	if [ -f $$(pwd)/jsconfig.json ]; then npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https; fi
+	if [ ! -f $$(pwd)/jsconfig.json ]; then npx -p mrs-developer missdev --output=addons --fetch-https; fi
 
 .PHONY: omelette
 omelette: ## Creates the omelette folder that contains a link to the installed version of Volto (a softlink pointing to node_modules/@plone/volto)
@@ -90,7 +90,7 @@ storybook: ## Generate Storybook
 
 .PHONY: build-image
 build-image:  ## Build Docker Image
-	@docker build . -t $(IMAGE_NAME):$(IMAGE_TAG) -f Dockerfile
+	@DOCKER_BUILDKIT=1 docker build . -t $(IMAGE_NAME):$(IMAGE_TAG) -f Dockerfile
 
 # Acceptance tests
 

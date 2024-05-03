@@ -116,7 +116,7 @@ jobs:
           pytest src/plonede/tests
 
   release:
-    if: ${{ github.ref == 'refs/heads/fixrelease' }}
+    # if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     needs: [black, flake8, isort, zpretty, tests]
 

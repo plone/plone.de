@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       TAG: ${{ steps.vars.outputs.TAG }}
+      VOLTO_VERSION: ${{ steps.vars.outputs.VOLTO_VERSION }}
+      PLONE_VERSION: ${{ steps.vars.outputs.PLONE_VERSION }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -25,7 +27,13 @@ jobs:
         id: vars
         run: |
           echo "TAG=$(cat version.txt)" >> $GITHUB_OUTPUT
-
+          python3 -c 'import json; data = json.load(open("frontend/package.json")); print("VOLTO_VERSION=" + data["dependencies"]["@plone/volto"])' >> $GITHUB_OUTPUT
+          echo "PLONE_VERSION=$(cat backend/version.txt)" >> $GITHUB_OUTPUT
+      - name: Test vars
+        run: |
+          echo "TAG=${{ steps.vars.outputs.TAG }}"
+          echo "VOLTO_VERSION=${{ steps.vars.outputs.VOLTO_VERSION }}"
+          echo "PLONE_VERSION=${{ steps.vars.outputs.PLONE_VERSION }}"
 
   release-frontend:
     runs-on: ubuntu-latest
@@ -60,6 +68,8 @@ jobs:
           platforms: linux/amd64
           context: frontend
           file: frontend/Dockerfile
+          build-args: |
+            VOLTO_VERSION=${{ needs.meta.outputs.VOLTO_VERSION }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -100,6 +110,8 @@ jobs:
           platforms: linux/amd64
           context: backend
           file: backend/Dockerfile
+          build-args: |
+            PLONE_VERSION=${{ needs.meta.outputs.PLONE_VERSION }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

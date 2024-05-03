@@ -1,20 +1,34 @@
 # syntax=docker/dockerfile:1
-ARG PLONE_VERSION=6.0.10.1
-FROM plone/plone-backend:${PLONE_VERSION}
+ARG PLONE_VERSION
+FROM plone/server-builder:${PLONE_VERSION:-6} as builder
 
-LABEL maintainer="Simples Consultoria <comercial@plone.de>" \
-      org.label-schema.name="plone.de-backend" \
-      org.label-schema.description="Simples Consultoria backend image." \
-      org.label-schema.vendor="Simples Consultoria"
+WORKDIR /app
 
 # Add local code
 COPY . .
 
-# Install local requirements and fix permissions
+# Install local requirements and pre-compile mo files
 RUN <<EOT
-    ./bin/pip install mxdev
+    set -e
+    bin/pip install mxdev
     mv requirements-docker.txt requirements.txt
-    ./bin/mxdev -c mx.ini
-    ./bin/pip install -r requirements-mxdev.txt
-    chown -R plone: /app
+    bin/mxdev -c mx.ini
+    bin/pip install -r requirements-mxdev.txt
+    bin/python /compile_mo.py
+    rm -Rf src/
+EOT
+
+FROM plone/server-prod-config:${PLONE_VERSION:-6}
+
+LABEL maintainer="kitconcept GmbH <info@kitconcept.com>" \
+      org.label-schema.name="kitconcept.com-backend" \
+      org.label-schema.description="kitconcept website backend image." \
+      org.label-schema.vendor="kitconcept GmbH"
+
+# Copy /app from builder
+COPY --from=builder /app /app
+
+RUN <<EOT
+    set -e
+    ln -s /data /app/var
 EOT

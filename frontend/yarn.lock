@@ -3453,9 +3453,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/volto@npm:18.0.0-alpha.30":
-  version: 18.0.0-alpha.30
-  resolution: "@plone/volto@npm:18.0.0-alpha.30"
+"@plone/volto@npm:18.0.0-alpha.29":
+  version: 18.0.0-alpha.29
+  resolution: "@plone/volto@npm:18.0.0-alpha.29"
   dependencies:
     "@loadable/component": 5.14.1
     "@loadable/server": 5.14.0
@@ -3550,7 +3550,7 @@ __metadata:
     url: ^0.11.3
     use-deep-compare-effect: 1.8.1
     uuid: ^8.3.2
-  checksum: 5cf1922bba414b688097d96850f3485379f606cabd49fb4043572c36b86ac901e95e4d3f03c1aa24924eb68b26c6a0885a4532f2f2f6f740aac2bed2700fb600
+  checksum: 0372d6a9074e339dc753c42be4ead13cba885b4c42a692dd1bec284c94c1afed983ccd30b5ee5302d27cad22ea1f7e0d126c2cdab88018c2c903a3f784bcd84d
   languageName: node
   linkType: hard
 
@@ -13263,7 +13263,7 @@ __metadata:
     "@loadable/webpack-plugin": 5.15.2
     "@plone/scripts": ^3.6.1
     "@plone/types": 1.0.0-alpha.11
-    "@plone/volto": 18.0.0-alpha.30
+    "@plone/volto": 18.0.0-alpha.29
     "@redux-devtools/extension": ^3.3.0
     "@sinonjs/fake-timers": ^6.0.1
     "@storybook/addon-actions": ^8.0.4

@@ -38,8 +38,11 @@ jobs:
       - name: Checkout codebase
         uses: actions/checkout@v3
 
+      - name: Install packages
+        run: make install
+
       - name: Run Prettier
-        run: npx prettier@2.0.5 --single-quote --check 'src/**/*.{js,jsx,ts,tsx,css,scss}' --config=package.json
+        run: yarn run prettier
 
   i18n:
     name: i18n sync

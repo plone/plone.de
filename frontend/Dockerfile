@@ -1,39 +1,20 @@
-FROM node:16-slim as base
-FROM base as builder
+# syntax=docker/dockerfile:1
+ARG VOLTO_VERSION
+FROM plone/frontend-builder:${VOLTO_VERSION} as builder
 
-RUN apt-get update \
-    && buildDeps="python3 build-essential git ca-certificates" \
-    && apt-get install -y --no-install-recommends $buildDeps \
-    && rm -rf /var/lib/apt/lists/*
+COPY --chown=node . /app/
 
-COPY --chown=node .yarnrc.yml Makefile package.json mrs.developer.json jsconfig.json yarn.lock /build/
-COPY --chown=node .yarn /build/.yarn
-RUN corepack enable
-USER node
-WORKDIR /build
+RUN <<EOT
+     make install
+     yarn build
+     rm -rf cache omelette .yarn/cache
+EOT
 
-RUN mkdir -p src/addons && make install
+FROM plone/frontend-prod-config:${VOLTO_VERSION}
 
-COPY --chown=node . /build/
-RUN yarn build
+LABEL maintainer="kitconcept GmbH <info@kitconcept.com>" \
+      org.label-schema.name="kitconcept.com-frontend" \
+      org.label-schema.description="kitconcept website frontend image." \
+      org.label-schema.vendor="kitconcept GmbH"
 
-
-FROM base
-
-LABEL maintainer="Jonas Piterek <piterek@kitconcept.com>" \
-      org.label-schema.name="plonede-frontend" \
-      org.label-schema.description="Plonede frontend image." \
-      org.label-schema.vendor="Jonas Piterek"
-
-RUN apt-get update \
-    && buildDeps="busybox" \
-    && apt-get install -y --no-install-recommends $buildDeps \
-    && busybox --install -s \
-    && rm -rf /var/lib/apt/lists/*
-
-USER node
-COPY --from=builder /build/ /app/
-
-WORKDIR /app
-EXPOSE 3000
-CMD ["yarn", "start:prod"]
+COPY --from=builder /app/ /app/

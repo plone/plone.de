@@ -68,75 +68,13 @@
       "__DEV__": true
     }
   },
-  "prettier": {
-    "trailingComma": "all",
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.overrides",
-        "options": {
-          "parser": "less"
-        }
-      }
-    ]
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-idiomatic-order"
-    ],
-    "plugins": [
-      "stylelint-prettier"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.less"
-        ],
-        "customSyntax": "postcss-less"
-      },
-      {
-        "files": [
-          "**/*.overrides"
-        ],
-        "customSyntax": "postcss-less"
-      },
-      {
-        "files": [
-          "**/*.scss"
-        ],
-        "customSyntax": "postcss-scss"
-      }
-    ],
-    "rules": {
-      "prettier/prettier": true,
-      "rule-empty-line-before": [
-        "always-multi-line",
-        {
-          "except": [
-            "first-nested"
-          ],
-          "ignore": [
-            "after-comment"
-          ]
-        }
-      ]
-    },
-    "ignoreFiles": "theme/themes/default/**/*.overrides"
-  },
-  "browserslist": [
-    ">1%",
-    "last 4 versions",
-    "Firefox ESR",
-    "not ie 11",
-    "not dead"
-  ],
   "engines": {
     "node": "^18 || ^20"
   },
   "dependencies": {
     "@loadable/component": "5.14.1",
     "@loadable/server": "5.14.0",
-    "@plone/volto": "18.0.0-alpha.30",
+    "@plone/volto": "18.0.0-alpha.29",
     "@redux-devtools/extension": "^3.3.0",
     "classnames": "2.2.6",
     "connected-react-router": "6.8.0",

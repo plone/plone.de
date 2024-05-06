@@ -1,24 +1,24 @@
+## 1.0.10 (2024-05-06)
+
+- Remove customization and add volto-light-theme [jonaspiterek]
+
 ## 1.0.9 (2023-12-21)
 
 - Updated Robots.txt to disallow any /search URL crawling @Molochem
 
 ## 1.0.6 (2023-12-14)
 
-
 - Added kitconcept.seo [Molochem]
 
 ## 1.0.5 (2023-07-28)
 
-
 - Add meta data for google search console [jonaspiterek]
-
 
 ## 1.0.4 (2023-07-10)
 
 - Clean styles. [jonaspiterek]
 
 - Add search design to page search. [jonaspiterek]
-
 
 ## 1.0.3 (2023-07-09)
 
@@ -30,11 +30,9 @@
 
 - Fix RAZZLE_INTERNAL_API_PATH in frontend stack. [fredvd]
 
-
 ## 1.0.1 (2023-07-09)
 
 - Remove basic_auth from live frontend. [fredvd]
-
 
 ## 1.0.0 (2023-07-09)
 

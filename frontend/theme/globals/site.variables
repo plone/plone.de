@@ -1,9 +1,0 @@
-/*-------------------
-     Breakpoints
---------------------*/
-
-@tabletBreakpoint: 769px;
-@computerWidth: 940px;
-@computerBreakpoint: 1012px;
-@largeMonitorWidth: 1440px;
-@largeMonitorBreakpoint: 1441px;

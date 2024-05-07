@@ -2980,12 +2980,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-logos-block@npm:2.0.0-alpha.1":
-  version: 2.0.0-alpha.1
-  resolution: "@kitconcept/volto-logos-block@npm:2.0.0-alpha.1"
+"@kitconcept/volto-logos-block@npm:1.2.2":
+  version: 1.2.2
+  resolution: "@kitconcept/volto-logos-block@npm:1.2.2"
   peerDependencies:
     "@plone/volto": ^17.0.0-alpha.21
-  checksum: 19dc055f32fd52cc60cbeeca3c778d49cc9339ed6d92d34a06ca34bda846613df0bfe327053b1468263921d55e5cbd35d33c4e5d5d576ba3a83691ceb4b105d7
+  checksum: e47f0a45e0fd05576623a8f1c93205ee6de8cb750650498cb2d5371710446b2c68c8e7a28d4a77ebf6bdfb9031a9ba9f0ce915021aafe631818f0b2cd0cbc8db
   languageName: node
   linkType: hard
 
@@ -25423,7 +25423,7 @@ __metadata:
     "@kitconcept/volto-heading-block": 2.4.0
     "@kitconcept/volto-introduction-block": 1.0.0
     "@kitconcept/volto-light-theme": 3.3.0
-    "@kitconcept/volto-logos-block": 2.0.0-alpha.1
+    "@kitconcept/volto-logos-block": 1.2.2
     "@kitconcept/volto-separator-block": 4.1.1
     "@kitconcept/volto-slider-block": 6.3.1
     "@plone-collective/volto-authomatic": 2.0.1

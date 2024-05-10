@@ -1,3 +1,7 @@
+## 1.0.11 (2024-05-06)
+
+- Fix images in logos block [jonaspiterek]
+
 ## 1.0.10 (2024-05-06)
 
 - Remove customization and add volto-light-theme [jonaspiterek]

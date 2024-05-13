@@ -1,0 +1,9 @@
+// `max-height` is 100px anyways,
+// might just make it 100px by default.
+.block.logos .logo-block .logo-image {
+  height: 100px;
+}
+
+.block.logos .three.column.grid .logo-image {
+  max-width: none !important;
+}

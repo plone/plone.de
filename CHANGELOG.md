@@ -1,4 +1,4 @@
-## 1.0.13 (unreleased)
+## 1.0.13 (2024-09-06)
 
 - Re-release with correct version.txt on the release tag. [fredvd]
 

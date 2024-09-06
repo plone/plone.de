@@ -1,3 +1,9 @@
+## 1.0.12 (2024-09-06)
+
+- Update deps [jonaspiterek]
+
+- Fix image width in logos block [jonaspiterek]
+
 ## 1.0.11 (2024-05-06)
 
 - Fix images in logos block [jonaspiterek]

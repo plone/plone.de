@@ -7,7 +7,16 @@ on:
       - 'frontend/**'
 
 env:
-  node-version: 20.x
+  node-version: 22.x
+  IMAGE_NAME_PREFIX: ghcr.io/plone/plone.de
+  IMAGE_NAME_SUFFIX: frontend
+  PYTHON_VERSION: "3.12"
+  STACK_PARAM: latest
+  STACK_NAME: testing-plone-de
+  STACK_PREFIX: testing_plonede
+  PUBLIC_URL: testing.plone.de
+  CERTRESOLVER: le-cloudflare
+  STACK_FILE: devops/stacks/testing.plone.de.yml
 
 defaults:
   run:
@@ -22,7 +31,7 @@ jobs:
       PLONE_VERSION: ${{ steps.vars.outputs.PLONE_VERSION }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set Env Vars
         working-directory: "."
@@ -43,10 +52,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout codebase
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Use Node.js ${{ env.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node-version }}
           cache: 'yarn'
@@ -63,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout codebase
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install packages
         run: make install
@@ -77,10 +86,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout codebase
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Use Node.js ${{ env.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node-version }}
           cache: 'yarn'
@@ -97,10 +106,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout codebase
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Use Node.js ${{ env.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node-version }}
           cache: 'yarn'
@@ -119,14 +128,16 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/plone/plonede-frontend
+            ${{ env.IMAGE_NAME_PREFIX }}-${{ env.IMAGE_NAME_SUFFIX }}
+          labels: |
+            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ env.IMAGE_NAME_PREFIX }}-${{ env.IMAGE_NAME_SUFFIX }}:latest
           flavor: |
             latest=false
           tags: |
@@ -135,17 +146,17 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
       - name: Login to DockerHub
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64
           context: frontend/
@@ -167,7 +178,7 @@ jobs:
       url: https://testing.plone.de
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Deploy to testing.plone.de
         uses: kitconcept/docker-stack-deploy@v1.2.0
@@ -181,5 +192,11 @@ jobs:
           remote_private_key: ${{ secrets.DEPLOY_SSH }}
           stack_file: 'devops/stacks/testing.plone.de.yml'
           stack_name: 'testing-plone-de'
-          env_file: ${{ secrets.ENV_FILE }}
+          env_file: |
+            STACK_NAME=${{ env.STACK_NAME }}
+            DB_HOST=${{ vars.DB_HOST }}
+            DB_PORT=${{ vars.DB_PORT }}
+            DB_NAME=${{ vars.DB_NAME }}
+            DB_USER=${{ vars.DB_USER }}
+            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
           deploy_timeout: 480

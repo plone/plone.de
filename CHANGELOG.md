@@ -1,7 +1,9 @@
 ## 1.0.14 (unreleased)
 
 
-- Nothing changed yet.
+- Update Github Action versions. 
+- Fix deploy token for testing stack.
+- Fix instance-filestorage blobs directive. [fredvd]
 
 
 ## 1.0.13 (2024-09-06)

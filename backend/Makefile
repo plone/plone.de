@@ -47,7 +47,7 @@ ifeq ($(PYTHON_VERSION_OK),0)
 endif
 
 
-# Add the following 'help' target to your Makefile
+# Add the following 'help' target to your Makefile.
 # And add help text after each target name starting with '\#\#'
 .PHONY: help
 help: ## This help message

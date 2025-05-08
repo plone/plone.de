@@ -1,7 +1,7 @@
 ## 1.0.15 (unreleased)
 
 
-- Nothing changed yet.
+- Update deploy-tag-release-live workflow with new env_file syntax. [fredvd]
 
 
 ## 1.0.14 (2025-05-08)

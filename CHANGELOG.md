@@ -1,4 +1,4 @@
-## 1.0.16 (unreleased)
+## 1.0.16 (2025-05-08)
 
 - Parameterise image names and use plone.de everywhere instead of plonede. [fredvd]
 

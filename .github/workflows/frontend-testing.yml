@@ -10,7 +10,6 @@ env:
   node-version: 22.x
   IMAGE_NAME_PREFIX: ghcr.io/plone/plone.de
   IMAGE_NAME_SUFFIX: frontend
-  PYTHON_VERSION: "3.12"
   STACK_PARAM: latest
   STACK_NAME: testing-plone-de
   STACK_PREFIX: testing_plonede

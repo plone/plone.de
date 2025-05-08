@@ -1,27 +1,20 @@
 ## 1.0.16 (unreleased)
 
-
-- Nothing changed yet.
-
+- Parameterise image names and use plone.de everywhere instead of plonede. [fredvd]
 
 ## 1.0.15 (2025-05-08)
 
-
 - Update deploy-tag-release-live workflow with new env_file syntax. [fredvd]
 
-
 ## 1.0.14 (2025-05-08)
-
 
 - Update Github Action versions. 
 - Fix deploy token for testing stack.
 - Fix instance-filestorage blobs directive. [fredvd]
 
-
 ## 1.0.13 (2024-09-06)
 
 - Re-release with correct version.txt on the release tag. [fredvd]
-
 
 ## 1.0.12 (2024-09-06)
 
